@@ -150,8 +150,13 @@ Esquema completo (propiedades, mapeos de nombres antiguos, estados) en `docs/NOT
 | Persona | GitHub | Notion | Rol |
 |---|---|---|---|
 | Sergio | `2317SECH` | admin workspace | dueño, contacto con prospectos |
-| Palan | `ptala611-oss` | acceso compartido por Sergio | prospección diaria, investigación, bocetos |
+| Palan (Alan) | `ptala611-oss` | acceso compartido por Sergio | prospección: descubre, investiga, audita y hace los bocetos |
 
-Acceso mínimo: Palan tiene permiso **write** al repo (no admin) y acceso a la
-base `Prospectos` en Notion. **Palan no contacta prospectos** — deja todo en
-"Listo para contactar" y Sergio envía.
+Palan (Alan) es quien opera la prospección día a día (usa su propia cuenta de
+Instagram en las sesiones con Chrome). Tiene acceso **admin** al repo y edición
+completa de la base `Prospectos` en Notion.
+
+**El contacto con el prospecto se hace siempre manual y revisado** (Sergio, o
+Palan con visto bueno de Sergio). Nunca automático: no se envían DMs, no se
+comenta, no se sigue a nadie de forma automática. El trabajo del sistema termina
+en `Listo para contactar` con el mensaje redactado.

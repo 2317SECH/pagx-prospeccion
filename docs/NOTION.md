@@ -88,7 +88,7 @@ Descubierto → Investigando → Auditado → Boceto → Listo para contactar
 | **Auditado** | Investigación completa, score asignado, supera criterios. | quien audita |
 | **Boceto** | Se está construyendo la maqueta visual. | quien hace boceto |
 | **Listo para contactar** | Boceto `Listo` + Mensaje listo. Falta que Sergio envíe. | quien termina el boceto |
-| **Contactado** | Sergio **ya envió** el mensaje. Se fija **Fecha de contacto**. | Sergio |
+| **Contactado** | El mensaje **ya se envió** (manual). Se fija **Fecha de contacto**. | quien contacta |
 | **Seguimiento** | Sin respuesta o conversación en curso, toca insistir. | Sergio |
 | **Interesado** / **Reunión agendada** / **Cerrado** | Avance comercial. | Sergio |
 | **No interesado** | Dijo que no. | Sergio |

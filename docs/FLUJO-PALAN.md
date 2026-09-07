@@ -105,14 +105,17 @@ Estado → `Boceto` · **Boceto** = `En progreso` · **Boceto por** = Palan.
 
 ## PASO 10 — Listo para contactar
 
-Estado → `Listo para contactar`. **Próxima acción** = fecha en que Sergio lo revisa.
-Aquí termina el trabajo de Palan. **Palan no contacta.**
+Estado → `Listo para contactar`. **Próxima acción** = fecha de revisión.
+Aquí termina el trabajo del sistema: la ficha está completa y el mensaje redactado.
+
+**El contacto se hace manual y revisado** (Sergio, o Palan con visto bueno de
+Sergio). Nunca automático.
 
 ## PASO 11 — Cuando exista contacto
 
-Lo hace Sergio: al enviar el mensaje → Estado `Contactado`,
-**Contactado por** = Sergio, **Fecha de contacto** = hoy. Luego **Resultado** y
-**Próxima acción** para el seguimiento.
+Al enviar el mensaje (manualmente) → Estado `Contactado`, **Contactado por** =
+quien lo envió, **Fecha de contacto** = hoy. Luego **Resultado** y **Próxima
+acción** para el seguimiento.
 
 ---
 
