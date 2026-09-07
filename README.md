@@ -89,7 +89,7 @@ Descubrir  →  ¿Ya existe en Notion?  →  SÍ: recuperar ficha, NO duplicar
         →  Boceto visual  (Estado: Boceto  ·  Boceto: En progreso → Listo)
         →  Vincular boceto a la ficha  (URL del boceto)
         →  Estado: Listo para contactar
-        →  Sergio contacta manualmente  →  Estado: Contactado + Fecha de contacto
+        →  contacto manual y revisado    →  Estado: Contactado + Fecha de contacto
         →  Seguimiento  →  Cerrado / No interesado
 ```
 
@@ -150,7 +150,7 @@ Esquema completo (propiedades, mapeos de nombres antiguos, estados) en `docs/NOT
 | Persona | GitHub | Notion | Rol |
 |---|---|---|---|
 | Sergio | `2317SECH` | admin workspace | dueño, contacto con prospectos |
-| Alan | `ptala611-oss` | acceso compartido por Sergio | prospección: descubre, investiga, audita y hace los bocetos |
+| Alan | `ptala611-oss` | acceso concedido por Sergio (Gmail) | prospección: descubre, investiga, audita y hace los bocetos |
 
 Alan es quien opera la prospección día a día (usa su propia cuenta de
 Instagram en las sesiones con Chrome). Tiene acceso **admin** al repo y edición
