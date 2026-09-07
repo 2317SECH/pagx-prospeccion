@@ -1,0 +1,30 @@
+# Secretos / entorno — NUNCA subir
+.env
+.env.local
+*.local
+secrets.*
+*token*
+*.key
+*.pem
+
+# Notion / API
+notion_token.txt
+credentials.json
+
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporales de captura
+tools/_scratch/
+tools/screenshots/
+*.tmp

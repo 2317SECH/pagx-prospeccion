@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAGX Studio — Bocetos de prospección</title>
+<style>
+  :root{ --bg:#0b0c10; --panel:#14161d; --line:#262a35; --text:#f4f5f7; --muted:#9aa1ad; --accent:#2f6bff; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:56px 28px 80px}
+  header h1{font-size:30px;letter-spacing:-.02em}
+  header p{color:var(--muted);margin-top:10px;max-width:60ch}
+  .note{margin-top:18px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--panel)}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.15s;display:block}
+  .card:hover{transform:translateY(-3px);border-color:#3a4150}
+  .card .thumb{aspect-ratio:16/10;overflow:hidden;background:#0f1218;border-bottom:1px solid var(--line)}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .card .body{padding:16px 18px 18px}
+  .card .n{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted)}
+  .card h2{font-size:19px;margin:4px 0 6px}
+  .card p{font-size:13.5px;color:var(--muted)}
+  .card .links{margin-top:12px;display:flex;gap:10px;font-size:13px;font-weight:600}
+  .card .links span{color:var(--accent)}
+  footer{margin-top:50px;font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>PAGX Studio — Bocetos de prospección</h1>
+    <p>Maquetas conceptuales de una posible nueva experiencia web para cada prospecto. Cada boceto está construido sobre la marca del prospecto, no es una plantilla.</p>
+    <div class="note">
+      <strong>Boceto conceptual · PAGX Studio · no es el sitio actual.</strong><br>
+      Precios, kilometrajes, fotos y testimonios están marcados como demostración dentro de cada página. Nada se presenta como dato real.
+    </div>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="bocetos/01-automotores-andina.html">
+      <div class="thumb"><img src="bocetos/preview/01-automotores-andina.png" alt="Boceto Automotores Andina"></div>
+      <div class="body">
+        <div class="n">BOCETO 01</div>
+        <h2>Automotores Andina</h2>
+        <p>Pereira, Colombia · Automotriz — vitrina propia con filtros, ficha por vehículo y captación de leads.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/01-automotores-andina.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/02-infinitum-usados.html">
+      <div class="thumb"><img src="bocetos/preview/02-infinitum-usados.png" alt="Boceto Infinitum Usados"></div>
+      <div class="body">
+        <div class="n">BOCETO 02</div>
+        <h2>Infinitum Usados</h2>
+        <p>Cali, Colombia · Automotriz — inventario ordenado, garantía y agenda de test drive al WhatsApp del asesor.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/02-infinitum-usados.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/03-centro-automotores.html">
+      <div class="thumb"><img src="bocetos/preview/03-centro-automotores.png" alt="Boceto Centro Automotores"></div>
+      <div class="body">
+        <div class="n">BOCETO 03</div>
+        <h2>Centro Automotores</h2>
+        <p>Córdoba, Argentina · Automotriz — catálogo de concesionario con cada auto ligado a su video de test drive.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/03-centro-automotores.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/04-dds-clinica-dental.html">
+      <div class="thumb"><img src="bocetos/preview/04-dds-clinica-dental.png" alt="Boceto DDS Clínica Dental"></div>
+      <div class="body">
+        <div class="n">BOCETO 04</div>
+        <h2>DDS Clínica Dental</h2>
+        <p>Bogotá, Colombia · Salud y estética — diseño de sonrisa con antes/después y agenda online real.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/04-dds-clinica-dental.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    Repositorio y flujo de prospección: ver <code>README.md</code> y <code>docs/</code>. · Base de datos: Notion → <em>Prospectos</em>.
+  </footer>
+</div>
+</body>
+</html>

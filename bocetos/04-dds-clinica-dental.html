@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DDS Clínica Dental — Diseño de sonrisa (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --bg2:#f4faf8; --ink:#122e2c; --ink2:#2c4a47;
+    --teal:#12a89f; --teal-d:#0b756e; --teal-soft:#e6f5f3; --line:#e3eeeb; --muted:#5f706e; --gold:#c9a24b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.005em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#e8f4f1,#dcefeb);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-primary:hover{background:var(--teal-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:#fff}
+
+  .ribbon{background:var(--ink);color:#dbe9e7;font-size:12.5px}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:76px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:Fraunces;font-weight:600;font-size:21px;letter-spacing:.02em}
+  .brand .mk{width:36px;height:36px;border-radius:11px;background:var(--teal-soft);display:flex;align-items:center;justify-content:center}
+  .brand .mk svg{width:20px;height:20px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.22em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--ink2)}
+  nav.links a:hover{color:var(--teal-d)}
+  .nav .spacer{flex:1}
+
+  .hero{background:linear-gradient(180deg,#fff,#f4faf8);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:70px 40px 76px}
+  .kicker{color:var(--teal-d);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:52px}
+  .hero h1 em{font-style:italic;color:var(--teal-d)}
+  .hero p.sub{margin-top:18px;font-size:17.5px;color:var(--ink2);max-width:42ch}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5;border-radius:22px}
+  .hero .bookcard{position:absolute;left:-38px;bottom:-30px;width:290px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 30px 60px -26px rgba(12,46,44,.28)}
+  .hero .bookcard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700}
+  .hero .bookcard h4{font-family:Inter;font-size:15px;font-weight:700;margin:3px 0 12px}
+  .mini-days{display:flex;gap:6px;margin-bottom:12px}
+  .mini-days span{flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:7px 0;font-size:12px;color:var(--ink2)}
+  .mini-days span.on{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:600}
+  .mini-days span b{display:block;font-family:Fraunces;font-size:15px}
+  .mini-slots{display:flex;gap:6px;flex-wrap:wrap}
+  .mini-slots span{border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12px}
+  .mini-slots span.on{border-color:var(--teal);color:var(--teal-d);font-weight:600}
+
+  section{padding:80px 0}
+  .sec-head{text-align:center;max-width:60ch;margin:0 auto 42px}
+  .sec-head h2{font-size:38px}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:16px}
+
+  /* before after */
+  .ba-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .ba{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+  .ba .imgs{position:relative;aspect-ratio:4/3;display:flex}
+  .ba .imgs .ph{flex:1}
+  .ba .imgs .divider{position:absolute;left:50%;top:0;bottom:0;width:2px;background:#fff}
+  .ba .imgs .handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;color:var(--teal-d);font-size:12px;font-weight:700}
+  .ba .imgs .t{position:absolute;bottom:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:rgba(18,46,44,.72);color:#fff;padding:3px 9px;border-radius:6px}
+  .ba .imgs .t.l{left:10px}.ba .imgs .t.r{right:10px}
+  .ba .cap{padding:13px 15px;font-size:13.5px;color:var(--ink2)}
+  .ba .imgs .ph:first-child img{filter:grayscale(.55) brightness(.8) contrast(.92) saturate(.7)}
+
+  /* treatments */
+  .treat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .tc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;transition:.15s}
+  .tc:hover{border-color:var(--teal);transform:translateY(-3px)}
+  .tc .ic{width:44px;height:44px;border-radius:12px;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px}
+  .tc h3{font-family:Inter;font-size:16px;font-weight:700;margin-bottom:6px}
+  .tc p{color:var(--muted);font-size:13.5px}
+  .tc a{margin-top:12px;display:inline-block;font-size:13px;font-weight:600;color:var(--teal-d)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+  .st{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .st .n{width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Fraunces;font-weight:600;margin-bottom:12px}
+  .st h3{font-family:Inter;font-size:15px;font-weight:700;margin-bottom:5px}
+  .st p{color:var(--muted);font-size:13px}
+
+  /* specialists */
+  .docs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .doc{text-align:center}
+  .doc .ph{aspect-ratio:1;border-radius:16px;margin-bottom:12px}
+  .doc h3{font-family:Inter;font-size:15px;font-weight:700}
+  .doc p{color:var(--muted);font-size:13px}
+
+  /* testimonials */
+  .tests{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .tst{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .tst .v{position:relative;aspect-ratio:16/10}
+  .tst .v .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .tst .v .play i{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
+  .tst .v .play i svg{width:18px;height:18px;fill:var(--teal-d);margin-left:2px}
+  .tst .q{padding:16px 18px;font-size:14px;color:var(--ink2)}
+  .tst .q .stars{color:var(--gold);letter-spacing:2px;margin-bottom:6px}
+
+  /* booking full */
+  .book{background:var(--ink);color:#eaf3f1;border-radius:24px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .book h2{color:#fff;font-size:34px;margin-bottom:12px}
+  .book p{color:#a9c3bf;font-size:15px;max-width:38ch}
+  .book .panel{background:#fff;color:var(--ink);border-radius:16px;padding:24px}
+  .book .panel .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;margin-bottom:9px}
+  .book .panel .svc{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .book .panel .svc span{border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:12.5px}
+  .book .panel .svc span.on{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);font-weight:600}
+  .book .panel .days{display:flex;gap:7px;margin-bottom:14px}
+  .book .panel .days span{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:9px 0;font-size:12px}
+  .book .panel .days span.on{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:600}
+  .book .panel .days span b{display:block;font-family:Fraunces;font-size:15px}
+  .book .panel .slots{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+  .book .panel .slots span{border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:12.5px}
+  .book .panel .slots span.on{border-color:var(--teal);color:var(--teal-d);font-weight:600}
+
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+  .loc .map{border:1px solid var(--line);border-radius:16px;min-height:220px;background:
+     linear-gradient(rgba(18,168,159,.05),rgba(18,168,159,.05)),
+     repeating-linear-gradient(0deg,#f4faf8 0 20px,#eef6f4 20px 22px),
+     repeating-linear-gradient(90deg,#f4faf8 0 20px,#eef6f4 20px 22px);position:relative}
+  .loc .map .pin{position:absolute;left:52%;top:46%;width:14px;height:14px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 7px rgba(18,168,159,.2)}
+  .loc .info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .loc .info h3{font-family:Inter;font-size:17px;font-weight:700;margin-bottom:6px}
+  .loc .info p{color:var(--muted);font-size:14px;margin-bottom:14px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--teal-soft);border:1px solid var(--teal);color:var(--teal-d);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Calle 97A #8-41 · Chicó, Bogotá</span><span>Más de 23 años cuidando sonrisas</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-6 2.5-6 6 0 3 1 5 1.8 8.2C8.2 19 9 21 10.2 21c1 0 1.1-2 1.8-2s.8 2 1.8 2c1.2 0 2-2 2.4-3.8C19 14 20 12 20 9c0-3.5-2-6-6-6-1 0-1.4.5-2 .5S13 3 12 3z" fill="#12a89f"/></svg></span>
+    <span>DDS<small>CLÍNICA DENTAL · BOGOTÁ</small></span>
+  </div>
+  <nav class="links"><a href="#casos">Antes / después</a><a href="#tratamientos">Tratamientos</a><a href="#especialistas">Especialistas</a><a href="#testimonios">Testimonios</a><a href="#agenda">Agenda</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#agenda">Agenda tu valoración</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Odontología estética · Rehabilitación · Implantes</div>
+      <h1>Diseña tu <em>sonrisa</em> con una clínica de 23 años.</h1>
+      <p class="sub">Valoración con especialistas, plan de tratamiento claro y una agenda que de verdad se reserva en un clic.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#agenda">Agenda tu valoración</a>
+        <a class="btn btn-ghost" href="#casos">Ver resultados</a>
+      </div>
+      <div class="trust"><span class="pill">✓ +23 años · dato verificado</span><span class="pill">✓ Equipo de especialistas</span><span class="pill">✓ Financiación</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://i.pravatar.cc/900?img=45" alt=""></div>
+      <div class="bookcard">
+        <span class="lab">Próximas citas</span>
+        <h4>Valoración de diseño de sonrisa</h4>
+        <div class="mini-days"><span>Mié<b>11</b></span><span class="on">Jue<b>12</b></span><span>Vie<b>13</b></span></div>
+        <div class="mini-slots"><span>8:30</span><span class="on">10:00</span><span>11:30</span><span>15:00</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:12px;padding:10px" href="#agenda">Reservar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="sec-head"><h2>Antes y después</h2><p>Lo que un paciente nuevo quiere ver antes de escribir. Casos de demostración para el boceto.</p></div>
+    <div class="ba-wrap">
+      <div class="ba"><div class="imgs"><div class="ph"><img src="https://i.pravatar.cc/500?img=31" alt=""></div><div class="ph"><img src="https://i.pravatar.cc/500?img=31" alt=""></div><div class="divider"></div><div class="handle">⟷</div><span class="t l">Antes</span><span class="t r">Después</span></div><div class="cap">Diseño de sonrisa con carillas · demo</div></div>
+      <div class="ba"><div class="imgs"><div class="ph"><img src="https://i.pravatar.cc/500?img=32" alt=""></div><div class="ph"><img src="https://i.pravatar.cc/500?img=32" alt=""></div><div class="divider"></div><div class="handle">⟷</div><span class="t l">Antes</span><span class="t r">Después</span></div><div class="cap">Rehabilitación oral sobre implantes · demo</div></div>
+      <div class="ba"><div class="imgs"><div class="ph"><img src="https://i.pravatar.cc/500?img=44" alt=""></div><div class="ph"><img src="https://i.pravatar.cc/500?img=44" alt=""></div><div class="divider"></div><div class="handle">⟷</div><span class="t l">Antes</span><span class="t r">Después</span></div><div class="cap">Ortodoncia invisible · demo</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="tratamientos" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Tratamientos</h2><p>Cada uno con su propia página: qué incluye, cuánto dura y opciones de financiación</p></div>
+    <div class="treat">
+      <div class="tc"><div class="ic">✨</div><h3>Diseño de sonrisa</h3><p>Carillas y estética dental planificadas digitalmente antes de empezar.</p><a href="#">Ver tratamiento →</a></div>
+      <div class="tc"><div class="ic">🦷</div><h3>Implantes</h3><p>Reemplazo de piezas con implantes de titanio y corona a medida.</p><a href="#">Ver tratamiento →</a></div>
+      <div class="tc"><div class="ic">⚙️</div><h3>Rehabilitación oral</h3><p>Recuperación integral de función y estética en casos complejos.</p><a href="#">Ver tratamiento →</a></div>
+      <div class="tc"><div class="ic">🪥</div><h3>Ortodoncia invisible</h3><p>Alineadores transparentes con control periódico del avance.</p><a href="#">Ver tratamiento →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="primera">
+  <div class="wrap">
+    <div class="sec-head"><h2>Cómo es tu primera cita</h2><p>Sin sorpresas: sabes qué pasa en cada paso</p></div>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><h3>Reservas online</h3><p>Eliges el motivo, el día y la hora. Confirmación inmediata por correo y WhatsApp.</p></div>
+      <div class="st"><div class="n">2</div><h3>Valoración</h3><p>El especialista revisa tu caso, toma registros y escanea tu sonrisa.</p></div>
+      <div class="st"><div class="n">3</div><h3>Plan y presupuesto</h3><p>Recibes el plan de tratamiento con etapas, tiempos y opciones de pago.</p></div>
+      <div class="st"><div class="n">4</div><h3>Empezamos</h3><p>Agendas las siguientes sesiones desde el mismo sistema. Recordatorios automáticos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="especialistas" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>Especialistas</h2><p>El equipo que ya presentan en Instagram, con su formación y área. Fotos de demostración.</p></div>
+    <div class="docs">
+      <div class="doc"><div class="ph"><img src="https://i.pravatar.cc/400?img=12" alt=""></div><h3>Rehabilitación oral</h3><p>Especialista · demo</p></div>
+      <div class="doc"><div class="ph"><img src="https://i.pravatar.cc/400?img=25" alt=""></div><h3>Odontología estética</h3><p>Especialista · demo</p></div>
+      <div class="doc"><div class="ph"><img src="https://i.pravatar.cc/400?img=51" alt=""></div><h3>Implantología</h3><p>Especialista · demo</p></div>
+      <div class="doc"><div class="ph"><img src="https://i.pravatar.cc/400?img=47" alt=""></div><h3>Ortodoncia</h3><p>Especialista · demo</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonios">
+  <div class="wrap">
+    <div class="sec-head"><h2>Lo que dicen los pacientes</h2><p>Testimonios en video — contenido de demostración para el boceto</p></div>
+    <div class="tests">
+      <div class="tst"><div class="v ph"><img src="https://i.pravatar.cc/500?img=15" alt=""><div class="play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></div></div><div class="q"><div class="stars">★★★★★</div>Testimonio de paciente (demo)</div></div>
+      <div class="tst"><div class="v ph"><img src="https://i.pravatar.cc/500?img=33" alt=""><div class="play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></div></div><div class="q"><div class="stars">★★★★★</div>Testimonio de paciente (demo)</div></div>
+      <div class="tst"><div class="v ph"><img src="https://i.pravatar.cc/500?img=5" alt=""><div class="play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></div></div><div class="q"><div class="stars">★★★★★</div>Testimonio de paciente (demo)</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda" style="padding-top:0">
+  <div class="wrap">
+    <div class="book">
+      <div>
+        <h2>Agenda que sí se reserva en un clic</h2>
+        <p>Eliges el tratamiento, ves los horarios reales de cada especialista y confirmas. Sin llamar, sin esperar respuesta. También queda el botón de WhatsApp para quien lo prefiera.</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Confirmar cita</a>
+          <a class="btn btn-wa" href="#">Prefiero WhatsApp</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="lab">1 · Motivo</div>
+        <div class="svc"><span class="on">Diseño de sonrisa</span><span>Implantes</span><span>Ortodoncia</span><span>Valoración general</span></div>
+        <div class="lab">2 · Día</div>
+        <div class="days"><span>Mié<b>11</b></span><span class="on">Jue<b>12</b></span><span>Vie<b>13</b></span><span>Sáb<b>14</b></span></div>
+        <div class="lab">3 · Hora</div>
+        <div class="slots"><span>8:30</span><span class="on">10:00</span><span>11:30</span><span>14:00</span><span>16:00</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href="#">Reservar valoración</a>
+      </div>
+    </div>
+    <div class="loc">
+      <div class="map"><span class="pin"></span></div>
+      <div class="info">
+        <h3>DDS Clínica Dental</h3>
+        <p>Calle 97A #8-41 · Chicó, Bogotá</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-ghost" href="#">Cómo llegar</a><a class="btn btn-wa" href="#">WhatsApp</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-6 2.5-6 6 0 3 1 5 1.8 8.2C8.2 19 9 21 10.2 21c1 0 1.1-2 1.8-2s.8 2 1.8 2c1.2 0 2-2 2.4-3.8C19 14 20 12 20 9c0-3.5-2-6-6-6-1 0-1.4.5-2 .5S13 3 12 3z" fill="#12a89f"/></svg></span><span>DDS<small>CLÍNICA DENTAL · BOGOTÁ</small></span></div>
+        <p>Odontología estética, rehabilitación e implantes. Más de 23 años. Calle 97A #8-41, Chicó, Bogotá.</p></div>
+      <div><h4>Tratamientos</h4><a href="#">Diseño de sonrisa</a><a href="#">Implantes</a><a href="#">Rehabilitación</a><a href="#">Ortodoncia</a></div>
+      <div><h4>Clínica</h4><a href="#">Especialistas</a><a href="#">Casos</a><a href="#">Financiación</a></div>
+      <div><h4>Contacto</h4><a href="#">Agenda online</a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 DDS Clínica Dental</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

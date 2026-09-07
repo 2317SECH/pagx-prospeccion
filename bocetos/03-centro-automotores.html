@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centro Automotores — Catálogo (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0d; --bg2:#101012; --panel:#141416; --panel2:#191919;
+    --line:#28282d; --text:#f6f6f7; --muted:#9a9aa2; --red:#e4141f; --red2:#ff3b45;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.cond{font-family:"Barlow Condensed",Inter,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.98}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1260px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#1c1c20,#0e0e10);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{background:#c50f19}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:#37373d;color:var(--text)}
+  .tagline{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;background:var(--red);color:#fff;display:inline-block;padding:3px 10px;font-size:13px;letter-spacing:.06em;transform:skewX(-8deg)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:#d4d4da;border:1px solid var(--line);border-radius:6px;padding:6px 12px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(11,11,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:30px;height:72px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mk{width:34px;height:34px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+  .brand .mk svg{width:19px;height:19px}
+  .brand .tx{font-family:"Barlow Condensed";font-weight:700;font-size:19px;line-height:.9}
+  .brand .tx small{display:block;font-family:Inter;font-size:8.5px;letter-spacing:.28em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:24px;font-size:14px;font-weight:500;color:#c3c3ca}
+  nav.links a:hover{color:#fff}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.46) contrast(1.12) grayscale(.15)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(90deg, rgba(11,11,13,.97) 30%, rgba(11,11,13,.45) 68%, rgba(11,11,13,.2)),
+    linear-gradient(0deg, rgba(228,20,31,.16), transparent 40%)}
+  .hero .inner{position:relative;padding:66px 0 92px}
+  .hero .tagline{margin-bottom:20px}
+  .hero h1{font-size:74px;font-weight:800;max-width:13ch}
+  .hero p.sub{margin-top:18px;font-size:18px;color:#c6c6cc;max-width:44ch;font-family:Inter}
+  .hero .cta{margin-top:28px;display:flex;gap:13px;flex-wrap:wrap}
+  .hero .trust{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+
+  .searchbar{position:relative;margin-top:-42px;z-index:20}
+  .searchbar .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr auto;gap:10px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+  .field{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:9px 13px}
+  .field label{display:block;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .field .val{margin-top:2px;font-size:14px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+  .field .val svg{width:14px;height:14px;opacity:.5}
+  .seg{display:flex;background:var(--panel2);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .seg span{flex:1;text-align:center;padding:9px 0;font-size:12.5px;font-weight:700;text-transform:uppercase;color:var(--muted)}
+  .seg span.on{background:var(--red);color:#fff}
+
+  section{padding:74px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:30px;gap:20px}
+  .sec-head h2{font-size:44px;font-weight:800}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter;text-transform:none;letter-spacing:0}
+  .sec-head a.more{font-size:14px;font-weight:700;color:var(--red2);white-space:nowrap;text-transform:uppercase}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .vcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.16s}
+  .vcard:hover{transform:translateY(-4px);border-color:#44444b}
+  .vcard .img{aspect-ratio:16/11}
+  .vcard .cond-tag{position:absolute;top:0;left:0;background:var(--red);color:#fff;font-family:"Barlow Condensed";font-weight:700;font-size:12px;letter-spacing:.06em;padding:4px 12px;text-transform:uppercase}
+  .vcard .cond-tag.used{background:#2b2b31}
+  .vcard .vid{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:6px;background:rgba(11,11,13,.82);border:1px solid var(--line);border-radius:7px;padding:5px 9px;font-size:11.5px;font-weight:700;text-transform:uppercase;font-family:"Barlow Condensed";letter-spacing:.04em}
+  .vcard .vid svg{width:13px;height:13px;fill:var(--red2)}
+  .vcard .body{padding:15px 16px 17px}
+  .vcard h3{font-size:21px;font-weight:700}
+  .vcard .specs{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;font-family:Inter}
+  .vcard .row{margin-top:13px;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--line)}
+  .vcard .price{font-family:"Barlow Condensed";font-weight:800;font-size:22px}
+  .vcard .price small{display:block;font-family:Inter;font-weight:500;font-size:11px;color:var(--muted);text-transform:none}
+  .vcard .see{font-size:12.5px;font-weight:700;color:var(--red2);text-transform:uppercase;font-family:"Barlow Condensed";letter-spacing:.04em}
+
+  .flow{background:#0e0e10;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+  .flow .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13.5px;font-weight:700;text-transform:uppercase;font-family:"Barlow Condensed";letter-spacing:.05em}
+  .flow b{color:#fff}.flow .ar{color:var(--red2)}
+
+  /* vehicle detail preview */
+  .vdp{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1.15fr 1fr}
+  .vdp .media{position:relative}
+  .vdp .media .main{aspect-ratio:4/3}
+  .vdp .media .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .vdp .media .play i{width:66px;height:66px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+  .vdp .media .play i svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+  .vdp .media .cap{position:absolute;left:14px;bottom:14px;background:rgba(11,11,13,.8);border:1px solid var(--line);padding:5px 10px;border-radius:6px;font-size:11.5px;font-weight:700;text-transform:uppercase;font-family:"Barlow Condensed"}
+  .vdp .info{padding:28px}
+  .vdp .info .tagline{margin-bottom:12px}
+  .vdp .info h3{font-size:30px;font-weight:800}
+  .vdp .info .grid2{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:13.5px;font-family:Inter}
+  .vdp .info .grid2 div{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0;color:#cfcfd5}
+  .vdp .info .grid2 b{color:#fff}
+  .vdp .info .fin{margin-top:16px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .vdp .info .fin .lab{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+  .vdp .info .fin .q{font-family:"Barlow Condensed";font-weight:800;font-size:24px;margin-top:2px}
+  .vdp .info .acts{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+
+  .thumbs{display:flex;gap:8px;padding:10px}
+  .thumbs .ph{width:70px;height:52px;border-radius:6px;flex:none}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:46px 0 36px;margin-top:14px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:#c2c2c8;font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(228,20,31,.14);border:1px solid rgba(228,20,31,.5);color:#ffb3b7;font-size:11px;font-weight:600;padding:8px 13px;border-radius:8px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  .carimg{object-fit:contain!important;padding:6% 8%!important;background:radial-gradient(120% 90% at 50% 35%, rgba(255,255,255,.14), transparent 70%)!important}
+  .vdp .media .main .carimg{padding:4% 6%!important;background:radial-gradient(120% 90% at 50% 40%, rgba(255,255,255,.12), transparent 72%)!important}
+
+  .carimg{object-fit:contain!important;padding:5% 7%!important;background:radial-gradient(120% 90% at 50% 38%, rgba(255,255,255,.10), transparent 70%)!important}
+  .thumbs .carimg{padding:8%!important}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 L21 20 H3 Z" fill="#fff"/><path d="M12 10 L16.5 19 H7.5 Z" fill="#e4141f"/></svg></span>
+    <span class="tx">CENTRO<br>AUTOMOTORES<small>CÓRDOBA · DESDE 1996</small></span>
+  </div>
+  <nav class="links"><a href="#cat">Catálogo</a><a href="#detalle">Vehículo + video</a><a href="#fin">Financiación</a><a href="#test">Test drive</a><a href="#contacto">Contacto</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg>WhatsApp</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/pickup,truck?lock=401" alt=""></div></div>
+  <div class="wrap inner">
+    <span class="tagline">30 años vendiendo autos en Córdoba</span>
+    <h1>Ahora, mucho más fácil de elegir.</h1>
+    <p class="sub">0km y usados seleccionados en un catálogo real: filtrás, mirás el test drive del auto y reservás el tuyo. Todo en un lugar.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#cat">Ver catálogo</a>
+      <a class="btn btn-ghost" href="#test">Reservá tu test drive</a>
+    </div>
+    <div class="trust"><span class="pill">✓ 0km y usados</span><span class="pill">✓ Video de cada modelo</span><span class="pill">✓ Financiación y planes</span></div>
+  </div>
+</section>
+
+<div class="wrap searchbar">
+  <div class="card">
+    <div class="seg"><span class="on">Todos</span><span>0km</span><span>Usados</span></div>
+    <div class="field"><label>Marca</label><div class="val">Todas <svg viewBox="0 0 24 24" fill="none" stroke="#9a9aa2" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Precio</label><div class="val">Hasta $38.000.000 <svg viewBox="0 0 24 24" fill="none" stroke="#9a9aa2" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Año</label><div class="val">2019–2026 <svg viewBox="0 0 24 24" fill="none" stroke="#9a9aa2" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Kilómetros</label><div class="val">0–80.000 <svg viewBox="0 0 24 24" fill="none" stroke="#9a9aa2" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <button class="btn btn-primary" style="justify-content:center">Buscar</button>
+  </div>
+</div>
+
+<section id="cat">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Catálogo</h2><p>La evolución del catálogo actual: filtros de concesionario, ficha completa y video en cada unidad</p></div><a class="more" href="#">Ver todo el stock →</a></div>
+    <div class="grid">
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=toyota&modelFamily=corolla cross" alt=""><span class="cond-tag">0 km</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Toyota Corolla Cross XEI</h3><div class="specs"><span>2026</span><span>·</span><span>0 km</span><span>·</span><span>CVT</span><span>·</span><span>Nafta</span></div>
+          <div class="row"><div class="price">$34.900.000<small>o en cuotas / plan de ahorro</small></div><span class="see">Ver + video →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=volkswagen&modelFamily=amarok" alt=""><span class="cond-tag">0 km</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Volkswagen Amarok Comfortline</h3><div class="specs"><span>2025</span><span>·</span><span>0 km</span><span>·</span><span>4x4</span><span>·</span><span>Diésel</span></div>
+          <div class="row"><div class="price">$52.500.000<small>financiación con la marca</small></div><span class="see">Ver + video →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=ford&modelFamily=territory" alt=""><span class="cond-tag used">Usado</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Ford Territory Titanium</h3><div class="specs"><span>2022</span><span>·</span><span>41.000 km</span><span>·</span><span>Automática</span></div>
+          <div class="row"><div class="price">$38.900.000<small>toma tu usado en parte de pago</small></div><span class="see">Ver + video →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=chevrolet&modelFamily=tracker" alt=""><span class="cond-tag">0 km</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Chevrolet Tracker Premier</h3><div class="specs"><span>2026</span><span>·</span><span>0 km</span><span>·</span><span>Automática</span></div>
+          <div class="row"><div class="price">$41.200.000<small>o en cuotas</small></div><span class="see">Ver + video →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=toyota&modelFamily=hilux" alt=""><span class="cond-tag used">Usado</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Toyota Hilux SRV 4x4</h3><div class="specs"><span>2021</span><span>·</span><span>68.500 km</span><span>·</span><span>Diésel</span></div>
+          <div class="row"><div class="price">$44.500.000<small>unidad revisada</small></div><span class="see">Ver + video →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=renault&modelFamily=kardian" alt=""><span class="cond-tag">0 km</span><span class="vid"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Test drive</span></div>
+        <div class="body"><h3>Renault Kardian Evolution</h3><div class="specs"><span>2026</span><span>·</span><span>0 km</span><span>·</span><span>Automática</span></div>
+          <div class="row"><div class="price">$29.800.000<small>plan de ahorro disponible</small></div><span class="see">Ver + video →</span></div></div></article>
+    </div>
+    <p style="color:#66666e;font-size:12px;margin-top:18px">Modelos, precios y kilómetros de ejemplo — boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<div class="flow"><div class="wrap">
+  <b>Catálogo</b><span class="ar">→</span><b>vehículo</b><span class="ar">→</span><b>información</b><span class="ar">→</span><b>video / test drive</b><span class="ar">→</span><b>reservá la prueba</b><span class="ar">→</span><b>contacto</b>
+</div></div>
+
+<section id="detalle">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Vehículo + video</h2><p>Lo que hoy hacen aparte en Instagram y YouTube, unido a la ficha: cada auto con su propio test drive</p></div></div>
+    <div class="vdp">
+      <div class="media">
+        <div class="ph main"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=toyota&modelFamily=corolla cross" alt=""></div>
+        <div class="play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></div>
+        <span class="cap">▶ Test drive — Corolla Cross XEI · 6:12</span>
+        <div class="thumbs">
+          <div class="ph"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=1&make=toyota&modelFamily=corolla cross" alt=""></div>
+          <div class="ph"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=9&make=toyota&modelFamily=corolla cross" alt=""></div>
+          <div class="ph"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=13&make=toyota&modelFamily=corolla cross" alt=""></div>
+          <div class="ph"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=17&make=toyota&modelFamily=corolla cross" alt=""></div>
+        </div>
+      </div>
+      <div class="info">
+        <span class="tagline">0 km · disponible</span>
+        <h3>Toyota Corolla Cross XEI 2026</h3>
+        <div class="grid2">
+          <div>Motor <b>2.0 CVT</b></div><div>Combustible <b>Nafta</b></div>
+          <div>Transmisión <b>Automática</b></div><div>Tracción <b>Delantera</b></div>
+          <div>Garantía <b>Oficial</b></div><div>Patentamiento <b>Incluido</b></div>
+        </div>
+        <div class="fin">
+          <span class="lab">Financiación estimada</span>
+          <div class="q">$690.000 <span style="font-size:14px;font-family:Inter;color:var(--muted)">/ mes · 48 cuotas (ejemplo)</span></div>
+        </div>
+        <div class="acts">
+          <a class="btn btn-primary" href="#test">Reservá el test drive</a>
+          <a class="btn btn-wa" href="#">Consultá por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="test" style="padding-top:0">
+  <div class="wrap">
+    <div class="vdp" style="grid-template-columns:1fr 1fr;align-items:center;padding:34px">
+      <div>
+        <h2 style="font-size:40px;font-weight:800;margin-bottom:12px">Reservá tu test drive</h2>
+        <p style="color:var(--muted);font-size:15px;max-width:40ch;font-family:Inter">Elegís el modelo, el día y la hora. La reserva llega al WhatsApp del vendedor con la unidad asignada. Sin llamados ni idas y vueltas.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Confirmar reserva</a><a class="btn btn-ghost" href="#">Ver ubicación</a></div>
+      </div>
+      <div class="fin" style="margin:0;background:var(--panel2)">
+        <span class="lab">Amarok Comfortline · elegí el día</span>
+        <div style="display:flex;gap:8px;margin:12px 0 14px">
+          <div style="flex:1;text-align:center;border:1px solid var(--line);border-radius:8px;padding:9px 0;font-size:12px">Jue<b style="display:block;font-family:'Barlow Condensed';font-size:16px">12</b></div>
+          <div style="flex:1;text-align:center;background:var(--red);border-radius:8px;padding:9px 0;font-size:12px;font-weight:700">Vie<b style="display:block;font-family:'Barlow Condensed';font-size:16px">13</b></div>
+          <div style="flex:1;text-align:center;border:1px solid var(--line);border-radius:8px;padding:9px 0;font-size:12px">Sáb<b style="display:block;font-family:'Barlow Condensed';font-size:16px">14</b></div>
+          <div style="flex:1;text-align:center;border:1px solid var(--line);border-radius:8px;padding:9px 0;font-size:12px">Lun<b style="display:block;font-family:'Barlow Condensed';font-size:16px">16</b></div>
+        </div>
+        <span class="lab">Horarios</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <span class="pill">10:00</span><span class="pill" style="border-color:var(--red2);color:var(--red2)">11:30</span><span class="pill">15:00</span><span class="pill">17:30</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 L21 20 H3 Z" fill="#fff"/><path d="M12 10 L16.5 19 H7.5 Z" fill="#e4141f"/></svg></span><span class="tx">CENTRO<br>AUTOMOTORES<small>CÓRDOBA · DESDE 1996</small></span></div>
+        <p>Concesionaria de 0km y usados seleccionados. Av. Monseñor Pablo Cabrera 2122, Córdoba, Argentina.</p></div>
+      <div><h4>Catálogo</h4><a href="#">0 km</a><a href="#">Usados</a><a href="#">Pick-ups</a><a href="#">SUVs</a></div>
+      <div><h4>Servicios</h4><a href="#">Financiación</a><a href="#">Planes de ahorro</a><a href="#">Tasá tu usado</a><a href="#">Test drive</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Horarios</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Centro Automotores</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
