@@ -27,6 +27,9 @@ import sys
 import unicodedata
 import urllib.request
 
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+
 NOTION_DB = "e11a0765-546f-4d1c-b57d-e72d28520210"  # base Prospectos
 NOTION_VERSION = "2022-06-28"
 

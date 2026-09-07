@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEiM CrossFit — Landing (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --bg2:#131313; --panel:#181818; --panel2:#1d1d1d;
+    --line:#2c2c2c; --text:#f5f5f3; --muted:#9c9c98; --red:#e8352b; --red2:#ff5a4f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Bebas Neue',Inter,sans-serif;letter-spacing:.01em;line-height:.98;text-transform:uppercase}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#1e1e1e,#0a0a0a);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:15px;padding:14px 26px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.15s;text-transform:uppercase;letter-spacing:.03em}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{background:var(--red2)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:#4a4a4a}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-transform:uppercase;letter-spacing:.03em}
+
+  .ribbon{background:var(--red);color:#fff;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:78px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue';font-weight:400;font-size:28px;letter-spacing:.04em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:700;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14px;font-weight:700;color:#d8d8d5;text-transform:uppercase;letter-spacing:.02em}
+  nav.links a:hover{color:var(--red2)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:620px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 78% -10%, rgba(232,53,43,.3), transparent 60%),
+     linear-gradient(90deg, rgba(10,10,10,.97) 32%, rgba(10,10,10,.62) 64%, rgba(10,10,10,.4))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.15) brightness(.55) grayscale(.2)}
+  .hero .inner{position:relative;padding:70px 0 90px}
+  .kicker{color:var(--red2);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:74px;font-weight:400;max-width:14ch}
+  .hero p.sub{margin-top:20px;font-size:18.5px;color:#cfcfcb;max-width:46ch;font-family:Inter}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:44px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter}
+
+  .sched{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .slot{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px 14px;text-align:center}
+  .slot .t{font-family:'Bebas Neue';font-size:30px;color:var(--red2)}
+  .slot .l{margin-top:6px;font-size:12.5px;color:var(--muted);font-family:Inter}
+
+  .progs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .prog{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px;transition:.15s}
+  .prog:hover{border-color:var(--red)}
+  .prog .n{width:40px;height:40px;border-radius:8px;background:rgba(232,53,43,.16);color:var(--red2);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:20px;margin-bottom:16px}
+  .prog h3{font-size:22px;margin-bottom:8px}
+  .prog p{color:var(--muted);font-size:14px;font-family:Inter}
+
+  .band{background:linear-gradient(120deg,#181818,#0a0a0a);border:1px solid var(--line);border-radius:14px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:38px;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:42ch;font-family:Inter}
+  .price-card{background:var(--panel2);border:2px solid var(--red);border-radius:12px;padding:28px;text-align:center}
+  .price-card .amt{font-family:'Bebas Neue';font-size:56px;color:#fff}
+  .price-card .lab{color:var(--muted);font-size:13px;font-family:Inter;margin-top:-4px}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .ts .big{font-family:'Bebas Neue';font-size:28px}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px;font-family:Inter}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:#c9c9c5;font-size:14px;display:block;margin-bottom:8px;font-family:Inter}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(232,53,43,.14);border:1px solid rgba(232,53,43,.5);color:#ffb8b3;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px);font-family:Inter}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Pinto, Madrid</span><span>Semana de prueba · 9€</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">HEiM<small>CROSSFIT · PINTO</small></div>
+  <nav class="links"><a href="#horarios">Horarios</a><a href="#programas">Programas</a><a href="#online">Online</a><a href="#prueba">Prueba 9€</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#prueba">Empieza tu semana</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/crossfit,gym?lock=518" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Box de CrossFit · Pinto, Madrid</div>
+    <h1>Tu box ya llena. Tu web todavía no existe.</h1>
+    <p class="sub">HEiM CrossFit entrena de verdad — clases todos los días, programas para mujeres y para mayores de 60, y entreno online. Faltaba un sitio propio para que quien busca "crossfit Pinto" te encuentre a ti primero.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#prueba">Quiero mi semana de prueba</a>
+      <a class="btn btn-ghost" href="#horarios">Ver horarios</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ Clases todos los días</span>
+      <span class="pill">✓ Programa mujeres y +60</span>
+      <span class="pill">✓ Entreno online</span>
+    </div>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Horarios de hoy</h2><p>Los mismos horarios reales que hoy solo están en el link de Instagram</p></div></div>
+    <div class="sched">
+      <div class="slot"><div class="t">8:00</div><div class="l">WOD mañana</div></div>
+      <div class="slot"><div class="t">11:00</div><div class="l">WOD media mañana</div></div>
+      <div class="slot"><div class="t">14:30</div><div class="l">WOD mediodía</div></div>
+      <div class="slot"><div class="t">20:00</div><div class="l">WOD tarde</div></div>
+      <div class="slot"><div class="t">21:00</div><div class="l">WOD noche</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="programas" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Programas</h2><p>No es un box genérico — cada programa con su propia página</p></div></div>
+    <div class="progs">
+      <div class="prog"><div class="n">01</div><h3>CrossFit general</h3><p>Clases dirigidas todos los días, con coach presente en cada WOD.</p></div>
+      <div class="prog"><div class="n">02</div><h3>Programa mujeres</h3><p>Espacio y programación pensada específicamente para mujeres.</p></div>
+      <div class="prog"><div class="n">03</div><h3>+60 años</h3><p>Entrenamiento adaptado para mantenerse activo con seguridad después de los 60.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="online">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Entrena online, donde estés</h2>
+        <p>HEiM también entrena a distancia. Hoy ese programa vive disperso en redes — aquí tendría su propia página de venta.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Quiero el plan online</a>
+        </div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">🗞️📺🎙️</div>
+        <div class="lab">HEiM ya ha salido en medios — hoy sin una página propia donde mostrarlo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prueba" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Semana de prueba</h2><p>La oferta que hoy solo está en el bio de Instagram, con su propia landing</p></div></div>
+    <div class="band" style="grid-template-columns:1fr .7fr">
+      <div>
+        <h2 style="font-size:30px">Prueba HEiM 7 días</h2>
+        <p>Acceso a las clases dirigidas durante una semana completa, con seguimiento del coach.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-wa" href="#">Reservar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="amt">9€</div>
+        <div class="lab">semana completa de prueba</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>El box, en números</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">5 clases/día</div><div class="lab">horario real publicado hoy en Instagram</div></div>
+      <div class="ts"><div class="big">~8.000</div><div class="lab">seguidores activos en Instagram</div></div>
+      <div class="ts"><div class="big">3 programas</div><div class="lab">general · mujeres · +60</div></div>
+      <div class="ts"><div class="big">Online</div><div class="lab">también se entrena a distancia</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">HEiM<small>CROSSFIT · PINTO</small></div>
+        <p>Box de CrossFit en Pinto, Madrid. Clases todos los días, programas para mujeres y mayores de 60, entreno online.</p>
+      </div>
+      <div><h4>Programas</h4><a href="#">CrossFit general</a><a href="#">Mujeres</a><a href="#">+60 años</a></div>
+      <div><h4>Box</h4><a href="#">Horarios</a><a href="#">Online</a><a href="#">Semana de prueba</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Cómo llegar</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 HEiM CrossFit</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

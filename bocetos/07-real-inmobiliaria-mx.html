@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real Inmobiliaria Mx — Catálogo (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0d0b; --bg2:#151310; --panel:#1a1815; --panel2:#1f1c18;
+    --line:#2f2b25; --text:#f6f3ee; --muted:#a49c8e; --gold:#c8a15c; --gold2:#e3c07f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#231f19,#0f0e0c);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--gold);color:#1c1305}
+  .btn-primary:hover{background:var(--gold2)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--text)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(14,13,11,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond';font-weight:700;font-size:22px;letter-spacing:.03em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14.5px;font-weight:500;color:#d6d0c4}
+  nav.links a:hover{color:#fff}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 78% -10%, rgba(200,161,92,.25), transparent 60%),
+     linear-gradient(90deg, rgba(14,13,11,.97) 32%, rgba(14,13,11,.6) 64%, rgba(14,13,11,.4))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) brightness(.58)}
+  .hero .inner{position:relative;padding:70px 0 86px}
+  .kicker{color:var(--gold2);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:56px;font-weight:600;max-width:16ch}
+  .hero p.sub{margin-top:20px;font-size:18.5px;color:#d3ccbf;max-width:46ch;font-family:Inter}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  .searchbar{position:relative;margin-top:-40px;z-index:20}
+  .searchbar .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
+  .field{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:10px 14px}
+  .field label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .field .val{margin-top:3px;font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;color:#f1ede4}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:36px;font-weight:600}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter}
+  .sec-head a.more{font-size:14px;font-weight:600;color:var(--gold2);white-space:nowrap;font-family:Inter}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.16s}
+  .pcard:hover{transform:translateY(-4px);border-color:#453f34}
+  .pcard .img{aspect-ratio:16/11}
+  .pcard .tag{position:absolute;top:12px;left:12px;background:rgba(14,13,11,.85);border:1px solid var(--line);color:#f0ebe0;font-size:11px;font-weight:700;letter-spacing:.05em;padding:5px 10px;border-radius:6px}
+  .pcard .tag.hot{background:var(--gold);border-color:var(--gold);color:#1c1305}
+  .pcard .body{padding:18px 18px 20px}
+  .pcard h3{font-size:19px;font-weight:600}
+  .pcard .loc{margin-top:4px;color:var(--muted);font-size:13px;font-family:Inter}
+  .pcard .specs{margin-top:12px;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:13px;font-family:Inter}
+  .pcard .row{margin-top:15px;display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+  .pcard .price{font-family:'Cormorant Garamond';font-weight:700;font-size:22px;color:var(--gold2)}
+  .pcard .see{font-size:13px;font-weight:600;color:var(--gold2);display:flex;align-items:center;gap:5px;font-family:Inter}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .step .n{width:38px;height:38px;border-radius:9px;background:rgba(200,161,92,.16);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-weight:700;margin-bottom:16px}
+  .step h3{font-size:18px;margin-bottom:7px}
+  .step p{color:var(--muted);font-size:14px;font-family:Inter}
+
+  .zones{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .zone{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-family:Inter;font-size:14px;font-weight:600;color:#e7e0d3}
+
+  .band{background:linear-gradient(120deg,#1a1712,#0f0e0c);border:1px solid var(--line);border-radius:18px;padding:40px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:32px;font-weight:600;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:40ch;font-family:Inter}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:#cbc4b5;font-size:14px;display:block;margin-bottom:8px;font-family:Inter}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(200,161,92,.14);border:1px solid rgba(200,161,92,.5);color:#ecd9ac;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px);font-family:Inter}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Plaza Capricornio II, Cuautitlán Izcalli</span><span><b>Zona Esmeralda · Interlomas · Polanco · Santa Fe</b></span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand"><span>REAL<small>INMOBILIARIA MX</small></span></div>
+  <nav class="links"><a href="#catalogo">Propiedades</a><a href="#zonas">Zonas</a><a href="#asesoria">Asesoría jurídica</a><a href="#contacto">Contacto</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>WhatsApp</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/mansion,architecture?lock=412" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Bienes raíces · Estado de México y CDMX</div>
+    <h1>Encuentra tu próximo hogar, sin fichas rotas ni fotos que no cargan.</h1>
+    <p class="sub">El mismo catálogo real de Real Inmobiliaria Mx — terrenos, casas y propiedades comerciales — presentado como corresponde a cada propiedad.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#catalogo">Ver el catálogo →</a>
+      <a class="btn btn-ghost" href="#asesoria">Asesoría jurídica</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ Oficina en Cuautitlán Izcalli</span>
+      <span class="pill">✓ Asesoría jurídica incluida</span>
+      <span class="pill">✓ Atención directa por WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap searchbar">
+  <div class="card">
+    <div class="field"><label>Zona</label><div class="val">Todas</div></div>
+    <div class="field"><label>Tipo</label><div class="val">Casa / Terreno</div></div>
+    <div class="field"><label>Precio</label><div class="val">Hasta $5M MXN</div></div>
+    <div class="field"><label>Operación</label><div class="val">Venta</div></div>
+    <button class="btn btn-primary" style="justify-content:center">Buscar propiedades</button>
+  </div>
+</div>
+
+<section id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Propiedades destacadas</h2><p>Catálogo real, con foto propia por propiedad — no placeholders rotos</p></div>
+      <a class="more" href="#">Ver catálogo completo →</a>
+    </div>
+    <div class="grid">
+      <article class="pcard"><div class="ph img"><img src="https://loremflickr.com/680/480/house,mexico?lock=21" alt=""><span class="tag hot">Terreno comercial</span></div>
+        <div class="body"><h3>Terreno comercial</h3><div class="loc">Huehuetoca, Edo. México</div>
+          <div class="specs"><span>📐 Terreno</span><span>🏗 Uso comercial</span></div>
+          <div class="row"><div class="price">$4.800.000 MXN</div><span class="see">Ver ficha →</span></div>
+        </div></article>
+      <article class="pcard"><div class="ph img"><img src="https://loremflickr.com/680/480/house,modern?lock=22" alt=""><span class="tag">Casa en venta</span></div>
+        <div class="body"><h3>Casa residencial</h3><div class="loc">Zona Esmeralda, Edo. México</div>
+          <div class="specs"><span>🛏 3 rec.</span><span>🚿 2.5 baños</span></div>
+          <div class="row"><div class="price">Consultar precio</div><span class="see">Ver ficha →</span></div>
+        </div></article>
+      <article class="pcard"><div class="ph img"><img src="https://loremflickr.com/680/480/apartment,interior?lock=23" alt=""><span class="tag">Departamento</span></div>
+        <div class="body"><h3>Departamento</h3><div class="loc">Interlomas, Edo. México</div>
+          <div class="specs"><span>🛏 2 rec.</span><span>🅿 1 estac.</span></div>
+          <div class="row"><div class="price">Consultar precio</div><span class="see">Ver ficha →</span></div>
+        </div></article>
+    </div>
+    <p style="color:#6f695b;font-size:12px;margin-top:18px">Fotografías de referencia por tipo de inmueble — el terreno de Huehuetoca conserva el precio real informado ($4.800.000 MXN). Boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<section id="zonas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Zonas donde operamos</h2></div></div>
+    <div class="zones">
+      <div class="zone">Cuautitlán Izcalli</div>
+      <div class="zone">Zona Esmeralda</div>
+      <div class="zone">Interlomas</div>
+      <div class="zone">Polanco</div>
+      <div class="zone">Santa Fe</div>
+    </div>
+  </div>
+</section>
+
+<section id="asesoria">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Cómo trabajamos</h2><p>Del primer contacto a la escrituración</p></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Buscas por zona y precio</h3><p>Filtras el catálogo real y agendas visita a las propiedades que te interesan.</p></div>
+      <div class="step"><div class="n">2</div><h3>Asesoría jurídica</h3><p>Acompañamiento legal durante todo el proceso de compra o venta.</p></div>
+      <div class="step"><div class="n">3</div><h3>Cierre de la operación</h3><p>Formalización y entrega, con seguimiento directo de tu asesor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Habla con un asesor</h2>
+        <p>Oficina física en Plaza Capricornio II, Cuautitlán Izcalli. Atención por teléfono, correo y WhatsApp.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Agendar visita</a>
+          <a class="btn btn-ghost" href="#">55 5868 7173</a>
+        </div>
+      </div>
+      <div class="step" style="padding:26px">
+        <div style="font-family:Inter;color:var(--muted);font-size:13px">Correo</div>
+        <div style="font-family:'Cormorant Garamond';font-size:20px;color:var(--gold2)">contacto@realinmobiliaria.com.mx</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><span>REAL<small>INMOBILIARIA MX</small></span></div>
+        <p>Bienes raíces con asesoría jurídica. Plaza Capricornio II, Cuautitlán Izcalli, Estado de México.</p>
+      </div>
+      <div><h4>Propiedades</h4><a href="#">Casas</a><a href="#">Terrenos</a><a href="#">Departamentos</a></div>
+      <div><h4>Zonas</h4><a href="#">Zona Esmeralda</a><a href="#">Interlomas</a><a href="#">Polanco</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Cómo llegar</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Real Inmobiliaria Mx</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
