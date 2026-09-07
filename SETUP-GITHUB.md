@@ -3,7 +3,7 @@
 El repositorio ya está **inicializado y commiteado en local**
 (`C:\Users\Sergio\Desktop\PAGX Studio\pagx-prospeccion`, rama `main`, 3 commits).
 
-Falta crear el repo remoto, subirlo, activar GitHub Pages y dar acceso a Palan.
+Falta crear el repo remoto, subirlo, activar GitHub Pages y dar acceso a Alan.
 Estas acciones requieren tu cuenta (`gh` autenticado como `2317SECH`) y no las
 puede hacer el asistente por seguridad. Cópialas y pégalas en la terminal.
 
@@ -55,7 +55,7 @@ Notion. Si el repo se llama distinto, hay que actualizarlas.)
 
 ---
 
-## 3. Dar acceso a Palan (Alan)
+## 3. Dar acceso a Alan
 
 Usuario de GitHub: **`ptala611-oss`** (verificado, existe).
 
@@ -66,7 +66,7 @@ gh api -X PUT repos/2317SECH/pagx-prospeccion/collaborators/ptala611-oss \
 
 `permission` puede ser: `pull` (solo lectura), `push` (leer + subir),
 `maintain`, `admin` (todo). Sergio pidió acceso completo → `admin`.
-Palan recibe un email/invitación que debe aceptar.
+Alan recibe un email/invitación que debe aceptar.
 
 ---
 
@@ -84,7 +84,7 @@ Abrir una URL de boceto en el navegador y comprobar que se ve completa y sin err
 
 ## Notas
 
-- Notion: Palan ya tiene acceso (Sergio lo compartió). Conviene verificar que el
+- Notion: Alan ya tiene acceso (Sergio lo compartió). Conviene verificar que el
   acceso incluya la base **Prospectos** y la base **Bitácora de Prospección**
   (ambas dentro de *Workspace Comercial — PAGX Studio*), con permiso de edición.
 - Si más adelante se añade algo sensible al repo → pasarlo a privado:

@@ -1,4 +1,4 @@
-# FLUJO DE TRABAJO — Palan
+# FLUJO DE TRABAJO — Alan
 
 Los 11 pasos de una jornada de prospección. Mismo estándar que se usó con los 4
 prospectos actuales. La calidad importa más que la cantidad: la meta diaria son
@@ -38,7 +38,7 @@ Crear la ficha en `Prospectos` con, como mínimo:
 - **Empresa**, **Nicho**, **País**, **Ciudad**, **Usuario Instagram**, **URL empresa**
 - **Clave de deduplicación** (calcularla ya)
 - **Fuente del hallazgo**
-- **Descubierto por** = Palan · **Responsable** = Palan
+- **Descubierto por** = Alan · **Responsable** = Alan
 - **Fecha de investigación** = hoy
 - **Estado** = `Descubierto`
 
@@ -78,12 +78,12 @@ Rúbrica del prompt maestro (0–100):
 ## PASO 7 — Si supera los criterios → Auditado
 
 - Score ≥ 70 y oportunidad clara y demostrable → Estado `Auditado`,
-  **Auditado por** = Palan, **Fecha de auditoría** = hoy.
+  **Auditado por** = Alan, **Fecha de auditoría** = hoy.
 - Si no supera → Estado `Descartado` + **Motivo de descarte**. No se borra.
 
 ## PASO 8 — Crear el boceto (cuando corresponda)
 
-Estado → `Boceto` · **Boceto** = `En progreso` · **Boceto por** = Palan.
+Estado → `Boceto` · **Boceto** = `En progreso` · **Boceto por** = Alan.
 
 - Investigar la identidad visual pública real: logo, colores, tipografías
   aproximadas, estilo fotográfico, productos/servicios, tono.
@@ -108,7 +108,7 @@ Estado → `Boceto` · **Boceto** = `En progreso` · **Boceto por** = Palan.
 Estado → `Listo para contactar`. **Próxima acción** = fecha de revisión.
 Aquí termina el trabajo del sistema: la ficha está completa y el mensaje redactado.
 
-**El contacto se hace manual y revisado** (Sergio, o Palan con visto bueno de
+**El contacto se hace manual y revisado** (Sergio, o Alan con visto bueno de
 Sergio). Nunca automático.
 
 ## PASO 11 — Cuando exista contacto

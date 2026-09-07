@@ -10,9 +10,9 @@ qué se envió y qué pasó después.
 
 | Propiedad | Qué poner |
 |---|---|
-| **Jornada** (título) | `DD/MM/AAAA — <Responsable>` (ej. `08/09/2026 — Palan`). |
+| **Jornada** (título) | `DD/MM/AAAA — <Responsable>` (ej. `08/09/2026 — Alan`). |
 | **Fecha** | La fecha de la jornada. |
-| **Responsable** | Sergio / Palan. |
+| **Responsable** | Sergio / Alan. |
 | **Empresas investigadas** | Total tocadas ese día (antes de filtrar). |
 | **Empresas descartadas** | Cuántas se descartaron. |
 | **Empresas auditadas** | Cuántas llegaron a `Auditado`. |

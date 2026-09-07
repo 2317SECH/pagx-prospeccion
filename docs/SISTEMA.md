@@ -44,7 +44,7 @@ propiedad **URL del boceto**.
 | Vista | Tipo | Para |
 |---|---|---|
 | **🎯 PROSPECCIÓN — Hoy** | Tablero por Estado | Qué hay que hacer hoy (excluye Cerrado / No interesado / Descartado) |
-| **👥 Por responsable** | Tablero por Responsable | Qué lleva Sergio, qué lleva Palan |
+| **👥 Por responsable** | Tablero por Responsable | Qué lleva Sergio, qué lleva Alan |
 | **🔁 Anti-duplicados** | Tabla ordenada por Clave de deduplicación | Detectar fichas repetidas (quedan pegadas) |
 | **🗑️ Descartados / histórico** | Tabla | Empresas descartadas y su motivo (leer antes de reconsiderar) |
 | **Pipeline** | Tablero por Estado | Todo el embudo |

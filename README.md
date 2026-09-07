@@ -28,7 +28,7 @@ pagx-prospeccion/
 │   └── preview/*.png                    Captura de página completa de cada boceto
 ├── docs/
 │   ├── SISTEMA.md              Visión general (GitHub + Notion + Pages)
-│   ├── FLUJO-PALAN.md          Los 11 pasos de una jornada de prospección
+│   ├── FLUJO-ALAN.md          Los 11 pasos de una jornada de prospección
 │   ├── ANTIDUPLICADOS.md       Reglas y procedimiento anti-duplicados  ← LEER SIEMPRE
 │   ├── NOTION.md               Esquema del CRM, propiedades, estados, vistas
 │   ├── PROSPECCION-DIARIA.md   Qué hacer hoy
@@ -97,7 +97,7 @@ Cada paso registra **quién** lo hizo (Descubierto por / Auditado por / Boceto p
 Contactado por) y **cuándo**. Nada se marca como "Contactado" hasta que el mensaje
 se envió de verdad.
 
-Paso a paso en `docs/FLUJO-PALAN.md`.
+Paso a paso en `docs/FLUJO-ALAN.md`.
 
 ---
 
@@ -150,13 +150,13 @@ Esquema completo (propiedades, mapeos de nombres antiguos, estados) en `docs/NOT
 | Persona | GitHub | Notion | Rol |
 |---|---|---|---|
 | Sergio | `2317SECH` | admin workspace | dueño, contacto con prospectos |
-| Palan (Alan) | `ptala611-oss` | acceso compartido por Sergio | prospección: descubre, investiga, audita y hace los bocetos |
+| Alan | `ptala611-oss` | acceso compartido por Sergio | prospección: descubre, investiga, audita y hace los bocetos |
 
-Palan (Alan) es quien opera la prospección día a día (usa su propia cuenta de
+Alan es quien opera la prospección día a día (usa su propia cuenta de
 Instagram en las sesiones con Chrome). Tiene acceso **admin** al repo y edición
 completa de la base `Prospectos` en Notion.
 
 **El contacto con el prospecto se hace siempre manual y revisado** (Sergio, o
-Palan con visto bueno de Sergio). Nunca automático: no se envían DMs, no se
+Alan con visto bueno de Sergio). Nunca automático: no se envían DMs, no se
 comenta, no se sigue a nadie de forma automática. El trabajo del sistema termina
 en `Listo para contactar` con el mensaje redactado.

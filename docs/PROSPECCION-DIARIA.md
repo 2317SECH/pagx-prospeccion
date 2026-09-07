@@ -9,7 +9,7 @@ Al entrar al sistema, abrir en Notion la vista **🎯 PROSPECCIÓN — Hoy** de 
 | **Investigando** | Terminar la investigación: score, problema, oportunidad, fuentes. Pasar a `Auditado` o `Descartado`. |
 | **Auditado** | Construir el boceto. Pasar a `Boceto`. |
 | **Boceto** | Terminar y publicar la maqueta. Vincular URL + imagen. Pasar a `Listo para contactar`. |
-| **Listo para contactar** | Nada que hacer por parte de Palan. Es turno de Sergio. |
+| **Listo para contactar** | Nada que hacer por parte de Alan. Es turno de Sergio. |
 | **Contactado** / **Seguimiento** | Turno de Sergio (seguimiento comercial). |
 
 Ordenado por **Próxima acción**: lo más urgente arriba en cada columna.

@@ -45,11 +45,11 @@ No se crea otra base. La existente se amplió.
 | Propiedad | Tipo | Notas |
 |---|---|---|
 | **Estado** | Select | Ver §2. |
-| **Responsable** | Select | Sergio / Palan / Sin asignar. Quién lleva el prospecto ahora. |
-| **Descubierto por** | Select | Sergio / Palan. |
-| **Auditado por** | Select | Sergio / Palan. |
-| **Boceto por** | Select | Sergio / Palan. |
-| **Contactado por** | Select | Sergio / Palan. |
+| **Responsable** | Select | Sergio / Alan / Sin asignar. Quién lleva el prospecto ahora. |
+| **Descubierto por** | Select | Sergio / Alan. |
+| **Auditado por** | Select | Sergio / Alan. |
+| **Boceto por** | Select | Sergio / Alan. |
+| **Contactado por** | Select | Sergio / Alan. |
 | **Fecha de investigación** | Fecha | Cuándo se investigó. |
 | **Fecha de auditoría** | Fecha | Cuándo se auditó. |
 | **Fecha de contacto** | Fecha | Cuándo se envió el primer mensaje (real). |
