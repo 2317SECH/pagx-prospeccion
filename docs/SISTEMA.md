@@ -4,8 +4,8 @@ El sistema de prospección de PAGX Studio tiene **tres piezas**:
 
 | Pieza | Dónde | Para qué |
 |---|---|---|
-| **GitHub** (este repo) | `github.com/<usuario>/pagx-prospeccion` | Versionar el código, los bocetos HTML y la documentación. |
-| **GitHub Pages** | `https://<usuario>.github.io/pagx-prospeccion/` | URLs estables para ver los bocetos y mandárselos a los prospectos. |
+| **GitHub** (este repo) | `github.com/2317SECH/pagx-prospeccion` | Versionar el código, los bocetos HTML y la documentación. |
+| **GitHub Pages** | `https://2317sech.github.io/pagx-prospeccion/` | URLs estables para ver los bocetos y mandárselos a los prospectos. |
 | **Notion** | Base `Prospectos` + `Bitácora de Prospección` | El CRM vivo: cada empresa, su estado, su ficha, su boceto, su responsable. |
 
 ## Fuente de verdad
@@ -17,7 +17,7 @@ El sistema de prospección de PAGX Studio tiene **tres piezas**:
 ## URLs de los bocetos (GitHub Pages)
 
 > Rellenar con las URLs reales una vez publicado. Base:
-> `https://<usuario>.github.io/pagx-prospeccion/`
+> `https://2317sech.github.io/pagx-prospeccion/`
 
 | Prospecto | Página (para enviar) | PNG de página completa |
 |---|---|---|

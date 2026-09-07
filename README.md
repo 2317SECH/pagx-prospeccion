@@ -52,11 +52,11 @@ pagx-prospeccion/
 
 | Boceto | URL |
 |---|---|
-| Índice | `https://<usuario>.github.io/pagx-prospeccion/` |
-| 01 · Automotores Andina | `https://<usuario>.github.io/pagx-prospeccion/bocetos/01-automotores-andina.html` |
-| 02 · Infinitum Usados | `https://<usuario>.github.io/pagx-prospeccion/bocetos/02-infinitum-usados.html` |
-| 03 · Centro Automotores | `https://<usuario>.github.io/pagx-prospeccion/bocetos/03-centro-automotores.html` |
-| 04 · DDS Clínica Dental | `https://<usuario>.github.io/pagx-prospeccion/bocetos/04-dds-clinica-dental.html` |
+| Índice | `https://2317sech.github.io/pagx-prospeccion/` |
+| 01 · Automotores Andina | `https://2317sech.github.io/pagx-prospeccion/bocetos/01-automotores-andina.html` |
+| 02 · Infinitum Usados | `https://2317sech.github.io/pagx-prospeccion/bocetos/02-infinitum-usados.html` |
+| 03 · Centro Automotores | `https://2317sech.github.io/pagx-prospeccion/bocetos/03-centro-automotores.html` |
+| 04 · DDS Clínica Dental | `https://2317sech.github.io/pagx-prospeccion/bocetos/04-dds-clinica-dental.html` |
 
 > Las URLs exactas quedan escritas en `docs/SISTEMA.md` y en cada ficha de Notion
 > (propiedad **URL del boceto**).
@@ -150,7 +150,8 @@ Esquema completo (propiedades, mapeos de nombres antiguos, estados) en `docs/NOT
 | Persona | GitHub | Notion | Rol |
 |---|---|---|---|
 | Sergio | `2317SECH` | admin workspace | dueño, contacto con prospectos |
-| Palan | *(pendiente: usuario GitHub válido)* | *(pendiente: acceso al workspace/base)* | prospección diaria, investigación, bocetos |
+| Palan | `ptala611-oss` | acceso compartido por Sergio | prospección diaria, investigación, bocetos |
 
-Acceso mínimo: Palan tendrá permiso **push** al repo (no admin) y edición de la
-base `Prospectos` en Notion (no del resto del workspace).
+Acceso mínimo: Palan tiene permiso **write** al repo (no admin) y acceso a la
+base `Prospectos` en Notion. **Palan no contacta prospectos** — deja todo en
+"Listo para contactar" y Sergio envía.
