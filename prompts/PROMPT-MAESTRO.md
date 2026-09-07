@@ -3,7 +3,7 @@
 
 > Este es el estándar de investigación de PAGX Studio. Cualquiera que prospecte
 > (Sergio, Alan, o un asistente) trabaja con este marco. El registro operativo
-> vive en Notion (`docs/NOTION.md`); el flujo paso a paso, en `docs/FLUJO-PALAN.md`.
+> vive en Notion (`docs/NOTION.md`); el flujo paso a paso, en `docs/FLUJO-ALAN.md`.
 
 **Objetivo:** convertir la prospección de PAGX Studio en un proceso diario,
 sistemático y de alta calidad: descubrir negocios y profesionales de cualquier
