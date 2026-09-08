@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUTOZONE Ecuador — Vitrina (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08121116; --bg:#081312; --bg2:#0d1a18; --panel:#11201e; --panel2:#152623;
+    --line:#1e332f; --text:#f2f8f6; --muted:#94aca5; --teal:#1fae8e; --teal2:#4fd9b6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:Sora,Inter,sans-serif;letter-spacing:-.02em;line-height:1.08}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#16302c,#0a1614);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--teal);color:#04211b}
+  .btn-primary:hover{background:var(--teal2)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--teal2)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(8,19,17,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Sora;font-weight:800;font-size:16px;letter-spacing:.1em}
+  .brand small{display:block;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14.5px;font-weight:500;color:#cfe0db}
+  nav.links a:hover{color:#fff}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:630px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 78% -10%, rgba(31,174,142,.3), transparent 60%),
+     linear-gradient(90deg, rgba(8,19,17,.97) 32%, rgba(8,19,17,.6) 64%, rgba(8,19,17,.4))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) brightness(.6)}
+  .hero .inner{position:relative;padding:70px 0 88px}
+  .kicker{color:var(--teal2);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:55px;font-weight:800;max-width:16ch}
+  .hero p.sub{margin-top:20px;font-size:18.5px;color:#c9dcd7;max-width:46ch}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  .searchbar{position:relative;margin-top:-46px;z-index:20}
+  .searchbar .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
+  .field{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px 14px}
+  .field label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .field .val{margin-top:3px;font-size:15px;font-weight:600;color:#eef7f4}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:34px;font-weight:700}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px}
+  .sec-head a.more{font-size:14px;font-weight:600;color:var(--teal2);white-space:nowrap}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .vcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.16s}
+  .vcard:hover{transform:translateY(-4px);border-color:#2c463f}
+  .vcard .img{aspect-ratio:16/11}
+  .vcard .tag{position:absolute;top:12px;left:12px;background:rgba(8,19,17,.82);border:1px solid var(--line);color:#dcece7;font-size:11px;font-weight:700;letter-spacing:.05em;padding:5px 10px;border-radius:8px}
+  .vcard .tag.hot{background:var(--teal);border-color:var(--teal);color:#04211b}
+  .vcard .body{padding:16px 17px 18px}
+  .vcard h3{font-size:17.5px;font-weight:600}
+  .vcard .specs{margin-top:10px;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+  .vcard .row{margin-top:15px;display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+  .vcard .price{font-family:Sora;font-weight:700;font-size:19px}
+  .vcard .price small{display:block;font-family:Inter;font-weight:500;font-size:11px;color:var(--muted)}
+  .vcard .see{font-size:13px;font-weight:600;color:var(--teal2)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:26px}
+  .step .n{width:38px;height:38px;border-radius:10px;background:rgba(31,174,142,.16);color:var(--teal2);display:flex;align-items:center;justify-content:center;font-family:Sora;font-weight:700;margin-bottom:16px}
+  .step h3{font-size:17px;margin-bottom:7px}
+  .step p{color:var(--muted);font-size:14px}
+
+  .band{background:linear-gradient(120deg,#11201e,#0a1614);border:1px solid var(--line);border-radius:20px;padding:40px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:30px;font-weight:700;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:40ch}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .ts .big{font-family:Sora;font-weight:700;font-size:24px}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#c4d6d0;font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(31,174,142,.14);border:1px solid rgba(31,174,142,.5);color:#b7ecd9;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+  .carimg{object-fit:contain!important;padding:6% 8%!important;background:radial-gradient(120% 90% at 50% 35%, rgba(255,255,255,.1), transparent 70%)!important}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Guayaquil, Ecuador</span><span><b>16.8K</b> en Instagram · catálogo hoy solo en Linktree</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">AUTOZONE<small>ECUADOR · GUAYAQUIL</small></div>
+  <nav class="links"><a href="#vitrina">Vitrina</a><a href="#financiamiento">Financiamiento</a><a href="#requisitos">Requisitos</a><a href="#contacto">Contacto</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Escríbenos</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/car,dealership?lock=814" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Compra · Venta · Financiamiento · Guayaquil</div>
+    <h1>16.8 mil te siguen. Tu catálogo vive escondido en un Linktree.</h1>
+    <p class="sub">AUTOZONE ya tiene el nombre, la cuenta verificada y "entrega el mismo día" — falta la vitrina propia donde el catálogo se filtre por marca, precio y año, en vez de un solo enlace.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#vitrina">Ver la vitrina completa →</a>
+      <a class="btn btn-ghost" href="#financiamiento">Consultar financiamiento</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ Cuenta verificada</span>
+      <span class="pill">✓ Entrega el mismo día</span>
+      <span class="pill">✓ 16.8K seguidores</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap searchbar">
+  <div class="card">
+    <div class="field"><label>Marca</label><div class="val">Todas</div></div>
+    <div class="field"><label>Precio</label><div class="val">Hasta $25.000</div></div>
+    <div class="field"><label>Año</label><div class="val">2017 – 2024</div></div>
+    <div class="field"><label>Financiamiento</label><div class="val">Disponible</div></div>
+    <button class="btn btn-primary" style="justify-content:center">Buscar vehículos</button>
+  </div>
+</div>
+
+<section id="vitrina">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Vehículos disponibles</h2><p>Catálogo con calidad garantizada · Guayaquil</p></div>
+      <a class="more" href="#">Ver catálogo completo →</a>
+    </div>
+    <div class="grid">
+      <article class="vcard"><div class="ph img"><img src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=kia&modelFamily=sportage" class="carimg" alt=""><span class="tag hot">Destacado</span></div>
+        <div class="body"><h3>Kia Sportage 2021</h3>
+          <div class="specs"><span>◷ 2021</span><span>⛽ Gasolina</span><span>⚙ Automática</span></div>
+          <div class="row"><div class="price">$19.900<small>consulta financiamiento</small></div><span class="see">Ver vehículo →</span></div>
+        </div></article>
+      <article class="vcard"><div class="ph img"><img src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=chevrolet&modelFamily=sail" class="carimg" alt=""><span class="tag">Entrega hoy</span></div>
+        <div class="body"><h3>Chevrolet Sail 2019</h3>
+          <div class="specs"><span>◷ 2019</span><span>⛽ Gasolina</span><span>⚙ Mecánica</span></div>
+          <div class="row"><div class="price">$11.500<small>ideal primer auto</small></div><span class="see">Ver vehículo →</span></div>
+        </div></article>
+      <article class="vcard"><div class="ph img"><img src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=hyundai&modelFamily=tucson" class="carimg" alt=""><span class="tag hot">Destacado</span></div>
+        <div class="body"><h3>Hyundai Tucson 2020</h3>
+          <div class="specs"><span>◷ 2020</span><span>⛽ Gasolina</span><span>⚙ Automática</span></div>
+          <div class="row"><div class="price">$17.800<small>consulta financiamiento</small></div><span class="see">Ver vehículo →</span></div>
+        </div></article>
+    </div>
+    <p style="color:#5f7a73;font-size:12px;margin-top:18px">Precios de ejemplo — boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<section id="financiamiento" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Comprar en AUTOZONE, paso a paso</h2></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Eliges tu vehículo</h3><p>Filtras por marca, precio y año — fotos reales del catálogo de Guayaquil.</p></div>
+      <div class="step"><div class="n">2</div><h3>Consultas financiamiento</h3><p>Formulario directo, con entrega el mismo día una vez aprobado.</p></div>
+      <div class="step"><div class="n">3</div><h3>Recibes tu auto</h3><p>Agenda la entrega en el mismo día, tal como ya lo promocionan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="requisitos" style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>¿Vendes tu auto?</h2>
+        <p>Publicamos tu vehículo dentro de la misma vitrina, con fotos propias y contacto directo de interesados.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Cotizar mi auto</a>
+        </div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">16.8K</div>
+        <div class="lab">seguidores en Instagram · dato verificado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Confianza que se nota</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">794</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">✓ Verificado</div><div class="lab">cuenta verificada por Meta</div></div>
+      <div class="ts"><div class="big">Guayaquil</div><div class="lab">Ecuador</div></div>
+      <div class="ts"><div class="big">Mismo día</div><div class="lab">entrega del vehículo</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">AUTOZONE<small>ECUADOR · GUAYAQUIL</small></div>
+        <p>Compra, venta y financiamiento de autos usados con calidad garantizada. Guayaquil, Ecuador.</p>
+      </div>
+      <div><h4>Vitrina</h4><a href="#">SUVs</a><a href="#">Sedanes</a><a href="#">Económicos</a></div>
+      <div><h4>Servicios</h4><a href="#">Financiamiento</a><a href="#">Vende tu carro</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 AUTOZONE Ecuador</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

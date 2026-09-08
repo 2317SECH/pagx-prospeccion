@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Montañeses — Restaurante Español (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf4ee; --bg2:#f3e4d8; --ink:#2e1912; --ink2:#5a3a2c;
+    --terracota:#b1502f; --terracota-d:#8c3c22; --terracota-soft:#f1ded2; --line:#e8d5c4; --muted:#7c6250; --gold:#b98a3e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#f1ded2,#e6c9b4);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--terracota);color:#fff}
+  .btn-primary:hover{background:var(--terracota-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:#fff}
+
+  .ribbon{background:var(--ink);color:#f1e2d6;font-size:12.5px}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(251,244,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:78px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:Fraunces;font-weight:600;font-size:22px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--ink2)}
+  nav.links a:hover{color:var(--terracota-d)}
+  .nav .spacer{flex:1}
+
+  .hero{background:linear-gradient(180deg,#fbf4ee,#f3e4d8);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:72px 40px 78px}
+  .kicker{color:var(--terracota-d);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:50px}
+  .hero h1 em{font-style:italic;color:var(--terracota-d)}
+  .hero p.sub{margin-top:18px;font-size:17px;color:var(--ink2);max-width:44ch;font-family:Inter}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5;border-radius:16px}
+  .hero .card{position:absolute;left:-30px;bottom:-26px;width:270px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 30px 60px -26px rgba(46,25,18,.25)}
+  .hero .card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;font-family:Inter}
+  .hero .card h4{font-family:Inter;font-size:15px;font-weight:700;margin:4px 0 6px}
+  .hero .card p{font-family:Inter;font-size:13px;color:var(--muted)}
+
+  section{padding:80px 0}
+  .sec-head{text-align:center;max-width:62ch;margin:0 auto 42px}
+  .sec-head h2{font-size:38px}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:16px;font-family:Inter}
+
+  .press{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .press span{font-family:Fraunces;font-size:20px;color:var(--ink2);opacity:.75}
+
+  .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .dish{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .dish .ph{aspect-ratio:4/3}
+  .dish .body{padding:16px 18px}
+  .dish h3{font-size:19px}
+  .dish p{color:var(--muted);font-size:13.5px;margin-top:4px;font-family:Inter}
+
+  .band{background:var(--ink);color:#f5e9dd;border-radius:20px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{color:#fff;font-size:32px;margin-bottom:12px}
+  .band p{color:#d6bfae;font-size:15px;max-width:40ch;font-family:Inter}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .ts .big{font-family:Fraunces;font-size:26px;color:var(--terracota-d)}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px;font-family:Inter}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px;font-family:Inter}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--terracota-soft);border:1px solid var(--terracota);color:var(--terracota-d);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;font-family:Inter}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Jorge Newbery 2818, Buenos Aires</span><span>España en Buenos Aires desde hace años</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">Montañeses<small>Restaurante Español · CABA</small></div>
+  <nav class="links"><a href="#menu">Menú</a><a href="#cava">Cava</a><a href="#prensa">Prensa</a><a href="#reserva">Reserva</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#reserva">Reservar mesa</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Restaurante español · Palermo, Buenos Aires</div>
+      <h1>82 mil te siguen. <em>Todavía</em> reservan por un enlace genérico.</h1>
+      <p class="sub">Montañeses ya tiene la prensa, la cava y el nombre — "excelencia sin pretensiones". Lo único que falta es una web propia que muestre el menú, la cava y las reseñas de prensa, en vez de un solo link con todo mezclado.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#reserva">Reservar mesa</a>
+        <a class="btn btn-ghost" href="#menu">Ver el menú</a>
+      </div>
+      <div class="trust"><span class="pill">✓ 82.4K seguidores</span><span class="pill">✓ Cobertura de prensa</span><span class="pill">✓ +740 publicaciones</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://loremflickr.com/700/860/spanish,restaurant,food?lock=77" alt=""></div>
+      <div class="card">
+        <span class="lab">Reserva de hoy</span>
+        <h4>Mesa para 2 · 21:00</h4>
+        <p>Confirmación directa, sin esperar respuesta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prensa">
+  <div class="wrap">
+    <div class="sec-head"><h2>En la prensa</h2><p>Lo que hoy mencionan en su bio de Instagram, sin un lugar propio donde mostrarlo</p></div>
+    <div class="press">
+      <span>La Nación</span><span>Clarín</span><span>Time Out</span><span>La Nación Restó</span>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><h2>El menú</h2><p>Sabores clásicos españoles — el mismo menú que hoy vive solo en las publicaciones</p></div>
+    <div class="menu">
+      <div class="dish"><div class="ph"><img src="https://loremflickr.com/500/380/paella?lock=1" alt=""></div><div class="body"><h3>Paella valenciana</h3><p>Para compartir · receta tradicional</p></div></div>
+      <div class="dish"><div class="ph"><img src="https://loremflickr.com/500/380/jamon,spanish?lock=2" alt=""></div><div class="body"><h3>Jamón ibérico</h3><p>Selección de la cava</p></div></div>
+      <div class="dish"><div class="ph"><img src="https://loremflickr.com/500/380/tapas,spanish?lock=3" alt=""></div><div class="body"><h3>Tapas clásicas</h3><p>Para empezar la noche</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cava">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>La Cava</h2>
+        <p>Selección de vinos españoles y argentinos que hoy se descubre solo estando en el salón — con web propia, el cliente la conoce antes de reservar.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Ver la carta de vinos</a>
+        </div>
+      </div>
+      <div class="ts" style="background:#241811;border-color:#3a2a1e">
+        <div class="big" style="color:#e3c07f">82.4K</div>
+        <div class="lab" style="color:#c9b6a4">seguidores en Instagram</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Confianza que se nota</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">743</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">82.4K</div><div class="lab">seguidores</div></div>
+      <div class="ts"><div class="big">J. Newbery 2818</div><div class="lab">Buenos Aires · Palermo</div></div>
+      <div class="ts"><div class="big">4 medios</div><div class="lab">mencionados en su bio</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">Montañeses<small>Restaurante Español · CABA</small></div>
+        <p>España en Buenos Aires. Jorge Newbery 2818, Palermo, Buenos Aires.</p>
+      </div>
+      <div><h4>Carta</h4><a href="#">Menú</a><a href="#">Cava</a></div>
+      <div><h4>Restaurante</h4><a href="#">Prensa</a><a href="#">El lugar</a></div>
+      <div><h4>Contacto</h4><a href="#">Reservas</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Montañeses</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

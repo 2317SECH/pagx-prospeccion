@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don Vito Barbería — Landing (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#100d0a; --bg2:#181410; --panel:#1d1712; --panel2:#221b15;
+    --line:#332a20; --text:#f3ede2; --muted:#a89a86; --gold:#c9973f; --gold2:#e6b967;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:Oswald,Inter,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#241d16,#12100c);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.03em;padding:14px 26px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--gold);color:#1a1305}
+  .btn-primary:hover{background:var(--gold2)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--gold2)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(16,13,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:76px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Oswald;font-weight:700;font-size:19px;letter-spacing:.04em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14px;font-weight:600;color:#d9d0c2;text-transform:uppercase;letter-spacing:.02em}
+  nav.links a:hover{color:var(--gold2)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:610px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 78% -10%, rgba(201,151,63,.25), transparent 60%),
+     linear-gradient(90deg, rgba(16,13,10,.97) 32%, rgba(16,13,10,.6) 64%, rgba(16,13,10,.4))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.1) brightness(.55) grayscale(.25)}
+  .hero .inner{position:relative;padding:70px 0 86px}
+  .kicker{color:var(--gold2);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:56px;max-width:15ch}
+  .hero p.sub{margin-top:20px;font-size:18px;color:#d6cebd;max-width:46ch;font-family:Inter;text-transform:none}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:34px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter;text-transform:none}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .svc h3{font-size:19px;margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:14px;font-family:Inter;text-transform:none}
+  .svc .price{margin-top:14px;font-family:Oswald;font-size:22px;color:var(--gold2)}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gallery .ph{aspect-ratio:1;border-radius:10px}
+
+  .band{background:linear-gradient(120deg,#1d1712,#100d0a);border:1px solid var(--line);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:32px;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:42ch;font-family:Inter;text-transform:none}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .ts .big{font-family:Oswald;font-weight:700;font-size:24px}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px;font-family:Inter;text-transform:none}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#cfc7b8;font-size:14px;display:block;margin-bottom:8px;font-family:Inter;text-transform:none}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(201,151,63,.14);border:1px solid rgba(201,151,63,.5);color:#ecd6a6;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px);font-family:Inter;text-transform:none}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Cra 15 #90-20, Bogotá</span><span><b>19.8K</b> en Instagram · agenda solo por WhatsApp</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">DON VITO<small>Barbería · Bogotá</small></div>
+  <nav class="links"><a href="#cortes">Cortes</a><a href="#galeria">Galería</a><a href="#ubicacion">Ubicación</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Agenda tu cita</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/barbershop,barber?lock=612" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Barbería · Cra 15 #90-20, Bogotá</div>
+    <h1>19.8 mil te siguen en Instagram. Todavía no tienes dónde agendar sin escribir.</h1>
+    <p class="sub">Don Vito ya tiene la clientela y el nombre — cortes, barba y estilo con más de 200 publicaciones que lo demuestran. Falta el sitio propio que muestre servicios, precios y horario sin depender solo del DM.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#cortes">Ver servicios</a>
+      <a class="btn btn-ghost" href="#ubicacion">Cómo llegar</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ 19.8K seguidores</span>
+      <span class="pill">✓ +200 publicaciones</span>
+      <span class="pill">✓ Agenda por WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<section id="cortes">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Servicios</h2><p>Los mismos que hoy promocionan en Instagram, con precio orientativo visible desde la web</p></div></div>
+    <div class="grid3">
+      <div class="svc"><h3>Corte clásico</h3><p>Corte a máquina y tijera, acabado con navaja.</p><div class="price">$35.000</div></div>
+      <div class="svc"><h3>Corte + Barba</h3><p>Servicio completo con diseño de barba y toalla caliente.</p><div class="price">$50.000</div></div>
+      <div class="svc"><h3>Diseño y color</h3><p>Diseños personalizados y color bajo cita previa.</p><div class="price">Desde $45.000</div></div>
+    </div>
+    <p style="color:#6b6155;font-size:12px;margin-top:18px">Precios de ejemplo — boceto de demostración PAGX Studio. Confirmar tarifas reales con el negocio.</p>
+  </div>
+</section>
+
+<section id="galeria" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Galería</h2><p>El trabajo que hoy solo se ve en el feed, ahora con su propia página</p></div></div>
+    <div class="gallery">
+      <div class="ph"><img src="https://loremflickr.com/400/400/haircut,barber?lock=1" alt=""></div>
+      <div class="ph"><img src="https://loremflickr.com/400/400/haircut,barber?lock=2" alt=""></div>
+      <div class="ph"><img src="https://loremflickr.com/400/400/haircut,barber?lock=3" alt=""></div>
+      <div class="ph"><img src="https://loremflickr.com/400/400/haircut,barber?lock=4" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Agenda sin salir de la web</h2>
+        <p>Hoy cada cita empieza con un mensaje directo. Con una landing propia, el cliente ve cortes, precios y disponibilidad antes de escribir — y el WhatsApp queda para cerrar, no para explicar todo desde cero.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Reservar cita</a>
+        </div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">19.8K</div>
+        <div class="lab">seguidores en Instagram · dato verificado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Confianza que se nota</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">218</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">19.8K</div><div class="lab">seguidores</div></div>
+      <div class="ts"><div class="big">Cra 15 #90-20</div><div class="lab">Bogotá · visítanos</div></div>
+      <div class="ts"><div class="big">WhatsApp</div><div class="lab">único canal de agenda hoy</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">DON VITO<small>Barbería · Bogotá</small></div>
+        <p>Barbería en Cra 15 #90-20, Bogotá. Cortes, barba y diseño.</p>
+      </div>
+      <div><h4>Servicios</h4><a href="#">Corte clásico</a><a href="#">Corte + Barba</a><a href="#">Diseño y color</a></div>
+      <div><h4>Barbería</h4><a href="#">Galería</a><a href="#">Ubicación</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Cómo llegar</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Don Vito Barbería</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
