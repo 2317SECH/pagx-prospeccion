@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santa Parrilla — Menú del día &amp; reserva (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1c1013; --bg2:#241419; --panel:#2b171d; --panel2:#341c23;
+    --line:#452630; --text:#f7ece9; --muted:#b6968f; --accent:#c8973f; --accent2:#e0b662; --wine:#7c2233;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em;line-height:1.1}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#341c23,#241419);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 24px;border-radius:9px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--accent);color:#20140a}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--accent2)}
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(28,16,19,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Fraunces;font-weight:700;font-size:20px;letter-spacing:.01em}
+  .brand svg{width:32px;height:32px;flex:none}
+  nav.links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:#e0cdc8}
+  nav.links a:hover{color:var(--accent2)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.4) contrast(1.08) saturate(1.02)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 520px at 80% 0%, rgba(200,151,63,.24), transparent 60%),linear-gradient(90deg, rgba(28,16,19,.97) 32%, rgba(28,16,19,.5) 66%, rgba(28,16,19,.25))}
+  .hero .inner{position:relative;padding:60px 0 94px}
+  .kicker{color:var(--accent2);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;font-family:Inter}
+  .hero h1{font-size:56px;font-weight:600;max-width:16ch}
+  .hero p.sub{margin-top:19px;font-size:18px;color:#dcc7c1;max-width:47ch}
+  .hero .cta{margin-top:28px;display:flex;gap:13px;flex-wrap:wrap}
+  .hero .trust{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+
+  .today{position:relative;margin-top:-52px;z-index:20}
+  .today .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 28px;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+  .today .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+  .today .top h3{font-size:22px;font-weight:600}
+  .today .top span{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+  .today .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .opt{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:15px 16px}
+  .opt .n{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  .opt h4{font-family:Fraunces;font-size:17px;font-weight:600;margin:5px 0 5px}
+  .opt p{font-size:12.5px;color:var(--muted)}
+  .today .foot{margin-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .today .price{font-family:Fraunces;font-weight:700;font-size:22px;color:var(--accent2)}
+
+  section{padding:76px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;gap:20px}
+  .sec-head h2{font-size:36px;font-weight:600}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;max-width:52ch}
+  .sec-head a.more{font-size:14px;font-weight:600;color:var(--accent2);white-space:nowrap}
+
+  .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .mcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.16s}
+  .mcard:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .mcard .img{aspect-ratio:16/11}
+  .mcard .img img{width:100%;height:100%;object-fit:cover}
+  .mcard .tag{position:absolute;top:12px;left:12px;background:rgba(28,16,19,.82);border:1px solid var(--line);color:#ecdad5;font-size:11px;font-weight:700;padding:5px 10px;border-radius:7px}
+  .mcard .body{padding:16px 18px 18px}
+  .mcard h3{font-size:19px;font-weight:600}
+  .mcard p{margin-top:6px;color:var(--muted);font-size:13.5px}
+  .mcard .row{margin-top:13px;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--line)}
+  .mcard .price{font-family:Fraunces;font-weight:700;font-size:19px;color:var(--accent2)}
+  .mcard .add{font-size:13px;font-weight:600;color:var(--accent2)}
+
+  .flow{background:#170c0f;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+  .flow .wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:600}
+  .flow b{color:var(--text)}.flow .ar{color:var(--accent)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .step .n{width:36px;height:36px;border-radius:10px;background:rgba(200,151,63,.14);color:var(--accent2);display:flex;align-items:center;justify-content:center;font-family:Fraunces;font-weight:700;margin-bottom:15px}
+  .step h3{font-size:18px;margin-bottom:7px}
+  .step p{color:var(--muted);font-size:14px}
+
+  .band{background:linear-gradient(120deg,#2c1620,#170c0f);border:1px solid var(--line);border-radius:18px;padding:38px;display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+  .band h2{font-size:30px;font-weight:600;margin-bottom:10px}
+  .band p{color:var(--muted);font-size:15px;max-width:42ch}
+  .sede-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .sede-card .img{aspect-ratio:16/10}
+  .sede-card .img img{width:100%;height:100%;object-fit:cover}
+  .sede-card .body{padding:18px 20px 20px}
+  .sede-card h3{font-size:19px}
+  .sede-card p{color:var(--muted);font-size:13.5px;margin-top:6px}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .ts .big{font-family:Fraunces;font-weight:700;font-size:22px;color:var(--accent2)}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:16px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#d0bab4;font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(200,151,63,.15);border:1px solid rgba(200,151,63,.5);color:var(--accent2);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Bogotá · Cedritos · Restaurante de parrilla — menú del día gourmet</span><span>Reserva y pedido <b>directos</b></span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="#c8973f" stroke-width="2"/><path d="M14 24c0-5 2.5-8 6-8s6 3 6 8M20 12v-3M20 12c-1.5 1.5-1.5 3 0 4.5" stroke="#e0b662" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Santa Parrilla</span>
+  </div>
+  <nav class="links"><a href="#hoy">Menú de hoy</a><a href="#carta">A la carta</a><a href="#pedir">Cómo pedir</a><a href="#sede">Ubicación</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#pedir">Reservar mesa</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&h=900&fit=crop&q=70" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Parrilla &amp; menú del día · Cedritos</div>
+    <h1>El menú del día, siempre visible. No solo en la historia de hoy.</h1>
+    <p class="sub">Cada día publican un menú gourmet distinto — aquí queda en su propia página, con foto y precio, y con la mesa reservable en un toque.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#hoy">Ver el menú de hoy →</a>
+      <a class="btn btn-ghost" href="#carta">Ver la carta</a>
+    </div>
+    <div class="trust"><span class="pill">✓ Menú del día gourmet</span><span class="pill">✓ Reserva directa</span><span class="pill">✓ Domicilio en Cedritos</span></div>
+  </div>
+</section>
+
+<div class="wrap today" id="hoy">
+  <div class="card">
+    <div class="top"><h3>Menú de hoy — miércoles</h3><span>Lun a Vie · 12:00 – 3:00 p. m.</span></div>
+    <div class="opts">
+      <div class="opt"><div class="n">Opción 1</div><h4>Punta de anca a la parrilla</h4><p>Con papa salada, ensalada de la casa y arepa.</p></div>
+      <div class="opt"><div class="n">Opción 2</div><h4>Pechuga en salsa de champiñones</h4><p>Con arroz pilaf y vegetales al grill.</p></div>
+      <div class="opt"><div class="n">Opción 3</div><h4>Trucha al ajillo</h4><p>Con puré rústico y patacón.</p></div>
+    </div>
+    <div class="foot"><div class="price">$28.900 <span style="font-family:Inter;font-size:12.5px;color:var(--muted);font-weight:500">· incluye sopa, jugo y postre</span></div><a class="btn btn-primary" href="#pedir">Reservar mesa para el almuerzo</a></div>
+    <p style="color:#7a5a55;font-size:11px;margin-top:12px">Menú, platos y precio de referencia — boceto de demostración PAGX Studio.</p>
+  </div>
+</div>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>A la carta · parrilla</h2><p>La carta de la noche y del fin de semana, con foto y precio — para decidir antes de llegar y para pedir a domicilio.</p></div><a class="more" href="#">Ver carta completa →</a></div>
+    <div class="menu">
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Corte estrella</span></div>
+        <div class="body"><h3>Bife de chorizo 350 g</h3><p>Madurado, a la parrilla, con chimichurri y guarnición.</p>
+          <div class="row"><div class="price">$46.900</div><span class="add">Añadir +</span></div></div></article>
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Recomendado</span></div>
+        <div class="body"><h3>Costillas BBQ a fuego lento</h3><p>Cerdo cocido 6 horas, salsa de la casa y papas rústicas.</p>
+          <div class="row"><div class="price">$39.900</div><span class="add">Añadir +</span></div></div></article>
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Ligero</span></div>
+        <div class="body"><h3>Ensalada de lomo salteado</h3><p>Verdes, lomo fino, cebolla caramelizada y aderezo de la casa.</p>
+          <div class="row"><div class="price">$29.900</div><span class="add">Añadir +</span></div></div></article>
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Para compartir</span></div>
+        <div class="body"><h3>Tabla de parrilla para 2</h3><p>Res, cerdo, chorizo, morcilla y acompañamientos.</p>
+          <div class="row"><div class="price">$52.900</div><span class="add">Añadir +</span></div></div></article>
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Entrada</span></div>
+        <div class="body"><h3>Chorizo santarrosano</h3><p>A la parrilla, con arepa de chócolo y ají de la casa.</p>
+          <div class="row"><div class="price">$13.900</div><span class="add">Añadir +</span></div></div></article>
+      <article class="mcard"><div class="ph img"><img src="https://images.unsplash.com/photo-1558030006-450675393462?w=680&h=460&fit=crop&q=70" alt=""><span class="tag">Cena de fin de semana</span></div>
+        <div class="body"><h3>Lomo al trapo</h3><p>Sellado en sal, término a elección, con papa criolla y ensalada.</p>
+          <div class="row"><div class="price">$44.900</div><span class="add">Añadir +</span></div></div></article>
+    </div>
+    <p style="color:#7a5a55;font-size:12px;margin-top:18px">Platos, descripciones y precios de referencia — boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<div class="flow"><div class="wrap">
+  <b>Instagram</b><span class="ar">→</span><b>menú y reserva propios</b><span class="ar">→</span><b>mesa o domicilio</b><span class="ar">→</span><b>cliente que repite</b>
+</div></div>
+
+<section id="pedir" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Cómo pedir</h2><p>Todo lo que hoy se coordina por WhatsApp, ordenado en la web — la conversación llega con los datos completos.</p></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Reserva de mesa</h3><p>Eliges día, hora y personas. Confirmación inmediata y recordatorio el mismo día.</p></div>
+      <div class="step"><div class="n">2</div><h3>Domicilio en Cedritos</h3><p>Carta con precios, carrito y pedido propio en la zona. Sin depender solo de apps de terceros.</p></div>
+      <div class="step"><div class="n">3</div><h3>Eventos y grupos</h3><p>Cumpleaños, almuerzos de empresa y celebraciones: formulario con fecha, # de personas y menú.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sede">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Una sede en Cedritos, fácil de encontrar</h2>
+        <p>Dirección, horario, mapa y parqueo en un solo lugar — y el menú del día siempre a un toque, sin buscar entre historias vencidas.</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Cómo llegar</a><a class="btn btn-ghost" href="#hoy">Ver menú de hoy</a></div>
+      </div>
+      <div class="sede-card">
+        <div class="ph img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=680&h=430&fit=crop&q=70" alt=""></div>
+        <div class="body"><h3>Santa Parrilla · Cedritos</h3><p>Carrera 16 # 140-23 · Bogotá<br>Lun–Sáb 12:00 p. m. – 9:00 p. m. · Menú del día Lun–Vie</p></div>
+      </div>
+    </div>
+    <p style="color:#7a5a55;font-size:12px;margin-top:16px">Dirección tomada de fuentes públicas; horario de referencia para el boceto.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Por qué Santa Parrilla</h2><p>Datos de referencia para el boceto</p></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">Menú del día</div><div class="lab">gourmet, distinto cada jornada</div></div>
+      <div class="ts"><div class="big">Cedritos</div><div class="lab">Carrera 16 # 140-23</div></div>
+      <div class="ts"><div class="big">Reserva directa</div><div class="lab">sin comisión de plataformas</div></div>
+      <div class="ts"><div class="big">Domicilio propio</div><div class="lab">en la zona norte</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="#c8973f" stroke-width="2"/><path d="M14 24c0-5 2.5-8 6-8s6 3 6 8M20 12v-3M20 12c-1.5 1.5-1.5 3 0 4.5" stroke="#e0b662" stroke-width="2" stroke-linecap="round"/></svg><span>Santa Parrilla</span></div>
+        <p>Restaurante de parrilla con menú del día gourmet. Cedritos, Bogotá.</p></div>
+      <div><h4>Carta</h4><a href="#">Menú del día</a><a href="#">Cortes</a><a href="#">Para compartir</a><a href="#">Entradas</a></div>
+      <div><h4>Pedir</h4><a href="#">Reservar mesa</a><a href="#">Domicilio</a><a href="#">Eventos</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Cómo llegar</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Santa Parrilla</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+</body>
+</html>
