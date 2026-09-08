@@ -38,6 +38,8 @@
   .nav .spacer{flex:1}
 
   .hero{position:relative;min-height:590px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
   .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.46) contrast(1.06) saturate(1.05)}
   .hero .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 460px at 82% 0%, rgba(192,38,211,.3), transparent 62%),linear-gradient(90deg, rgba(11,9,16,.96) 32%, rgba(11,9,16,.5) 66%, rgba(11,9,16,.32))}
   .hero .inner{position:relative;padding:60px 0 88px}
@@ -115,7 +117,7 @@
 </div></header>
 
 <section class="hero" style="padding:0">
-  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/car,parking,garage?lock=1001" alt=""></div></div>
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx101001/1600/900" alt=""></div></div>
   <div class="wrap inner">
     <div class="kicker">Carros usados · Medellín · 2 sedes</div>
     <h1>Todo el inventario de las dos sedes, en un solo lugar.</h1>
