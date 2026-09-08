@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Charme 64 — Casa boutique (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf6ef; --bg2:#f2ebdf; --ink:#2b2621; --ink2:#4a423a; --muted:#7a7063;
+    --terra:#c1744a; --terra-d:#a25c37; --green:#33493b; --gold:#b08d3f; --line:#e7ddcc; --card:#fffdf9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.005em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#ece2d1,#e0d3bd);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 24px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.02em}
+  .btn-primary{background:var(--terra);color:#fff}
+  .btn-primary:hover{background:var(--terra-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--card)}
+
+  .ribbon{background:var(--green);color:#e9e3d5;font-size:12.5px}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:78px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Fraunces;font-weight:600;font-size:19px;letter-spacing:.06em}
+  .brand .mk{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 50% 40%, #e9b872, #c1744a);flex:none}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.24em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--ink2)}
+  nav.links a:hover{color:var(--terra-d)}
+  .nav .spacer{flex:1}
+  .lang{font-size:12.5px;color:var(--muted);font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(1.02)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg, rgba(20,16,12,.7), rgba(20,16,12,.15) 55%, rgba(20,16,12,.35))}
+  .hero .inner{position:relative;padding:0 0 44px;color:#fdf9f1;width:100%}
+  .hero .kicker{font-weight:600;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#f0d9be;margin-bottom:14px}
+  .hero h1{font-size:52px;max-width:16ch;color:#fff}
+  .hero p.sub{margin-top:14px;font-size:17px;color:#ece3d6;max-width:44ch}
+
+  .bookbar{position:relative;margin-top:-38px;z-index:20}
+  .bookbar .card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;box-shadow:0 28px 60px -30px rgba(43,38,33,.3)}
+  .fld{border-right:1px solid var(--line);padding:4px 16px}
+  .fld:first-child{padding-left:8px}
+  .fld label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .fld .val{margin-top:3px;font-size:15px;font-weight:600;font-family:Fraunces}
+
+  section{padding:82px 0}
+  .sec-head{max-width:56ch;margin:0 auto 44px;text-align:center}
+  .sec-head .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d);margin-bottom:12px}
+  .sec-head h2{font-size:37px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:16px}
+
+  .rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .room{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .room .img{aspect-ratio:4/3}
+  .room .body{padding:18px 20px 20px}
+  .room h3{font-size:20px;margin-bottom:6px}
+  .room .meta{color:var(--muted);font-size:13px}
+  .room .row{margin-top:14px;display:flex;justify-content:space-between;align-items:baseline;padding-top:13px;border-top:1px solid var(--line)}
+  .room .price{font-family:Fraunces;font-size:19px}
+  .room .price small{font-family:Inter;font-size:11px;color:var(--muted);display:block}
+  .room .see{font-size:13px;font-weight:600;color:var(--terra-d)}
+
+  .exp{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ec{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card)}
+  .ec .img{aspect-ratio:1}
+  .ec .cap{padding:14px 16px;font-size:14px;font-weight:600}
+  .ec .cap span{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+
+  .direct{background:var(--green);color:#eee7d9;border-radius:6px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .direct h2{color:#fff;font-size:32px;margin-bottom:12px}
+  .direct ul{list-style:none;margin-top:8px}
+  .direct li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14.5px;display:flex;gap:10px}
+  .direct li:last-child{border:0}
+  .direct .ck{color:#e9b872;font-weight:700}
+  .direct .panel{background:var(--card);color:var(--ink);border-radius:4px;padding:24px}
+  .direct .panel .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;margin-bottom:10px}
+  .direct .panel .days{display:flex;gap:7px;margin-bottom:14px}
+  .direct .panel .days span{flex:1;text-align:center;border:1px solid var(--line);border-radius:3px;padding:9px 0;font-size:12px}
+  .direct .panel .days span.on{background:var(--terra);color:#fff;border-color:var(--terra);font-weight:600}
+  .direct .panel .days span b{display:block;font-family:Fraunces;font-size:15px}
+
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+  .loc .map{border:1px solid var(--line);border-radius:4px;min-height:260px;background:linear-gradient(rgba(193,116,74,.05),rgba(51,73,59,.05)),repeating-linear-gradient(0deg,#f4ecdd 0 20px,#efe6d3 20px 22px),repeating-linear-gradient(90deg,#f4ecdd 0 20px,#efe6d3 20px 22px);position:relative}
+  .loc .map .pin{position:absolute;left:44%;top:52%;width:14px;height:14px;background:var(--terra);border-radius:50%;box-shadow:0 0 0 7px rgba(193,116,74,.22)}
+  .loc .info{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:28px}
+  .loc .info h3{font-size:20px;margin-bottom:8px}
+  .loc .info p{color:var(--muted);font-size:14px;margin-bottom:14px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:24px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#f3e6d4;border:1px solid var(--terra);color:var(--terra-d);font-size:11px;font-weight:600;padding:8px 13px;border-radius:3px}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Carrera 1a #64-68 · Cartagena de Indias · RNT 179013</span><span>Reserva directa — mejor tarifa garantizada</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand"><span class="mk"></span><span>Charme 64<small>CASA BOUTIQUE · CARTAGENA</small></span></div>
+  <nav class="links"><a href="#rooms">Habitaciones</a><a href="#exp">Experiencias</a><a href="#directo">Por qué reservar aquí</a><a href="#loc">Ubicación</a></nav>
+  <span class="spacer"></span>
+  <span class="lang">ES · EN</span>
+  <a class="btn btn-primary" href="#reserva">Reservar</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&h=900&fit=crop&q=70" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Casa boutique · Getsemaní, Cartagena</div>
+    <h1>Arte, naturaleza y calma, a un paso del centro histórico.</h1>
+    <p class="sub">Una casa restaurada con alma rústica y sofisticada. Reserva directo y llega sin intermediarios.</p>
+  </div>
+</section>
+
+<div class="wrap bookbar">
+  <div class="card">
+    <div class="fld"><label>Llegada</label><div class="val">Jue 12 mar</div></div>
+    <div class="fld"><label>Salida</label><div class="val">Dom 15 mar</div></div>
+    <div class="fld"><label>Huéspedes</label><div class="val">2 adultos</div></div>
+    <button class="btn btn-primary" style="justify-content:center">Ver disponibilidad</button>
+  </div>
+</div>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Habitaciones</div><h2>Cada habitación, una pieza distinta de la casa</h2><p>Fotos reales, tarifas claras y disponibilidad al día. Datos de ejemplo para el boceto.</p></div>
+    <div class="rooms">
+      <article class="room"><div class="ph img"><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=560&h=420&fit=crop&q=70" alt=""></div>
+        <div class="body"><h3>Habitación Patio</h3><div class="meta">2 personas · balcón al patio interior · A/A</div>
+          <div class="row"><div class="price">USD 118<small>/ noche · impuestos incl.</small></div><span class="see">Ver y reservar →</span></div></div></article>
+      <article class="room"><div class="ph img"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=560&h=420&fit=crop&q=70" alt=""></div>
+        <div class="body"><h3>Habitación Colonial</h3><div class="meta">2 personas · techos altos · muros originales</div>
+          <div class="row"><div class="price">USD 142<small>/ noche · impuestos incl.</small></div><span class="see">Ver y reservar →</span></div></div></article>
+      <article class="room"><div class="ph img"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=560&h=420&fit=crop&q=70" alt=""></div>
+        <div class="body"><h3>Suite Terraza</h3><div class="meta">2–3 personas · terraza privada · vista a tejados</div>
+          <div class="row"><div class="price">USD 189<small>/ noche · impuestos incl.</small></div><span class="see">Ver y reservar →</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="exp" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Experiencias</div><h2>La casa también organiza tu Cartagena</h2><p>Reserva la habitación y suma experiencias en el mismo paso</p></div>
+    <div class="exp">
+      <div class="ec"><div class="ph img"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=380&h=380&fit=crop&q=70" alt=""></div><div class="cap">City tour histórico<span>guía privado · 3 h</span></div></div>
+      <div class="ec"><div class="ph img"><img src="https://loremflickr.com/380/380/sunset,boat,caribbean?lock=1122" alt=""></div><div class="cap">Atardecer en velero<span>bahía de Cartagena</span></div></div>
+      <div class="ec"><div class="ph img"><img src="https://images.unsplash.com/photo-1533777324565-a040eb52facd?w=380&h=380&fit=crop&q=70" alt=""></div><div class="cap">Desayuno en el patio<span>incluido en la tarifa</span></div></div>
+      <div class="ec"><div class="ph img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=380&h=380&fit=crop&q=70" alt=""></div><div class="cap">Cena de aniversario<span>montaje en la terraza</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="directo" style="padding-top:0">
+  <div class="wrap">
+    <div class="direct">
+      <div>
+        <h2>Por qué reservar en Charme 64</h2>
+        <p style="color:#c9c1b0;font-size:15px">Hoy toda la reserva pasa por WhatsApp o por una OTA que cobra comisión. Con página propia + motor de reservas:</p>
+        <ul>
+          <li><span class="ck">✓</span> Mejor tarifa garantizada (sin comisión de intermediario)</li>
+          <li><span class="ck">✓</span> Confirmación inmediata, en español o inglés</li>
+          <li><span class="ck">✓</span> Ves las fotos reales de la habitación exacta que reservas</li>
+          <li><span class="ck">✓</span> Sumas experiencias y traslado al aeropuerto en el mismo paso</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="lab">Suite Terraza · elige tu llegada</div>
+        <div class="days"><span>Mié<b>11</b></span><span class="on">Jue<b>12</b></span><span>Vie<b>13</b></span><span>Sáb<b>14</b></span></div>
+        <div class="lab">3 noches · 2 huéspedes</div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px"><span>Habitación</span><b>USD 567</b></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px"><span>Desayuno</span><b>Incluido</b></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13.5px"><span>Reserva directa</span><b style="color:var(--green)">Sin comisión</b></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:14px" href="#">Reservar ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Ubicación</div><h2>En Getsemaní, entre el arte y el mar</h2></div>
+    <div class="loc">
+      <div class="map"><span class="pin"></span></div>
+      <div class="info">
+        <h3>Hotel Charme 64 · Casa Boutique</h3>
+        <p>Carrera 1a #64-68, Getsemaní · Cartagena de Indias, Colombia</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Reservar habitación</a><a class="btn btn-wa" href="#">Escribir por WhatsApp</a></div>
+        <p style="margin-top:18px">Check-in 15:00 · Check-out 12:00 · Traslado aeropuerto bajo reserva</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><span class="mk"></span><span>Charme 64<small>CASA BOUTIQUE · CARTAGENA</small></span></div>
+        <p>Casa boutique restaurada en Getsemaní. Carrera 1a #64-68, Cartagena de Indias. RNT 179013.</p></div>
+      <div><h4>Estancia</h4><a href="#">Habitaciones</a><a href="#">Experiencias</a><a href="#">Desayuno</a></div>
+      <div><h4>Reservas</h4><a href="#">Reserva directa</a><a href="#">Política de cancelación</a><a href="#">Grupos y eventos</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Cómo llegar</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Hotel Charme 64</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+</body>
+</html>

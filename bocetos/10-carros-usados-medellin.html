@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carros Usados Medellín — Vitrina (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0910; --bg2:#100c16; --panel:#161020; --panel2:#1b1426;
+    --line:#2a2036; --text:#f4f0f8; --muted:#9a90a8; --accent:#c026d3; --accent2:#e879f9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.015em;line-height:1.08}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#1c1428,#100c16);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .carimg{object-fit:contain!important;padding:6% 8%!important;background:radial-gradient(120% 90% at 50% 38%, rgba(255,255,255,.11), transparent 70%)!important}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:11px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:linear-gradient(120deg,var(--accent),#a21caf);color:#fff}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:#cfc6d8;border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--panel)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(11,9,16,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:30px;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:700;font-size:16px;letter-spacing:.02em}
+  .brand .mk{width:38px;height:38px;border-radius:50%;background:conic-gradient(from 140deg,#e879f9,#a21caf,#e879f9);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#1b0b1f}
+  .brand small{display:block;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:24px;font-size:14.5px;font-weight:500;color:#c6bcd0}
+  nav.links a:hover{color:#fff}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:590px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.46) contrast(1.06) saturate(1.05)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 460px at 82% 0%, rgba(192,38,211,.3), transparent 62%),linear-gradient(90deg, rgba(11,9,16,.96) 32%, rgba(11,9,16,.5) 66%, rgba(11,9,16,.32))}
+  .hero .inner{position:relative;padding:60px 0 88px}
+  .kicker{color:var(--accent2);font-weight:600;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:54px;font-weight:700;max-width:15ch}
+  .hero p.sub{margin-top:18px;font-size:18px;color:#c5bbd0;max-width:44ch}
+  .hero .cta{margin-top:26px;display:flex;gap:13px;flex-wrap:wrap}
+  .hero .trust{margin-top:24px;display:flex;gap:9px;flex-wrap:wrap}
+
+  .searchbar{position:relative;margin-top:-42px;z-index:20}
+  .searchbar .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;box-shadow:0 30px 70px -30px rgba(0,0,0,.75)}
+  .field{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px 14px}
+  .field label{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .field .val{margin-top:3px;font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+  .field .val svg{width:15px;height:15px;opacity:.5}
+
+  section{padding:74px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;gap:20px}
+  .sec-head h2{font-size:33px;font-weight:700}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px}
+  .sec-head a.more{font-size:14px;font-weight:600;color:var(--accent2);white-space:nowrap}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .vcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.16s}
+  .vcard:hover{transform:translateY(-4px);border-color:rgba(232,121,249,.4)}
+  .vcard .img{aspect-ratio:16/11}
+  .vcard .tag{position:absolute;top:12px;left:12px;background:rgba(11,9,16,.8);border:1px solid var(--line);color:#e6dcef;font-size:11px;font-weight:700;padding:5px 10px;border-radius:8px}
+  .vcard .tag.g{background:linear-gradient(120deg,var(--accent),var(--accent2));border:0;color:#1b0b1f}
+  .vcard .body{padding:16px 17px 18px}
+  .vcard h3{font-size:17px;font-weight:600}
+  .vcard .specs{margin-top:10px;display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}
+  .vcard .sede{margin-top:10px;font-size:12px;color:var(--accent2)}
+  .vcard .row{margin-top:12px;display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--line)}
+  .vcard .price{font-family:"Space Grotesk";font-weight:700;font-size:18.5px}
+  .vcard .price small{display:block;font-family:Inter;font-weight:500;font-size:11px;color:var(--muted)}
+  .vcard .see{font-size:13px;font-weight:600;color:var(--accent2)}
+
+  .flow{background:#0d0a12;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+  .flow .wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:600}
+  .flow b{color:#fff}.flow .ar{color:var(--accent2)}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .panelc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .panelc h3{font-size:20px;margin-bottom:14px}
+  .booking .lab{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600;margin-bottom:10px}
+  .sedes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .sedes span{border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}
+  .sedes span.on{border-color:var(--accent2);color:var(--accent2)}
+  .days{display:flex;gap:8px;margin-bottom:14px}
+  .day{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:9px 0;font-size:12px}
+  .day.on{background:linear-gradient(120deg,var(--accent),var(--accent2));border:0;color:#1b0b1f;font-weight:700}
+  .day b{display:block;font-family:"Space Grotesk";font-size:15px}
+  .slots{display:flex;gap:8px;flex-wrap:wrap}
+  .slot{border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px}
+  .slot.on{border-color:var(--accent2);color:var(--accent2)}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:46px 0 36px;margin-top:14px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#c2b8cc;font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(192,38,211,.14);border:1px solid rgba(192,38,211,.5);color:#f0abfc;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <div class="brand"><span class="mk">M&P</span><span>CARROS USADOS<small>MEDELLÍN · M&amp;P INVERSIONES</small></span></div>
+  <nav class="links"><a href="#inv">Inventario</a><a href="#sedes">Sedes</a><a href="#cita">Agenda tu cita</a><a href="#financia">Financiación</a><a href="#vende">Vende tu carro</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg>Agenda tu cita</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/car,parking,garage?lock=1001" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Carros usados · Medellín · 2 sedes</div>
+    <h1>Todo el inventario de las dos sedes, en un solo lugar.</h1>
+    <p class="sub">Filtra por marca, precio y sede. Reserva tu cita para ver el carro que te interesa — sin escribir y esperar.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#inv">Ver inventario</a>
+      <a class="btn btn-ghost" href="#cita">Agendar una cita</a>
+    </div>
+    <div class="trust"><span class="pill">✓ Llano Grande</span><span class="pill">✓ Centro Automotriz</span><span class="pill">✓ Financiación y retoma</span></div>
+  </div>
+</section>
+
+<div class="wrap searchbar">
+  <div class="card">
+    <div class="field"><label>Sede</label><div class="val">Todas <svg viewBox="0 0 24 24" fill="none" stroke="#9a90a8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Marca</label><div class="val">Todas <svg viewBox="0 0 24 24" fill="none" stroke="#9a90a8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Precio</label><div class="val">$30M – $120M <svg viewBox="0 0 24 24" fill="none" stroke="#9a90a8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <div class="field"><label>Año</label><div class="val">Desde 2016 <svg viewBox="0 0 24 24" fill="none" stroke="#9a90a8" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <button class="btn btn-primary" style="justify-content:center">Buscar</button>
+  </div>
+</div>
+
+<section id="inv">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Inventario en vitrina</h2><p>Actualizado a diario desde las dos sedes · cada vehículo con fotos y ficha</p></div><a class="more" href="#">Ver todo →</a></div>
+    <div class="grid">
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=renault&modelFamily=duster" alt=""><span class="tag g">Disponible</span></div>
+        <div class="body"><h3>Renault Duster Dynamique 2019</h3><div class="specs"><span>2019</span><span>·</span><span>63.100 km</span><span>·</span><span>Mecánica</span></div><div class="sede">◉ Sede Llano Grande</div>
+          <div class="row"><div class="price">$56.900.000<small>desde $965.000/mes</small></div><span class="see">Ver ficha →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=nissan&modelFamily=np300" alt=""><span class="tag">Recién ingresado</span></div>
+        <div class="body"><h3>Nissan Frontier NP300 4x4 2021</h3><div class="specs"><span>2021</span><span>·</span><span>48.400 km</span><span>·</span><span>Diésel</span></div><div class="sede">◉ Sede Centro Automotriz</div>
+          <div class="row"><div class="price">$118.000.000<small>desde $1.960.000/mes</small></div><span class="see">Ver ficha →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=chevrolet&modelFamily=onix" alt=""><span class="tag">Financiable</span></div>
+        <div class="body"><h3>Chevrolet Onix Turbo RS 2022</h3><div class="specs"><span>2022</span><span>·</span><span>29.800 km</span><span>·</span><span>Automática</span></div><div class="sede">◉ Sede Llano Grande</div>
+          <div class="row"><div class="price">$58.500.000<small>desde $985.000/mes</small></div><span class="see">Ver ficha →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=toyota&modelFamily=hilux" alt=""><span class="tag">Único dueño</span></div>
+        <div class="body"><h3>Toyota Hilux SRV 4x4 2020</h3><div class="specs"><span>2020</span><span>·</span><span>71.200 km</span><span>·</span><span>Diésel</span></div><div class="sede">◉ Sede Centro Automotriz</div>
+          <div class="row"><div class="price">$142.500.000<small>desde $2.360.000/mes</small></div><span class="see">Ver ficha →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=mazda&modelFamily=2" alt=""><span class="tag g">Disponible</span></div>
+        <div class="body"><h3>Mazda 2 Grand Touring 2021</h3><div class="specs"><span>2021</span><span>·</span><span>34.600 km</span><span>·</span><span>Automática</span></div><div class="sede">◉ Sede Llano Grande</div>
+          <div class="row"><div class="price">$59.900.000<small>desde $1.010.000/mes</small></div><span class="see">Ver ficha →</span></div></div></article>
+      <article class="vcard"><div class="ph img"><img class="carimg" src="https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=byd&modelFamily=t3" alt=""><span class="tag g">Eléctrico</span></div>
+        <div class="body"><h3>BYD T3 Van 100% eléctrica 2023</h3><div class="specs"><span>2023</span><span>·</span><span>22.000 km</span><span>·</span><span>Eléctrico</span></div><div class="sede">◉ Sede Centro Automotriz</div>
+          <div class="row"><div class="price">$96.900.000<small>ideal para trabajar en ciudad</small></div><span class="see">Ver ficha →</span></div></div></article>
+    </div>
+    <p style="color:#5f5568;font-size:12px;margin-top:18px">Vehículos, precios y kilometrajes de ejemplo — boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<div class="flow"><div class="wrap">
+  <b>Instagram</b><span class="ar">→</span><b>inventario de las 2 sedes</b><span class="ar">→</span><b>ficha del vehículo</b><span class="ar">→</span><b>cita agendada</b><span class="ar">→</span><b>WhatsApp del asesor</b>
+</div></div>
+
+<section id="cita">
+  <div class="wrap">
+    <div class="split" style="align-items:center">
+      <div>
+        <h2 style="font-size:31px;margin-bottom:12px">Agenda tu cita, no una cadena de mensajes</h2>
+        <p style="color:var(--muted);font-size:15px;max-width:40ch">Eliges el carro, la sede, el día y la hora. La cita llega al WhatsApp del asesor con el vehículo listo para que lo veas — nada de "¿sigue disponible?".</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-primary" href="#">Confirmar cita</a><a class="btn btn-ghost" href="#">Ver ubicación de las sedes</a></div>
+      </div>
+      <div class="panelc booking">
+        <div class="lab">Renault Duster 2019 · elige sede y día</div>
+        <div class="sedes"><span class="on">Llano Grande</span><span>Centro Automotriz</span></div>
+        <div class="days"><div class="day">Mié<b>10</b></div><div class="day on">Jue<b>11</b></div><div class="day">Vie<b>12</b></div><div class="day">Sáb<b>13</b></div></div>
+        <div class="lab">Horarios</div>
+        <div class="slots"><span class="slot">9:00</span><span class="slot on">10:30</span><span class="slot">14:00</span><span class="slot">16:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sedes" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Dos sedes en Medellín</h2><p>El inventario cambia entre sedes — la web te dice dónde está cada carro</p></div></div>
+    <div class="split">
+      <div class="panelc"><h3>Llano Grande</h3><p style="color:var(--muted);font-size:14px">Vía Llano Grande · atención de lunes a sábado. Vehículos livianos y línea eléctrica.</p></div>
+      <div class="panelc"><h3>Centro Automotriz</h3><p style="color:var(--muted);font-size:14px">Local 125 / 125A – Burbuja #1. Pick-ups, 4x4 y vehículos de trabajo.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="financia">
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><span class="mk">M&P</span><span>CARROS USADOS<small>MEDELLÍN · M&amp;P INVERSIONES</small></span></div>
+        <p>Carros usados multimarca en Medellín. Sedes Llano Grande y Centro Automotriz (Local 125/125A – Burbuja #1).</p></div>
+      <div><h4>Inventario</h4><a href="#">SUVs</a><a href="#">Pick-ups</a><a href="#">Sedanes</a><a href="#">Eléctricos</a></div>
+      <div><h4>Servicios</h4><a href="#">Financiación</a><a href="#">Retoma</a><a href="#">Agenda tu cita</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Sedes</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Carros Usados Medellín · M&amp;P Inversiones</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+</body>
+</html>
