@@ -1,0 +1,235 @@
+<!doctype html>
+<!--
+DECISIONES ANTES DE CODIFICAR — Viveros de Colombia (@viverosdecolombia_oficial)
+1. ARQUETIPO DE PORTADA: C. Mosaico asimétrico — piezas de distinto tamaño, como
+   un puesto de mercado con variedad a la vista. La sección más fuerte (aparte)
+   son los 4 productos del puesto, como corresponde a una tienda.
+2. PALETA (5, del propio perfil): #1f4a2e verde monstera de sus fotos de plantas ·
+   #c9742f terracota de las materas de barro · #f3ead9 papel kraft de las etiquetas
+   de precio del mercado · #2d2a20 tierra húmeda de las macetas recién regadas ·
+   #e7c65a amarillo de la flor que usan en el highlight "Decoración". Acento fuerte: #1f4a2e.
+3. TIPOGRAFÍAS: "Fraunces" (display orgánico, con curvas de hoja) + "Karla" (texto).
+   Ninguna es Inter/Poppins/Montserrat/Roboto/Space Grotesk.
+4. TÍTULOS en su vocabulario real: "Plan verde para tu casa" (de su propio caption
+   "BOGOTÁ, ¡PLAN VERDE!") en vez de "Nuestros productos"; "Puesto #46" en vez de
+   "Ubicación".
+5. GESTO MEMORABLE: cada producto lleva una etiqueta de cartulina colgada en ángulo,
+   como las que se usan literalmente en los puestos del Mercado Nacional de Plantas
+   — solo tiene sentido en un negocio que vende desde un puesto físico de mercado.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viveros de Colombia — Puesto #46</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --monstera:#1f4a2e; --terracota:#c9742f; --kraft:#f3ead9; --tierra:#2d2a20; --flor:#e7c65a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--kraft);color:var(--tierra);font-family:Karla,system-ui,sans-serif;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  h1,h2,.display{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em}
+
+  /* ===== PORTADA — Mosaico asimétrico ===== */
+  .portada{padding:56px 0 0}
+  .rotulo{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--monstera);
+    border:1px solid var(--monstera);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+  .portada h1{font-size:clamp(38px,5.4vw,58px);line-height:1.05;color:var(--tierra);max-width:14ch}
+  .portada .sub{max-width:46ch;margin-top:16px;font-size:16.5px;color:#4a4536}
+
+  .mosaico{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,110px);
+    gap:12px;margin-top:36px}
+  .pieza{border-radius:2px;display:flex;align-items:flex-end;padding:12px;color:#fff;
+    font-size:12px;font-weight:600;line-height:1.35}
+  .p1{grid-column:1/4;grid-row:1/3;background:var(--monstera)}
+  .p2{grid-column:4/7;grid-row:1/2;background:var(--terracota)}
+  .p3{grid-column:4/5;grid-row:2/4;background:var(--tierra)}
+  .p4{grid-column:5/7;grid-row:2/3;background:#8a9f6e;color:#1c2415}
+  .p5{grid-column:1/3;grid-row:3/4;background:var(--flor);color:#4a3b0e}
+  .p6{grid-column:3/5;grid-row:3/4;background:#3c5a3f}
+  @media (max-width:760px){
+    .mosaico{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(6,90px)}
+    .p1{grid-column:1/3;grid-row:1/2}.p2{grid-column:1/2;grid-row:2/3}
+    .p3{grid-column:2/3;grid-row:2/4}.p4{grid-column:1/2;grid-row:3/4}
+    .p5{grid-column:1/2;grid-row:4/5}.p6{grid-column:2/3;grid-row:4/6}
+  }
+
+  .cta-verde{display:inline-flex;align-items:center;gap:10px;margin:30px 0 60px;background:var(--monstera);
+    color:#fff;font-weight:700;font-size:15px;padding:15px 28px;border-radius:2px}
+  .cta-verde:hover{background:#173a24}
+
+  /* elemento que rompe la cuadrícula: la etiqueta de puesto colgando sobre el mosaico */
+  .ticket-puesto{position:absolute;background:#fff;border:2px dashed var(--tierra);
+    padding:10px 16px;font-family:Fraunces;font-size:14px;transform:rotate(-6deg);
+    box-shadow:0 12px 24px -10px rgba(0,0,0,.3);top:120px;right:24px}
+  .portada{position:relative}
+  @media (max-width:900px){.ticket-puesto{display:none}}
+
+  /* ===== SECCIÓN FUERTE — 4 productos del puesto ===== */
+  section{padding:70px 0}
+  .sec-head{max-width:54ch;margin-bottom:38px}
+  .sec-head .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--terracota);margin-bottom:10px}
+  .sec-head h2{font-size:33px}
+  .sec-head p{color:#4a4536;margin-top:10px;font-size:15.5px}
+
+  .productos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .prod{background:#fff;border:1px solid #e4d8bd;border-radius:3px;position:relative;
+    padding-bottom:18px}
+  .prod .foto-ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:14px;font-size:12px;color:#fff;font-weight:600}
+  .prod:nth-child(1) .foto-ph{background:var(--monstera)}
+  .prod:nth-child(2) .foto-ph{background:var(--terracota)}
+  .prod:nth-child(3) .foto-ph{background:#8a9f6e;color:#1c2415}
+  .prod:nth-child(4) .foto-ph{background:var(--tierra)}
+  .prod .etiqueta{position:absolute;top:-10px;left:16px;background:var(--flor);color:#4a3b0e;
+    font-family:Fraunces;font-size:13px;font-weight:700;padding:5px 12px;
+    transform:rotate(-4deg);box-shadow:2px 3px 0 rgba(0,0,0,.15)}
+  .prod:nth-child(2n) .etiqueta{transform:rotate(3deg)}
+  .prod .cuerpo{padding:16px 16px 0}
+  .prod h3{font-size:17px;font-family:Fraunces;font-weight:600}
+  .prod .precio{margin-top:6px;font-weight:700;color:var(--monstera);font-size:15px}
+  .prod .precio.falta{color:#a3672a;font-style:italic;font-weight:600;font-size:13.5px}
+  @media (max-width:900px){.productos{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.productos{grid-template-columns:1fr}}
+
+  /* ===== BLOQUE DE ACCIÓN ===== */
+  .accion{background:var(--monstera);color:#eaf0e6}
+  .accion .caja{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .accion h2{color:#fff;font-size:32px}
+  .accion p{margin-top:12px;color:#cfe0c8;font-size:15.5px;max-width:42ch}
+  .ficha{background:#173a24;border:1px solid #2c5537;border-radius:3px;padding:24px}
+  .ficha .fila{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #2c5537;font-size:14px}
+  .ficha .fila:last-child{border:0}
+  .ficha .fila b{color:var(--flor)}
+  .cta-grande{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--flor);
+    color:#4a3b0e;font-weight:700;font-size:16px;padding:17px 28px;border-radius:2px}
+  @media (max-width:820px){.accion .caja{grid-template-columns:1fr}}
+
+  /* ===== FRANJA DE CIERRE ===== */
+  .vista-previa{background:#171410;color:#a99c82;padding:36px 0;border-top:4px dashed #3c3527}
+  .vista-previa .etiqueta2{font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--flor);font-weight:700;margin-bottom:14px}
+  .vista-previa ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px;font-size:13px}
+  .vista-previa li{padding-left:16px;position:relative}
+  .vista-previa li::before{content:"—";position:absolute;left:0;color:var(--flor)}
+  @media (max-width:720px){.vista-previa ul{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="portada wrap">
+  <span class="rotulo">🌿 Puesto #46 · Mercado Nacional de Plantas</span>
+  <h1>Plan verde para tu casa</h1>
+  <p class="sub">Variedad, precios y todo lo que necesitas para llenar tu casa de vida. Plantas exóticas, materas y fertilizantes — Los Mártires, Bogotá.</p>
+  <div class="ticket-puesto">Puesto #46<br>Calle 23A #27-41</div>
+  <div class="mosaico">
+    <div class="pieza p1">foto: pasillo del puesto lleno de materas</div>
+    <div class="pieza p2">foto: monstera grande recién regada</div>
+    <div class="pieza p3">foto: cliente eligiendo maceta de barro</div>
+    <div class="pieza p4">foto: cactus y suculentas en fila</div>
+    <div class="pieza p5">foto: flor amarilla del highlight "Decoración"</div>
+    <div class="pieza p6">foto: entrega para alquiler de plantas en evento</div>
+  </div>
+  <a class="cta-verde" href="https://wa.me/573013154513?text=Hola%2C%20quiero%20pedir%20una%20cotizaci%C3%B3n%20de%20plantas" target="_blank" rel="noopener">Pedir cotización por WhatsApp →</a>
+</header>
+
+<section class="wrap">
+  <div class="sec-head">
+    <div class="k">Lo que encuentras en el puesto</div>
+    <h2>Aquí encontrarás vida y belleza verde en un solo lugar</h2>
+    <p>Cuatro categorías del puesto #46, tal como las organizamos en Instagram.</p>
+  </div>
+  <div class="productos">
+    <div class="prod">
+      <div class="etiqueta">Interior</div>
+      <div class="foto-ph">foto: monstera y potos en materas de barro</div>
+      <div class="cuerpo">
+        <h3>Plantas de interior</h3>
+        <div class="precio falta">[FALTA: precio de lista]</div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="etiqueta">Exóticas</div>
+      <div class="foto-ph">foto: planta exótica destacada del feed</div>
+      <div class="cuerpo">
+        <h3>Plantas exóticas</h3>
+        <div class="precio falta">[FALTA: precio de lista]</div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="etiqueta">Barro</div>
+      <div class="foto-ph">foto: materas de barro apiladas</div>
+      <div class="cuerpo">
+        <h3>Materas y fertilizantes</h3>
+        <div class="precio falta">[FALTA: precio de lista]</div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="etiqueta">Eventos</div>
+      <div class="foto-ph">foto: montaje de alquiler de plantas</div>
+      <div class="cuerpo">
+        <h3>Alquiler de plantas</h3>
+        <div class="precio falta">[FALTA: tarifa por evento]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="accion">
+  <div class="wrap caja">
+    <div>
+      <h2>Pide tu cotización, te la armamos hoy mismo</h2>
+      <p>Escríbenos por WhatsApp con lo que necesitas para tu casa, oficina o evento y te respondemos con precio y disponibilidad en el puesto.</p>
+      <a class="cta-grande" href="https://wa.me/573013154513?text=Hola%2C%20quiero%20pedir%20una%20cotizaci%C3%B3n%20de%20plantas" target="_blank" rel="noopener">🌿 Pedir cotización por WhatsApp</a>
+    </div>
+    <div class="ficha">
+      <div class="fila"><span>Puesto</span><b>#46</b></div>
+      <div class="fila"><span>Dirección</span><b>Calle 23A #27-41</b></div>
+      <div class="fila"><span>Mercado</span><b>Nacional de Plantas, Los Mártires</b></div>
+      <div class="fila"><span>WhatsApp</span><b>301 315 4513</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="vista-previa">
+  <div class="wrap">
+    <div class="etiqueta2">Vista previa — esto es ~20% del proyecto completo</div>
+    <ul>
+      <li>Catálogo completo con precio y disponibilidad por planta</li>
+      <li>Galería del puesto: materas, exóticas, montajes de eventos</li>
+      <li>Pedido en línea con domicilio a toda Bogotá</li>
+      <li>Formulario de cotización para alquiler de plantas en eventos</li>
+      <li>Mapa y cómo llegar al Mercado Nacional de Plantas</li>
+      <li>Dominio propio en vez de depender solo del feed de Instagram</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+AUTORREVISIÓN
+1. ¿Métricas de Instagram o frases de carencia dentro del boceto? No. No se
+   mencionan seguidores ni "sin página web"; el botón de WhatsApp reemplaza
+   cualquier carencia con la acción funcionando.
+2. ¿Tres bloques terminados o varios a medias? Tres: portada (mosaico), los 4
+   productos del puesto, y el bloque de acción con ficha del puesto. Ninguno
+   a medias.
+3. ¿Serviría para otro vivero cambiando el nombre? No: el puesto #46, la
+   dirección exacta (Calle 23A #27-41), el Mercado Nacional de Plantas y el
+   servicio real de "alquiler de plantas" (tomado de su propio highlight) son
+   específicos de esta cuenta.
+4. ¿La franja de cierre está separada? Sí: fondo oscuro distinto, tipografía
+   menor, borde punteado, etiquetada "Vista previa", después de los 3 bloques.
+5. ¿Algún título suena a plantilla? Se evitó "Nuestros productos"; se usó
+   "Plan verde para tu casa" y "Lo que encuentras en el puesto", tomados del
+   vocabulario real del perfil.
+-->
+</body>
+</html>

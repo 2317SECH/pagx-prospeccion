@@ -1,0 +1,219 @@
+<!doctype html>
+<!--
+DECISIONES ANTES DE CODIFICAR — Otter Bakery (@otter.bakery)
+1. ARQUETIPO DE PORTADA: D. Producto estrella — un solo pastel (el Korean cake,
+   su firma) domina la pantalla. La sección más fuerte (aparte) es la Carta
+   primero: la lista de tortas con su nombre real y tamaño.
+2. PALETA (5, del propio perfil): #f6c9d6 buttercream rosa de sus tortas Korean
+   cake · #7a4a5c ciruela de las flores de buttercream · #f2e6c9 crema del
+   fondant vintage · #3a2b3d chocolate oscuro de sus cupcakes · #d98f4e caramelo
+   del "otter" (nutria) de su logo. Acento fuerte: #7a4a5c.
+3. TIPOGRAFÍAS: "Baloo 2" (display redondeado, tierno, estilo repostería/anime) +
+   "Josefin Sans" (texto). Ninguna es Inter/Poppins/Montserrat/Roboto/Space Grotesk.
+4. TÍTULOS en su vocabulario real: "Tortas y cupcakes personalizados en
+   buttercream" (bio real) en vez de "Nuestros productos"; "Cómo pedir" (nombre
+   real de su highlight) en vez de "Contáctanos".
+5. GESTO MEMORABLE: cada torta de la carta lleva una "sticker de washi tape"
+   pegada en ángulo distinto, como el sticker de caja que ponen al entregar cada
+   pedido — solo tiene sentido en una pastelería que empaca cada torta a mano.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Otter Bakery — Pastelería artística</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --buttercream:#f6c9d6; --ciruela:#7a4a5c; --vintage:#f2e6c9; --choco:#3a2b3d; --caramelo:#d98f4e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--vintage);color:var(--choco);font-family:"Josefin Sans",system-ui,sans-serif;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  h1,h2,.display{font-family:"Baloo 2",sans-serif;font-weight:700}
+
+  /* ===== PORTADA — Producto estrella ===== */
+  .portada{background:var(--buttercream);padding:60px 0 0;overflow:hidden;position:relative}
+  .portada .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .rotulo{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ciruela);
+    background:#fff;border-radius:999px;padding:7px 15px;margin-bottom:20px}
+  .portada h1{font-size:clamp(36px,5vw,52px);line-height:1.06;color:var(--choco)}
+  .portada .sub{max-width:40ch;margin-top:16px;font-size:16px;color:#5a3f4c}
+  .estrella{aspect-ratio:1/1;background:linear-gradient(160deg,var(--ciruela),var(--choco));
+    border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;
+    color:#fbeaf0;font-weight:600;font-size:14px;padding:30px;position:relative}
+  /* elemento que rompe la cuadrícula: el sticker circular de "firma" sobre la torta */
+  .sticker-firma{position:absolute;top:-18px;right:-18px;width:96px;height:96px;border-radius:50%;
+    background:var(--caramelo);color:#3a220c;display:flex;align-items:center;justify-content:center;
+    text-align:center;font-family:"Baloo 2";font-weight:700;font-size:12.5px;line-height:1.2;
+    transform:rotate(8deg);box-shadow:0 14px 28px -10px rgba(0,0,0,.35)}
+  @media (max-width:820px){.portada .grid{grid-template-columns:1fr}.sticker-firma{display:none}}
+
+  .cta-rosa{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;background:var(--ciruela);
+    color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:999px}
+  .cta-rosa:hover{background:#5f3648}
+  .franja-datos{margin-top:40px;background:#fff;border-radius:4px 4px 0 0;padding:18px 28px;
+    display:flex;flex-wrap:wrap;gap:26px;font-size:13.5px;color:#5a3f4c}
+  .franja-datos b{display:block;color:var(--ciruela);font-family:"Baloo 2";font-size:14.5px}
+
+  /* ===== SECCIÓN FUERTE — Carta primero ===== */
+  section{padding:64px 0}
+  .sec-head{max-width:54ch;margin-bottom:34px}
+  .sec-head .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--caramelo);margin-bottom:10px}
+  .sec-head h2{font-size:32px;color:var(--choco)}
+  .sec-head p{color:#5a4a52;margin-top:10px;font-size:15.5px}
+
+  .carta{display:flex;flex-direction:column;border-top:2px solid var(--choco)}
+  .plato{display:grid;grid-template-columns:90px 1fr auto;gap:20px;align-items:center;
+    padding:20px 0;border-bottom:1px dashed #c9b8a0;position:relative}
+  .plato .foto-ph{width:90px;height:90px;border-radius:4px;display:flex;align-items:center;
+    justify-content:center;text-align:center;color:#fff;font-size:10px;font-weight:600;padding:8px}
+  .plato:nth-child(1) .foto-ph{background:var(--ciruela)}
+  .plato:nth-child(2) .foto-ph{background:var(--caramelo)}
+  .plato:nth-child(3) .foto-ph{background:var(--choco)}
+  .plato:nth-child(4) .foto-ph{background:#a8748a}
+  .plato h3{font-family:"Baloo 2";font-size:19px;color:var(--choco)}
+  .plato p{font-size:13.5px;color:#6b5860;margin-top:3px}
+  .plato .precio{font-family:"Baloo 2";font-weight:700;color:var(--ciruela);font-size:15px;white-space:nowrap}
+  .plato .precio.falta{color:#a3672a;font-style:italic;font-size:12.5px;font-weight:600}
+  .washi{position:absolute;top:-6px;left:78px;width:56px;height:20px;background:var(--vintage);
+    border:1px solid #d9c9a8;opacity:.9}
+  .plato:nth-child(odd) .washi{transform:rotate(-5deg)}
+  .plato:nth-child(even) .washi{transform:rotate(4deg)}
+  @media (max-width:600px){.plato{grid-template-columns:64px 1fr;grid-template-rows:auto auto}
+    .plato .foto-ph{width:64px;height:64px}.plato .precio{grid-column:2}}
+
+  /* ===== BLOQUE DE ACCIÓN ===== */
+  .accion{background:var(--choco);color:#f3e6ec}
+  .accion .caja{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .accion h2{color:#fff;font-size:31px;font-family:"Baloo 2"}
+  .accion p{margin-top:12px;color:#d8c3cc;font-size:15.5px;max-width:42ch}
+  .ficha{background:#2c2030;border:1px solid #4a3a4c;border-radius:4px;padding:24px}
+  .ficha .fila{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #4a3a4c;font-size:14px}
+  .ficha .fila:last-child{border:0}
+  .ficha .fila b{color:var(--caramelo)}
+  .cta-grande{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--caramelo);
+    color:#3a220c;font-weight:700;font-size:16px;padding:17px 28px;border-radius:999px}
+  @media (max-width:820px){.accion .caja{grid-template-columns:1fr}}
+
+  /* ===== FRANJA DE CIERRE ===== */
+  .vista-previa{background:#1c1420;color:#a8909e;padding:36px 0;border-top:4px dashed #4a3a4c}
+  .vista-previa .etiqueta2{font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--caramelo);font-weight:700;margin-bottom:14px}
+  .vista-previa ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px;font-size:13px}
+  .vista-previa li{padding-left:16px;position:relative}
+  .vista-previa li::before{content:"—";position:absolute;left:0;color:var(--caramelo)}
+  @media (max-width:720px){.vista-previa ul{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="rotulo">🦦 La Molina, Lima</span>
+        <h1>Tortas y cupcakes personalizados en buttercream</h1>
+        <p class="sub">Korean cake, vintage, anime, florales y más — hechos a mano, pedido por pedido.</p>
+        <a class="cta-rosa" href="https://wa.link/zhbia7" target="_blank" rel="noopener">Pedir por WhatsApp →</a>
+      </div>
+      <div class="estrella">
+        foto: Korean cake insignia, buttercream con flores
+        <div class="sticker-firma">hecho<br>a mano<br>🦦</div>
+      </div>
+    </div>
+    <div class="franja-datos">
+      <div><b>Martes – Sábado</b>9:00 a.m. – 6:00 p.m.</div>
+      <div><b>La Molina</b>Lima, Perú</div>
+      <div><b>DM o WhatsApp</b>así reciben los pedidos</div>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="sec-head">
+    <div class="k">La carta de Otter</div>
+    <h2>Lo que sale del obrador esta semana</h2>
+    <p>Cuatro estilos de la casa, tal como los nombran en el feed. Cada torta se hace por encargo.</p>
+  </div>
+  <div class="carta">
+    <div class="plato">
+      <div class="washi"></div>
+      <div class="foto-ph">foto: Korean cake con flores de buttercream</div>
+      <div><h3>Korean cake</h3><p>Buttercream con flores, estilo firma de la casa</p></div>
+      <div class="precio falta">[FALTA: precio]</div>
+    </div>
+    <div class="plato">
+      <div class="washi"></div>
+      <div class="foto-ph">foto: torta vintage con encaje de buttercream</div>
+      <div><h3>Torta vintage</h3><p>Encaje y textura clásica en buttercream</p></div>
+      <div class="precio falta">[FALTA: precio]</div>
+    </div>
+    <div class="plato">
+      <div class="washi"></div>
+      <div class="foto-ph">foto: torta temática anime pintada a mano</div>
+      <div><h3>Torta anime</h3><p>Diseño personalizado según el personaje pedido</p></div>
+      <div class="precio falta">[FALTA: precio]</div>
+    </div>
+    <div class="plato">
+      <div class="washi"></div>
+      <div class="foto-ph">foto: cupcakes florales en set de 6</div>
+      <div><h3>Cupcakes florales</h3><p>Set para compartir, buttercream de temporada</p></div>
+      <div class="precio falta">[FALTA: precio por set]</div>
+    </div>
+  </div>
+</section>
+
+<section class="accion">
+  <div class="wrap caja">
+    <div>
+      <h2>Cuéntanos qué torta imaginas</h2>
+      <p>Escríbenos por WhatsApp con la fecha, el estilo y para cuántas personas — te confirmamos diseño y tiempos de entrega.</p>
+      <a class="cta-grande" href="https://wa.link/zhbia7" target="_blank" rel="noopener">🦦 Pedir por WhatsApp</a>
+    </div>
+    <div class="ficha">
+      <div class="fila"><span>Horario</span><b>Mar–Sáb 9am–6pm</b></div>
+      <div class="fila"><span>Zona</span><b>La Molina, Lima</b></div>
+      <div class="fila"><span>Pedidos</span><b>DM o WhatsApp</b></div>
+      <div class="fila"><span>Entrega</span><b class="falta" style="color:#e2b98a;font-style:italic">[FALTA: tiempo mínimo de encargo]</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="vista-previa">
+  <div class="wrap">
+    <div class="etiqueta2">Vista previa — esto es ~20% del proyecto completo</div>
+    <ul>
+      <li>Carta completa con todos los estilos, tamaños y precios</li>
+      <li>Galería de tortas anteriores organizada por tipo</li>
+      <li>Cotizador de encargos en línea (fecha, estilo, tamaño)</li>
+      <li>Delivery propio integrado, no solo por WhatsApp</li>
+      <li>Mapa y cómo llegar al local en La Molina</li>
+      <li>Dominio propio (otterbakery.pe) en vez de solo Instagram</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+AUTORREVISIÓN
+1. ¿Métricas de Instagram o frases de carencia dentro del boceto? No. Ni
+   seguidores ni "no tiene página"; el botón de WhatsApp está funcionando como
+   la solución, no como una queja.
+2. ¿Tres bloques terminados o varios a medias? Tres: portada con producto
+   estrella, la carta de 4 estilos, y el bloque de acción con ficha. Completos.
+3. ¿Serviría para otra pastelería cambiando el nombre? No: el horario real
+   (martes-sábado 9-6), La Molina/Lima, el wa.link real y los nombres reales de
+   sus estilos (Korean cake, vintage, anime) son de esta cuenta.
+4. ¿La franja de cierre está separada? Sí: fondo oscuro distinto, tipografía
+   menor, borde punteado, etiquetada "Vista previa".
+5. ¿Algún título suena a plantilla? Se evitó "Nuestros productos"; se usó "La
+   carta de Otter" y "Lo que sale del obrador esta semana".
+-->
+</body>
+</html>

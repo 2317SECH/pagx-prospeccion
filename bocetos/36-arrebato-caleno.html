@@ -1,0 +1,205 @@
+<!doctype html>
+<!--
+DECISIONES ANTES DE CODIFICAR — Arrebato Caleño Clases de Salsa (@arrebatocaleno)
+1. ARQUETIPO DE PORTADA: I. Barrio — la identidad caleña y el Palenque como
+   argumento de portada. La sección más fuerte (aparte) es la Agenda: los tipos
+   de clase como estructura, igual que un horario de gimnasio.
+2. PALETA (5, del propio perfil): #b3122a rojo de la falda de salsa caleña ·
+   #f2a71b amarillo-oro del vestuario de feria ·#1c1c1c negro del piso de tabla
+   donde bailan · #f4ede1 crema de las paredes del Palenque · #205e4a verde de
+   la bandera del Valle en sus posts de FestSalsaCali. Acento fuerte: #b3122a.
+3. TIPOGRAFÍAS: "Anton" (display de afiche/festival, muy caleño) + "Mulish"
+   (texto). Ninguna es Inter/Poppins/Montserrat/Roboto/Space Grotesk.
+4. TÍTULOS en su vocabulario real: "Aprende, disfruta y baila con los mejores"
+   (bio real) en vez de "Nuestros servicios"; "Reserva tu clase" (su propio CTA)
+   en vez de "Contáctanos".
+5. GESTO MEMORABLE: una banda diagonal tipo "sash" de feria cruza la portada con
+   el estilo (Caleño / En Línea / Bachata), como las bandas que se usan en los
+   eventos de salsa de Cali (FestSalsaCali) — solo tiene sentido en una escuela
+   de baile caleña.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrebato Caleño — Clases de Salsa en Cali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rojo:#b3122a; --oro:#f2a71b; --negro:#1c1c1c; --crema:#f4ede1; --verde:#205e4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--crema);color:var(--negro);font-family:Mulish,system-ui,sans-serif;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  h1,h2,.display{font-family:Anton,sans-serif;font-weight:400;letter-spacing:.01em}
+
+  /* ===== PORTADA — arquetipo Barrio ===== */
+  .portada{background:var(--negro);color:var(--crema);position:relative;overflow:hidden;
+    padding:70px 0 90px}
+  .portada::before{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,rgba(242,167,27,.05) 0 3px,transparent 3px 34px)}
+  .sash{position:absolute;top:34px;right:-70px;width:340px;background:var(--rojo);color:#fff;
+    text-align:center;font-family:Anton;font-size:14px;letter-spacing:.14em;padding:9px 0;
+    transform:rotate(38deg);box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
+  @media (max-width:720px){.sash{display:none}}
+  .rotulo{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12.5px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--oro);
+    border:1px solid var(--oro);border-radius:999px;padding:7px 16px;margin-bottom:26px}
+  .portada h1{font-size:clamp(46px,8vw,84px);line-height:.98;color:#fff}
+  .portada h1 em{font-style:normal;color:var(--oro)}
+  .portada .sub{max-width:38ch;margin-top:20px;font-size:17px;color:#e6dcc9}
+  .datos{margin-top:30px;display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:#c9bfa8}
+  .datos b{display:block;color:#fff;font-family:Anton;font-size:16px;letter-spacing:.01em}
+  .cta-oro{display:inline-flex;align-items:center;gap:10px;margin-top:30px;background:var(--oro);
+    color:#3a2606;font-weight:800;font-size:15px;padding:16px 28px;border-radius:2px}
+  .cta-oro:hover{background:#e0961a}
+
+  /* ===== SECCIÓN FUERTE — Agenda de clases ===== */
+  section{padding:72px 0}
+  .sec-head{max-width:52ch;margin-bottom:36px}
+  .sec-head .k{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--rojo);margin-bottom:10px}
+  .sec-head h2{font-size:34px}
+  .sec-head p{color:#4a4235;margin-top:10px;font-size:15.5px}
+
+  .agenda{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .clase{background:#fff;border:2px solid var(--negro);border-radius:2px;padding:22px 18px;
+    position:relative}
+  .clase:nth-child(2){transform:translateY(18px)}
+  .clase:nth-child(4){transform:translateY(-10px)}
+  .clase .num{font-family:Anton;font-size:34px;color:var(--rojo)}
+  .clase h3{font-family:Anton;font-size:19px;margin-top:8px;letter-spacing:.01em}
+  .clase p{font-size:13px;color:#5a5245;margin-top:8px}
+  .clase .cuando{margin-top:14px;font-size:12.5px;font-weight:700;color:var(--verde)}
+  .clase .falta{color:#a3672a;font-style:italic;font-weight:600}
+  @media (max-width:900px){.agenda{grid-template-columns:1fr 1fr}
+    .clase:nth-child(2),.clase:nth-child(4){transform:none}}
+  @media (max-width:560px){.agenda{grid-template-columns:1fr}}
+
+  /* ===== BLOQUE DE ACCIÓN ===== */
+  .accion{background:var(--rojo);color:#fdeee0}
+  .accion .caja{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .accion h2{color:#fff;font-size:32px;font-family:Anton}
+  .accion p{margin-top:12px;color:#f3d3ce;font-size:15.5px;max-width:42ch}
+  .ficha{background:#8c0e21;border:1px solid #a52a3c;border-radius:2px;padding:24px}
+  .ficha .fila{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #a52a3c;font-size:14px}
+  .ficha .fila:last-child{border:0}
+  .ficha .fila b{color:var(--oro)}
+  .cta-grande{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--oro);
+    color:#3a2606;font-weight:800;font-size:16px;padding:17px 28px;border-radius:2px}
+  @media (max-width:820px){.accion .caja{grid-template-columns:1fr}}
+
+  /* ===== FRANJA DE CIERRE ===== */
+  .vista-previa{background:#120b0d;color:#a89588;padding:36px 0;border-top:4px dashed #3c2a2a}
+  .vista-previa .etiqueta2{font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--oro);font-weight:800;margin-bottom:14px}
+  .vista-previa ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 24px;font-size:13px}
+  .vista-previa li{padding-left:16px;position:relative}
+  .vista-previa li::before{content:"—";position:absolute;left:0;color:var(--oro)}
+  @media (max-width:720px){.vista-previa ul{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <div class="sash">FEST SALSA CALI</div>
+  <div class="wrap">
+    <span class="rotulo">💃 Cali, Colombia</span>
+    <h1>Aprende,<br>disfruta y baila<br><em>con los mejores</em></h1>
+    <p class="sub">Estilo Caleño · Salsa en Línea · Bachata. Clases en Cali para todos los niveles.</p>
+    <div class="datos">
+      <div><b>3 estilos</b>Caleño, En Línea, Bachata</div>
+      <div><b>Clases privadas</b>y grupales</div>
+      <div><b class="falta" style="color:#e2b98a">[FALTA: dirección exacta del salón]</b>no confirmada en el perfil</div>
+    </div>
+    <a class="cta-oro" href="https://wa.me/573004763474?text=Hola%2C%20quiero%20reservar%20una%20clase%20de%20salsa" target="_blank" rel="noopener">Reservar clase por WhatsApp →</a>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="sec-head">
+    <div class="k">Reserva tu clase ahora</div>
+    <h2>Elige tu estilo, nosotros ponemos el ritmo</h2>
+    <p>Así organizamos las clases hoy — escríbenos por WhatsApp para el horario disponible.</p>
+  </div>
+  <div class="agenda">
+    <div class="clase">
+      <div class="num">01</div>
+      <h3>Estilo Caleño</h3>
+      <p>El sello de Cali: rapidez de pies y figuras de pareja.</p>
+      <div class="cuando falta">[FALTA: horario exacto]</div>
+    </div>
+    <div class="clase">
+      <div class="num">02</div>
+      <h3>Salsa en Línea</h3>
+      <p>Estructura por líneas, ideal para empezar desde cero.</p>
+      <div class="cuando falta">[FALTA: horario exacto]</div>
+    </div>
+    <div class="clase">
+      <div class="num">03</div>
+      <h3>Bachata</h3>
+      <p>Ritmo y conexión, en grupo o en pareja.</p>
+      <div class="cuando falta">[FALTA: horario exacto]</div>
+    </div>
+    <div class="clase">
+      <div class="num">04</div>
+      <h3>Clases privadas</h3>
+      <p>A tu ritmo, con atención uno a uno.</p>
+      <div class="cuando">Bajo cita por WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<section class="accion">
+  <div class="wrap caja">
+    <div>
+      <h2>Reserva tu clase ahora por WhatsApp</h2>
+      <p>Cuéntanos qué estilo quieres aprender y te confirmamos cupo y horario disponible.</p>
+      <a class="cta-grande" href="https://wa.me/573004763474?text=Hola%2C%20quiero%20reservar%20una%20clase%20de%20salsa" target="_blank" rel="noopener">💃 Reservar clase por WhatsApp</a>
+    </div>
+    <div class="ficha">
+      <div class="fila"><span>Ciudad</span><b>Cali, Colombia</b></div>
+      <div class="fila"><span>Estilos</span><b>Caleño · En Línea · Bachata</b></div>
+      <div class="fila"><span>Modalidad</span><b>Privadas y grupales</b></div>
+      <div class="fila"><span>WhatsApp</span><b>300 476 3474</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="vista-previa">
+  <div class="wrap">
+    <div class="etiqueta2">Vista previa — esto es ~20% del proyecto completo</div>
+    <ul>
+      <li>Horario completo de clases por estilo, día y hora</li>
+      <li>Galería y video del salón y de los eventos (FestSalsaCali, PalenqueCali)</li>
+      <li>Inscripción y pago de paquetes en línea</li>
+      <li>Perfil de cada instructor con su especialidad</li>
+      <li>Mapa y cómo llegar al salón en Cali</li>
+      <li>Dominio propio en vez de depender solo del feed de Instagram</li>
+    </ul>
+  </div>
+</div>
+
+<!--
+AUTORREVISIÓN
+1. ¿Métricas de Instagram o frases de carencia dentro del boceto? No. No se
+   mencionan seguidores ni "sin agenda"; el botón de WhatsApp funciona como la
+   reserva real, tal como lo pide su propio bio ("Reserva tu clase ahora por
+   WhatsApp").
+2. ¿Tres bloques terminados o varios a medias? Tres: portada tipo Barrio con
+   banda de festival, agenda de 4 clases, y bloque de acción con ficha. Completos.
+3. ¿Serviría para otra escuela de salsa cambiando el nombre? No: los estilos
+   reales (Caleño, En Línea, Bachata), el WhatsApp real, y la referencia real a
+   FestSalsaCali (su propio highlight) son específicos de esta cuenta.
+4. ¿La franja de cierre está separada? Sí: fondo casi negro, tipografía menor,
+   borde punteado, etiquetada "Vista previa".
+5. ¿Algún título suena a plantilla? Se evitó "Nuestros servicios"; se usó
+   "Aprende, disfruta y baila con los mejores" y "Elige tu estilo, nosotros
+   ponemos el ritmo", ambos del vocabulario real del perfil.
+-->
+</body>
+</html>
