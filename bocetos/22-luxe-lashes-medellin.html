@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luxe Lashes — Servicios &amp; academia (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf5f4; --bg2:#f5eae8; --ink:#3a2b2b; --ink2:#5c4747; --muted:#8a7472;
+    --rose:#b9707c; --rose-d:#9c5761; --gold:#b58a4d; --line:#ecdcd9; --card:#fffdfc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:-.005em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#f1dcd8,#e7c8c3);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;padding:13px 24px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.02em}
+  .btn-primary{background:var(--rose);color:#fff}
+  .btn-primary:hover{background:var(--rose-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--card)}
+
+  .ribbon{background:#4a2f33;color:#f3e2df;font-size:12.5px}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(251,245,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:78px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Marcellus;font-size:20px;letter-spacing:.04em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.24em;color:var(--muted);font-weight:600}
+  nav.links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--ink2)}
+  nav.links a:hover{color:var(--rose-d)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:600px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.8) saturate(1.05)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(58,43,43,.72) 30%, rgba(58,43,43,.28) 62%, rgba(58,43,43,.08))}
+  .hero .inner{position:relative;padding:70px 0 84px;color:#fdf6f4}
+  .hero .kicker{font-weight:600;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#eec9be;margin-bottom:14px}
+  .hero h1{font-size:50px;max-width:15ch;color:#fff}
+  .hero p.sub{margin-top:16px;font-size:17px;color:#f1e2df;max-width:44ch}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-ghost{border-color:#fdf6f4;color:#fdf6f4}
+  .hero .trust{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+
+  section{padding:82px 0}
+  .sec-head{max-width:60ch;margin:0 auto 44px;text-align:center}
+  .sec-head .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-d);margin-bottom:12px}
+  .sec-head h2{font-size:36px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:16px}
+
+  .tabs{display:flex;justify-content:center;gap:12px;margin-bottom:36px}
+  .tab{padding:10px 22px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;font-weight:600;background:var(--card)}
+  .tab.on{background:var(--rose);color:#fff;border-color:var(--rose)}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .svc .ph{aspect-ratio:4/3}
+  .svc .body{padding:20px}
+  .svc h3{font-size:19px;margin-bottom:6px}
+  .svc p{color:var(--muted);font-size:13.5px}
+  .svc .price{margin-top:12px;font-family:Marcellus;font-size:18px;color:var(--rose-d)}
+
+  .curso{background:#3a2b2b;color:#f3e6e3;border-radius:14px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-top:20px}
+  .curso h2{color:#fff;font-size:30px;margin-bottom:12px}
+  .curso p{color:#d9c6c2;font-size:15px;max-width:44ch}
+  .curso ul{list-style:none;margin-top:14px}
+  .curso li{padding:7px 0;font-size:14px;display:flex;gap:9px}
+  .curso .ck{color:#e9c48c;font-weight:700}
+  .curso .panel{background:#fffdfc;color:var(--ink);border-radius:8px;padding:24px;text-align:center}
+  .curso .panel .big{font-family:Marcellus;font-size:26px;color:var(--rose-d)}
+  .curso .panel .lab{color:var(--muted);font-size:12.5px;margin-top:4px}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px;text-align:center}
+  .ts .big{font-family:Marcellus;font-size:23px;color:var(--rose-d)}
+  .ts .lab{color:var(--muted);font-size:12.5px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:24px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(185,112,124,.14);border:1px solid rgba(185,112,124,.5);color:#7a3d47;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Sede Poblado · Medellín</span><span>+8 años de experiencia · agenda por WhatsApp</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">LUXE LASHES<small>Medellín</small></div>
+  <nav class="links"><a href="#servicios">Servicios</a><a href="#academia">Academia</a><a href="#contacto">Contacto</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Agenda tu cita</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx22lash1/1600/900" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Lash Extensions · Lifting · Brows · Academia</div>
+    <h1>23.6K siguen a Luxe Lashes. Todo — cita y curso — pasa por el mismo link de mensajes.</h1>
+    <p class="sub">+8 años de experiencia, sede en El Poblado y una academia propia para pestañistas. Hoy quien quiere agendar un lifting y quien quiere estudiar el curso reciben exactamente el mismo enlace, sin distinción.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#servicios">Ver servicios</a>
+      <a class="btn btn-ghost" href="#academia">Ver academia</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ 23.6K seguidoras</span>
+      <span class="pill">✓ +8 años de experiencia</span>
+      <span class="pill">✓ Sede El Poblado</span>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Para clientas</div><h2>Servicios</h2><p>El mismo menú que hoy se explica publicación por publicación, ahora con precio de referencia y reserva directa</p></div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ph"><img src="https://picsum.photos/seed/pagx22s1/560/420" alt=""></div><div class="body"><h3>Lash Extensions</h3><p>Volumen ruso, mega volumen o clásico según el efecto que busques.</p><div class="price">Desde $80.000</div></div></div>
+      <div class="svc"><div class="ph"><img src="https://picsum.photos/seed/pagx22s2/560/420" alt=""></div><div class="body"><h3>Lifting &amp; Brows</h3><p>Lifting de pestañas y diseño de cejas con laminado.</p><div class="price">Desde $65.000</div></div></div>
+      <div class="svc"><div class="ph"><img src="https://picsum.photos/seed/pagx22s3/560/420" alt=""></div><div class="body"><h3>Retoque / Relleno</h3><p>Mantenimiento cada 3 semanas para conservar el set.</p><div class="price">Desde $50.000</div></div></div>
+    </div>
+    <p style="color:#a08e8c;font-size:12px;margin-top:18px">Precios de ejemplo a partir de servicios mencionados en Instagram — boceto de demostración PAGX Studio. Confirmar tarifas reales con el negocio.</p>
+  </div>
+</section>
+
+<section id="academia" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="curso">
+      <div>
+        <h2>Academia Luxe Lashes</h2>
+        <p>Con +8 años formando pestañistas, la academia hoy no tiene página propia — solo aparece mezclada en el mismo feed de servicios. Una landing dedicada la vende como lo que es: un segundo negocio, con su propio precio y calendario.</p>
+        <ul>
+          <li><span class="ck">✓</span> Curso de lash extensions certificado</li>
+          <li><span class="ck">✓</span> Cupos limitados por grupo</li>
+          <li><span class="ck">✓</span> Kit de iniciación incluido</li>
+        </ul>
+        <div style="margin-top:22px"><a class="btn btn-primary" href="#">Quiero el curso</a></div>
+      </div>
+      <div class="panel">
+        <div class="big">23.6K</div>
+        <div class="lab">seguidoras en Instagram · dato verificado</div>
+      </div>
+    </div>
+    <p style="color:#a08e8c;font-size:12px;margin-top:14px">Estructura del curso ilustrativa, a partir de las categorías destacadas ("Cursos") del perfil — confirmar programa real con la academia.</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Confianza</div><h2>Lo que ya construyeron</h2></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">1.9K+</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">23.6K</div><div class="lab">seguidoras</div></div>
+      <div class="ts"><div class="big">+8 años</div><div class="lab">de experiencia</div></div>
+      <div class="ts"><div class="big">2 sedes</div><div class="lab">incluyendo El Poblado</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">LUXE LASHES<small>Medellín</small></div>
+        <p>Lash extensions, lifting, brows y academia. Sede El Poblado, Medellín.</p>
+      </div>
+      <div><h4>Servicios</h4><a href="#">Lash Extensions</a><a href="#">Lifting &amp; Brows</a></div>
+      <div><h4>Academia</h4><a href="#">Curso de lashes</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot" style="margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between"><span>© 2026 Luxe Lashes</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

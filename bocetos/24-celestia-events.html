@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celestia Events — Bodas destino (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4; --bg2:#f1ebe1; --ink:#2c2a26; --ink2:#4d4a43; --muted:#847d70;
+    --gold:#a8843f; --gold-d:#8a6b2e; --line:#e6dfd0; --card:#fffefb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Italiana,Georgia,serif;font-weight:400;line-height:1.15;letter-spacing:.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#efe3cf,#e3d3b6);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14px;padding:13px 26px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.04em;text-transform:uppercase}
+  .btn-primary{background:var(--gold);color:#fff}
+  .btn-primary:hover{background:var(--gold-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--card);letter-spacing:.02em}
+  .lang{font-size:12px;color:var(--muted);font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+
+  .ribbon{background:#2c2a26;color:#e9e1d0;font-size:12.5px}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(250,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:82px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Italiana;font-size:24px;letter-spacing:.06em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.24em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:26px;font-size:13.5px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.04em}
+  nav.links a:hover{color:var(--gold-d)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:660px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.7) saturate(1.02)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg, rgba(28,24,16,.75), rgba(28,24,16,.1) 55%, rgba(28,24,16,.35))}
+  .hero .inner{position:relative;padding:0 0 50px;color:#fbf6ec;width:100%}
+  .hero .kicker{font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e3caa0;margin-bottom:16px}
+  .hero h1{font-size:50px;max-width:17ch;color:#fff}
+  .hero p.sub{margin-top:16px;font-size:17px;color:#efe6d6;max-width:46ch}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-ghost{border-color:#fbf6ec;color:#fbf6ec}
+
+  section{padding:84px 0}
+  .sec-head{max-width:60ch;margin:0 auto 46px;text-align:center}
+  .sec-head .k{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-bottom:12px}
+  .sec-head h2{font-size:38px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:16px}
+
+  .weddings{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .wd{border-radius:6px;overflow:hidden;position:relative}
+  .wd .ph{aspect-ratio:3/4}
+  .wd .tag{position:absolute;left:12px;bottom:12px;color:#fff;font-family:Italiana;font-size:19px;letter-spacing:.05em;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+
+  .bilingue{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-top:8px}
+  .bilingue h2{font-size:30px;margin-bottom:12px}
+  .bilingue p{color:var(--muted);font-size:15px;max-width:44ch;font-family:Inter}
+  .bilingue .flags{display:flex;gap:10px;margin-top:20px}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px;text-align:center}
+  .ts .big{font-family:Italiana;font-size:24px;color:var(--gold-d)}
+  .ts .lab{color:var(--muted);font-size:12.5px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:24px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(168,132,63,.14);border:1px solid rgba(168,132,63,.5);color:#6b4f22;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px)}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Destination Weddings · Colombia</span><span>10.3K en Instagram · contacto por Linktree</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">CELESTIA<small>Events · Bodas destino</small></div>
+  <nav class="links"><a href="#bodas">Bodas</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+  <span class="spacer"></span>
+  <span class="lang">ES / EN</span>
+  <a class="btn btn-wa" href="#" style="margin-left:14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Conversemos</a>
+</div></header>
+
+<section class="hero">
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx24wed1/1600/900" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Wedding planner · destination weddings Colombia</div>
+    <h1>10.3K siguen las bodas de Celestia. Hoy todo el contacto vive en un link de Linktree.</h1>
+    <p class="sub">Celestia Events ya organiza bodas destino en Colombia con casos reales detrás de cada publicación. Para una pareja decidiendo casarse en otro país, esa decisión necesita más respaldo que un enlace suelto — necesita ver el trabajo real antes de escribir.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#bodas">Ver bodas reales</a>
+      <a class="btn btn-ghost" href="#contacto">Conversemos</a>
+    </div>
+  </div>
+</section>
+
+<section id="bodas">
+  <div class="wrap">
+    <div class="sec-head"><div class="k">Portafolio</div><h2>Bodas reales</h2><p>Las mismas parejas que hoy solo aparecen como iniciales guardadas en destacadas de Instagram</p></div>
+    <div class="weddings">
+      <div class="wd"><div class="ph"><img src="https://picsum.photos/seed/pagx24w1/380/500" alt=""></div><div class="tag">L &amp; J</div></div>
+      <div class="wd"><div class="ph"><img src="https://picsum.photos/seed/pagx24w2/380/500" alt=""></div><div class="tag">E &amp; L</div></div>
+      <div class="wd"><div class="ph"><img src="https://picsum.photos/seed/pagx24w3/380/500" alt=""></div><div class="tag">V &amp; P</div></div>
+      <div class="wd"><div class="ph"><img src="https://picsum.photos/seed/pagx24w4/380/500" alt=""></div><div class="tag">C &amp; A</div></div>
+    </div>
+    <p style="color:#a89c85;font-size:12px;margin-top:18px">Nombres de ejemplo — la referencia real (iniciales de parejas) proviene de las destacadas públicas del perfil. Boceto de demostración PAGX Studio.</p>
+  </div>
+</section>
+
+<section id="nosotros" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="bilingue">
+      <div>
+        <h2>Pensado para parejas de fuera</h2>
+        <p>Descubre la magia de casarte en Colombia es la promesa de Celestia — pero hoy esa promesa se sostiene solo en un perfil de Instagram y un Linktree. Una página bilingüe (ES/EN) le da a una pareja extranjera el mismo nivel de confianza que ya tienen sus clientas locales.</p>
+        <div class="flags"><span class="pill">🇨🇴 Español</span><span class="pill">🇺🇸 English</span></div>
+        <div style="margin-top:22px"><a class="btn btn-primary" href="#">Solicitar propuesta</a></div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">10.3K</div>
+        <div class="lab">seguidores en Instagram · dato verificado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:0">
+  <div class="wrap" style="padding-top:56px">
+    <div class="sec-head"><div class="k">Confianza</div><h2>Lo que ya construyeron</h2></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">1.2K+</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">10.3K</div><div class="lab">seguidores</div></div>
+      <div class="ts"><div class="big">Colombia</div><div class="lab">bodas destino</div></div>
+      <div class="ts"><div class="big">Linktree</div><div class="lab">único canal de contacto hoy</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">CELESTIA<small>Events · Bodas destino</small></div>
+        <p>Wedding planner especializada en destination weddings en Colombia.</p>
+      </div>
+      <div><h4>Portafolio</h4><a href="#">Bodas reales</a></div>
+      <div><h4>Servicio</h4><a href="#">Bodas destino</a><a href="#">Planeación integral</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div style="margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between"><span>© 2026 Celestia Events</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

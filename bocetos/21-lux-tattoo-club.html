@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LŪX Tattoo Club — Portafolio &amp; reservas (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0a0a; --bg2:#141010; --panel:#181212; --panel2:#1d1616;
+    --line:#2e2323; --text:#f2ece7; --muted:#a8988f; --red:#c23b3b; --red2:#e2554f; --gold:#c9a44a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:Anton,Inter,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;font-weight:400}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#221818,#0f0b0b);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.03em;padding:14px 26px;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{background:var(--red2)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--gold)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(12,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:76px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:Anton;font-size:20px;letter-spacing:.03em}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14px;font-weight:600;color:#e2d6cd;text-transform:uppercase;letter-spacing:.02em}
+  nav.links a:hover{color:var(--gold)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:620px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 80% -10%, rgba(194,59,59,.28), transparent 60%),
+     linear-gradient(90deg, rgba(12,10,10,.97) 34%, rgba(12,10,10,.62) 66%, rgba(12,10,10,.42))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.15) brightness(.5) grayscale(.3)}
+  .hero .inner{position:relative;padding:70px 0 86px}
+  .kicker{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-family:Inter}
+  .hero h1{font-size:54px;max-width:16ch}
+  .hero p.sub{margin-top:20px;font-size:18px;color:#d8ccc2;max-width:48ch;font-family:Inter;text-transform:none}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:32px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter;text-transform:none}
+
+  .artistas{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .artista{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-align:center}
+  .artista .ph{aspect-ratio:1}
+  .artista .nm{padding:14px 10px;font-family:Anton;font-size:16px;letter-spacing:.02em}
+  .artista .st{padding:0 10px 14px;color:var(--muted);font-size:12.5px;font-family:Inter}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gallery .ph{aspect-ratio:1;border-radius:8px}
+
+  .band{background:linear-gradient(120deg,#1d1616,#0c0a0a);border:1px solid var(--line);border-radius:14px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:30px;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:42ch;font-family:Inter;text-transform:none}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .ts .big{font-family:Anton;font-size:24px;letter-spacing:.02em}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px;font-family:Inter;text-transform:none}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#d2c6bd;font-size:14px;display:block;margin-bottom:8px;font-family:Inter;text-transform:none}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(194,59,59,.14);border:1px solid rgba(194,59,59,.5);color:#f0c9c9;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px);font-family:Inter;text-transform:none}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Zona T · Cll 83 #14-17, Bogotá</span><span><b>16.6K</b> en Instagram · walk-ins 11am–8pm todos los días</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">LŪX TATTOO<small>Club · Bogotá</small></div>
+  <nav class="links"><a href="#artistas">Artistas</a><a href="#galeria">Galería</a><a href="#reserva">Reserva</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Agenda por WhatsApp</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx21tattoo1/1600/900" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Estudio de tatuajes · Zona T, Bogotá</div>
+    <h1>7 artistas, 500+ publicaciones y ni una página propia para mostrarlo.</h1>
+    <p class="sub">LŪX Tattoo Club ya tiene el nombre en Zona T: walk-ins todos los días, 16.6K en Instagram y un feed que demuestra el nivel del equipo. Hoy alguien nuevo solo puede conocer el trabajo scrolleando el perfil y agendar escribiendo por WhatsApp sin saber con quién.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#artistas">Ver artistas</a>
+      <a class="btn btn-ghost" href="#galeria">Ver trabajo</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ 16.6K seguidores</span>
+      <span class="pill">✓ 504 publicaciones</span>
+      <span class="pill">✓ Walk-ins 11am–8pm</span>
+    </div>
+  </div>
+</section>
+
+<section id="artistas">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>El equipo</h2><p>Cada artista con su propio estilo — hoy solo visible si alguien entra a destacadas de Instagram</p></div></div>
+    <div class="artistas">
+      <div class="artista"><div class="ph"><img src="https://picsum.photos/seed/pagx21art1/400/400" alt=""></div><div class="nm">Gino</div><div class="st">Realismo &amp; blackwork</div></div>
+      <div class="artista"><div class="ph"><img src="https://picsum.photos/seed/pagx21art2/400/400" alt=""></div><div class="nm">Jaguar</div><div class="st">Fine line &amp; script</div></div>
+      <div class="artista"><div class="ph"><img src="https://picsum.photos/seed/pagx21art3/400/400" alt=""></div><div class="nm">Santi</div><div class="st">Color &amp; floral</div></div>
+      <div class="artista"><div class="ph"><img src="https://picsum.photos/seed/pagx21art4/400/400" alt=""></div><div class="nm">Steven</div><div class="st">Neo-tradicional</div></div>
+    </div>
+    <p style="color:#847770;font-size:12px;margin-top:18px">Especialidades de ejemplo a partir del portafolio público — boceto de demostración PAGX Studio. Confirmar con cada artista.</p>
+  </div>
+</section>
+
+<section id="galeria" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Galería</h2><p>El trabajo que hoy solo vive en el feed, con su propia página para compartir</p></div></div>
+    <div class="gallery">
+      <div class="ph"><img src="https://picsum.photos/seed/pagx21g1/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx21g2/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx21g3/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx21g4/400/400" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Reserva sabiendo con quién</h2>
+        <p>Hoy cada mensaje por WhatsApp empieza igual: "¿quién me atiende y qué hace?". Con una página propia, cada artista muestra su portafolio y el cliente elige antes de escribir — el WhatsApp queda para confirmar cita, no para explicar todo desde cero.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Reservar cita</a>
+        </div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">16.6K</div>
+        <div class="lab">seguidores en Instagram · dato verificado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Confianza que se nota</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">504</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">16.6K</div><div class="lab">seguidores</div></div>
+      <div class="ts"><div class="big">Zona T</div><div class="lab">Cll 83 #14-17, Bogotá</div></div>
+      <div class="ts"><div class="big">WhatsApp</div><div class="lab">único canal de agenda hoy</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">LŪX TATTOO<small>Club · Bogotá</small></div>
+        <p>Estudio de tatuajes y piercings en Zona T, Bogotá. Walk-ins todos los días.</p>
+      </div>
+      <div><h4>Estudio</h4><a href="#">Artistas</a><a href="#">Galería</a></div>
+      <div><h4>Visítanos</h4><a href="#">Cll 83 #14-17</a><a href="#">11am – 8pm</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 LŪX Tattoo Club</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

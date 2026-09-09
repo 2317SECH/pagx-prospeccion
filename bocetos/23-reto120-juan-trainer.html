@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reto120 — Landing de programa (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0b0d; --bg2:#121417; --panel:#171a1e; --panel2:#1c2025;
+    --line:#292e35; --text:#f2f4f6; --muted:#9aa3ad; --lime:#c6ff3d; --lime-d:#9fd422;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Archivo Black',Inter,sans-serif;text-transform:uppercase;letter-spacing:0;line-height:1.05}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#1d2127,#0a0b0d);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.03em;padding:15px 28px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--lime);color:#0a0b0d}
+  .btn-primary:hover{background:var(--lime-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--bg2);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .ribbon b{color:var(--lime)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(10,11,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:76px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Archivo Black';font-size:18px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;margin-left:8px;font-size:14px;font-weight:700;color:#dfe3e8;text-transform:uppercase;letter-spacing:.02em}
+  nav.links a:hover{color:var(--lime)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;min-height:630px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:
+     radial-gradient(1100px 520px at 78% -10%, rgba(198,255,61,.16), transparent 60%),
+     linear-gradient(90deg, rgba(10,11,13,.97) 34%, rgba(10,11,13,.62) 66%, rgba(10,11,13,.4))}
+  .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.15) brightness(.55)}
+  .hero .inner{position:relative;padding:70px 0 86px}
+  .kicker{color:var(--lime);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-family:Inter}
+  .hero h1{font-size:56px;max-width:15ch}
+  .hero p.sub{margin-top:20px;font-size:18px;color:#cfd5db;max-width:46ch;font-family:Inter;text-transform:none}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;gap:20px}
+  .sec-head h2{font-size:32px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter;text-transform:none}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .step .num{font-family:'Archivo Black';font-size:34px;color:var(--lime);margin-bottom:10px}
+  .step h3{font-size:18px;margin-bottom:8px;text-transform:none;font-family:Inter;font-weight:700}
+  .step p{color:var(--muted);font-size:14px;font-family:Inter}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .gallery .ph{aspect-ratio:1;border-radius:10px}
+
+  .band{background:linear-gradient(120deg,#1c2025,#0a0b0d);border:1px solid var(--line);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band h2{font-size:32px;margin-bottom:12px}
+  .band p{color:var(--muted);font-size:15px;max-width:42ch;font-family:Inter;text-transform:none}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .ts .big{font-family:'Archivo Black';font-size:22px}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px;font-family:Inter;text-transform:none}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:50px 0 40px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#c7ccd2;font-size:14px;display:block;margin-bottom:8px;font-family:Inter;text-transform:none}
+  .fbot{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(198,255,61,.12);border:1px solid rgba(198,255,61,.45);color:#e4ffb0;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px;backdrop-filter:blur(6px);font-family:Inter;text-transform:none}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.6)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Juan David Gómez Arias · Medellín</span><span><b>85.3K</b> en Instagram · online y presencial</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">RETO<small>120 · Juan Trainer</small></div>
+  <nav class="links"><a href="#programa">Programa</a><a href="#resultados">Resultados</a><a href="#inscripcion">Inscripción</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-wa" href="#"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.13l.36.22a9.9 9.9 0 1 0-3.35-3.34l.24.38-1 3.64 3.75-.99z"/></svg>Únete al reto</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx23fit1/1600/900" alt=""></div></div>
+  <div class="wrap inner">
+    <div class="kicker">Entrenador certificado · Medellín</div>
+    <h1>85.3 mil te siguen por el Reto120. Todavía no hay página donde verlo antes de escribir.</h1>
+    <p class="sub">Juan David ya construyó el programa y la audiencia — el Reto120, online o presencial, con miles de personas cambiando de hábitos. Hoy toda esa demanda entra por el mismo DM de WhatsApp, sin un lugar que explique la estructura, el método o los resultados antes de preguntar.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#programa">Ver el programa</a>
+      <a class="btn btn-ghost" href="#resultados">Ver resultados</a>
+    </div>
+    <div class="trust">
+      <span class="pill">✓ 85.3K seguidores</span>
+      <span class="pill">✓ 1.4K+ publicaciones</span>
+      <span class="pill">✓ Online y presencial</span>
+    </div>
+  </div>
+</section>
+
+<section id="programa">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Cómo funciona el Reto120</h2><p>La estructura que hoy solo se explica uno a uno por WhatsApp, resumida en 3 pasos</p></div></div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Diagnóstico inicial</h3><p>Evaluación de tu punto de partida, objetivo y modalidad: online o presencial en Medellín.</p></div>
+      <div class="step"><div class="num">02</div><h3>Plan personalizado</h3><p>Rutina y hábitos ajustados a tu progreso durante el reto.</p></div>
+      <div class="step"><div class="num">03</div><h3>Seguimiento</h3><p>Acompañamiento directo con Juan durante todo el proceso de transformación.</p></div>
+    </div>
+    <p style="color:#6b7178;font-size:12px;margin-top:18px">Estructura ilustrativa a partir del contenido público del programa — boceto de demostración PAGX Studio. Confirmar detalles reales del Reto120 con el entrenador.</p>
+  </div>
+</section>
+
+<section id="resultados" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Transformaciones</h2><p>El contenido que hoy vive disperso en el feed, reunido en una sola galería</p></div></div>
+    <div class="gallery">
+      <div class="ph"><img src="https://picsum.photos/seed/pagx23g1/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx23g2/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx23g3/400/400" alt=""></div>
+      <div class="ph"><img src="https://picsum.photos/seed/pagx23g4/400/400" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>De DM a inscripción directa</h2>
+        <p>Con 85K seguidores, cada mensaje nuevo repite las mismas preguntas: qué incluye, cuánto dura, cuánto cuesta. Una landing del Reto120 responde eso antes del primer mensaje — y el WhatsApp queda solo para confirmar el cupo.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Inscribirme al reto</a>
+        </div>
+      </div>
+      <div class="ts" style="padding:26px">
+        <div class="big">85.3K</div>
+        <div class="lab">seguidores en Instagram · dato verificado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="inscripcion" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Confianza que se nota</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">1.4K+</div><div class="lab">publicaciones en Instagram</div></div>
+      <div class="ts"><div class="big">85.3K</div><div class="lab">seguidores</div></div>
+      <div class="ts"><div class="big">Medellín</div><div class="lab">presencial disponible</div></div>
+      <div class="ts"><div class="big">WhatsApp</div><div class="lab">único canal de inscripción hoy</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RETO<small>120 · Juan Trainer</small></div>
+        <p>Programa de transformación física con Juan David Gómez Arias, entrenador certificado en Medellín.</p>
+      </div>
+      <div><h4>Programa</h4><a href="#">Cómo funciona</a><a href="#">Resultados</a></div>
+      <div><h4>Modalidad</h4><a href="#">Online</a><a href="#">Presencial · Medellín</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Reto120 · Juan Trainer</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
