@@ -372,6 +372,49 @@ digital podría representar una mejora comercial evidente."*
 
 ---
 
+## 32. Actualización 2026-09-09 — "Prompt Maestro Definitivo" (Alan)
+
+Alan entregó una versión ampliada de este prompt como estándar de arranque de
+jornada ("Cuando reciba este prompt / cuando me digas 'hazlo', ya sé cómo
+ejecutar todo sin preguntar"). Reglas que este documento ya cubría quedan
+igual; lo que sigue son las piezas **nuevas o reforzadas** que hay que aplicar
+a partir de ahora, sin que haga falta que Alan las repita:
+
+- **Autonomía total de arranque:** nunca preguntar "¿qué prospecto
+  trabajamos?" ni "¿qué nicho buscamos?" ni "¿abro Instagram?" ni "¿reviso
+  Notion?" — hacerlo directamente. Solo detenerse ante un bloqueo real
+  (credenciales, acceso, ambigüedad que cambie el resultado de forma
+  importante), nunca por rutina.
+- **Punto de partida en Instagram:** Alan puede dar una cuenta semilla, pero
+  si no la da, autodescubrir un punto de partida razonable (igual que en las
+  jornadas anteriores) — no bloquear la jornada esperando una cuenta si no
+  llega.
+- **Universo de nichos abierto de verdad:** la lista de categorías (aquí y en
+  el prompt de Alan) son ejemplos, no un filtro. Si aparece una oportunidad en
+  un nicho no listado, investigarlo igual.
+- **Boceto ≈ 20% del proyecto, nunca la página completa.** Mostrar solo lo
+  necesario para demostrar la dirección (hero + 1-2 secciones + CTA), con
+  calidad alta pero alcance deliberadamente parcial.
+- **Entregable desktop + mobile (NUEVO):** cada boceto final debe pensar
+  explícitamente el mobile (no solo CSS responsive) y, cuando sea posible,
+  presentar ambas vistas — idealmente en una composición (pantalla grande +
+  teléfono) o, si eso resta calidad, como dos capturas separadas. No basta con
+  el HTML responsive: hay que producir/mostrar la vista mobile real.
+- **Mensaje y boceto deben ser una sola historia:** si el mensaje promete
+  "mejor presentación del portafolio", el boceto tiene que mostrar portafolio;
+  si promete reservas, el boceto tiene que mostrar reservas. Revisar esta
+  coherencia como parte del control de calidad, no como algo implícito.
+- **Reporte final estructurado por prospecto:** al entregar los finalistas,
+  usar el formato — nombre, por qué se eligió, problema/oportunidad, qué se
+  propone, concepto visual, boceto (preview ~20%, desktop/mobile), mensaje
+  listo para copiar, estado en Notion, próximo paso.
+- **Imágenes del boceto:** deben corresponder al negocio real (ver
+  [[feedback_prospect_selection_and_qa]] — nunca picsum.photos ni
+  loremflickr.com; usar fotos curadas y verificadas, coherentes con el nicho
+  Y con el estilo real de la cuenta de Instagram del prospecto).
+
+---
+
 ## 33. Instrucción final
 
 Trabajar con mentalidad de **investigador comercial + estratega digital + diseñador
