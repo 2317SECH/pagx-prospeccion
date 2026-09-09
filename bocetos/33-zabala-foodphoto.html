@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zabala Foodphoto — Landing (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#151210; --bg2:#1c1815; --panel:#201b17; --line:#332b23;
+    --text:#f6f1e8; --muted:#a89c8a; --amber:#d98c2e; --cream:#efe4d0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#2a231b,#141110);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;padding:14px 26px;border-radius:3px;border:1px solid transparent;cursor:pointer;transition:.15s;text-transform:uppercase;letter-spacing:.04em}
+  .btn-primary{background:var(--amber);color:#1a1108}
+  .btn-primary:hover{background:#eb9f45}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--amber)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  .ribbon{background:var(--amber);color:#211505;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(21,18,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:78px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Oswald';font-size:19px;font-weight:600;text-transform:uppercase}
+  .brand .mk{width:38px;height:38px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;color:#1a1108;font-family:'Oswald';font-size:16px;font-weight:700}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.16em;color:var(--muted);font-weight:700;text-transform:uppercase}
+  nav.links{display:flex;gap:26px;font-size:13.5px;font-weight:600;color:#d8d0c0;text-transform:uppercase;letter-spacing:.03em}
+  nav.links a:hover{color:var(--amber)}
+  .nav .spacer{flex:1}
+
+  .hero{background:radial-gradient(900px 500px at 82% -10%,rgba(217,140,46,.15),transparent 60%),var(--bg);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:60px 40px 74px}
+  .kicker{color:var(--amber);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:40px}
+  .hero h1 span{color:var(--amber)}
+  .hero p.sub{margin-top:20px;font-size:16px;color:#cdc3b2;max-width:47ch;text-transform:none;letter-spacing:0;font-weight:400}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5;border-radius:4px}
+  .hero .svcard{position:absolute;left:-30px;bottom:-26px;width:260px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px;box-shadow:0 30px 60px -26px rgba(0,0,0,.6)}
+  .hero .svcard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--amber);font-weight:700}
+  .hero .svcard h4{font-family:'Oswald';font-size:15px;font-weight:600;margin:4px 0 12px;text-transform:none}
+  .sv-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:12.5px}
+  .sv-row:first-of-type{border-top:none}
+  .sv-row b{color:var(--amber);font-weight:700}
+
+  section{padding:76px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:20px}
+  .sec-head h2{font-size:30px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:14.5px;text-transform:none;letter-spacing:0;font-weight:400}
+
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .mc{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5}
+  .mc img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .mc:hover img{transform:scale(1.06)}
+  .mc::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,10,8,.92),rgba(12,10,8,0) 55%)}
+  .mc .lb{position:absolute;left:16px;bottom:14px;z-index:2}
+  .mc .lb .t{font-family:'Oswald';font-size:18px;font-weight:600}
+  .mc .lb .n{font-size:12px;color:var(--muted);margin-top:2px;text-transform:none}
+
+  .events{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .events h2{font-size:27px;margin-bottom:12px}
+  .events p{color:var(--muted);font-size:14.5px;max-width:42ch;text-transform:none;letter-spacing:0;font-weight:400}
+  .events .photo{border-radius:6px;aspect-ratio:5/4}
+  .ev-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+  .ev-list .item{display:flex;justify-content:space-between;border:1px solid var(--line);border-radius:4px;padding:10px 14px;font-size:13.5px}
+  .ev-list .item b{color:var(--amber);font-weight:700}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .st{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .st .n{width:30px;height:30px;border-radius:4px;background:var(--amber);color:#1a1108;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-size:14px;font-weight:700;margin-bottom:12px}
+  .st h3{font-size:14.5px;font-weight:700;margin-bottom:5px;font-family:Inter;text-transform:none}
+  .st p{color:var(--muted);font-size:13px}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .ts .big{font-family:'Oswald';font-size:22px;color:var(--amber);font-weight:700}
+  .ts .lab{color:var(--muted);font-size:12.5px;margin-top:6px;text-transform:none}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:#c9beac;font-size:13.5px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(217,140,46,.16);border:1px solid var(--amber);color:#f0c98d;font-size:11px;font-weight:700;padding:8px 13px;border-radius:8px}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:36px 20px 56px}
+    .hero h1{font-size:28px}
+    .hero .svcard{position:static;width:100%;margin-top:20px}
+    .wrap{padding:0 18px}
+    section{padding:50px 0}
+    .menu-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .events{grid-template-columns:1fr;padding:24px}
+    .steps{grid-template-columns:1fr 1fr;gap:12px}
+    .trust-strip{grid-template-columns:1fr 1fr;gap:12px}
+    .fcols{grid-template-columns:1fr 1fr;gap:22px}
+    nav.links{display:none}
+    .nav .wrap{gap:14px}
+    .brand{font-size:14px;gap:8px}
+    .brand .mk{width:32px;height:32px;font-size:14px}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .sec-head h2{font-size:23px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:2px;text-align:center;font-size:10.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Pereira, Colombia</span><span>Fotografía comercial y gastronómica</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk">Z</span>
+    <span>ZABALA<small>Fotografía de producto</small></span>
+  </div>
+  <nav class="links"><a href="#portafolio">Portafolio</a><a href="#servicios">Servicios</a><a href="#agenda">Agenda</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#agenda">Agenda tu sesión</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Fotografía comercial y gastronómica · Pereira</div>
+      <h1>Mostramos la <span>mejor versión</span> de tu producto.</h1>
+      <p class="sub">Zabala ya tiene 197 publicaciones de fotografía gastronómica, de producto y de eventos para marcas y restaurantes. Hoy ese trabajo solo vive en el feed. Con página propia, cualquier restaurante o marca que busque "fotógrafo de producto Pereira" encuentra el portafolio completo y agenda directo, sin perderse en mensajes de Instagram.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#agenda">Agenda tu sesión</a>
+        <a class="btn btn-ghost" href="#portafolio">Ver portafolio</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Fotografía gastronómica</span><span class="pill">✓ Fotografía de producto</span><span class="pill">✓ Cobertura de eventos</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&h=1100&fit=crop&q=75" alt=""></div>
+      <div class="svcard">
+        <span class="lab">Lo que hacemos</span>
+        <h4>Nuestros servicios</h4>
+        <div class="sv-row"><span>Fotografía gastronómica</span><b>01</b></div>
+        <div class="sv-row"><span>Fotografía de producto</span><b>02</b></div>
+        <div class="sv-row"><span>Cobertura de eventos</span><b>03</b></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;padding:10px;margin-top:12px" href="#servicios">Ver todos los servicios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portafolio">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Portafolio</h2><p>Lo que hoy se descubre publicación por publicación, ahora en un solo lugar</p></div></div>
+    <div class="menu-grid">
+      <div class="mc"><img src="https://images.unsplash.com/photo-1558030006-450675393462?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Gastronómica</div><div class="n">Menús y platos de autor</div></div></div>
+      <div class="mc"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Producto</div><div class="n">Empaques y catálogo comercial</div></div></div>
+      <div class="mc"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Eventos</div><div class="n">Lanzamientos y activaciones</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="events">
+      <div>
+        <div class="kicker">Servicios</div>
+        <h2>De la sesión a la entrega, sin fricción</h2>
+        <p>Fotografía gastronómica, de producto y cobertura de eventos — hoy cada tipo de sesión se explica en un post distinto. Con página propia, la marca ve ejemplos reales antes de agendar.</p>
+        <div class="ev-list">
+          <div class="item"><span>Fotografía gastronómica</span><b>Restaurantes y marcas</b></div>
+          <div class="item"><span>Fotografía de producto</span><b>Catálogo y empaques</b></div>
+          <div class="item"><span>Cobertura de eventos</span><b>Lanzamientos y activaciones</b></div>
+        </div>
+      </div>
+      <div class="ph photo events"><img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?w=900&h=720&fit=crop&q=75" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Cómo agendar</h2><p>De escribir por Instagram sin ver ejemplos, a agendar directo</p></div></div>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><h3>Cuéntanos tu marca</h3><p>Restaurante, producto o evento.</p></div>
+      <div class="st"><div class="n">2</div><h3>Eliges el tipo de sesión</h3><p>Gastronómica, producto o cobertura.</p></div>
+      <div class="st"><div class="n">3</div><h3>Agendamos la fecha</h3><p>Estudio o en tu locación.</p></div>
+      <div class="st"><div class="n">4</div><h3>Recibes tu material</h3><p>Listo para redes y catálogo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Zabala, en números</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">~640</div><div class="lab">seguidores activos en Instagram</div></div>
+      <div class="ts"><div class="big">197 posts</div><div class="lab">de gastronomía, producto y eventos</div></div>
+      <div class="ts"><div class="big">Pereira</div><div class="lab">disponible para viajar a tu locación</div></div>
+      <div class="ts"><div class="big">3 servicios</div><div class="lab">gastronómica, producto, eventos</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><span class="mk">Z</span><span>ZABALA<small>Fotografía de producto</small></span></div>
+        <p>Fotografía comercial y gastronómica en Pereira, Colombia.</p>
+      </div>
+      <div><h4>Portafolio</h4><a href="#">Gastronómica</a><a href="#">Producto</a><a href="#">Eventos</a></div>
+      <div><h4>Zabala</h4><a href="#">Servicios</a><a href="#">Cómo agendar</a><a href="#">Sobre nosotros</a></div>
+      <div><h4>Contacto</h4><a href="#">Agenda tu sesión</a><a href="#">Instagram</a><a href="#">WhatsApp</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Zabala Foodphoto</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
