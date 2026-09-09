@@ -41,6 +41,8 @@
   .nav .spacer{flex:1}
 
   .hero{position:relative;min-height:600px;display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg .ph{position:absolute;inset:0}
   .hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.46) contrast(1.12) grayscale(.15)}
   .hero .bg::after{content:"";position:absolute;inset:0;background:
     linear-gradient(90deg, rgba(11,11,13,.97) 30%, rgba(11,11,13,.45) 68%, rgba(11,11,13,.2)),
@@ -140,7 +142,7 @@
 </div></header>
 
 <section class="hero" style="padding:0">
-  <div class="bg"><div class="ph"><img src="https://loremflickr.com/1600/900/pickup,truck?lock=401" alt=""></div></div>
+  <div class="bg"><div class="ph"><img src="https://picsum.photos/seed/pagx03401/1600/900" alt=""></div></div>
   <div class="wrap inner">
     <span class="tagline">30 años vendiendo autos en Córdoba</span>
     <h1>Ahora, mucho más fácil de elegir.</h1>
