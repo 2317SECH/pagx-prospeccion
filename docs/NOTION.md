@@ -126,6 +126,30 @@ Estructura recomendada dentro de la página (además de las propiedades):
 7. **Boceto** — hero, secciones, dirección visual, elemento diferencial.
 8. **Mensaje listo** — el DM, en bloque de código para copiar.
 9. **Confianza y fuentes**.
+10. **Evidencia / Pantallazos** — captura del perfil de Instagram del prospecto,
+    adjunta como imagen (ver `PROMPT-MAESTRO.md` §23-bis).
+
+### ⚠️ Sintaxis correcta para adjuntar imágenes subidas (`notion-create-file-upload`)
+
+Después de subir un archivo con `notion-create-file-upload` + `curl` al
+`upload_url` devuelto, la forma de insertarlo en el contenido de la página es
+markdown de imagen estándar:
+
+```
+![Descripción de la imagen](file-upload://ID-DEL-UPLOAD)
+```
+
+**Nunca** uses una etiqueta tipo `<image src="file-upload://ID">` — Notion la
+guarda como **texto plano escapado y visible**, no como imagen, y **no da ningún
+error**. Es un fallo silencioso: la ficha se crea "correctamente" pero la imagen
+nunca aparece.
+
+**Verificación obligatoria después de crear o actualizar cualquier ficha con
+imágenes:** vuelve a leer la página (`fetch`) y confirma que el markdown de salida
+contiene una URL de `prod-files-secure.s3.us-west-2.amazonaws.com/...` en el lugar
+de cada imagen — esa es la prueba real de que quedó adjunta. Si en vez de eso ves
+la cadena `file-upload://...` sin procesar, corrígelo con `update_content`
+reemplazando la etiqueta `<image src="...">` por `![](...)` en el mismo `file-upload://ID`.
 
 Los 4 prospectos actuales (Automotores Andina, Infinitum Usados, Centro Automotores,
 DDS Clínica Dental) sirven de plantilla.

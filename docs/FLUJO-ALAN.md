@@ -100,8 +100,24 @@ Estado → `Boceto` · **Boceto** = `En progreso` · **Boceto por** = Alan.
 
 - `git add / commit / push` del nuevo HTML.
 - Copiar la URL de GitHub Pages → propiedad **URL del boceto** de la ficha.
-- Pegar la imagen de página completa en el cuerpo de la ficha (sección "Boceto visual").
+- Capturar página completa **desktop y mobile** por separado y componerlas en una
+  sola imagen con `tools/compose_preview.py` (ver `docs/capturar-boceto.md` para el
+  truco del iframe móvil y la advertencia sobre el parámetro `IH` de `stitch.py`).
+- Subir esa imagen combinada a Notion con `notion-create-file-upload` y adjuntarla
+  en el cuerpo de la ficha (sección "Boceto visual") usando la sintaxis
+  `![Descripción](file-upload://ID)` — **nunca** `<image src="file-upload://ID">`
+  (ver la advertencia en `docs/NOTION.md`). Verificar releyendo la ficha después de
+  guardarla: la imagen debe verse como imagen, no como texto.
 - **Boceto** = `Listo`.
+
+## PASO 9-bis — Evidencia visual del prospecto
+
+- Tomar un pantallazo legible del perfil de Instagram del prospecto (bio, cifras,
+  grid de publicaciones).
+- Subirlo con el mismo mecanismo del Paso 9 y adjuntarlo en una sección separada
+  `## Evidencia / Pantallazos` del cuerpo de la ficha — no mezclarlo con la sección
+  del boceto ni con la evidencia de otro prospecto.
+- Verificar (releyendo la ficha) que también se ve como imagen.
 
 ## PASO 10 — Listo para contactar
 

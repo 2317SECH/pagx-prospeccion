@@ -272,6 +272,38 @@ página."* El mensaje debe demostrar observación.
 
 ---
 
+## 17-bis. Nombre correcto y apertura obligatoria del mensaje
+
+El nombre correcto del estudio es **PAGX Studio**. Nunca "Pax Studio", "PAG Studio"
+ni ninguna otra variante.
+
+Todo mensaje comercial inicial **debe abrir con**:
+
+> "Hola 👋 Somos de PAGX Studio."
+
+Después del saludo, seguir con la estructura: saludo → presentación breve →
+observación real sobre el negocio → oportunidad concreta → cómo ayuda PAGX Studio →
+beneficio → mención de la preview (~20% de la propuesta) → cierre con invitación
+sencilla a conversar (variar la frase, no repetir siempre la misma). No empezar
+nunca señalando un problema o criticando el negocio antes de presentarse.
+
+**Checklist de control de calidad antes de dar el mensaje por terminado:**
+- [ ] Empieza con "Hola 👋 Somos de PAGX Studio."
+- [ ] "PAGX Studio" escrito correctamente en todo el mensaje.
+- [ ] Personalizado con al menos 2 datos reales verificados (regla §18).
+- [ ] Se entiende por qué se contacta a este negocio en particular.
+- [ ] Se identifica una oportunidad concreta, no genérica.
+- [ ] PAGX Studio aparece como la solución a esa oportunidad.
+- [ ] Se explica el beneficio para el negocio.
+- [ ] Menciona la preview (~20%) preparada específicamente para ellos.
+- [ ] El cierre invita a responder, sin sonar agresivo ni a plantilla masiva.
+- [ ] No hay datos inventados (precios, cifras, premios, testimonios).
+- [ ] No es innecesariamente largo.
+
+Si el mensaje no cumple todos los puntos, reescribirlo antes de continuar.
+
+---
+
 ## 18. Regla de personalización
 
 Cada mensaje contiene **al menos 2 detalles específicos** encontrados en la
@@ -288,6 +320,26 @@ se puede verificar, no presentarlo como hecho.
 - **Nunca** marcar como "Contactado" algo que Sergio todavía no envió.
 - Seguimiento sin bombardear: Día 0 primer mensaje · Día 3–5 seguimiento ·
   Día 7–10 último seguimiento razonable.
+
+---
+
+## 23-bis. Evidencia visual en Notion (pantallazos)
+
+Además del registro normal, cada prospecto **final** trabajado debe llevar
+evidencia visual adjunta directamente en Notion — no basta con tomarla y guardarla
+localmente.
+
+- Tomar un pantallazo legible del perfil de Instagram del prospecto (bio, cifras,
+  grid de publicaciones) — ver `docs/capturar-boceto.md` para el método de captura.
+- Subirlo como imagen dentro del cuerpo de la ficha de Notion, en una sección
+  identificada `## Evidencia / Pantallazos`, separada de `## Boceto`.
+- La sintaxis correcta para adjuntar una imagen subida por `notion-create-file-upload`
+  es `![Descripción](file-upload://ID-DEL-UPLOAD)`. **Nunca** `<image
+  src="file-upload://ID">` — esa forma se guarda como texto plano roto, sin error
+  visible. Ver `docs/NOTION.md` para el detalle completo y la verificación
+  obligatoria posterior.
+- No mezclar evidencia entre prospectos distintos. Cada imagen debe quedar dentro
+  de la ficha del prospecto correcto.
 
 ---
 

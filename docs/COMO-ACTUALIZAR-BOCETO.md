@@ -47,9 +47,21 @@ que ya existe. El historial queda en Git.
    - **No** inventar cifras, premios ni testimonios reales. Todo lo no verificable
      se marca como demo.
 5. Imágenes:
-   - **Autos:** `https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=<marca>&modelFamily=<modelo>` — renders de estudio del modelo real.
+   - **Autos:** `https://cdn.imagin.studio/getimage?customer=img&width=680&angle=23&make=<marca>&modelFamily=<modelo>` — renders de estudio del modelo real. Ignora `modelYear`: no sirve para autos clásicos/vintage (siempre renderiza un modelo moderno genérico).
    - **Personas:** `https://i.pravatar.cc/800?img=<1-70>` — retratos genéricos (marcar como demo).
+   - **Fotografía de stock (todo lo demás — interiores, comida, bodas, moda, nightlife, autos de lujo, etc.):** Unsplash, vía
+     `https://images.unsplash.com/photo-<ID>?w=..&h=..&fit=crop&q=75`. Ajustar `w`/`h` al tamaño real del contenedor CSS (hero ≈900×1100, tarjetas de grid ≈700×860, panel ancho ≈900×720).
    - Fallback: fondos con degradado CSS.
+
+   **Verificación obligatoria de cualquier ID de Unsplash antes de usarlo** (los IDs
+   adivinados fallan con frecuencia o devuelven contenido genérico que no encaja):
+   ```
+   curl -s -o candidato.jpg --max-time 8 "https://images.unsplash.com/photo-<ID>?w=400"
+   ```
+   y luego **abrir `candidato.jpg` y mirarlo** antes de ponerlo en el HTML. No
+   asumas el contenido a partir del ID — confírmalo visualmente. Un código HTTP 200
+   no garantiza que el ID exista con contenido real (Unsplash puede devolver una
+   imagen placeholder).
 6. Añadir la tarjeta del nuevo boceto en `index.html`.
 7. Generar la captura de página completa (abajo) → `bocetos/preview/05-nombre.png`.
 8. `git add / commit / push`.
