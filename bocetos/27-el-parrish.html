@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Parrish — Landing (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0e10; --bg2:#161618; --panel:#1b1b1e; --line:#2c2c30;
+    --text:#f3f1ec; --muted:#9a978f; --teal:#2fd6c0; --pink:#ff2f7e; --pink-d:#d81f66;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.disp{font-family:'Archivo Black',Inter,sans-serif;line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#232326,#101012);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:14px;padding:14px 24px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:.15s;text-transform:uppercase;letter-spacing:.03em}
+  .btn-primary{background:var(--pink);color:#100;color:#0e0e10}
+  .btn-primary:hover{background:#ff5590}
+  .btn-teal{background:var(--teal);color:#0e0e10}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--teal)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-transform:uppercase;letter-spacing:.03em}
+
+  .ribbon{background:var(--pink);color:#170007;font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(14,14,16,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:76px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Archivo Black';font-size:19px}
+  .brand .mk{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--pink));display:flex;align-items:center;justify-content:center;color:#0e0e10;font-family:'Archivo Black';font-size:17px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:700;text-transform:none}
+  nav.links{display:flex;gap:26px;font-size:13.5px;font-weight:700;color:#d8d5cd;text-transform:uppercase;letter-spacing:.02em}
+  nav.links a:hover{color:var(--teal)}
+  .nav .spacer{flex:1}
+
+  .hero{background:radial-gradient(900px 500px at 80% -10%,rgba(47,214,192,.12),transparent 60%),var(--bg);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:64px 40px 72px}
+  .kicker{color:var(--teal);font-weight:800;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:44px}
+  .hero h1 span{color:var(--pink)}
+  .hero p.sub{margin-top:20px;font-size:16.5px;color:#cac7bf;max-width:44ch;font-family:Inter}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5;border-radius:6px;filter:contrast(1.08) saturate(1.05)}
+  .hero .todaycard{position:absolute;left:-30px;bottom:-26px;width:270px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 30px 60px -26px rgba(0,0,0,.6)}
+  .hero .todaycard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--teal);font-weight:800}
+  .hero .todaycard h4{font-family:Inter;font-size:15px;font-weight:700;margin:3px 0 12px}
+  .ev-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:12.5px}
+  .ev-row:first-of-type{border-top:none}
+  .ev-row b{color:var(--pink)}
+
+  section{padding:76px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:20px}
+  .sec-head h2{font-size:34px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:14.5px;font-family:Inter}
+
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .mc{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/5}
+  .mc img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .mc:hover img{transform:scale(1.06)}
+  .mc::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,11,.9),rgba(10,10,11,0) 55%)}
+  .mc .lb{position:absolute;left:16px;bottom:14px;z-index:2}
+  .mc .lb .t{font-family:'Archivo Black';font-size:19px}
+  .mc .lb .n{font-size:12px;color:var(--muted);margin-top:2px;font-family:Inter}
+
+  .events{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .events h2{font-size:30px;margin-bottom:12px}
+  .events p{color:var(--muted);font-size:14.5px;max-width:42ch;font-family:Inter}
+  .events .photo{border-radius:10px;aspect-ratio:5/4}
+  .ev-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+  .ev-list .item{display:flex;justify-content:space-between;border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:13.5px;font-family:Inter}
+  .ev-list .item b{color:var(--teal)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .st{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .st .n{width:30px;height:30px;border-radius:6px;background:var(--pink);color:#0e0e10;display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:14px;margin-bottom:12px}
+  .st h3{font-size:14.5px;font-weight:700;margin-bottom:5px;font-family:Inter;text-transform:none;letter-spacing:0}
+  .st p{color:var(--muted);font-size:13px;font-family:Inter}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .ts .big{font-family:'Archivo Black';font-size:24px;color:var(--teal)}
+  .ts .lab{color:var(--muted);font-size:12.5px;margin-top:6px;font-family:Inter}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:#c9c6be;font-size:13.5px;display:block;margin-bottom:8px;font-family:Inter}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:rgba(255,47,126,.14);border:1px solid var(--pink);color:#ffb0cd;font-size:11px;font-weight:700;padding:8px 13px;border-radius:10px;font-family:Inter}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:36px 20px 56px}
+    .hero h1{font-size:31px}
+    .hero .todaycard{position:static;width:100%;margin-top:20px}
+    .wrap{padding:0 18px}
+    section{padding:50px 0}
+    .menu-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .events{grid-template-columns:1fr;padding:24px;border-radius:14px}
+    .steps{grid-template-columns:1fr 1fr;gap:12px}
+    .trust-strip{grid-template-columns:1fr 1fr;gap:12px}
+    .fcols{grid-template-columns:1fr 1fr;gap:22px}
+    nav.links{display:none}
+    .nav .wrap{gap:14px}
+    .brand{font-size:15px;gap:8px}
+    .brand .mk{width:32px;height:32px;font-size:14px}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .sec-head h2{font-size:25px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:2px;text-align:center;font-size:10.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Barranquilla · El Prado</span><span>Café · Cócteles · Vinilos</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk">P</span>
+    <span>EL PARRISH<small>CAFÉ Y CÓCTELES</small></span>
+  </div>
+  <nav class="links"><a href="#menu">Menú</a><a href="#eventos">Eventos</a><a href="#reservas">Reservas</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#reservas">Reservar mesa</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Cafetería de especialidad · Bar de cócteles · Vinilos</div>
+      <h1>Café de día, <span>cócteles</span> de noche, siempre con vinilo sonando.</h1>
+      <p class="sub">El Parrish ya tiene la escena — cata de café, noches de rock, DJs en vinilo. Hoy todo eso vive en el feed de Instagram. Con web propia, cualquiera que busque "café Barranquilla" o "plan El Prado" te encuentra directo, con la cartelera de la semana a la vista.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#reservas">Reservar mesa</a>
+        <a class="btn btn-ghost" href="#eventos">Ver cartelera</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Café de especialidad</span><span class="pill">✓ Cócteles de autor</span><span class="pill">✓ Noches de vinilo</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=900&h=1100&fit=crop&q=75" alt=""></div>
+      <div class="todaycard">
+        <span class="lab">Esta semana</span>
+        <h4>Cartelera El Parrish</h4>
+        <div class="ev-row"><span>Vie · Funky Coffee</span><b>7PM</b></div>
+        <div class="ev-row"><span>Sáb · Rock al Parrish</span><b>8PM</b></div>
+        <div class="ev-row"><span>Dom · Cata de café</span><b>4PM</b></div>
+        <a class="btn btn-teal" style="width:100%;justify-content:center;padding:10px;margin-top:12px" href="#eventos">Ver toda la cartelera</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>La carta</h2><p>Lo que hoy se descubre publicación por publicación, ahora en un solo menú</p></div></div>
+    <div class="menu-grid">
+      <div class="mc"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Café</div><div class="n">Especialidad · filtrado · cata</div></div></div>
+      <div class="mc"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Cócteles</div><div class="n">Carta de autor</div></div></div>
+      <div class="mc"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">De la barra</div><div class="n">Clásicos revisitados</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="eventos" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="events">
+      <div>
+        <div class="kicker">Cartelera</div>
+        <h2>La escena vive aquí</h2>
+        <p>Funky Coffee, Rock al Parrish, catas y sets en vinilo — eventos reales que hoy solo se anuncian en post sueltos. Con página propia, la cartelera completa queda siempre a la vista, con hora y cupo.</p>
+        <div class="ev-list">
+          <div class="item"><span>Funky Coffee — vinilo + café</span><b>Viernes</b></div>
+          <div class="item"><span>Rock al Parrish — banda en vivo</span><b>Sábado</b></div>
+          <div class="item"><span>Cata de café — experiencia guiada</span><b>Domingo</b></div>
+        </div>
+      </div>
+      <div class="ph photo events" style="border-radius:10px;aspect-ratio:5/4"><img src="https://images.unsplash.com/photo-1483000805330-4eaf0a0d82da?w=900&h=720&fit=crop&q=75" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="reservas">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Reservar</h2><p>De escribir por Instagram sin saber si hay mesa, a confirmar directo</p></div></div>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><h3>Eliges el plan</h3><p>Café de día o cócteles + música de noche.</p></div>
+      <div class="st"><div class="n">2</div><h3>Ves la cartelera</h3><p>Qué evento hay esa noche antes de ir.</p></div>
+      <div class="st"><div class="n">3</div><h3>Reservas mesa</h3><p>Confirmación directa, sin ida y vuelta de DMs.</p></div>
+      <div class="st"><div class="n">4</div><h3>Llegas a El Prado</h3><p>Cra 58 #68-192 Esquina, Barranquilla.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>El Parrish, en números</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">~2.140</div><div class="lab">seguidores activos en Instagram</div></div>
+      <div class="ts"><div class="big">3 formatos</div><div class="lab">café · cócteles · eventos en vivo</div></div>
+      <div class="ts"><div class="big">El Prado</div><div class="lab">barrio cultural de Barranquilla</div></div>
+      <div class="ts"><div class="big">Semanal</div><div class="lab">cartelera de eventos fija</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><span class="mk">P</span><span>EL PARRISH<small>CAFÉ Y CÓCTELES</small></span></div>
+        <p>Cafetería de especialidad, bar de cócteles y vinilos en El Prado, Barranquilla.</p>
+      </div>
+      <div><h4>Carta</h4><a href="#">Café</a><a href="#">Cócteles</a><a href="#">De la barra</a></div>
+      <div><h4>El Parrish</h4><a href="#">Cartelera</a><a href="#">Reservas</a><a href="#">Cómo llegar</a></div>
+      <div><h4>Contacto</h4><a href="#">Reservar mesa</a><a href="#">Instagram</a><a href="#">Ubicación</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 El Parrish</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>

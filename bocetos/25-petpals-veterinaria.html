@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petpals Veterinaria — Landing (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8ff; --bg2:#f1ebfd; --ink:#241b35; --ink2:#5c4f78;
+    --purple:#6c3fc5; --purple-d:#4f2c96; --purple-soft:#e9defc; --line:#e5dbf7; --muted:#8577a3; --pink:#ff5da2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.disp{font-family:'Baloo 2',Inter,sans-serif;font-weight:700;line-height:1.12}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#ede3fc,#dfd0f7);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--purple);color:#fff}
+  .btn-primary:hover{background:var(--purple-d)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:#fff}
+
+  .ribbon{background:var(--purple-d);color:#f1e7ff;font-size:12.5px;font-weight:600}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(250,248,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:76px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Baloo 2';font-weight:800;font-size:22px}
+  .brand .mk{width:38px;height:38px;border-radius:12px;background:var(--purple-soft);display:flex;align-items:center;justify-content:center}
+  .brand .mk svg{width:21px;height:21px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:700}
+  nav.links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:var(--ink2)}
+  nav.links a:hover{color:var(--purple-d)}
+  .nav .spacer{flex:1}
+
+  .hero{background:linear-gradient(180deg,#faf8ff,#f1ebfd);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:64px 40px 72px}
+  .kicker{color:var(--purple-d);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:47px}
+  .hero h1 em{font-style:normal;color:var(--purple-d)}
+  .hero p.sub{margin-top:18px;font-size:17px;color:var(--ink2);max-width:44ch}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5;border-radius:24px}
+  .hero .bookcard{position:absolute;left:-34px;bottom:-28px;width:280px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 30px 60px -26px rgba(76,44,150,.28)}
+  .hero .bookcard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700}
+  .hero .bookcard h4{font-family:Inter;font-size:15px;font-weight:700;margin:3px 0 12px}
+  .svc-chip{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .svc-chip span{border:1px solid var(--line);border-radius:999px;padding:6px 11px;font-size:11.5px}
+  .svc-chip span.on{background:var(--purple-soft);border-color:var(--purple);color:var(--purple-d);font-weight:700}
+
+  section{padding:76px 0}
+  .sec-head{text-align:center;max-width:60ch;margin:0 auto 40px}
+  .sec-head h2{font-size:35px}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:16px}
+
+  .specs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .sc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;transition:.15s}
+  .sc:hover{border-color:var(--purple);transform:translateY(-3px)}
+  .sc .ic{width:44px;height:44px;border-radius:12px;background:var(--purple-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px}
+  .sc h3{font-family:Inter;font-size:16px;font-weight:700;margin-bottom:6px}
+  .sc p{color:var(--muted);font-size:13.5px}
+
+  .band{background:linear-gradient(120deg,var(--purple-d),#341d68);color:#fff;border-radius:24px;padding:46px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .band h2{color:#fff;font-size:33px;margin-bottom:12px}
+  .band p{color:#d9c9fb;font-size:15.5px;max-width:42ch}
+  .band .photo{border-radius:18px;aspect-ratio:5/4}
+  .band .tag{position:absolute}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .st{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .st .n{width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2';font-weight:700;margin-bottom:12px}
+  .st h3{font-family:Inter;font-size:15px;font-weight:700;margin-bottom:5px}
+  .st p{color:var(--muted);font-size:13px}
+
+  .book{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;box-shadow:0 30px 70px -40px rgba(76,44,150,.3)}
+  .book h2{font-size:32px;margin-bottom:12px}
+  .book p{color:var(--muted);font-size:15px;max-width:38ch}
+  .book .panel{background:var(--bg2);border-radius:16px;padding:24px}
+  .book .panel .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;margin-bottom:9px}
+  .book .panel .days{display:flex;gap:7px;margin-bottom:14px}
+  .book .panel .days span{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:9px 0;font-size:12px;background:#fff}
+  .book .panel .days span.on{background:var(--purple);color:#fff;border-color:var(--purple);font-weight:700}
+  .book .panel .days span b{display:block;font-family:'Baloo 2';font-size:15px}
+  .book .panel .slots{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+  .book .panel .slots span{border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:12.5px;background:#fff}
+  .book .panel .slots span.on{border-color:var(--purple);color:var(--purple-d);font-weight:700}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ts{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .ts .big{font-family:'Baloo 2';font-size:26px;color:var(--purple-d)}
+  .ts .lab{color:var(--muted);font-size:13px;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  footer a,footer p{color:var(--ink2);font-size:14px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--purple-soft);border:1px solid var(--purple);color:var(--purple-d);font-size:11px;font-weight:700;padding:8px 13px;border-radius:10px}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:40px 22px 56px}
+    .hero h1{font-size:34px}
+    .hero .bookcard{position:static;width:100%;margin-top:20px}
+    .wrap{padding:0 20px}
+    section{padding:52px 0}
+    .specs,.steps,.trust-strip{grid-template-columns:1fr 1fr;gap:14px}
+    .band,.book{grid-template-columns:1fr;padding:26px;border-radius:18px}
+    .band .photo{aspect-ratio:16/10}
+    .fcols{grid-template-columns:1fr 1fr;gap:24px}
+    nav.links{display:none}
+    .sec-head h2{font-size:27px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:2px;text-align:center;font-size:11px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Bogotá · Dermatología · Oncología · Homeopatía</span><span>Agenda en 1 clic · Consulta virtual disponible</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-3.5 0-6.5-1.8-6.5-4.5 0-2.2 2-3.3 2.7-4.8.6-1.3-.2-2.7.7-3.8 1-1.2 2.8-.4 3.1-1.9.2-1.1 1.4-1.6 2.3-1 .8.5.7 1.7 1.6 2 1.1.4 2-.6 2.9.2 1 .9.3 2.2.9 3.4.7 1.3 2.3 1.7 2.3 3.4 0 3-3.5 6-10 6z" fill="#6c3fc5"/></svg></span>
+    <span>Petpals<small>VETERINARIA · BOGOTÁ</small></span>
+  </div>
+  <nav class="links"><a href="#especialidades">Especialidades</a><a href="#virtual">Petpals Virtual</a><a href="#agenda">Agenda</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#agenda">Agendar cita</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Veterinaria especializada · Perros y gatos</div>
+      <h1>Tu mascota en <em>buenas manos</em>, con la clínica que ya eligen cientos de familias en Bogotá.</h1>
+      <p class="sub">Dermatología, oncología y homeopatía en un solo lugar — y ahora también consulta veterinaria virtual. Una web propia para que quien busque veterinario en Bogotá encuentre primero a Petpals, no solo el WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#agenda">Agendar cita</a>
+        <a class="btn btn-ghost" href="#virtual">Conocer Petpals Virtual</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Dermatología y oncología</span><span class="pill">✓ Homeopatía</span><span class="pill">✓ Consulta virtual</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900&h=1100&fit=crop&q=75" alt=""></div>
+      <div class="bookcard">
+        <span class="lab">Agendar consulta</span>
+        <h4>¿Qué necesita tu mascota?</h4>
+        <div class="svc-chip"><span class="on">Dermatología</span><span>Oncología</span><span>Homeopatía</span><span>General</span></div>
+        <div class="book-mini" style="display:flex;gap:6px;margin-bottom:10px">
+          <span style="flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:7px 0;font-size:12px">Mié<b style="display:block;font-family:'Baloo 2'">09</b></span>
+          <span style="flex:1;text-align:center;border:1px solid var(--purple);background:var(--purple-soft);color:var(--purple-d);border-radius:9px;padding:7px 0;font-size:12px;font-weight:700">Jue<b style="display:block;font-family:'Baloo 2'">10</b></span>
+          <span style="flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:7px 0;font-size:12px">Vie<b style="display:block;font-family:'Baloo 2'">11</b></span>
+        </div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;padding:10px" href="#agenda">Confirmar cita</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="especialidades">
+  <div class="wrap">
+    <div class="sec-head"><h2>Especialidades</h2><p>Las mismas que hoy solo se ven en publicaciones sueltas de Instagram, ahora con su propia página y agenda</p></div>
+    <div class="specs">
+      <div class="sc"><div class="ic">🩺</div><h3>Dermatología</h3><p>Diagnóstico y tratamiento de piel, alergias y afecciones comunes en perros y gatos.</p></div>
+      <div class="sc"><div class="ic">🎗️</div><h3>Oncología</h3><p>Detección, seguimiento y tratamiento oncológico especializado.</p></div>
+      <div class="sc"><div class="ic">🌿</div><h3>Homeopatía</h3><p>Tratamientos complementarios para mascotas, con enfoque integral.</p></div>
+      <div class="sc"><div class="ic">💉</div><h3>Medicina general</h3><p>Consulta, vacunación y control de rutina para perros y gatos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="virtual" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <div class="kicker" style="color:#d9c9fb">Petpals Virtual</div>
+        <h2>Videoconsulta con un veterinario, sin salir de casa</h2>
+        <p>Hoy este servicio ya existe y funciona — pero vive dentro de historias destacadas de Instagram. Con su propia página, un dueño nuevo puede agendar la videoconsulta directamente, ver precio y confirmar en minutos.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" style="background:#fff;color:var(--purple-d)" href="#">Agendar consulta virtual</a>
+        </div>
+      </div>
+      <div class="ph photo" style="border-radius:18px;aspect-ratio:5/4"><img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=900&h=720&fit=crop&q=75" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="como-agendar">
+  <div class="wrap">
+    <div class="sec-head"><h2>Cómo se agenda hoy vs. cómo podría ser</h2><p>De escribir por WhatsApp y esperar respuesta, a reservar en un clic</p></div>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><h3>Eliges especialidad</h3><p>Dermatología, oncología, homeopatía o consulta general.</p></div>
+      <div class="st"><div class="n">2</div><h3>Presencial o virtual</h3><p>Ves disponibilidad real de la clínica o de Petpals Virtual.</p></div>
+      <div class="st"><div class="n">3</div><h3>Confirmas</h3><p>Reserva inmediata, con recordatorio automático.</p></div>
+      <div class="st"><div class="n">4</div><h3>Llevas a tu mascota</h3><p>O te conectas a la videollamada, sin reescribir todo por chat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="book">
+      <div>
+        <h2>Agenda que se reserva sola</h2>
+        <p>Elige la especialidad, ve horarios reales y confirma. El WhatsApp sigue disponible para quien lo prefiera — pero deja de ser el único camino.</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Confirmar cita</a>
+          <a class="btn btn-wa" href="#">Prefiero WhatsApp</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="lab">1 · Especialidad</div>
+        <div class="svc-chip"><span class="on">Dermatología</span><span>Oncología</span><span>Homeopatía</span></div>
+        <div class="lab">2 · Día</div>
+        <div class="days"><span>Mié<b>09</b></span><span class="on">Jue<b>10</b></span><span>Vie<b>11</b></span><span>Sáb<b>12</b></span></div>
+        <div class="lab">3 · Hora</div>
+        <div class="slots"><span>9:00</span><span class="on">11:30</span><span>13:00</span><span>16:00</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href="#">Reservar consulta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Petpals, en números</h2></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">~4.700</div><div class="lab">seguidores activos en Instagram</div></div>
+      <div class="ts"><div class="big">4 áreas</div><div class="lab">dermatología · oncología · homeopatía · general</div></div>
+      <div class="ts"><div class="big">Virtual</div><div class="lab">videoconsulta veterinaria disponible</div></div>
+      <div class="ts"><div class="big">Bogotá</div><div class="lab">atención presencial y remota</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="brand" style="margin-bottom:14px"><span class="mk"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c-3.5 0-6.5-1.8-6.5-4.5 0-2.2 2-3.3 2.7-4.8.6-1.3-.2-2.7.7-3.8 1-1.2 2.8-.4 3.1-1.9.2-1.1 1.4-1.6 2.3-1 .8.5.7 1.7 1.6 2 1.1.4 2-.6 2.9.2 1 .9.3 2.2.9 3.4.7 1.3 2.3 1.7 2.3 3.4 0 3-3.5 6-10 6z" fill="#6c3fc5"/></svg></span><span>Petpals<small>VETERINARIA · BOGOTÁ</small></span></div>
+        <p>Veterinaria especializada en perros y gatos. Dermatología, oncología, homeopatía y consulta virtual.</p></div>
+      <div><h4>Especialidades</h4><a href="#">Dermatología</a><a href="#">Oncología</a><a href="#">Homeopatía</a></div>
+      <div><h4>Clínica</h4><a href="#">Petpals Virtual</a><a href="#">Agenda</a><a href="#">Cómo llegar</a></div>
+      <div><h4>Contacto</h4><a href="#">Agenda online</a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Petpals Veterinaria</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
