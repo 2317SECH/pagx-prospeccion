@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arlequín La Chocolatería (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1c1512; --bg2:#261c17; --ink:#f2e9df; --ink2:#cbb8a8;
+    --clay:#8a4a2c; --clay-d:#b06a3e; --gold:#c9a24a; --line:#3a2c22; --muted:#a68f7c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.1}
+  em{font-style:italic;color:var(--clay-d)}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ph{position:relative;background:linear-gradient(135deg,#2e2119,#261c17);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;padding:14px 26px;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--gold);color:#241a0c}
+  .btn-primary:hover{background:#dbb968}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--ink2);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:#261c17}
+
+  .ribbon{background:#000;color:#e3c9a8;font-size:12px;letter-spacing:.03em}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(28,21,18,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:32px;height:80px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'DM Serif Display';font-size:24px}
+  .brand .mk{width:38px;height:38px;border-radius:50%;background:conic-gradient(from 180deg,#e9c898,#c9a24a,#8a4a2c,#e9c898);display:flex;align-items:center;justify-content:center}
+  .brand .mk span{width:30px;height:30px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display';font-size:15px;color:var(--gold)}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.22em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;font-size:14px;font-weight:500;color:var(--ink2)}
+  nav.links a:hover{color:var(--clay-d)}
+  .nav .spacer{flex:1}
+
+  .hero{background:linear-gradient(180deg,#1c1512,#261c17);border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:64px 40px 72px}
+  .kicker{color:var(--clay-d);font-weight:600;font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:44px}
+  .hero p.sub{margin-top:20px;font-size:16.5px;color:var(--ink2);max-width:44ch;font-family:Inter}
+  .hero .cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .hero .trust{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap}
+  .hero .visual{position:relative}
+  .hero .visual .photo{aspect-ratio:4/5}
+  .hero .featcard{position:absolute;left:-30px;bottom:-28px;width:270px;background:#261c17;border:1px solid var(--line);padding:18px;box-shadow:0 30px 60px -26px rgba(0,0,0,.6)}
+  .hero .featcard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700}
+  .hero .featcard h4{font-family:'DM Serif Display';font-size:18px;font-weight:400;margin:3px 0 12px;color:var(--ink)}
+  .proj-chip{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+  .proj-chip span{border:1px solid var(--line);padding:6px 11px;font-size:11.5px;color:var(--ink2)}
+
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:38px;gap:20px}
+  .sec-head h2{font-size:36px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;font-family:Inter}
+
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+  .pc{position:relative;overflow:hidden;aspect-ratio:4/5}
+  .pc img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .pc:hover img{transform:scale(1.06)}
+  .pc::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),rgba(0,0,0,0) 50%)}
+  .pc .lb{position:absolute;left:16px;bottom:14px;color:#fff;z-index:2}
+  .pc .lb .t{font-family:'DM Serif Display';font-size:19px}
+  .pc .lb .n{font-size:11.5px;opacity:.85;margin-top:2px;font-family:Inter}
+
+  .foa{background:#000;color:#ecdccc;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .foa .kicker{color:var(--gold)}
+  .foa h2{color:#fff;font-size:34px;margin-bottom:14px}
+  .foa p{color:#cbb3a3;font-size:15px;max-width:42ch;font-family:Inter}
+  .foa .photo{aspect-ratio:5/4}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
+  .st{background:var(--bg);padding:26px}
+  .st .n{font-family:'DM Serif Display';font-size:26px;color:var(--clay-d);margin-bottom:10px}
+  .st h3{font-size:15px;font-weight:700;margin-bottom:6px;font-family:Inter}
+  .st p{color:var(--muted);font-size:13px;font-family:Inter}
+
+  .consult{background:#261c17;border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .consult h2{font-size:32px;margin-bottom:12px}
+  .consult p{color:var(--muted);font-size:15px;max-width:38ch;font-family:Inter}
+  .consult .panel{background:#1c1512;padding:24px}
+  .consult .panel .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;margin-bottom:9px;font-family:Inter}
+  .consult .panel .opts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .consult .panel .opts span{border:1px solid var(--line);padding:7px 13px;font-size:12.5px;background:#261c17;font-family:Inter;color:var(--ink2)}
+  .consult .panel .opts span.on{background:var(--gold);border-color:var(--gold);color:#241a0c;font-weight:600}
+
+  .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
+  .ts{background:#261c17;padding:24px}
+  .ts .big{font-family:'DM Serif Display';font-size:27px;color:var(--clay-d)}
+  .ts .lab{color:var(--muted);font-size:12.5px;margin-top:6px;font-family:Inter}
+
+  footer{border-top:1px solid var(--line);background:#000;padding:48px 0 38px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-family:Inter}
+  footer a,footer p{color:var(--ink2);font-size:13.5px;display:block;margin-bottom:8px;font-family:Inter}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;font-family:Inter}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#261c17;border:1px solid var(--gold);color:var(--clay-d);font-size:11px;font-weight:700;padding:8px 13px;border-radius:10px;font-family:Inter}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:36px 20px 56px}
+    .hero h1{font-size:29px}
+    .hero .featcard{position:static;width:100%;margin-top:20px}
+    .wrap{padding:0 18px}
+    section{padding:52px 0}
+    .proj-grid{grid-template-columns:1fr 1fr}
+    .foa,.consult{grid-template-columns:1fr;padding:26px}
+    .steps{grid-template-columns:1fr 1fr}
+    .trust-strip{grid-template-columns:1fr 1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:22px}
+    nav.links{display:none}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    .sec-head h2{font-size:27px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:2px;text-align:center;font-size:10.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Bogotá, Colombia</span><span>C.C. Galerías, 2do piso, local 2065 · Premiada Chocomaster 2023-2024</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <span class="mk"><span>A.</span></span>
+    <span>Arlequín<small>LA CHOCOLATERÍA</small></span>
+  </div>
+  <nav class="links"><a href="#coleccion">Colección</a><a href="#premios">Premios</a><a href="#contacto">Pedidos</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#contacto">Haz tu pedido</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Chocolatería artesanal · tradicional y sin azúcar</div>
+      <h1>Chocolate premiado en Chocomaster que hoy solo se pide por WhatsApp.</h1>
+      <p class="sub">Arlequín ganó Chocomaster 2023 y 2024, tiene boutique propia en el Centro Comercial Galerías y 500 publicaciones de bombones artesanales — pero ese reconocimiento no tiene un sitio propio donde un cliente nuevo vea la colección completa y pida a domicilio sin escribir primero.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contacto">Haz tu pedido</a>
+        <a class="btn btn-ghost" href="#coleccion">Ver colección</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Premio Chocomaster 2023 y 2024</span><span class="pill">✓ Tradicional y sin azúcar</span><span class="pill">✓ Boutique en C.C. Galerías</span></div>
+    </div>
+    <div class="visual">
+      <div class="ph photo"><img src="https://images.unsplash.com/photo-1548741487-18d363dc4469?w=900&h=1100&fit=crop&q=75" alt=""></div>
+      <div class="featcard">
+        <span class="lab">Colección premiada</span>
+        <h4>Elegí tu caja</h4>
+        <div class="proj-chip"><span>Bombones</span><span>Sin azúcar</span></div>
+        <div class="proj-chip"><span>Cajas de regalo</span><span>Chocomaster 2024</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center;padding:10px;margin-top:8px" href="#coleccion">Ver colección completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coleccion">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Colección</h2><p>Los mismos bombones que hoy viven en el feed — ahora en un catálogo para pedir a domicilio</p></div></div>
+    <div class="proj-grid">
+      <div class="pc"><img src="https://images.unsplash.com/photo-1573013792262-761a3e17fb39?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Caja premium</div><div class="n">Selección de bombones</div></div></div>
+      <div class="pc"><img src="https://images.unsplash.com/photo-1572978841729-b4be31634e6a?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Edición sin azúcar</div><div class="n">Chocolate tradicional</div></div></div>
+      <div class="pc"><img src="https://images.unsplash.com/photo-1625151659386-5e1a63ee84c5?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Trufas de autor</div><div class="n">Receta artesanal</div></div></div>
+      <div class="pc"><img src="https://images.unsplash.com/photo-1605497391913-143c1c547a19?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Pieza de temporada</div><div class="n">Colección limitada</div></div></div>
+      <div class="pc"><img src="https://images.unsplash.com/photo-1573013778470-26b347398a94?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Caja de regalo</div><div class="n">Para toda ocasión</div></div></div>
+      <div class="pc"><img src="https://images.unsplash.com/photo-1573013835014-60d1590bfa38?w=700&h=860&fit=crop&q=75" alt=""><div class="lb"><div class="t">Bombón individual</div><div class="n">Chocolate real</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="premios" style="background:#000">
+  <div class="wrap">
+    <div class="foa">
+      <div>
+        <div class="kicker">El verdadero sabor del chocolate real</div>
+        <h2>Premio Chocomaster 2023 y 2024</h2>
+        <p>No es una chocolatería más: es una marca reconocida por el gremio del chocolate en Colombia — ese premio hoy no tiene un espacio propio donde contarse antes de que el cliente llegue al local.</p>
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" style="background:var(--gold);color:#241a0c" href="#contacto">Conocer la boutique</a>
+        </div>
+      </div>
+      <div class="ph photo foa" style="aspect-ratio:5/4"><img src="https://images.unsplash.com/photo-1583312205568-2975f2f726d3?w=900&h=720&fit=crop&q=75" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Cómo se hace un pedido</h2><p>El mismo proceso que ya siguen — ahora explicado antes de escribir por WhatsApp</p></div></div>
+    <div class="steps">
+      <div class="st"><div class="n">01</div><h3>Elegís tu caja</h3><p>Bombones, sin azúcar o edición especial.</p></div>
+      <div class="st"><div class="n">02</div><h3>Confirmás el pedido</h3><p>Cantidad y fecha de entrega.</p></div>
+      <div class="st"><div class="n">03</div><h3>Se prepara artesanalmente</h3><p>En la boutique de C.C. Galerías.</p></div>
+      <div class="st"><div class="n">04</div><h3>Retiro o entrega</h3><p>En tienda o a domicilio en Bogotá.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="background:#000">
+  <div class="wrap">
+    <div class="consult">
+      <div>
+        <h2>Haz tu pedido</h2>
+        <p>Elegís tu caja y confirmás la entrega — hoy ese primer paso vive solo en la atención por chat de WhatsApp.</p>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Ver colección</a>
+          <a class="btn btn-wa" href="#">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="lab">1 · Colección</div>
+        <div class="opts"><span class="on">Bombones</span><span>Sin azúcar</span><span>Edición especial</span></div>
+        <div class="lab">2 · Entrega</div>
+        <div class="opts"><span class="on">Retiro en tienda</span><span>Domicilio Bogotá</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href="#">Enviar pedido</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Arlequín, en números</h2></div></div>
+    <div class="trust-strip">
+      <div class="ts"><div class="big">Chocomaster</div><div class="lab">premio 2023 y 2024</div></div>
+      <div class="ts"><div class="big">Bogotá</div><div class="lab">C.C. Galerías, local 2065</div></div>
+      <div class="ts"><div class="big">~5.117</div><div class="lab">seguidores activos en Instagram</div></div>
+      <div class="ts"><div class="big">500</div><div class="lab">publicaciones — catálogo real disperso</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px"><span class="mk"><span>A.</span></span><span>Arlequín<small>LA CHOCOLATERÍA</small></span></div>
+        <p>Chocolatería artesanal tradicional y sin azúcar. Boutique en C.C. Galerías, Bogotá. Premio Chocomaster 2023-2024.</p>
+      </div>
+      <div><h4>Colección</h4><a href="#">Bombones</a><a href="#">Sin azúcar</a><a href="#">Regalo</a></div>
+      <div><h4>Marca</h4><a href="#">Premios</a><a href="#">Proceso</a><a href="#">Boutique</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Ubicación</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Arlequín La Chocolatería</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
