@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JF Atelier (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f0; --bg2:#ffffff; --ink:#1b1c18; --ink2:#54554d;
+    --forest:#3f5641; --forest-d:#2c3d2e; --gold:#9a7b3f; --line:#e4e0d5; --muted:#8b8a7f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:400}
+  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1.12}
+  em{font-style:italic;color:var(--forest)}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 46px}
+  .ph{position:relative;background:linear-gradient(135deg,#eceae1,#f7f5f0);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:13px;padding:15px 30px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+  .btn-primary{background:var(--ink);color:#f7f5f0}
+  .btn-primary:hover{background:var(--forest-d)}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:#fff;letter-spacing:.06em;text-transform:uppercase}
+
+  .ribbon{background:var(--ink);color:#d9d6c8;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .ribbon .wrap{display:flex;justify-content:center;gap:26px;align-items:center;height:38px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(247,245,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:88px}
+  .brand{font-family:'Playfair Display';font-size:26px;letter-spacing:.28em;text-transform:uppercase;display:flex;flex-direction:column}
+  .brand small{font-family:Jost;font-size:8.5px;letter-spacing:.34em;color:var(--muted);font-weight:500;margin-top:2px}
+  nav.links{display:flex;gap:34px;font-size:12px;font-weight:500;color:var(--ink2);letter-spacing:.14em;text-transform:uppercase;margin-left:auto;margin-right:34px}
+  nav.links a:hover{color:var(--gold)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;padding:0;min-height:600px}
+  .hero .left{padding:80px 60px 80px 46px;display:flex;flex-direction:column;justify-content:center}
+  .kicker{color:var(--gold);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px}
+  .hero h1{font-size:56px;font-weight:400}
+  .hero p.sub{margin-top:24px;font-size:16px;color:var(--ink2);max-width:44ch}
+  .hero .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .right{position:relative;min-height:420px}
+  .hero .right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  section{padding:96px 0}
+  .sec-head{text-align:center;margin-bottom:52px}
+  .sec-head h2{font-size:42px;font-weight:400}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:14.5px;max-width:56ch;margin-left:auto;margin-right:auto}
+
+  .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .col{position:relative;overflow:hidden;aspect-ratio:3/4;background:#e9e6dc}
+  .col img{width:100%;height:100%;object-fit:cover;transition:.6s}
+  .col:hover img{transform:scale(1.05)}
+  .col::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,20,16,.72),transparent 55%)}
+  .col .lb{position:absolute;left:22px;bottom:20px;color:#f7f5f0;z-index:2}
+  .col .lb .t{font-family:'Playfair Display';font-size:22px}
+  .col .lb .n{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-top:3px}
+
+  .craft{background:var(--forest-d);color:#eef0e8;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:0}
+  .craft .txt{padding:72px 60px}
+  .craft .kicker{color:#c9b78a}
+  .craft h2{color:#fff;font-size:38px;font-weight:400;margin-bottom:16px}
+  .craft p{color:#c9cdbf;font-size:15px;max-width:40ch}
+  .craft .ph{min-height:100%;align-self:stretch}
+  .craft .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  .press{text-align:center;padding:64px 0}
+  .press .lab{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .press .row{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;font-family:'Playfair Display';font-size:21px;color:var(--ink2)}
+
+  .appt{border:1px solid var(--line);background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .appt .ph{min-height:100%}
+  .appt .txt{padding:56px}
+  .appt h2{font-size:36px;font-weight:400;margin-bottom:14px}
+  .appt p{color:var(--ink2);font-size:15px;max-width:38ch}
+  .appt .field{margin-top:16px}
+  .appt .field .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .appt .opts{display:flex;gap:8px;flex-wrap:wrap}
+  .appt .opts span{border:1px solid var(--line);padding:8px 14px;font-size:12.5px;color:var(--ink2)}
+  .appt .opts span.on{background:var(--ink);border-color:var(--ink);color:#f7f5f0}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .st{background:#fff;padding:26px;text-align:center}
+  .st .big{font-family:'Playfair Display';font-size:26px}
+  .st .lab{color:var(--muted);font-size:12px;margin-top:6px;letter-spacing:.03em}
+
+  footer{border-top:1px solid var(--line);background:#fff;padding:52px 0 36px;margin-top:0}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between;letter-spacing:.04em}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#fff;border:1px solid var(--gold);color:var(--gold);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0}
+    .hero .left{padding:44px 18px}
+    .hero h1{font-size:34px}
+    .hero .right{min-height:360px}
+    section{padding:56px 0}
+    .sec-head h2{font-size:30px}
+    .collections{grid-template-columns:1fr 1fr}
+    .craft,.appt{grid-template-columns:1fr}
+    .craft .txt{padding:36px 20px}
+    .craft .ph,.appt .ph{min-height:280px}
+    .appt .txt{padding:30px 20px}
+    .press .row{gap:22px;font-size:17px}
+    .stats{grid-template-columns:1fr 1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .wrap .btn{margin-left:auto;padding:10px 16px;font-size:11px}
+    .brand{font-size:19px}
+    .brand small{font-size:7.5px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:3px;font-size:9.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Hecho en Colombia</span><span>·</span><span>Piezas únicas, pintadas y bordadas a mano</span><span>·</span><span>Dosquebradas / Pereira</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">JF Atelier<small>Editorial Fashion House</small></div>
+  <nav class="links"><a href="#colecciones">Colecciones</a><a href="#proceso">El proceso</a><a href="#prensa">Prensa</a><a href="#cita">Agenda una cita</a></nav>
+  <a class="btn btn-primary" href="#cita">Agendar cita</a>
+</div></header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="left">
+      <div class="kicker">Casa de moda editorial · alta costura artesanal</div>
+      <h1>Una casa de moda editorial que todavía no tiene una publicación propia.</h1>
+      <p class="sub">JF Atelier viste pasarelas de Bogotá y Barranquilla y suma casi 9 mil seguidores con piezas únicas, pintadas y bordadas a mano e inspiradas en la naturaleza colombiana. Todo ese lenguaje visual vive hoy en un feed — no en un sitio donde una clienta o una editora pueda recorrer las colecciones y pedir una cita.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#colecciones">Ver colecciones</a>
+        <a class="btn btn-ghost" href="#proceso">El proceso artesanal</a>
+      </div>
+    </div>
+    <div class="right"><img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=900&h=1200&fit=crop&q=75" alt="Editorial de moda"></div>
+  </div>
+</section>
+
+<section id="colecciones">
+  <div class="wrap">
+    <div class="sec-head"><h2>Colecciones</h2><p>Cada colección nace de una forma, una textura o un color de la naturaleza colombiana. Aquí como serie editorial, no como publicaciones sueltas.</p></div>
+    <div class="collections">
+      <div class="col"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Iridiscencia</div><div class="n">Colección · SS26</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Bordado</div><div class="n">Piezas a mano</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Atelier</div><div class="n">Hecho a medida</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Raíz</div><div class="n">Inspiración · flora</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Polen</div><div class="n">Estampado pintado</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=700&h=930&fit=crop&q=75" alt=""><div class="lb"><div class="t">Editorial</div><div class="n">Lookbook completo →</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" style="padding:0">
+  <div class="craft">
+    <div class="txt">
+      <div class="kicker">Diseño con identidad y detalle artesanal</div>
+      <h2>Cada pieza se pinta y se borda a mano</h2>
+      <p>La marca empezó con un sombrero pintado a mano durante la pandemia. Hoy cada prenda sigue el mismo principio: dibujo, pintura y bordado sobre tela, con formas y colores tomados de la fauna y la flora del país. Son piezas únicas — y una web propia es donde esa historia se cuenta antes de la primera cita.</p>
+      <div style="margin-top:26px"><a class="btn" style="background:#f7f5f0;color:var(--ink)" href="#cita">Agenda una cita en el atelier</a></div>
+    </div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=900&h=900&fit=crop&q=75" alt="Herramientas de atelier de costura"></div>
+  </div>
+</section>
+
+<div class="press" id="prensa">
+  <div class="wrap">
+    <div class="lab">Pasarela y prensa</div>
+    <div class="row"><span>Bogotá Fashion Week</span><span>Barranquilla Fashion Week</span><span>Marie Claire</span><span>Telecafé</span></div>
+    <p style="color:var(--muted);font-size:12px;margin-top:16px">Menciones y pasarelas verificadas públicamente · el listado editable vive en el sitio</p>
+  </div>
+</div>
+
+<section id="cita" style="padding-top:0">
+  <div class="wrap">
+    <div class="appt">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&h=900&fit=crop&q=75" alt=""></div>
+      <div class="txt">
+        <div class="kicker">Atención personalizada</div>
+        <h2>Agenda una cita en el atelier</h2>
+        <p>Piezas únicas y hechas a medida. La cita define diseño, telas y tiempos — hoy ese primer contacto vive solo en mensajes de Instagram.</p>
+        <div class="field"><div class="l">Tipo de pieza</div><div class="opts"><span class="on">Vestido de gala</span><span>Pieza editorial</span><span>A medida</span></div></div>
+        <div class="field"><div class="l">Ciudad</div><div class="opts"><span class="on">Pereira</span><span>Bogotá</span><span>Otra</span></div></div>
+        <div style="margin-top:22px"><a class="btn btn-primary" href="#">Solicitar cita</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numeros" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px"><h2 style="font-size:32px">JF Atelier, en números</h2></div>
+    <div class="stats">
+      <div class="st"><div class="big">8.951</div><div class="lab">seguidores en Instagram</div></div>
+      <div class="st"><div class="big">111</div><div class="lab">publicaciones — lookbook sin ordenar</div></div>
+      <div class="st"><div class="big">Pasarela</div><div class="lab">Bogotá y Barranquilla Fashion Week</div></div>
+      <div class="st"><div class="big">Sin web</div><div class="lab">la bio enlaza a otra red, no a un sitio</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="font-size:20px;margin-bottom:14px">JF Atelier<small>Editorial Fashion House</small></div>
+        <p>Alta costura artesanal hecha en Colombia. Piezas únicas pintadas y bordadas a mano, inspiradas en la naturaleza. Diseñador: Fernando Jastrellón Medina.</p>
+      </div>
+      <div><h4>Colecciones</h4><a href="#">Iridiscencia</a><a href="#">Bordado</a><a href="#">Lookbook</a></div>
+      <div><h4>Casa</h4><a href="#">El proceso</a><a href="#">Prensa</a><a href="#">Pasarela</a></div>
+      <div><h4>Contacto</h4><a href="#">Agenda una cita</a><a href="#">Instagram</a><a href="#">Atelier</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 JF Atelier</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual · imágenes de referencia</div>
+
+</body>
+</html>

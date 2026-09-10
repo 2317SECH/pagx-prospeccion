@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troncos · Madera Centenaria (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14100c; --bg2:#1c1712; --ink:#efe6d8; --ink2:#c3b4a1;
+    --walnut:#7a4e2d; --walnut-l:#a9743f; --brass:#c9a35b; --line:#332720; --muted:#9c8b78;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08}
+  em{font-style:italic;color:var(--walnut-l)}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .ph{position:relative;background:linear-gradient(135deg,#2a2018,#1c1712);overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14px;padding:14px 28px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.01em;white-space:nowrap}
+  .btn-primary{background:var(--brass);color:#231803}
+  .btn-primary:hover{background:#dcb872}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-ghost{background:transparent;border-color:var(--ink2);color:var(--ink)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--bg2)}
+
+  .ribbon{background:#000;color:#d9c3a2;font-size:12px;letter-spacing:.04em}
+  .ribbon .wrap{display:flex;justify-content:space-between;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(20,16,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;gap:34px;height:82px}
+  .brand{display:flex;align-items:center;gap:13px;font-family:'Cormorant Garamond';font-size:27px;letter-spacing:.16em;text-transform:uppercase}
+  .brand .mk{width:38px;height:38px;border:1px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--brass);font-size:15px}
+  .brand small{display:block;font-family:Inter;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:600;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;font-size:13.5px;font-weight:500;color:var(--ink2);text-transform:uppercase;letter-spacing:.04em}
+  nav.links a:hover{color:var(--brass)}
+  .nav .spacer{flex:1}
+
+  .hero{position:relative;border-bottom:1px solid var(--line)}
+  .hero .bgph{position:absolute;inset:0}
+  .hero .bgph img{width:100%;height:100%;object-fit:cover;opacity:.34}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#14100c 34%,rgba(20,16,12,.55))}
+  .hero .wrap{position:relative;z-index:2;padding:96px 44px 104px;max-width:1200px}
+  .kicker{color:var(--brass);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:58px;max-width:15ch;font-weight:500}
+  .hero p.sub{margin-top:22px;font-size:17px;color:var(--ink2);max-width:52ch}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .trust{margin-top:26px;display:flex;gap:9px;flex-wrap:wrap}
+
+  section{padding:88px 0}
+  .sec-head{margin-bottom:44px}
+  .sec-head h2{font-size:44px;font-weight:500}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:15px;max-width:60ch}
+
+  .comments{background:var(--bg2);border:1px solid var(--line);padding:40px}
+  .comments h3{font-family:Inter;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700;margin-bottom:20px}
+  .cbubbles{display:flex;gap:12px;flex-wrap:wrap}
+  .cb{background:#14100c;border:1px solid var(--line);border-radius:14px;padding:11px 15px;font-size:13.5px;color:var(--ink2)}
+  .comments p.note{margin-top:22px;font-size:14.5px;color:var(--ink);max-width:64ch}
+  .comments p.note b{color:var(--brass)}
+
+  .catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--line);border:1px solid var(--line)}
+  .pcard{background:linear-gradient(160deg,#241a12,#1a140f);padding:26px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .pcard::before{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(201,163,91,.16),transparent 70%)}
+  .pcard .t{font-family:'Cormorant Garamond';font-size:25px}
+  .pcard .specs{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.7}
+  .pcard .foot{display:flex;justify-content:space-between;align-items:end;font-size:12px;color:var(--ink2);margin-top:18px}
+  .pcard .foot .demo{color:var(--walnut-l);border:1px solid var(--line);padding:2px 7px;border-radius:999px;font-weight:700;font-size:10px}
+
+  .proc{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid var(--line)}
+  .proc .txt{padding:44px}
+  .proc .ph{min-height:100%}
+  .steps{margin-top:22px}
+  .steps .s{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+  .steps .s .n{font-family:'Cormorant Garamond';font-size:26px;color:var(--brass);min-width:38px}
+  .steps .s h4{font-family:Inter;font-size:14.5px;font-weight:700;margin-bottom:3px}
+  .steps .s p{font-size:13px;color:var(--muted)}
+
+  .guar{background:#000;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;border:1px solid var(--line)}
+  .guar h2{font-size:40px;color:#fff;margin-bottom:12px;font-weight:500}
+  .guar p{color:#c9b79f;font-size:15px;max-width:40ch}
+  .guar .badge{font-family:'Cormorant Garamond';font-size:70px;color:var(--brass);line-height:1}
+  .guar .badge small{display:block;font-family:Inter;font-size:13px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:6px}
+
+  .cotiza{border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .cotiza h2{font-size:38px;font-weight:500;margin-bottom:12px}
+  .cotiza p{color:var(--muted);font-size:15px;max-width:38ch}
+  .cotiza .panel{background:var(--bg2);border:1px solid var(--line);padding:24px}
+  .cotiza .panel .lab{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:700;margin-bottom:9px}
+  .cotiza .panel .opts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .cotiza .panel .opts span{border:1px solid var(--line);padding:7px 13px;font-size:12.5px;color:var(--ink2)}
+  .cotiza .panel .opts span.on{background:var(--brass);border-color:var(--brass);color:#231803;font-weight:600}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:var(--line);border:1px solid var(--line)}
+  .st{background:var(--bg2);padding:24px}
+  .st .big{font-family:'Cormorant Garamond';font-size:30px;color:var(--brass)}
+  .st .lab{color:var(--muted);font-size:12.5px;margin-top:6px}
+
+  footer{border-top:1px solid var(--line);background:#000;padding:48px 0 36px;margin-top:20px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13.5px;display:block;margin-bottom:8px}
+  .fbot{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--bg2);border:1px solid var(--brass);color:var(--walnut-l);font-size:11px;font-weight:700;padding:8px 13px;border-radius:10px}
+  .wa-fab{position:fixed;right:16px;bottom:56px;z-index:80;width:52px;height:52px;border-radius:50%;background:#1faa53;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(31,170,83,.5)}
+  .wa-fab svg{width:26px;height:26px;fill:#fff}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero .wrap{padding:60px 18px 68px}
+    .hero h1{font-size:36px}
+    .hero::after{background:linear-gradient(180deg,rgba(20,16,12,.5),#14100c)}
+    section{padding:56px 0}
+    .sec-head h2{font-size:31px}
+    .catalog{grid-template-columns:1fr}
+    .proc,.guar,.cotiza{grid-template-columns:1fr}
+    .proc .ph{min-height:260px}
+    .guar,.cotiza{padding:26px}
+    .stats{grid-template-columns:1fr 1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:22px}
+    nav.links{display:none}
+    .nav .wrap{gap:12px;height:66px}
+    .nav .wrap>.btn{padding:9px 14px;font-size:12px}
+    .brand{font-size:20px}
+    .brand small{display:none}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:8px 0;gap:2px;text-align:center;font-size:10.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Pereira, Colombia · Envíos a todo el país</span><span>Mobiliario en madera centenaria · Garantía 5–10 años</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand"><span class="mk">T</span><span>Troncos<small>Madera centenaria</small></span></div>
+  <nav class="links"><a href="#catalogo">Catálogo</a><a href="#proceso">Proceso</a><a href="#garantia">Garantía</a><a href="#cotizar">Cotizar</a></nav>
+  <span class="spacer"></span>
+  <a class="btn btn-primary" href="#cotizar">Cotizar mi pieza</a>
+</div></header>
+
+<section class="hero">
+  <div class="bgph"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&h=1000&fit=crop&q=75" alt="Bosque de árboles centenarios"></div>
+  <div class="wrap">
+    <div class="kicker">Mobiliario en madera centenaria</div>
+    <h1>287 mil personas siguen tus mesas. En los comentarios todas preguntan lo mismo.</h1>
+    <p class="sub">"¿Dónde están ubicados?" · "¿Precios de la mesa de 8 puestos?" · "¿Hacen envíos?". Troncos tiene una comunidad enorme y 920 publicaciones de piezas únicas, pero cada venta arranca resolviendo por chat lo que un sitio propio podría contestar solo: catálogo con medidas, proceso, garantía y ubicación.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#catalogo">Ver el catálogo</a>
+      <a class="btn btn-ghost" href="#proceso">Cómo se hace una pieza</a>
+    </div>
+    <div class="trust"><span class="pill">🪵 Madera centenaria</span><span class="pill">📐 Piezas a medida</span><span class="pill">🚚 Envío nacional</span><span class="pill">🛡 Garantía 5–10 años</span></div>
+  </div>
+</section>
+
+<section id="catalogo">
+  <div class="wrap">
+    <div class="sec-head"><h2>El catálogo</h2><p>Cada pieza con su tipo de madera, medidas, acabado y tiempo de entrega — la información que hoy se pide una y otra vez por mensaje directo.</p></div>
+    <div class="catalog">
+      <div class="pcard"><div><div class="t">Mesa comedor Samán</div><div class="specs">Losa viva · 240 × 100 cm<br>Base metálica negra · 8 puestos<br>Acabado aceite natural</div></div><div class="foot"><span>Entrega 6–8 semanas</span><span class="demo">medidas demo</span></div></div>
+      <div class="pcard"><div><div class="t">Mesa comedor Nogal</div><div class="specs">Losa viva · 300 × 110 cm<br>Base doble U · 10 puestos<br>Acabado poliuretano mate</div></div><div class="foot"><span>Entrega 8–10 semanas</span><span class="demo">medidas demo</span></div></div>
+      <div class="pcard"><div><div class="t">Barra / isla de cocina</div><div class="specs">Roble centenario · 260 × 65 cm<br>Anclaje a muro · overhang 30 cm</div></div><div class="foot"><span>Entrega 6–8 semanas</span><span class="demo">medidas demo</span></div></div>
+      <div class="pcard"><div><div class="t">Escritorio ejecutivo</div><div class="specs">Losa viva · 180 × 80 cm<br>Pasacables integrado · base H</div></div><div class="foot"><span>Entrega 5–7 semanas</span><span class="demo">medidas demo</span></div></div>
+      <div class="pcard"><div><div class="t">Consola de entrada</div><div class="specs">Cedro · 150 × 40 cm<br>Patas cónicas en bronce</div></div><div class="foot"><span>Entrega 4–6 semanas</span><span class="demo">medidas demo</span></div></div>
+      <div class="pcard"><div><div class="t">Puerta pivotante</div><div class="specs">Teca maciza · 120 × 250 cm<br>Sistema pivot oculto</div></div><div class="foot"><span>Entrega 8–12 semanas</span><span class="demo">medidas demo</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" style="padding-top:0">
+  <div class="wrap">
+    <div class="proc">
+      <div class="txt">
+        <div class="kicker">De un árbol centenario a tu mesa</div>
+        <h2 style="font-size:38px;font-weight:500">El proceso</h2>
+        <div class="steps">
+          <div class="s"><div class="n">01</div><div><h4>Selección de la madera</h4><p>Troncos caídos o recuperados de árboles centenarios, elegidos por veta y sanidad.</p></div></div>
+          <div class="s"><div class="n">02</div><div><h4>Secado y estabilizado</h4><p>Meses de secado controlado para que la pieza no se abra ni se mueva con el clima.</p></div></div>
+          <div class="s"><div class="n">03</div><div><h4>Diseño y ensamble</h4><p>Se define medida, base y uso junto al cliente. Cada pieza es única.</p></div></div>
+          <div class="s"><div class="n">04</div><div><h4>Acabado a mano</h4><p>Lijado progresivo y sellado. Entrega e instalación en la ciudad de destino.</p></div></div>
+        </div>
+      </div>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?w=800&h=1000&fit=crop&q=75" alt="Carpintero trabajando una pieza de madera"></div>
+    </div>
+  </div>
+</section>
+
+<section id="garantia" style="padding-top:0">
+  <div class="wrap">
+    <div class="guar">
+      <div>
+        <div class="kicker" style="color:var(--brass)">Respaldo de la pieza</div>
+        <h2>Garantía de 5 a 10 años</h2>
+        <p>Una página propia deja por escrito qué cubre la garantía, cómo se solicita y los tiempos de respuesta — antes de la compra y sin depender de un chat.</p>
+      </div>
+      <div class="badge">5–10<small>años de garantía</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="cotizar" style="padding-top:0">
+  <div class="wrap">
+    <div class="cotiza">
+      <div>
+        <div class="kicker">Para arquitectos, interioristas y hogares</div>
+        <h2>Cotizá tu pieza</h2>
+        <p>Eliges tipo de pieza y medida aproximada; Troncos responde con propuesta, precio y tiempo de entrega.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#">Enviar solicitud</a>
+          <a class="btn btn-wa" href="#">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="lab">1 · Tipo de pieza</div>
+        <div class="opts"><span class="on">Mesa de comedor</span><span>Barra / isla</span><span>Escritorio</span><span>Puerta</span></div>
+        <div class="lab">2 · Puestos / medida</div>
+        <div class="opts"><span>6</span><span class="on">8</span><span>10</span><span>12+</span></div>
+        <div class="lab">3 · Ciudad de entrega</div>
+        <div class="opts"><span class="on">Pereira</span><span>Bogotá</span><span>Medellín</span><span>Otra</span></div>
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href="#">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numeros" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px"><h2 style="font-size:34px">Troncos, en números</h2></div>
+    <div class="stats">
+      <div class="st"><div class="big">287 mil</div><div class="lab">seguidores en Instagram</div></div>
+      <div class="st"><div class="big">920</div><div class="lab">publicaciones — catálogo real disperso</div></div>
+      <div class="st"><div class="big">Pereira</div><div class="lab">taller + envíos a todo el país</div></div>
+      <div class="st"><div class="big">Sin web</div><div class="lab">el enlace de la bio lleva a WhatsApp</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="margin-bottom:14px;font-size:22px"><span class="mk">T</span><span>Troncos</span></div>
+        <p>Mobiliario y decoración en madera centenaria. Piezas únicas a medida. Pereira, Colombia — envíos a todo el país. Garantía 5–10 años.</p>
+      </div>
+      <div><h4>Catálogo</h4><a href="#">Mesas de comedor</a><a href="#">Barras e islas</a><a href="#">Puertas</a></div>
+      <div><h4>Marca</h4><a href="#">Proceso</a><a href="#">Garantía</a><a href="#">Showroom</a></div>
+      <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Ubicación</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Troncos · Madera Centenaria</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="wa-fab"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.14A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.45L.06 24z"/></svg></div>
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual</div>
+
+</body>
+</html>
