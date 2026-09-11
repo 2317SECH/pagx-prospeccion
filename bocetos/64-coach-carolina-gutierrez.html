@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coach Carolina Gutiérrez (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1210; --bg2:#171b18; --ink:#f1f3ee; --ink2:#a6ab9f;
+    --lime:#c6f24e; --violet:#8b6bd6; --line:#2a2e28; --muted:#6d716a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 46px}
+  .ph{position:relative;background:#1c211c;overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:13px;padding:15px 30px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.02em;white-space:nowrap}
+  .btn-primary{background:var(--lime);color:#10130f}
+  .btn-primary:hover{background:#b0da3e}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .kicker{color:var(--lime);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(15,18,16,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:84px}
+  .brand{font-family:'Space Grotesk';font-size:22px;display:flex;flex-direction:column;line-height:1}
+  .brand small{font-family:Inter;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:600;margin-top:5px;text-transform:uppercase}
+  nav.links{display:flex;gap:32px;font-size:12.5px;font-weight:600;color:var(--ink2);margin-left:auto;margin-right:34px}
+  nav.links a:hover{color:var(--lime)}
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgph{position:absolute;inset:0;z-index:0}
+  .hero .bgph img{width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(1.05)}
+  .hero .bgph::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,18,16,.94) 30%,transparent 78%)}
+  .hero .wrap{position:relative;z-index:2;padding:110px 46px 80px}
+  .hero h1{font-size:64px;max-width:13ch}
+  .hero p.sub{margin-top:22px;font-size:16.5px;color:var(--ink2);max-width:50ch}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:100px 0}
+  .sec-head{margin-bottom:50px;max-width:60ch}
+  .sec-head h2{font-size:40px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:14.5px}
+
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .plan{background:var(--bg);padding:34px 28px}
+  .plan.on{background:var(--bg2);border-top:2px solid var(--lime)}
+  .plan .t{font-family:'Space Grotesk';font-size:22px;margin-bottom:6px}
+  .plan .p{color:var(--muted);font-size:12.5px;margin-bottom:20px}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .plan li{font-size:13.5px;color:var(--ink2);display:flex;gap:9px;align-items:flex-start}
+  .plan li::before{content:"+";color:var(--lime);font-weight:700}
+
+  .cred{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+  .cred .ph{min-height:100%}
+  .cred .txt{padding:76px 60px}
+  .cred .kicker{color:var(--violet)}
+  .cred h2{font-size:36px;margin-bottom:18px}
+  .cred p{color:var(--ink2);font-size:15px;max-width:42ch;margin-bottom:14px}
+  .cred .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+  .cred .tags span{border:1px solid var(--line);padding:8px 14px;font-size:12px;color:var(--ink2)}
+
+  .testi{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .tcard{background:var(--bg);padding:32px}
+  .tcard .stars{color:var(--lime);font-size:13px;margin-bottom:12px;letter-spacing:2px}
+  .tcard p{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+  .tcard .who{font-size:12.5px;color:var(--muted);font-weight:600}
+  .tcard .demo{font-size:10.5px;color:var(--violet);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+
+  .cta-final{border:1px solid var(--line);background:var(--bg2);display:grid;grid-template-columns:1fr 1fr}
+  .cta-final .ph{min-height:100%}
+  .cta-final .txt{padding:64px 56px}
+  .cta-final h2{font-size:38px;margin-bottom:16px}
+  .cta-final p{color:var(--ink2);font-size:15px;max-width:40ch;margin-bottom:26px}
+
+  footer{border-top:1px solid var(--line);padding:54px 0 34px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#171b18;border:1px solid var(--lime);color:var(--lime);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero{min-height:76vh}
+    .hero .wrap{padding:70px 18px 50px}
+    .hero h1{font-size:38px}
+    section{padding:56px 0}
+    .sec-head h2{font-size:28px}
+    .plans{grid-template-columns:1fr}
+    .cred,.cta-final{grid-template-columns:1fr}
+    .cred .txt,.cta-final .txt{padding:36px 20px}
+    .cred .ph,.cta-final .ph{min-height:240px}
+    .testi{grid-template-columns:1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .brand{font-size:18px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">Coach Carolina G.<small>Entrenamiento personal</small></div>
+  <nav class="links"><a href="#planes">Asesoría online</a><a href="#sobre">Sobre mí</a><a href="#empezar">Empezar</a></nav>
+  <a class="btn btn-primary" href="#empezar">Empezar asesoría</a>
+</div></header>
+
+<section class="hero">
+  <div class="bgph"><img src="https://images.unsplash.com/photo-1509833903111-9cb142f644e4?w=1600&q=75&fit=crop" alt="Entrenamiento"></div>
+  <div class="wrap">
+    <div class="kicker">Entrenadora personal · asesoría online · deportista</div>
+    <h1>Ofrecés asesoría online. No hay dónde comprarla.</h1>
+    <p class="sub">Tu Instagram muestra disciplina real — carreras, triatlón, entrenamiento diario — y ya tenés gente preguntando "info por favor" en tus publicaciones. Pero tu bio no tiene ningún enlace: cada consulta se resuelve una por una, por mensaje directo.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#planes">Ver planes de asesoría</a>
+      <a class="btn btn-ghost" href="#sobre">Sobre mí</a>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
+  <div class="wrap">
+    <div class="sec-head"><h2>Asesoría online</h2><p>Hoy explicás esto en cada chat, desde cero. Con planes claros en el sitio, quien llega ya sabe qué está comprando.</p></div>
+    <div class="plans">
+      <div class="plan">
+        <div class="t">Básico</div>
+        <div class="p">Seguimiento mensual</div>
+        <ul><li>Plan de entrenamiento personalizado</li><li>Ajustes mensuales</li><li>Contacto por mensajes</li></ul>
+      </div>
+      <div class="plan on">
+        <div class="t">Asesoría Online</div>
+        <div class="p">El servicio que ya promocionás</div>
+        <ul><li>Plan 100% personalizado</li><li>Acompañamiento profesional continuo</li><li>Ajustes según objetivos y nivel</li><li>Seguimiento de hábitos</li></ul>
+      </div>
+      <div class="plan">
+        <div class="t">Presencial</div>
+        <div class="p">Entrenamiento 1 a 1</div>
+        <ul><li>Sesiones en persona</li><li>Corrección técnica directa</li><li>Planificación de carreras</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" style="padding-top:0">
+  <div class="wrap">
+    <div class="cred">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1556817411-92f5ec899a55?w=900&h=1000&fit=crop&q=75" alt="Entrenamiento en gimnasio"></div>
+      <div class="txt">
+        <div class="kicker">Formación y trayectoria</div>
+        <h2>Lo que ya respalda tu marca</h2>
+        <p>Tecnóloga en entrenamiento deportivo, entrenadora personal y deportista activa — corredora y triatleta con participación en carreras reales, no solo teoría de gimnasio.</p>
+        <div class="tags"><span>Tecnóloga en entrenamiento deportivo</span><span>Deportista · running & triatlón</span><span>Asesoría online</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resultados">
+  <div class="wrap">
+    <div class="sec-head"><h2>Espacio para resultados reales</h2><p>Así se vería un bloque de testimonios una vez migrados desde los comentarios de Instagram. Contenido de ejemplo — se reemplaza por testimonios reales verificados.</p></div>
+    <div class="testi">
+      <div class="tcard"><div class="stars">★★★★★</div><p>"Con el plan online bajé mi tiempo en 10K sin lesionarme, siguiendo los ajustes semana a semana."</p><div class="who">Cliente demo</div><div class="demo">Contenido de ejemplo</div></div>
+      <div class="tcard"><div class="stars">★★★★★</div><p>"El seguimiento constante fue la diferencia — no es solo una rutina, es acompañamiento real."</p><div class="who">Cliente demo</div><div class="demo">Contenido de ejemplo</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="empezar">
+  <div class="wrap">
+    <div class="cta-final">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1509833903111-9cb142f644e4?w=800&h=900&fit=crop&q=75" alt=""></div>
+      <div class="txt">
+        <div class="kicker">Empezar asesoría</div>
+        <h2>De "info por favor" a asesoría activa</h2>
+        <p>Un formulario simple para arrancar: objetivo, nivel actual y plan de interés — sin que la consulta se pierda entre comentarios.</p>
+        <div style="margin-top:22px"><a class="btn btn-primary" href="#">Quiero mi asesoría</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="font-size:20px;margin-bottom:14px">Coach Carolina G.<small>Entrenamiento personal</small></div>
+        <p>Entrenadora personal, tecnóloga en entrenamiento deportivo y deportista. Asesoría online y entrenamiento presencial.</p>
+      </div>
+      <div><h4>Asesoría</h4><a href="#">Básico</a><a href="#">Asesoría online</a><a href="#">Presencial</a></div>
+      <div><h4>Sobre mí</h4><a href="#">Formación</a><a href="#">Carreras</a></div>
+      <div><h4>Contacto</h4><a href="#">Empezar</a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 Coach Carolina Gutiérrez</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual · imágenes y testimonios de referencia</div>
+
+</body>
+</html>

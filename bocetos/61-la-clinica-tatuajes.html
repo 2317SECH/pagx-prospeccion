@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Clínica Tatuajes y Perforaciones (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0d0d; --bg2:#161616; --ink:#f2f0ea; --ink2:#a8a49a;
+    --red:#b3261e; --line:#2a2a28; --muted:#6f6b62;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.02em;line-height:.98;font-weight:400;text-transform:uppercase}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 46px}
+  .ph{position:relative;background:#1c1c1a;overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:13px;padding:15px 30px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{background:#8f1e18}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:var(--ink2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;letter-spacing:.06em;text-transform:uppercase}
+
+  .ribbon{background:var(--red);color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .ribbon .wrap{display:flex;justify-content:center;gap:26px;align-items:center;height:36px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(13,13,13,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:84px}
+  .brand{font-family:'Bebas Neue';font-size:30px;letter-spacing:.04em;display:flex;flex-direction:column;line-height:.9}
+  .brand small{font-family:Inter;font-size:9px;letter-spacing:.22em;color:var(--ink2);font-weight:600;margin-top:5px;text-transform:uppercase}
+  nav.links{display:flex;gap:34px;font-size:12px;font-weight:600;color:var(--ink2);letter-spacing:.1em;text-transform:uppercase;margin-left:auto;margin-right:34px}
+  nav.links a:hover{color:var(--red)}
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgph{position:absolute;inset:0;z-index:0}
+  .hero .bgph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) brightness(.38)}
+  .hero .bgph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 2%,transparent 46%),linear-gradient(90deg,rgba(13,13,13,.9) 5%,transparent 55%)}
+  .hero .wrap{position:relative;z-index:2;padding:120px 46px 90px}
+  .kicker{color:var(--red);font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-size:78px;max-width:12ch}
+  .hero p.sub{margin-top:22px;font-size:16.5px;color:var(--ink2);max-width:52ch}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:100px 0}
+  .sec-head{margin-bottom:52px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+  .sec-head h2{font-size:46px}
+  .sec-head p{color:var(--muted);font-size:14.5px;max-width:44ch}
+
+  .gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;height:640px}
+  .gallery .g1{grid-row:1/3}
+  .gallery .col{position:relative;overflow:hidden;background:#1c1c1a}
+  .gallery .col img{width:100%;height:100%;object-fit:cover;transition:.6s}
+  .gallery .col:hover img{transform:scale(1.05)}
+  .gallery .col::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,10,.7),transparent 50%)}
+  .gallery .lb{position:absolute;left:20px;bottom:16px;z-index:2}
+  .gallery .lb .t{font-family:'Bebas Neue';font-size:22px;letter-spacing:.03em}
+  .gallery .lb .n{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-top:2px}
+
+  .trust{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .trust .grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .trust .txt{padding:80px 60px}
+  .trust .kicker{color:#e8a13a}
+  .trust h2{font-size:38px;margin-bottom:18px}
+  .trust p{color:var(--ink2);font-size:15px;max-width:42ch;margin-bottom:14px}
+  .trust .warn{display:flex;gap:12px;align-items:flex-start;background:#1c1310;border:1px solid #3a2318;padding:16px 18px;margin-top:22px;max-width:44ch}
+  .trust .warn .ic{color:#e8a13a;font-size:18px;line-height:1}
+  .trust .warn .tx{font-size:13px;color:#d9b98c}
+  .trust .ph{min-height:100%}
+
+  .booking{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+  .booking .ph{min-height:100%}
+  .booking .txt{padding:64px 56px}
+  .booking h2{font-size:40px;margin-bottom:16px}
+  .booking p{color:var(--ink2);font-size:15px;max-width:40ch;margin-bottom:26px}
+  .booking .row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .booking .opt{border:1px solid var(--line);padding:10px 16px;font-size:12.5px;color:var(--ink2);letter-spacing:.03em}
+  .booking .opt.on{background:var(--red);border-color:var(--red);color:#fff}
+  .booking .lab{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .st{background:var(--bg);padding:30px 22px;text-align:center}
+  .st .big{font-family:'Bebas Neue';font-size:34px;color:var(--red)}
+  .st .lab{color:var(--muted);font-size:12px;margin-top:6px}
+
+  footer{border-top:1px solid var(--line);padding:56px 0 34px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#161616;border:1px solid var(--red);color:#f2b3ae;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero{min-height:70vh}
+    .hero .wrap{padding:70px 18px 50px}
+    .hero h1{font-size:44px}
+    section{padding:56px 0}
+    .sec-head{margin-bottom:30px}
+    .sec-head h2{font-size:32px}
+    .gallery{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,180px);height:auto}
+    .gallery .g1{grid-row:auto;grid-column:1/3}
+    .trust .grid,.booking{grid-template-columns:1fr}
+    .trust .txt,.booking .txt{padding:36px 20px}
+    .trust .ph,.booking .ph{min-height:260px}
+    .stats{grid-template-columns:1fr 1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .brand{font-size:22px}
+    .ribbon .wrap{flex-direction:column;height:auto;padding:7px 0;gap:2px;font-size:9.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon"><div class="wrap"><span>Querétaro Centro Histórico</span><span>·</span><span>Desde 1995</span><span>·</span><span>Tatuaje · Perforación</span></div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">La Clínica<small>Tatuajes y perforaciones</small></div>
+  <nav class="links"><a href="#trabajo">Trabajo</a><a href="#estudio">El estudio</a><a href="#reservar">Reservar</a></nav>
+  <a class="btn btn-primary" href="#reservar">Reservar cita</a>
+</div></header>
+
+<section class="hero">
+  <div class="bgph"><img src="https://images.unsplash.com/photo-1761276297686-f507ca9fe8b6?w=1600&q=75&fit=crop" alt=""></div>
+  <div class="wrap">
+    <div class="kicker">31 años tatuando Querétaro · 32 mil seguidores en Instagram</div>
+    <h1>Tu trabajo ya tiene tres décadas de trayectoria. Tu sitio web no lo transmite.</h1>
+    <p class="sub">La Clínica tiene el respeto de la escena — historia desde 1995, convenciones propias, miles de piezas documentadas en Instagram. Pero quien busca "tatuajes Querétaro" y llega a tu página hoy encuentra una advertencia de sitio no seguro y una portada genérica que no se parece en nada al trabajo real de tus artistas.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#reservar">Ver la propuesta</a>
+      <a class="btn btn-ghost" href="#trabajo">El trabajo real</a>
+    </div>
+  </div>
+</section>
+
+<section id="trabajo">
+  <div class="wrap">
+    <div class="sec-head"><h2>El portafolio que sí existe</h2><p>Esto es lo que ya tienen — documentado en Instagram, pieza por pieza. Una web propia es donde se organiza por artista y por estilo, sin depender del algoritmo.</p></div>
+    <div class="gallery">
+      <div class="col g1"><img src="https://images.unsplash.com/photo-1761276297686-f507ca9fe8b6?w=900&h=1200&fit=crop&q=75" alt=""><div class="lb"><div class="t">Blackwork</div><div class="n">Sesión en estudio</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1482329033286-79a3d24413b4?w=700&h=560&fit=crop&q=75" alt=""><div class="lb"><div class="t">Fine line</div><div class="n">Trabajo en proceso</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1516008684536-605574d804ce?w=700&h=560&fit=crop&q=75" alt=""><div class="lb"><div class="t">El estudio</div><div class="n">Centro Histórico</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1482329033286-79a3d24413b4?w=700&h=560&fit=crop&q=75&sat=-50" alt=""><div class="lb"><div class="t">Realismo</div><div class="n">Portafolio completo →</div></div></div>
+      <div class="col"><img src="https://images.unsplash.com/photo-1761276297686-f507ca9fe8b6?w=700&h=560&fit=crop&q=75&sat=-30" alt=""><div class="lb"><div class="t">Perforación</div><div class="n">Higiene certificada</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="estudio" style="padding-top:0">
+  <div class="wrap">
+    <div class="trust">
+      <div class="grid">
+        <div class="txt">
+          <div class="kicker">Lo que encontramos al revisar tu sitio actual</div>
+          <h2>El problema no es la marca. Es la puerta de entrada.</h2>
+          <p>Tatuajeslaclinica.com existe desde hace años, pero el certificado de seguridad está vencido — la mayoría de navegadores hoy muestran una advertencia de "sitio no seguro" antes de dejar pasar al visitante. Quien llega desde Google o desde el enlace de Instagram se encuentra con eso primero.</p>
+          <p>Y la portada usa una ilustración genérica de reloj y ojo — no una sola foto de un tatuaje real, cuando el feed de Instagram está lleno de trabajo excelente.</p>
+          <div class="warn"><div class="ic">⚠</div><div class="tx"><strong>Advertencia de seguridad activa</strong> — el sitio actual pierde visitantes antes de que vean una sola pieza de trabajo.</div></div>
+        </div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1516008684536-605574d804ce?w=900&h=1000&fit=crop&q=75" alt="Estudio de tatuajes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reservar">
+  <div class="wrap">
+    <div class="booking">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1482329033286-79a3d24413b4?w=800&h=900&fit=crop&q=75" alt=""></div>
+      <div class="txt">
+        <div class="kicker">Reserva de cita</div>
+        <h2>Un sitio seguro, con el portafolio real al frente</h2>
+        <p>Así se vería el primer contacto: elegir estilo y artista, ver trabajo real filtrado por categoría, y reservar sin salir del sitio — sin la advertencia de seguridad en el camino.</p>
+        <div class="lab">Estilo</div>
+        <div class="row"><span class="opt on">Blackwork</span><span class="opt">Fine line</span><span class="opt">Realismo</span><span class="opt">Perforación</span></div>
+        <div class="lab">Artista</div>
+        <div class="row"><span class="opt on">Cualquiera disponible</span><span class="opt">Elegir por portafolio</span></div>
+        <div style="margin-top:24px"><a class="btn btn-primary" href="#">Solicitar cita</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numeros" style="padding-top:0">
+  <div class="wrap">
+    <div class="stats">
+      <div class="st"><div class="big">31 años</div><div class="lab">de trayectoria — desde 1995</div></div>
+      <div class="st"><div class="big">32.2k</div><div class="lab">seguidores en Instagram</div></div>
+      <div class="st"><div class="big">4,903</div><div class="lab">publicaciones — portafolio sin organizar</div></div>
+      <div class="st"><div class="big">SSL vencido</div><div class="lab">el sitio actual muestra advertencia de seguridad</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="font-size:22px;margin-bottom:14px">La Clínica<small>Tatuajes y perforaciones</small></div>
+        <p>Av. Universidad #46, Centro Histórico, Santiago de Querétaro, Qro. Estudio de tatuajes y perforaciones desde 1995.</p>
+      </div>
+      <div><h4>Trabajo</h4><a href="#">Blackwork</a><a href="#">Fine line</a><a href="#">Realismo</a></div>
+      <div><h4>Estudio</h4><a href="#">Artistas</a><a href="#">Higiene</a><a href="#">Convenciones</a></div>
+      <div><h4>Contacto</h4><a href="#">Reservar cita</a><a href="#">WhatsApp</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 La Clínica Tatuajes y Perforaciones</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual · imágenes de referencia</div>
+
+</body>
+</html>
