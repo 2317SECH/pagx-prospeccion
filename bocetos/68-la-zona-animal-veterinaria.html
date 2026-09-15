@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Zona Animal Veterinaria (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3fbfb; --bg2:#e6f5f5; --ink:#0b2a2d; --ink2:#3f6367;
+    --teal:#0e8f96; --coral:#f0654a; --line:#d3ebeb; --muted:#6f9497; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Manrope',sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 46px}
+  .ph{position:relative;background:#d3ebeb;overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:13px;padding:15px 30px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.01em;white-space:nowrap;border-radius:8px}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-primary:hover{background:#0b7278}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .kicker{color:var(--teal);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(243,251,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:84px}
+  .brand{font-family:'Manrope';font-weight:800;font-size:20px;display:flex;flex-direction:column;line-height:1}
+  .brand small{font-family:Inter;font-size:9px;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-top:6px;text-transform:uppercase}
+  nav.links{display:flex;gap:32px;font-size:12.5px;font-weight:700;color:var(--ink2);margin-left:auto;margin-right:34px}
+  nav.links a:hover{color:var(--teal)}
+
+  .urgent{background:var(--coral);color:#fff;text-align:center;padding:11px;font-size:13px;font-weight:700;letter-spacing:.01em}
+
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgph{position:absolute;inset:0;z-index:0}
+  .hero .bgph img{width:100%;height:100%;object-fit:cover}
+  .hero .bgph::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(11,42,45,.88) 34%,rgba(11,42,45,.2) 78%)}
+  .hero .wrap{position:relative;z-index:2;padding:90px 46px 80px}
+  .hero h1{font-size:58px;max-width:14ch;color:#fff}
+  .hero p.sub{margin-top:22px;font-size:16.5px;color:#d7ecec;max-width:50ch}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn-ghost{border-color:#fff;color:#fff}
+
+  section{padding:100px 0}
+  .sec-head{margin-bottom:50px;max-width:60ch}
+  .sec-head h2{font-size:38px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:14.5px}
+
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc{background:var(--card);padding:32px 26px}
+  .svc .ico{width:42px;height:42px;border-radius:10px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+  .svc h3{font-size:18px;margin-bottom:8px;font-weight:700}
+  .svc p{color:var(--muted);font-size:13px}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .split .ph{min-height:100%}
+  .split .txt{padding:70px 56px;display:flex;flex-direction:column;justify-content:center}
+  .split h2{font-size:34px;margin-bottom:16px}
+  .split p{color:var(--ink2);font-size:15px;max-width:42ch;margin-bottom:14px}
+  .split .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .split .tags span{background:var(--bg2);color:var(--teal);padding:8px 14px;font-size:12px;font-weight:700;border-radius:20px}
+
+  .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tph{aspect-ratio:4/5;border-radius:12px}
+
+  .cta-final{background:var(--ink);border-radius:16px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+  .cta-final .ph{min-height:100%}
+  .cta-final .txt{padding:64px 56px;color:#fff}
+  .cta-final h2{font-size:36px;margin-bottom:16px}
+  .cta-final p{color:#bcd8d8;font-size:15px;max-width:40ch;margin-bottom:26px}
+
+  footer{border-top:1px solid var(--line);padding:54px 0 34px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);border:1px solid var(--teal);color:#eafafa;font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero{min-height:78vh}
+    .hero .wrap{padding:60px 18px 50px}
+    .hero h1{font-size:34px}
+    section{padding:56px 0}
+    .sec-head h2{font-size:26px}
+    .services{grid-template-columns:1fr 1fr}
+    .split,.cta-final{grid-template-columns:1fr;border-radius:12px}
+    .split .txt,.cta-final .txt{padding:32px 20px}
+    .split .ph,.cta-final .ph{min-height:220px}
+    .trust{grid-template-columns:1fr 1fr}
+    .fcols{grid-template-columns:1fr 1fr;gap:20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+  }
+</style>
+</head>
+<body>
+
+<div class="urgent">🚨 Urgencias 24 horas · Hospitalización · Cirugías — Pereira, Risaralda</div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">La Zona Animal<small>Clínica veterinaria 24h</small></div>
+  <nav class="links"><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#cita">Agendar cita</a></nav>
+  <a class="btn btn-primary" href="#cita">Agendar cita</a>
+</div></header>
+
+<section class="hero">
+  <div class="bgph"><img src="https://images.unsplash.com/photo-1594149929911-78975a43d4f5?w=1600&q=75&fit=crop" alt="Cachorro sano"></div>
+  <div class="wrap">
+    <div class="kicker">Pereira · clínica veterinaria 24 horas · 7,3K seguidores</div>
+    <h1>Atienden urgencias las 24 horas. Se agenda todo por WhatsApp.</h1>
+    <p class="sub">Cirugías, hospitalización, farmacia y laboratorio propio — todo real, documentado en el Instagram de la clínica. Pero hoy solo hay un link de "beacons.ai" en la bio: nada que transmita confianza médica antes de escribir en plena urgencia.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#cita">Agendar cita</a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head"><h2>Todo lo que ya ofrecen, en un solo lugar</h2><p>Hoy cada servicio vive en un highlight distinto de Instagram.</p></div>
+    <div class="services">
+      <div class="svc"><div class="ico">🚨</div><h3>Urgencias 24h</h3><p>Atención de emergencias todos los días, a toda hora.</p></div>
+      <div class="svc"><div class="ico">🏥</div><h3>Hospitalización</h3><p>Seguimiento interno para casos que requieren observación.</p></div>
+      <div class="svc"><div class="ico">🔬</div><h3>Cirugías y laboratorio</h3><p>Ecografía, rayos X y laboratorio propio en la misma sede.</p></div>
+      <div class="svc"><div class="ico">💊</div><h3>Farmacia</h3><p>Medicamentos e insumos disponibles al momento de la consulta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" style="padding-top:0">
+  <div class="wrap">
+    <div class="split">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?w=900&h=1000&fit=crop&q=75" alt="Gato en revisión"></div>
+      <div class="txt">
+        <div class="kicker">Por qué agendar aquí</div>
+        <h2>Confianza médica, antes de la urgencia</h2>
+        <p>Un sitio propio deja ver el equipo, el equipamiento y la disponibilidad 24 horas antes de que una familia tenga que decidir en medio de una emergencia con su mascota.</p>
+        <div class="tags"><span>Urgencias 24 horas</span><span>Cirugías</span><span>Laboratorio propio</span><span>7,3K seguidores</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="confianza">
+  <div class="wrap">
+    <div class="sec-head"><h2>Pacientes reales, casos reales</h2></div>
+    <div class="trust">
+      <div class="tph ph"><img src="https://images.unsplash.com/photo-1587764379873-97837921fd44?w=500&h=600&fit=crop&q=75" alt="Cachorro atendido"></div>
+      <div class="tph ph"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&h=600&fit=crop&q=75" alt="Perros sanos jugando"></div>
+      <div class="tph ph"><img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?w=500&h=600&fit=crop&q=75" alt="Gato en consulta"></div>
+    </div>
+  </div>
+</section>
+
+<section id="cita">
+  <div class="wrap">
+    <div class="cta-final">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1594149929911-78975a43d4f5?w=800&h=900&fit=crop&q=75" alt=""></div>
+      <div class="txt">
+        <div class="kicker" style="color:#7fd8db">Agendar cita</div>
+        <h2>De un link genérico a una cita agendada</h2>
+        <p>Boceto de propuesta — vista previa de aproximadamente el 20% del sitio completo para La Zona Animal Veterinaria.</p>
+        <a class="btn btn-primary" href="#">Quiero ver la propuesta completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="font-size:20px;margin-bottom:14px">La Zona Animal<small>Clínica veterinaria 24h</small></div>
+        <p>Urgencias, hospitalización y cirugías las 24 horas en Pereira, Risaralda.</p>
+      </div>
+      <div><h4>Servicios</h4><a href="#servicios">Urgencias</a><a href="#servicios">Cirugías</a></div>
+      <div><h4>Nosotros</h4><a href="#nosotros">Equipo</a><a href="#confianza">Casos</a></div>
+      <div><h4>Contacto</h4><a href="#cita">Agendar cita</a><a href="#">WhatsApp</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 La Zona Animal Veterinaria</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · no es el sitio actual · imágenes de referencia</div>
+
+</body>
+</html>

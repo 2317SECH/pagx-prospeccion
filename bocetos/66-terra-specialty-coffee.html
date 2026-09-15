@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TERRA Specialty Coffee (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1c140d; --bg2:#241a10; --ink:#f4ecdd; --ink2:#c2ab8e;
+    --clay:#c96a3f; --olive:#8a9463; --line:#3a2c1e; --muted:#8a7a63; --card:#241a10;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 46px}
+  .ph{position:relative;background:#2c2015;overflow:hidden}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:13px;padding:15px 30px;border:1px solid transparent;cursor:pointer;transition:.15s;letter-spacing:.02em;white-space:nowrap}
+  .btn-primary{background:var(--clay);color:#1c140d}
+  .btn-primary:hover{background:#d97e51}
+  .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .kicker{color:var(--clay);font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(28,20,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:84px}
+  .brand{font-family:'Fraunces';font-size:22px;display:flex;flex-direction:column;line-height:1}
+  .brand small{font-family:'IBM Plex Mono';font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:500;margin-top:6px;text-transform:uppercase}
+  nav.links{display:flex;gap:32px;font-size:12.5px;font-weight:600;color:var(--ink2);margin-left:auto;margin-right:34px}
+  nav.links a:hover{color:var(--clay)}
+
+  .badge-row{background:var(--olive);color:#1c140d;text-align:center;padding:10px;font-size:12.5px;font-weight:600;letter-spacing:.03em}
+
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgph{position:absolute;inset:0;z-index:0}
+  .hero .bgph img{width:100%;height:100%;object-fit:cover;filter:brightness(.38) saturate(1.1)}
+  .hero .bgph::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(28,20,13,.92) 32%,transparent 78%)}
+  .hero .wrap{position:relative;z-index:2;padding:100px 46px 80px}
+  .hero h1{font-size:60px;max-width:14ch}
+  .hero p.sub{margin-top:22px;font-size:16.5px;color:var(--ink2);max-width:50ch}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:100px 0}
+  .sec-head{margin-bottom:50px;max-width:60ch}
+  .sec-head h2{font-size:40px}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:14.5px}
+
+  .locations{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .loc{background:var(--card);padding:40px 36px}
+  .loc .tag{display:inline-block;background:var(--olive);color:#1c140d;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;margin-bottom:16px}
+  .loc h3{font-size:26px;margin-bottom:8px}
+  .loc p{color:var(--ink2);font-size:14px}
+
+  .menu{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line)}
+  .menu .ph{min-height:100%}
+  .menu .txt{padding:76px 60px}
+  .menu .kicker{color:var(--olive)}
+  .menu h2{font-size:36px;margin-bottom:18px}
+  .menu ul{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+  .menu li{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink2);border-bottom:1px dashed var(--line);padding-bottom:12px}
+  .menu li b{color:var(--ink);font-weight:600}
+  .menu li span.mono{color:var(--clay)}
+
+  .roast{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .rc{background:var(--card);padding:36px 30px}
+  .rc h3{font-size:22px;margin-bottom:10px}
+  .rc p{color:var(--muted);font-size:13.5px}
+
+  .cta-final{border:1px solid var(--line);background:var(--bg2);display:grid;grid-template-columns:1fr 1fr}
+  .cta-final .ph{min-height:100%}
+  .cta-final .txt{padding:64px 56px}
+  .cta-final h2{font-size:38px;margin-bottom:16px}
+  .cta-final p{color:var(--ink2);font-size:15px;max-width:40ch;margin-bottom:26px}
+
+  footer{border-top:1px solid var(--line);padding:54px 0 34px}
+  .fcols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+  footer a,footer p{color:var(--ink2);font-size:13px;display:block;margin-bottom:8px}
+  .fbot{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:11.5px;display:flex;justify-content:space-between}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#241a10;border:1px solid var(--clay);color:var(--clay);font-size:11px;font-weight:600;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .hero{min-height:76vh}
+    .hero .wrap{padding:70px 18px 50px}
+    .hero h1{font-size:36px}
+    section{padding:56px 0}
+    .sec-head h2{font-size:28px}
+    .locations,.roast{grid-template-columns:1fr}
+    .menu{grid-template-columns:1fr}
+    .menu .txt{padding:36px 20px}
+    .menu .ph{min-height:220px}
+    .cta-final{grid-template-columns:1fr}
+    .cta-final .txt{padding:36px 20px}
+    .cta-final .ph{min-height:240px}
+    .fcols{grid-template-columns:1fr 1fr;gap:20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .brand{font-size:18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="badge-row">★ Reconocidos en el ranking "South America's 100 Best Coffee Shops 2026" — Chile</div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">TERRA<small>Specialty Coffee · Valdivia</small></div>
+  <nav class="links"><a href="#sedes">Sedes</a><a href="#carta">Carta</a><a href="#roaster">Roaster</a></nav>
+  <a class="btn btn-primary" href="#carta">Ver carta</a>
+</div></header>
+
+<section class="hero">
+  <div class="bgph"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1600&q=75&fit=crop" alt="Granos de café tostado"></div>
+  <div class="wrap">
+    <div class="kicker">Valdivia, Chile · cafetería de especialidad & roasters</div>
+    <h1>Un café reconocido a nivel mundial, sin sitio propio.</h1>
+    <p class="sub">TERRA aparece en el ranking de las 100 mejores cafeterías de Sudamérica — pero quien busca "TERRA Valdivia" solo encuentra ese artículo externo y el feed de Instagram. Ningún lugar propio para ver la carta, las dos sedes o el trabajo como roaster.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#sedes">Ver las dos sedes</a>
+      <a class="btn btn-ghost" href="#carta">Ver carta de bebidas</a>
+    </div>
+  </div>
+</section>
+
+<section id="sedes">
+  <div class="wrap">
+    <div class="sec-head"><h2>Dos sedes, un solo lugar para encontrarlas</h2><p>Hoy hay que buscar en el feed cuál dirección corresponde a cada servicio.</p></div>
+    <div class="locations">
+      <div class="loc"><span class="tag">To serve</span><h3>Independencia #648</h3><p>Sede principal, para quedarse a tomar el café en el local.</p></div>
+      <div class="loc"><span class="tag">To go</span><h3>Arauco #240</h3><p>Sede pensada para pedidos rápidos, para llevar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="carta" style="padding-top:0">
+  <div class="wrap">
+    <div class="menu">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&h=1000&fit=crop&q=75" alt="Latte art"></div>
+      <div class="txt">
+        <div class="kicker">Carta de bebidas</div>
+        <h2>La carta que hoy vive solo en un highlight</h2>
+        <p>Precios y variedades de método de filtrado organizados una vez, no repetidos en cada historia.</p>
+        <ul>
+          <li><b>Espresso de origen</b><span class="mono">demo</span></li>
+          <li><b>Filtrado V60</b><span class="mono">demo</span></li>
+          <li><b>Cold brew de la casa</b><span class="mono">demo</span></li>
+          <li><b>Selección de granos para llevar</b><span class="mono">demo</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roaster">
+  <div class="wrap">
+    <div class="sec-head"><h2>Roasters, no solo cafetería</h2><p>El tueste propio es parte de la historia — hoy solo se cuenta en publicaciones sueltas.</p></div>
+    <div class="roast">
+      <div class="rc"><div class="ph" style="aspect-ratio:4/3;margin-bottom:16px"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=500&q=75&fit=crop" alt="Método pour-over"></div><h3>Métodos de filtrado</h3><p>V60, prensa francesa y cold brew explicados para quien recién descubre la especialidad.</p></div>
+      <div class="rc"><h3>Tueste propio</h3><p>El proceso de roaster contado como historia, no como caption suelto.</p></div>
+      <div class="rc"><h3>Reconocimiento internacional</h3><p>El lugar del ranking mundial, documentado con fuente y fecha en el propio sitio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-final">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=900&fit=crop&q=75" alt=""></div>
+      <div class="txt">
+        <div class="kicker">Propuesta</div>
+        <h2>Un sitio a la altura del ranking</h2>
+        <p>Boceto de propuesta — vista previa de aproximadamente el 20% del sitio completo para TERRA Specialty Coffee.</p>
+        <a class="btn btn-primary" href="#">Quiero ver la propuesta completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="brand" style="font-size:20px;margin-bottom:14px">TERRA<small>Specialty Coffee · Valdivia</small></div>
+        <p>Cafetería de especialidad y roasters con dos sedes en Valdivia, Chile.</p>
+      </div>
+      <div><h4>Sedes</h4><a href="#sedes">Independencia #648</a><a href="#sedes">Arauco #240</a></div>
+      <div><h4>Carta</h4><a href="#carta">Bebidas</a><a href="#roaster">Roaster</a></div>
+      <div><h4>Contacto</h4><a href="#">Instagram</a><a href="#">Ubicación</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 TERRA Specialty Coffee</span><span>Boceto de propuesta — PAGX Studio</span></div>
+  </div>
+</footer>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · precios demo · imágenes de referencia</div>
+
+</body>
+</html>
