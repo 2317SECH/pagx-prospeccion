@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discópolis · Vinilos desde 1955 (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#1b3f8f;--blue2:#14306e;--cream:#f6f1e6;--ink:#141826;--ink2:#5d6275;--line:#ddd6c6;--red:#d6402d;--mustard:#e7b33b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1}
+  .script{font-family:'Lobster',cursive;font-weight:400;letter-spacing:0}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-w{background:#fff;color:var(--blue)}
+  .btn-b{background:var(--blue);color:#fff}
+  .btn-l{border:1.5px solid #fff;color:#fff}
+
+  header.nav{position:sticky;top:0;z-index:40;background:var(--blue);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'Lobster';font-size:32px;line-height:1}
+  .logo small{display:block;font-family:'Space Grotesk';font-size:9px;letter-spacing:.3em;opacity:.75}
+  .search{flex:1;max-width:360px;margin-left:30px;background:rgba(255,255,255,.12);border-radius:999px;padding:10px 16px;font-size:13px;opacity:.85}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:600}
+  .cart{background:#fff;color:var(--blue);border-radius:999px;padding:8px 14px;font-weight:700;font-size:13px}
+
+  .hero{background:var(--blue);color:#fff;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:560px;padding-top:30px;padding-bottom:50px}
+  .hero h1{font-size:72px;margin:14px 0 18px}
+  .hero h1 .script{font-size:1.1em;color:var(--mustard)}
+  .hero p{font-size:18px;opacity:.88;max-width:460px;margin-bottom:28px}
+  .hero .k{color:var(--mustard)}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .turn{position:relative;height:440px;display:grid;place-items:center}
+  .rec{width:380px;height:380px;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d1d 2px 5px);box-shadow:0 30px 60px rgba(0,0,0,.4);display:grid;place-items:center}
+  .rec .lbl{width:130px;height:130px;border-radius:50%;background:var(--red);display:grid;place-items:center;text-align:center;font-family:'Lobster';font-size:22px;color:#fff;line-height:1}
+  .rec .lbl small{display:block;font-family:'Space Grotesk';font-size:9px;letter-spacing:.2em;margin-top:4px}
+  .sleeve{position:absolute;left:0;top:30px;width:230px;height:230px;background:url('https://images.unsplash.com/photo-1619983081563-430f63602796?w=500&q=70&fit=crop') center/cover;box-shadow:0 20px 40px rgba(0,0,0,.35);transform:rotate(-6deg)}
+
+  section.shop{padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:26px}
+  .head h2{font-size:52px}
+  .head h2 .script{color:var(--blue)}
+  .head p{max-width:420px;color:var(--ink2)}
+  .genres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+  .genres span{border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600}
+  .genres .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .lp .cov{aspect-ratio:1;display:grid;place-items:center;color:#fff;font-weight:700;text-align:center;padding:16px;font-size:20px;line-height:1.1;position:relative;overflow:hidden}
+  .lp .cov::after{content:"";position:absolute;right:-40%;top:10%;width:80%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#222 2px 4px);z-index:0;opacity:.9}
+  .lp .cov span{position:relative;z-index:1;max-width:70%}
+  .lp h3{font-size:16px;margin-top:10px}
+  .lp .row{display:flex;justify-content:space-between;font-size:13px;color:var(--ink2);margin-top:4px}
+  .lp .row b{color:var(--ink)}
+
+  section.history{background:var(--ink);color:#fff;padding:80px 0 100px}
+  .history .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .history h2{font-size:52px;margin:12px 0 14px}
+  .history h2 .script{color:var(--mustard)}
+  .history p{opacity:.8;max-width:430px}
+  .tl{border-left:2px solid var(--mustard);padding-left:24px}
+  .tl div{margin-bottom:22px}
+  .tl b{font-family:'Lobster';font-size:30px;color:var(--mustard);font-weight:400}
+  .tl span{display:block;opacity:.85;font-size:14.5px}
+  .visit{margin-top:24px;background:rgba(255,255,255,.06);border-radius:18px;padding:18px}
+  .visit b{display:block;font-size:17px}
+  .visit span{font-size:14px;opacity:.8}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--blue2);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links,.search{display:none}
+    .nav .wrap{height:64px}
+    .logo{font-size:26px}
+    .cart{margin-left:auto}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:20px}
+    .hero h1{font-size:44px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .turn{height:300px}
+    .rec{width:260px;height:260px}
+    .rec .lbl{width:90px;height:90px;font-size:16px}
+    .sleeve{width:150px;height:150px;top:10px}
+    section.shop{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:36px}
+    .genres{flex-wrap:nowrap;overflow:hidden}
+    .genres span{white-space:nowrap}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .lp .cov{font-size:15px}
+    section.history{padding:56px 0 60px}
+    .history .wrap{grid-template-columns:1fr;gap:28px}
+    .history h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Discópolis<small>DESDE · SINCE · 1955</small></a>
+    <span class="search">Buscar artista, disco o género…</span>
+    <nav class="links"><a href="#shop">Tienda</a><a href="#shop">Novedades</a><a href="#history">Historia</a><a href="#history">Visítanos</a></nav>
+    <a class="cart" href="#">Carrito (0)</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">La tienda de vinilos con más historia de México</div>
+      <h1>Desde 1955, <span class="script">girando en CDMX.</span></h1>
+      <p>Discos, recomendaciones de la casa y siete décadas de historia del vinilo. Compra en línea o visítanos en la Tabacalera.</p>
+      <div class="ctas"><a class="btn btn-w" href="#shop">Explorar vinilos</a><a class="btn btn-l" href="#history">Nuestra historia</a></div>
+    </div>
+    <div class="turn"><div class="sleeve"></div><div class="rec"><div class="lbl"><span>Discópolis<small>1955</small></span></div></div></div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Tienda en línea</div><h2>Recomendados <span class="script">de la casa</span></h2></div>
+      <p>Hoy se vende por Discogs y PayPal y la web marca error de seguridad. Aquí cada disco tiene ficha, precio y checkout en Shopify.</p>
+    </div>
+    <div class="genres"><span class="on">Todos</span><span>Rock en español</span><span>Clásicos mexicanos</span><span>Funk &amp; soul</span><span>Jazz</span><span>Nuevos</span><span>Usados</span></div>
+    <div class="grid">
+      <div class="lp"><div class="cov" style="background:#c8452f"><span>War · Greatest Hits</span></div><h3>War — Greatest Hits</h3><div class="row"><span>Usado · ejemplo</span><b>$ demo</b></div></div>
+      <div class="lp"><div class="cov" style="background:#2f6b4a"><span>Óscar Chávez</span></div><h3>Óscar Chávez</h3><div class="row"><span>Usado · ejemplo</span><b>$ demo</b></div></div>
+      <div class="lp"><div class="cov" style="background:#e1a72c"><span>Latinoamérica canta</span></div><h3>Latinoamérica canta</h3><div class="row"><span>Usado · ejemplo</span><b>$ demo</b></div></div>
+      <div class="lp"><div class="cov" style="background:#1b3f8f"><span>Novedad de la semana</span></div><h3>Novedad de la semana</h3><div class="row"><span>Nuevo · ejemplo</span><b>$ demo</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="history" id="history">
+  <div class="wrap">
+    <div>
+      <div class="k" style="color:var(--mustard)">Historia</div>
+      <h2>Siete décadas <span class="script">de música</span></h2>
+      <p>La historia que hoy está en historias destacadas (artistas que la visitan, prensa, el barrio) contada en una página que genera confianza para comprar en línea.</p>
+      <div class="visit"><b>Insurgentes Centro 72-E, Col. Tabacalera</b><span>Alcaldía Cuauhtémoc, CDMX · Cómo llegar en Metro y Metrobús →</span></div>
+    </div>
+    <div class="tl">
+      <div><b>1955</b><span>Abre Discópolis en la Ciudad de México.</span></div>
+      <div><b>Hoy</b><span>Visitas de artistas como Gil Cerezo, Rey Pila y Jay de la Cueva.</span></div>
+      <div><b>En línea</b><span>Propuesta: el catálogo de la tienda, en línea.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · precios y estados demo · portadas ilustradas</div>
+</body>
+</html>

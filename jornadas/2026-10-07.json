@@ -516,6 +516,21 @@
         "bocetos/evidencia/104-sweet-lily-bakery-la-web-actual.png"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nYou've been on NBC4 and KTLA for your croissants, yet your website doesn't show that press or let anyone order catering or wholesale.\nWe'd build a site with your menu, an \"as seen on\" strip and a catering & wholesale quote form.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 105,
+      "slug": "105-discopolis-vinilos",
+      "nombre": "Discópolis México · Tienda de vinilos",
+      "ig": "discopolis.mx",
+      "lugar": "CDMX, México (Insurgentes Centro 72-E, Col. Tabacalera)",
+      "nicho": "Tienda de vinilos desde 1955 (e-commerce)",
+      "web": "Deficiente: discopolis.mx muestra error de seguridad ('La conexión no es privada'); venden en línea vía Discogs y PayPal.me",
+      "porque": "6,8K seguidores, activa (07/10/2026), 'la tienda de vinilos con más historia de México' (desde 1955), con visitas de artistas y prensa. Su web da error de certificado y el comercio en línea está repartido entre Discogs y PayPal: ideal para una tienda Shopify propia (tipo ARVENA). Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/105-discopolis-vinilos-ig.jpg",
+        "bocetos/evidencia/105-discopolis-vinilos-web-actual.png"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Discópolis tiene 70 años de historia, pero su web hoy muestra un error de seguridad y las ventas en línea van por Discogs y PayPal.\nLes proponemos una tienda Shopify propia con catálogo por género, recomendados de la casa y su historia.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
