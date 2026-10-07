@@ -501,6 +501,21 @@
         "bocetos/evidencia/103-kutz-by-vontae-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nYour house calls and travel cuts are a real brand, but prices, reviews and your apparel line are scattered across highlights and a booking link.\nWe'd build one site: book a house call or travel cut, see your work, and shop the merch with Shopify checkout.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 104,
+      "slug": "104-sweet-lily-bakery-la",
+      "nombre": "Sweet Lily Bakery · French bakery café",
+      "ig": "sweetlilyla",
+      "lugar": "Studio City, Los Angeles, CA, Estados Unidos",
+      "nicho": "Panadería/café francés + catering y mayoreo",
+      "web": "Deficiente: sweetlilyla.com es una plantilla con 4 botones (menú, pastries, breads, coffee), sin historia, sin prensa y sin forma de pedir catering o mayoreo",
+      "porque": "4,6K seguidores, activa (06/10/2026), salió en NBC4, KTLA y KCAL por el National Croissant Day y ofrece catering y venta al por mayor, pero su web no muestra nada de eso ni permite pedirlo. Prioridad MEDIA-ALTA. Mensaje en inglés.",
+      "evidencia": [
+        "bocetos/evidencia/104-sweet-lily-bakery-la-ig.jpg",
+        "bocetos/evidencia/104-sweet-lily-bakery-la-web-actual.png"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nYou've been on NBC4 and KTLA for your croissants, yet your website doesn't show that press or let anyone order catering or wholesale.\nWe'd build a site with your menu, an \"as seen on\" strip and a catering & wholesale quote form.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }

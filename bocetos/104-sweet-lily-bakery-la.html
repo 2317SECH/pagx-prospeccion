@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweet Lily Bakery · Los Angeles (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#fdf8f2;--rose:#e05d8a;--rose2:#f9dbe5;--navy:#1d2b4a;--butter:#f3d9a4;--ink:#2a2224;--ink2:#6e6264;--line:#eedfd3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-r{background:var(--rose);color:#fff}
+  .btn-n{border:1.5px solid var(--navy);color:var(--navy)}
+  .tricolor{height:6px;background:linear-gradient(90deg,#1f4aa8 0 33%,#fff 33% 66%,#d8323a 66%)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(253,248,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:24px}
+  .logo{font-family:'Playfair Display';font-style:italic;font-size:30px;color:var(--rose);line-height:.9}
+  .logo small{display:block;font-family:'Jost';font-style:normal;font-size:9.5px;letter-spacing:.28em;color:var(--ink2)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:500;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:40px}
+  .hero h1{font-size:76px;margin:16px 0 18px}
+  .hero h1 em{color:var(--rose)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:440px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .pic{height:520px;border-radius:220px 220px 26px 26px;background:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1000&q=70&fit=crop') center/cover;position:relative}
+  .open{position:absolute;left:-24px;bottom:50px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px rgba(42,34,36,.12);font-size:13px}
+  .open b{display:block;font-family:'Playfair Display';font-size:20px}
+
+  .press{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .press .wrap{display:flex;align-items:center;gap:40px;height:86px;justify-content:center;flex-wrap:wrap}
+  .press small{font-size:11px;letter-spacing:.22em;color:var(--ink2);font-weight:600}
+  .press b{font-family:'Playfair Display';font-size:24px;color:var(--navy)}
+
+  section.menu{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:54px;color:var(--navy)}
+  .head p{max-width:420px;color:var(--ink2)}
+  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .m{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+  .m .ph{height:230px;background-size:cover;background-position:center}
+  .m .bd{padding:14px 16px 18px}
+  .m h3{font-size:22px}
+  .m span{font-size:13px;color:var(--ink2)}
+
+  section.cater{background:var(--navy);color:#fff;padding:84px 0 100px}
+  .cater .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .cater .k{color:var(--butter)}
+  .cater h2{font-size:52px;margin:12px 0 14px}
+  .cater p{opacity:.85;max-width:430px}
+  .tabs{display:flex;gap:8px;margin-top:22px}
+  .tabs span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600}
+  .tabs .on{background:var(--butter);color:var(--navy);border-color:var(--butter)}
+  .form{background:#fff;color:var(--ink);border-radius:26px;padding:28px}
+  .form h3{font-size:30px;margin-bottom:14px}
+  .f{border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--navy);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:46px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .pic{height:360px;border-radius:160px 160px 22px 22px}
+    .open{left:12px;bottom:14px}
+    .press .wrap{height:auto;padding:18px 20px;gap:18px}
+    .press b{font-size:18px}
+    section.menu{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .mgrid{grid-template-columns:1fr 1fr;gap:10px}
+    .m .ph{height:150px}
+    section.cater{padding:56px 0 60px}
+    .cater .wrap{grid-template-columns:1fr;gap:28px}
+    .cater h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<div class="tricolor"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Sweet Lily<small>FRENCH BAKERY CAFÉ · STUDIO CITY</small></a>
+    <nav class="links"><a href="#menu">Menu</a><a href="#menu">Pastries</a><a href="#cater">Catering</a><a href="#cater">Wholesale</a><a href="#">Visit</a></nav>
+    <a class="btn btn-r" href="#cater">Order catering</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">A little piece of France in LA</div>
+      <h1>Croissants worth <em>crossing town for.</em></h1>
+      <p>Authentic French food, pastries and bread, baked fresh daily in Studio City. Stop by, order catering, or bring Sweet Lily to your business.</p>
+      <div class="ctas"><a class="btn btn-r" href="#menu">See today's menu</a><a class="btn btn-n" href="#cater">Catering &amp; wholesale</a></div>
+    </div>
+    <div class="pic"><div class="open"><b>Baked fresh daily</b>3315 Cahuenga Blvd W</div></div>
+  </div>
+</section>
+
+<div class="press"><div class="wrap"><small>AS SEEN ON</small><b>NBC4</b><b>KTLA</b><b>KCAL News</b><small>NATIONAL CROISSANT DAY</small></div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Menu</div><h2>From the oven</h2></div>
+      <p>Highlights already split the menu into pastries, breads, cakes and catering. Here each category has photos and is ready to order.</p>
+    </div>
+    <div class="mgrid">
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Croissants</h3><span>Fresh every morning</span></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Fresh bread</h3><span>Baguettes and loaves</span></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Cakes</h3><span>For every celebration</span></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Savory</h3><span>French plates &amp; salads</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cater" id="cater">
+  <div class="wrap">
+    <div>
+      <div class="k">Catering &amp; wholesale</div>
+      <h2>Bring Sweet Lily to your table</h2>
+      <p>Today catering and wholesale are a line in the bio. Here offices, events and cafés request a quote with headcount, date and products.</p>
+      <div class="tabs"><span class="on">Sweet catering</span><span>Savory catering</span><span>Wholesale</span></div>
+    </div>
+    <div class="form">
+      <h3>Request a quote</h3>
+      <div class="row2"><div class="f"><small>Date</small>Fri, Oct 24 (example)</div><div class="f"><small>Guests</small>40</div></div>
+      <div class="f"><small>Type</small>Office breakfast (example)</div>
+      <div class="f"><small>Items</small>Croissant platter · Mini quiches (example)</div>
+      <a class="btn btn-r" href="#">Send request →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">PAGX Studio concept · not the live site · example details · reference images</div>
+</body>
+</html>
