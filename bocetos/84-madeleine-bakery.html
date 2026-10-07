@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madeleine Bakery · Lima (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--blush:#f6e3e3;--rose:#e8b9bd;--deep:#a85866;--cream:#fffaf6;--ink:#3b2a2c;--ink2:#7d6a6c;--line:#efdcdc;--gold:#c6a46b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Jost',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.02}
+  .script{font-family:'Great Vibes',cursive;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--deep)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:15px 26px;white-space:nowrap}
+  .btn-d{background:var(--deep);color:#fff}
+  .btn-l{border:1px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,250,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:24px}
+  .mono{width:50px;height:50px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-family:'Great Vibes';font-size:26px}
+  .bn{font-family:'Cormorant Garamond';font-size:24px;line-height:1}
+  .bn small{display:block;font-family:'Jost';font-size:9.5px;letter-spacing:.26em;color:var(--ink2)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:620px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:80px;margin:16px 0 18px}
+  .hero h1 .script{font-size:1.05em;color:var(--deep)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .arch{height:560px;border-radius:300px 300px 0 0;background:url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=1000&q=70&fit=crop') center/cover;position:relative;border:10px solid var(--blush)}
+  .tagc{position:absolute;right:-24px;top:70px;background:#fff;padding:14px 18px;box-shadow:0 18px 40px rgba(168,88,102,.15);font-size:13px}
+  .tagc b{display:block;font-family:'Cormorant Garamond';font-size:20px}
+
+  section.occ{background:var(--blush);padding:86px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:58px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .oc{background:var(--cream);text-align:center}
+  .oc .ph{height:260px;background-size:cover;background-position:center}
+  .oc .bd{padding:18px 16px 22px}
+  .oc h3{font-size:28px}
+  .oc p{font-size:13.5px;color:var(--ink2)}
+  .oc a{display:inline-block;margin-top:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);border-bottom:1px solid var(--deep)}
+
+  section.cot{padding:86px 0 100px}
+  .cot .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .cot h2{font-size:56px;margin:12px 0 16px}
+  .cot p{color:var(--ink2);max-width:440px}
+  .corp{margin-top:24px;border:1px solid var(--line);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .corp b{font-family:'Cormorant Garamond';font-size:22px;font-weight:600}
+  .corp span{font-size:13px;color:var(--ink2);display:block}
+  .corp a{color:var(--deep);font-size:13px;font-weight:600;white-space:nowrap}
+  .form{background:#fff;border:1px solid var(--line);padding:28px;box-shadow:0 24px 60px rgba(168,88,102,.1)}
+  .form h3{font-size:32px;margin-bottom:14px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1px solid var(--line);padding:7px 13px;font-size:13px}
+  .chips .on{background:var(--deep);border-color:var(--deep);color:#fff}
+  .form .btn{width:100%;justify-content:center;margin-top:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:11px}
+    .bn small{display:none}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:50px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .arch{height:380px}
+    .tagc{right:10px;top:auto;bottom:16px}
+    section.occ{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:40px}
+    .ogrid{grid-template-columns:1fr 1fr;gap:10px}
+    .oc .ph{height:160px}
+    .oc h3{font-size:22px}
+    section.cot{padding:56px 0 60px}
+    .cot .wrap{grid-template-columns:1fr;gap:28px}
+    .cot h2{font-size:40px}
+    .corp{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="mono">mb</span>
+    <span class="bn">Madeleine Bakery<small>PASTELERÍA ARTÍSTICA · LIMA</small></span>
+    <nav class="links"><a href="#ocasiones">Ocasiones</a><a href="#cotizar">Cotizar</a><a href="#">Dulces y catering</a><a href="#cotizar">Corporativo</a></nav>
+    <a class="btn btn-d" href="#cotizar">Cotizar torta</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Tortas de lujo personalizadas en Lima</div>
+      <h1>Una torta para <span class="script">cada sí</span> y cada celebración.</h1>
+      <p>Bodas, cumpleaños, baby showers, sacramentos y eventos exclusivos. Diseños hechos a mano, dulces temáticos y catering.</p>
+      <div class="ctas"><a class="btn btn-d" href="#cotizar">Cotizar mi torta</a><a class="btn btn-l" href="#ocasiones">Ver diseños</a></div>
+    </div>
+    <div class="arch"><div class="tagc"><b>Hecha a mano</b>Diseño personalizado</div></div>
+  </div>
+</section>
+
+<section class="occ" id="ocasiones">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Elige tu ocasión</div><h2>Diseños para cada momento</h2></div>
+      <p>Hoy los diseños viven en el feed y en cuatro historias. Aquí se recorren por ocasión, con un botón para pedir uno igual o inspirado.</p>
+    </div>
+    <div class="ogrid">
+      <div class="oc"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Bodas</h3><p>Pisos clásicos y tortas rectangulares.</p><a href="#">Ver diseños</a></div></div>
+      <div class="oc"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Cumpleaños</h3><p>Niños, niñas y adultos.</p><a href="#">Ver diseños</a></div></div>
+      <div class="oc"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Baby shower</h3><p>Detalles suaves y temáticos.</p><a href="#">Ver diseños</a></div></div>
+      <div class="oc"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Sacramentos</h3><p>Bautizos y primeras comuniones.</p><a href="#">Ver diseños</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cot" id="cotizar">
+  <div class="wrap">
+    <div>
+      <div class="k">Cotización</div>
+      <h2>Cuéntanos tu evento</h2>
+      <p>Muchos clientes llegan con una foto de referencia. Aquí pueden subirla junto con fecha y porciones, y el pedido llega completo a WhatsApp.</p>
+      <div class="corp"><div><b>Pedidos corporativos</b><span>Empresas, lanzamientos y regalos</span></div><a href="#">Ir a Madeleine Corporativo →</a></div>
+    </div>
+    <div class="form">
+      <h3>Cotiza tu torta</h3>
+      <div class="q"><small>Ocasión</small><div class="chips"><span class="on">Boda</span><span>Cumpleaños</span><span>Baby shower</span><span>Sacramento</span></div></div>
+      <div class="q"><small>Forma</small><div class="chips"><span>Redonda por pisos</span><span class="on">Rectangular</span></div></div>
+      <div class="q"><small>Porciones</small><div class="chips"><span>20</span><span class="on">50</span><span>100+</span></div></div>
+      <div class="q"><small>Foto de referencia</small><div class="chips"><span>Subir imagen</span></div></div>
+      <a class="btn btn-d" href="#">Enviar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · imágenes de referencia, no son tortas de Madeleine</div>
+</body>
+</html>

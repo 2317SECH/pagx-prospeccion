@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milenio · Sastrería a medida (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0e0e0e;--char:#1a1a1a;--bone:#efebe4;--ink2:#a49d92;--line:#2c2c2c;--wine:#7b1e2b;--chalk:#d9d3c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--bone);font-family:'Montserrat',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:500;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--chalk)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding:16px 26px;white-space:nowrap}
+  .btn-b{background:var(--bone);color:var(--black)}
+  .btn-l{border:1px solid #555}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(14,14,14,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:26px}
+  .logo{font-family:'Bodoni Moda';font-size:28px;letter-spacing:.14em;line-height:1}
+  .logo small{display:block;font-family:'Montserrat';font-size:8.5px;letter-spacing:.42em;color:var(--ink2);margin-top:4px}
+  nav.links{display:flex;gap:28px;margin-left:auto;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:660px;border-bottom:1px solid var(--line)}
+  .hero .txt{padding:80px 60px 70px 0;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:88px;margin:20px 0 22px}
+  .hero h1 em{color:var(--chalk)}
+  .hero p{font-size:17px;color:var(--ink2);max-width:450px;margin-bottom:32px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{background:url('https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=1100&q=70&fit=crop') center/cover;position:relative}
+  .measure{position:absolute;left:24px;bottom:24px;right:24px;display:flex;gap:10px}
+  .measure span{flex:1;background:rgba(14,14,14,.85);border:1px solid #444;padding:10px 12px;font-size:11px;letter-spacing:.12em}
+  .measure b{display:block;font-family:'Bodoni Moda';font-size:20px;letter-spacing:0}
+
+  section.lines{padding:90px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:58px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .l{position:relative;min-height:440px;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+  .l::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 55%)}
+  .l .bd{position:relative;z-index:2;padding:22px}
+  .l h3{font-size:34px}
+  .l p{font-size:13.5px;color:var(--chalk)}
+
+  section.cita{background:var(--char);padding:86px 0 100px;border-top:1px solid var(--line)}
+  .cita .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .cita h2{font-size:56px;margin:14px 0 16px}
+  .cita p{color:var(--ink2);max-width:440px}
+  .proc{margin-top:24px;border-top:1px solid var(--line)}
+  .proc div{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .proc b{font-family:'Bodoni Moda';font-size:22px;color:var(--chalk);width:30px}
+  .form{background:var(--bone);color:var(--black);padding:30px}
+  .form h3{font-size:32px;margin-bottom:16px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#6b655c;margin-bottom:8px;font-weight:600}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chips span{border:1px solid #bdb6aa;padding:7px 12px;font-size:12.5px}
+  .chips .on{background:var(--black);color:var(--bone);border-color:var(--black)}
+  .form .btn{width:100%;justify-content:center;background:var(--black);color:var(--bone);margin-top:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--char);border:1px solid var(--chalk);color:var(--bone);font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:11px}
+    .logo{font-size:22px}
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero .pic{height:380px;order:-1}
+    .hero .txt{padding:40px 0 46px}
+    .hero h1{font-size:50px}.hero .wrap{padding-right:20px!important}
+    .hero p{font-size:15.5px}
+    .ctas .btn{flex:1;justify-content:center}
+    .measure span{padding:8px}
+    .measure b{font-size:16px}
+    section.lines{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:40px}
+    .lgrid{grid-template-columns:1fr;gap:12px}
+    .l{min-height:300px}
+    section.cita{padding:56px 0 60px}
+    .cita .wrap{grid-template-columns:1fr;gap:30px}
+    .cita h2{font-size:40px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">MILENIO<small>ESTUDIO DE MODA</small></a>
+    <nav class="links"><a href="#lineas">Sastrería</a><a href="#lineas">Vestidos</a><a href="#lineas">Camisas</a><a href="#">Cursos</a><a href="#cita">Cita</a></nav>
+    <a class="btn btn-b" href="#cita">Coordinar cita</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="padding-right:0">
+    <div class="txt">
+      <div class="k">Sastrería a medida · Alta costura · Resistencia, Chaco</div>
+      <h1>Hecho a tu medida. <em>Pensado para tu momento.</em></h1>
+      <p>Sacos, pantalones, trajes y vestidos de alta costura, con asesoramiento de imagen. Para tu boda, tu fiesta o tu día a día.</p>
+      <div class="ctas"><a class="btn btn-b" href="#cita">Coordinar una cita</a><a class="btn btn-l" href="#lineas">Ver trabajos</a></div>
+    </div>
+  </div>
+  <div class="pic"><div class="measure"><span>HOMBRO<b>46 cm</b></span><span>MANGA<b>63 cm</b></span><span>LARGO<b>74 cm</b></span></div></div>
+</section>
+
+<section class="lines" id="lineas">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Líneas Milenio</div><h2>Para cada ocasión</h2></div>
+      <p>Lo que hoy está en historias (Sastrería A.M, Vestidos, Camisas Milenio) presentado como colección, con su proceso y forma de pedir.</p>
+    </div>
+    <div class="lgrid">
+      <div class="l" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=70&fit=crop')"><div class="bd"><div class="k">Sastrería</div><h3>Trajes y smoking</h3><p>Dos y tres piezas, a medida.</p></div></div>
+      <div class="l" style="background-image:url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=70&fit=crop')"><div class="bd"><div class="k">Bodas</div><h3>Look completo</h3><p>Opciones desestructuradas para boda de día.</p></div></div>
+      <div class="l" style="background-image:url('https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?w=800&q=70&fit=crop')"><div class="bd"><div class="k">Línea propia</div><h3>Camisas Milenio</h3><p>Corte y terminación de sastre.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cita" id="cita">
+  <div class="wrap">
+    <div>
+      <div class="k">Tu primera cita</div>
+      <h2>Empezamos por escucharte</h2>
+      <p>Coordinar una cita hoy es un ida y vuelta por WhatsApp. Acá el cliente elige qué necesita, para cuándo, y llega al estudio con todo hablado.</p>
+      <div class="proc"><div><b>1</b>Cita y asesoramiento de imagen</div><div><b>2</b>Toma de medidas y elección de tela</div><div><b>3</b>Pruebas y ajustes</div><div><b>4</b>Entrega lista para tu evento</div></div>
+    </div>
+    <div class="form">
+      <h3>Coordinar cita</h3>
+      <div class="q"><small>¿Qué necesitás?</small><div class="chips"><span class="on">Traje</span><span>Saco</span><span>Pantalón</span><span>Vestido</span><span>Camisa</span></div></div>
+      <div class="q"><small>Ocasión</small><div class="chips"><span class="on">Boda</span><span>Fiesta de 15</span><span>Egreso</span><span>Trabajo</span></div></div>
+      <div class="q"><small>Fecha del evento</small><div class="chips"><span class="on">Diciembre (ejemplo)</span></div></div>
+      <div class="q"><small>Estudio</small><div class="chips"><span>Colón 51, of. 5, 2° piso · Resistencia</span></div></div>
+      <a class="btn" href="#">Pedir cita por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · medidas de ejemplo · imágenes de referencia</div>
+</body>
+</html>
