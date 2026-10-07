@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emewey Estudio (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07080b; --bg2:#0e1117; --panel:#131722; --line:#222838;
+    --ink:#f2f4f8; --ink2:#a9b0c0; --muted:#6b7384;
+    --blue:#2f8cff; --cyan:#3fe0ff; --gold:#e7b54a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
+  .mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;padding:15px 26px;border-radius:999px;border:1px solid transparent;letter-spacing:.02em;white-space:nowrap}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 10px 30px rgba(47,140,255,.35)}
+  .btn-line{border-color:#3a4256;color:var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(7,8,11,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:28px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .ew{width:42px;height:42px;border-radius:50%;border:2px solid var(--blue);display:grid;place-items:center;font-family:'Archivo Black';font-size:15px;color:var(--blue)}
+  .logo b{font-family:'Archivo Black';font-weight:400;font-size:17px;letter-spacing:.04em}
+  .logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  nav.links{display:flex;gap:28px;margin-left:auto;font-size:13px;color:var(--ink2);font-weight:500}
+  nav.links a:hover{color:#fff}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .bgimg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1800&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,11,.96) 0%,rgba(7,8,11,.78) 45%,rgba(7,8,11,.35) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 40%)}
+  .hero .wrap{position:relative;z-index:2;padding-bottom:70px;width:100%}
+  .rec{display:inline-flex;align-items:center;gap:10px;background:rgba(255,59,59,.12);border:1px solid rgba(255,59,59,.4);color:#ff8a8a;padding:7px 14px;border-radius:999px;margin-bottom:26px}
+  .rec i{width:8px;height:8px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 0 4px rgba(255,59,59,.25)}
+  .hero h1{font-size:86px;max-width:760px}
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero p.lead{font-size:18px;color:var(--ink2);max-width:520px;margin:24px 0 34px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .credits{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px;align-items:center}
+  .credits span{font-size:12px;color:var(--ink2);border:1px solid var(--line);background:rgba(19,23,34,.7);padding:6px 12px;border-radius:999px}
+  .credits .mono{color:var(--muted);margin-right:6px}
+
+  /* reproductor */
+  section.listen{padding:96px 0 40px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px}
+  .head h2{font-size:52px}
+  .head p{color:var(--ink2);max-width:420px;font-size:15px}
+  .kick{color:var(--cyan);margin-bottom:16px}
+  .player{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .now{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:28px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,#131a2c,#121622)}
+  .cover{width:150px;height:150px;border-radius:14px;background:url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&q=70&fit=crop') center/cover}
+  .now h3{font-size:30px;margin:8px 0 6px}
+  .now .meta{color:var(--ink2);font-size:14px}
+  .wave{display:flex;align-items:center;gap:3px;height:58px;margin-top:18px}
+  .wave b{display:block;width:4px;border-radius:3px;background:#3a4560}
+  .wave b.on{background:linear-gradient(var(--cyan),var(--blue))}
+  .play{width:70px;height:70px;border-radius:50%;background:var(--blue);display:grid;place-items:center;box-shadow:0 10px 30px rgba(47,140,255,.45)}
+  .play::before{content:"";border-left:20px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+  .tracks{list-style:none}
+  .tracks li{display:grid;grid-template-columns:40px 1fr 190px 70px;gap:18px;align-items:center;padding:17px 28px;border-bottom:1px solid var(--line);font-size:15px}
+  .tracks li:last-child{border-bottom:0}
+  .tracks li:hover{background:#171c2a}
+  .tracks .n{color:var(--muted);font-family:'JetBrains Mono';font-size:12px}
+  .tracks .t b{display:block;font-weight:600}
+  .tracks .t small{color:var(--muted);font-size:12.5px}
+  .tag{justify-self:start;font-size:11px;padding:5px 10px;border-radius:999px;border:1px solid #2c3550;color:var(--cyan)}
+  .tracks .d{color:var(--muted);font-family:'JetBrains Mono';font-size:12px;text-align:right}
+
+  /* servicios + reserva */
+  section.book{padding:60px 0 100px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .svc{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;min-height:250px}
+  .svc .ic{width:44px;height:44px;border-radius:12px;background:rgba(47,140,255,.12);color:var(--blue);display:grid;place-items:center;font-size:20px}
+  .svc h3{font-size:19px;line-height:1.1}
+  .svc p{color:var(--ink2);font-size:14px;flex:1}
+  .svc .price{font-family:'JetBrains Mono';font-size:12px;color:var(--gold)}
+  .svc.feat{background:linear-gradient(160deg,#16306a,#0f1730);border-color:#2b4fa0}
+  .cta-band{margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px 34px}
+  .cta-band h3{font-size:28px}
+  .cta-band p{color:var(--ink2);font-size:14.5px;margin-top:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#0e1117;border:1px solid var(--blue);color:#cfe2ff;font-size:11px;font-weight:500;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:11px 16px;font-size:12px}
+    .hero{min-height:620px}
+    .hero::after{background:linear-gradient(0deg,rgba(7,8,11,.98) 30%,rgba(7,8,11,.55) 100%)}
+    .hero h1{font-size:46px}
+    .hero p.lead{font-size:16px}
+    .hero .ctas .btn{flex:1;justify-content:center}
+    .credits{margin-top:30px}
+    section.listen{padding:64px 0 24px}
+    .head{flex-direction:column;align-items:flex-start;gap:14px}
+    .head h2{font-size:34px}
+    .now{grid-template-columns:1fr auto;padding:20px;gap:16px}
+    .cover{display:none}
+    .now h3{font-size:22px}
+    .play{width:56px;height:56px}
+    .tracks li{grid-template-columns:28px 1fr 52px;padding:15px 18px}
+    .tag{display:none}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .svc{min-height:0;padding:20px 16px}
+    .cta-band{flex-direction:column;align-items:flex-start;padding:24px}
+    .cta-band .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="ew">EW</span><span><b>EMEWEY</b><small>Estudio de grabación</small></span></a>
+    <nav class="links"><a href="#escucha">Escucha</a><a href="#servicios">Servicios</a><a href="#">Mezcla online</a><a href="#">Videoclips</a><a href="#">Reseñas</a></nav>
+    <a class="btn btn-blue" href="#reserva">Reservar sesión</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bgimg"></div>
+  <div class="wrap">
+    <div class="rec mono"><i></i> Grabando desde hace ~18 años</div>
+    <h1>Tu música se merece <em>más que suerte.</em></h1>
+    <p class="lead">Grabación, mezcla y mastering con el mismo oído que ha trabajado con artistas de la escena urbana. Escucha el resultado antes de reservar.</p>
+    <div class="ctas">
+      <a class="btn btn-blue" href="#escucha">▶ Escuchar trabajos</a>
+      <a class="btn btn-line" href="#reserva">Ver tarifas y reservar</a>
+    </div>
+    <div class="credits">
+      <span class="mono">Han pasado por el estudio</span>
+      <span>Arianna Puello</span><span>CWT4</span><span>Rccelta</span><span>Iban con b</span><span>Calles</span><span>Galez</span><span>Sara Escudero</span>
+    </div>
+  </div>
+</section>
+
+<section class="listen" id="escucha">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="mono kick">01 — Escucha</div><h2>El sonido,<br>antes que la promesa</h2></div>
+      <p>Hoy los temas viven en una carpeta de Drive. Aquí cada trabajo se escucha en un clic, con el crédito del artista y el servicio que se hizo.</p>
+    </div>
+    <div class="player">
+      <div class="now">
+        <div class="cover"></div>
+        <div>
+          <div class="mono" style="color:var(--cyan)">Sonando · Mezcla &amp; Mastering</div>
+          <h3>Rap Battle a Hostias</h3>
+          <div class="meta">Swit Eme vs Mister Ego · Beat por Katsuro Beats</div>
+          <div class="wave" id="wave"></div>
+        </div>
+        <a class="play" href="#" aria-label="Reproducir"></a>
+      </div>
+      <ul class="tracks">
+        <li><span class="n">01</span><span class="t"><b>Rap Battle a Hostias</b><small>Swit Eme vs Mister Ego</small></span><span class="tag">Mezcla + Máster</span><span class="d">3:12</span></li>
+        <li><span class="n">02</span><span class="t"><b>Tema de archivo (2022)</b><small>Galez · Calles</small></span><span class="tag">Grabación</span><span class="d">2:58</span></li>
+        <li><span class="n">03</span><span class="t"><b>Sesión de voz — 4 temas</b><small>Artista del estudio</small></span><span class="tag">Grabación de voz</span><span class="d">3:40</span></li>
+        <li><span class="n">04</span><span class="t"><b>Beat original</b><small>Katsuro Beats</small></span><span class="tag">Beat a la venta</span><span class="d">2:21</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="servicios">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="mono kick">02 — Servicios y tarifas</div><h2>Elige, escucha<br>y reserva</h2></div>
+      <p>Las tarifas que hoy están en historias destacadas, ordenadas y siempre visibles.</p>
+    </div>
+    <div class="grid">
+      <div class="svc feat"><div class="ic mono">REC</div><h3>Grabación</h3><p>Voz e instrumentos en sala tratada, con dirección durante la toma.</p><span class="price">DESDE 35 € · DEMO</span></div>
+      <div class="svc"><div class="ic mono">MIX</div><h3>Mezcla &amp; Mastering</h3><p>Tu tema listo para plataformas, con revisiones incluidas.</p><span class="price">TARIFA · DEMO</span></div>
+      <div class="svc"><div class="ic mono">WEB</div><h3>Mezcla online</h3><p>Envía tus pistas desde cualquier ciudad y recibe el máster.</p><span class="price">TARIFA · DEMO</span></div>
+      <div class="svc"><div class="ic mono">LP</div><h3>Maqueta / Disco</h3><p>Sesiones de hasta 12 horas para grabar el proyecto entero, incluso videoclip.</p><span class="price">PACK · DEMO</span></div>
+    </div>
+    <div class="cta-band" id="reserva">
+      <div><h3>¿Tienes un tema listo para grabar?</h3><p>Elige servicio y fecha; te confirmamos por WhatsApp.</p></div>
+      <a class="btn btn-blue" href="#">Reservar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · precios y pistas demo · imágenes de referencia</div>
+<script>
+  const w=document.getElementById('wave');
+  for(let i=0;i<64;i++){const b=document.createElement('b');b.style.height=(12+Math.abs(Math.sin(i*.55)*38)+(i%5)*3)+'px';if(i<26)b.className='on';w.appendChild(b)}
+</script>
+</body>
+</html>

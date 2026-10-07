@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Z4 Custom Motorcycles · Taller Vespa (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1d2a6b; --navy2:#121b4a; --red:#d7262e; --cream:#f5f2ea; --white:#fff;
+    --ink:#121626; --ink2:#4b5370; --muted:#8a90a6; --line:#e2e0d8; --mint:#a9d6c9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.95;letter-spacing:.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:10px;white-space:nowrap}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-w{background:#fff;color:var(--navy)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+
+  header.nav{position:sticky;top:0;z-index:40;background:var(--navy);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .z{width:46px;height:46px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;font-family:'Bebas Neue';font-size:26px;font-style:italic}
+  .logo b{font-family:'Bebas Neue';font-weight:400;font-size:24px;letter-spacing:.04em;line-height:1}
+  .logo small{display:block;font-size:10px;letter-spacing:.2em;opacity:.7;text-transform:uppercase}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:600;opacity:.9}
+
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:600px;padding-top:30px;padding-bottom:60px}
+  .hero h1{font-size:104px;margin:16px 0 18px}
+  .hero h1 span{color:var(--mint)}
+  .hero p{font-size:18px;opacity:.85;max-width:480px;margin-bottom:30px}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{position:relative;height:500px;border-radius:26px;overflow:hidden;background:url('https://images.pexels.com/photos/3284232/pexels-photo-3284232.jpeg?auto=compress&w=1100') center/cover}
+  .hero .chip{position:absolute;left:20px;bottom:20px;right:20px;background:rgba(255,255,255,.95);color:var(--ink);border-radius:16px;padding:16px 18px;display:flex;gap:14px;align-items:center}
+  .chip .dot{width:12px;height:12px;border-radius:50%;background:#22b35e;box-shadow:0 0 0 5px rgba(34,179,94,.18)}
+  .chip b{display:block;font-size:15px}
+  .chip small{color:var(--ink2);font-size:13px}
+  .stripes{position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(90deg,var(--red) 0 60px,#fff 60px 120px,var(--mint) 120px 180px)}
+
+  section.agenda{padding:90px 0 70px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:38px}
+  .head h2{font-size:64px;color:var(--navy)}
+  .head p{max-width:420px;color:var(--ink2)}
+  .booker{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+  .svcs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .svc{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:22px;display:flex;gap:16px;align-items:flex-start}
+  .svc .ic{flex:none;width:48px;height:48px;border-radius:14px;background:#eef0fa;color:var(--navy);display:grid;place-items:center;font-family:'Bebas Neue';font-size:20px}
+  .svc h3{font-size:26px;color:var(--navy)}
+  .svc p{font-size:14px;color:var(--ink2)}
+  .svc.sel{border-color:var(--navy);box-shadow:0 0 0 3px rgba(29,42,107,.12)}
+  .svc.sel .ic{background:var(--navy);color:#fff}
+  .panel{background:var(--navy2);color:#fff;border-radius:22px;padding:28px}
+  .panel h3{font-size:34px;margin-bottom:6px}
+  .panel .sub{opacity:.7;font-size:14px;margin-bottom:20px}
+  .field{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+  .field small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+  .field b{font-size:15px;font-weight:600}
+  .days{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:6px 0 18px}
+  .days span{text-align:center;border-radius:10px;padding:9px 0;background:rgba(255,255,255,.08);font-size:13px;font-weight:600;line-height:1.2}
+  .days span small{display:block;font-size:10px;opacity:.6;font-weight:500}
+  .days .on{background:var(--mint);color:var(--navy2)}
+  .panel .btn{width:100%;justify-content:center}
+
+  section.proceso{padding:10px 0 90px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border-radius:22px;border:1.5px solid var(--line);overflow:hidden}
+  .step{padding:26px 24px;border-right:1.5px solid var(--line)}
+  .step:last-child{border-right:0}
+  .step .n{font-family:'Bebas Neue';font-size:46px;color:var(--red);line-height:1}
+  .step h3{font-size:24px;color:var(--navy);margin:8px 0 4px}
+  .step p{font-size:14px;color:var(--ink2)}
+  .shop{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--red);color:#fff;border-radius:22px;padding:26px 30px}
+  .shop h3{font-size:36px}
+  .shop p{opacity:.9;font-size:14.5px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--navy2);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px;border:1px solid var(--mint)}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .logo small{display:none}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:34px;padding-bottom:50px;gap:26px}
+    .hero h1{font-size:64px}
+    .hero p{font-size:16px}
+    .hero .ctas .btn{flex:1;justify-content:center}
+    .hero .pic{height:330px}
+    section.agenda{padding:56px 0 40px}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:46px}
+    .booker{grid-template-columns:1fr}
+    .svcs{grid-template-columns:1fr;gap:10px}
+    .svc{padding:16px}
+    .steps{grid-template-columns:1fr 1fr}
+    .step{border-bottom:1.5px solid var(--line)}
+    .step:nth-child(2n){border-right:0}
+    .shop{flex-direction:column;align-items:flex-start}
+    .shop .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="z">Z4</span><span><b>Z4 CUSTOM</b><small>Taller Vespa · Bogotá</small></span></a>
+    <nav class="links"><a href="#agenda">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#">Peritajes</a><a href="#">Comunidad</a><a href="#">Repuestos</a></nav>
+    <a class="btn btn-red" href="#agenda">Agendar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--mint)">Taller especializado en Vespa</div>
+      <h1>Tu Vespa,<br>en manos que <span>la conocen.</span></h1>
+      <p>Mantenimiento, restauración, detailing, latonería y pintura. Agenda en línea y sigue tu moto por WhatsApp hasta que esté lista.</p>
+      <div class="ctas">
+        <a class="btn btn-w" href="#agenda">Agendar mantenimiento</a>
+        <a class="btn btn-line" href="#">Solicitar peritaje</a>
+      </div>
+    </div>
+    <div class="pic">
+      <div class="chip"><span class="dot"></span><div><b>Carrera 23 #74A-29, Bogotá</b><small>Recibimos tu Vespa con cita · cupos de esta semana disponibles</small></div></div>
+    </div>
+  </div>
+  <div class="stripes"></div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">01 — Agenda tu servicio</div><h2>Elige qué necesita tu Vespa</h2></div>
+      <p>Hoy cada cita empieza con un mensaje. Aquí el cliente elige servicio y día, y llega al taller con todo claro.</p>
+    </div>
+    <div class="booker">
+      <div class="svcs">
+        <div class="svc sel"><div class="ic">MT</div><div><h3>Mantenimiento</h3><p>Preventivo y correctivo, aceite, transmisión y frenos.</p></div></div>
+        <div class="svc"><div class="ic">RS</div><div><h3>Restauración</h3><p>Devolverle la vida a una Vespa clásica, pieza por pieza.</p></div></div>
+        <div class="svc"><div class="ic">LP</div><div><h3>Latonería y pintura</h3><p>Carrocería, color y acabados después de un golpe.</p></div></div>
+        <div class="svc"><div class="ic">PR</div><div><h3>Peritaje</h3><p>Diagnóstico documentado del daño tras un accidente.</p></div></div>
+        <div class="svc"><div class="ic">DT</div><div><h3>Detailing</h3><p>Limpieza profunda y protección de pintura y cromados.</p></div></div>
+        <div class="svc"><div class="ic">RP</div><div><h3>Repuestos</h3><p>Originales y accesorios, con instalación en el taller.</p></div></div>
+      </div>
+      <div class="panel">
+        <h3>Mantenimiento</h3>
+        <div class="sub">Reserva tu cupo en 1 minuto</div>
+        <div class="field"><small>Tu Vespa</small><b>Primavera 150 · 2021 (ejemplo)</b></div>
+        <div class="field"><small>Kilometraje</small><b>12.400 km (ejemplo)</b></div>
+        <small style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.6">Día de ingreso</small>
+        <div class="days"><span>Lun<small>13</small></span><span class="on">Mar<small>14</small></span><span>Mié<small>15</small></span><span>Jue<small>16</small></span><span>Vie<small>17</small></span></div>
+        <a class="btn btn-red" href="#">Confirmar por WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proceso" id="proceso">
+  <div class="wrap">
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Agendas</h3><p>Eliges servicio y día desde el celular.</p></div>
+      <div class="step"><div class="n">02</div><h3>Diagnóstico</h3><p>Revisamos y te enviamos fotos y cotización.</p></div>
+      <div class="step"><div class="n">03</div><h3>Taller</h3><p>Avances por WhatsApp mientras trabajamos.</p></div>
+      <div class="step"><div class="n">04</div><h3>Entrega</h3><p>Tu Vespa lista, con el registro del servicio.</p></div>
+    </div>
+    <div class="shop">
+      <div><h3>¿Buscas un repuesto?</h3><p>La tienda en línea de Z4 queda integrada a la misma web.</p></div>
+      <a class="btn btn-w" href="#">Ir a la tienda →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · fechas y datos de ejemplo · imágenes de referencia</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUELO · Vinos naturales (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ede2; --paper2:#ebe1d1; --ink:#1f1a16; --ink2:#5d5249; --muted:#8c7f72;
+    --clay:#b4532f; --wine:#6e1f2b; --leaf:#4f5d3a; --line:#d9cbb6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .serif{font-family:'Cormorant Garamond',serif}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.02;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .cap{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--clay)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;padding:15px 26px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .btn-ink{background:var(--ink);color:var(--paper)}
+  .btn-line{border:1px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(244,237,226,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:30px}
+  .word{font-family:'Cormorant Garamond';font-weight:600;font-size:30px;letter-spacing:.32em}
+  nav.links{display:flex;gap:30px;font-size:13px;font-weight:500;color:var(--ink2);margin-left:auto}
+  .lang{display:flex;border:1px solid var(--ink);font-size:11px;font-weight:700}
+  .lang span{padding:6px 10px}
+  .lang .on{background:var(--ink);color:var(--paper)}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:640px;border-bottom:1px solid var(--line)}
+  .hero .txt{padding:90px 60px 70px 0;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:84px;margin:22px 0 22px}
+  .hero h1 em{color:var(--wine)}
+  .hero p.lead{font-size:17px;color:var(--ink2);max-width:470px;margin-bottom:34px}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{position:relative;background:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=70&fit=crop') center/cover}
+  .stamp{position:absolute;left:-58px;bottom:56px;width:150px;height:150px;border-radius:50%;background:var(--clay);color:var(--paper);display:grid;place-items:center;text-align:center;font-family:'Cormorant Garamond';font-size:19px;line-height:1.1;transform:rotate(-10deg);box-shadow:0 14px 30px rgba(60,30,10,.25)}
+  .stamp small{display:block;font-family:'DM Sans';font-size:9px;letter-spacing:.2em;margin-top:6px}
+
+  .info{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);background:var(--paper2)}
+  .info div{padding:28px 34px;border-right:1px solid var(--line)}
+  .info div:last-child{border-right:0}
+  .info b{display:block;font-family:'Cormorant Garamond';font-size:24px;font-weight:600;margin:6px 0 2px}
+  .info span{font-size:14px;color:var(--ink2)}
+
+  section.week{padding:96px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;gap:30px}
+  .head h2{font-size:58px}
+  .head p{max-width:400px;color:var(--ink2)}
+  .cards{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px}
+  .card{background:#fffaf2;border:1px solid var(--line)}
+  .card .ph{height:260px;background-size:cover;background-position:center}
+  .card .bd{padding:24px 24px 28px}
+  .card h3{font-size:30px;margin:8px 0 8px}
+  .card p{font-size:14.5px;color:var(--ink2)}
+  .card .when{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--clay);color:var(--clay)}
+  .card.big .ph{height:340px}
+
+  section.carta{background:var(--ink);color:var(--paper);padding:90px 0}
+  .carta .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+  .carta h2{font-size:56px}
+  .carta .note{color:#c9bba8;margin-top:18px;max-width:380px}
+  .list{border-top:1px solid #4a4037}
+  .row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid #4a4037}
+  .row b{font-family:'Cormorant Garamond';font-size:25px;font-weight:500}
+  .row small{display:block;color:#a99a88;font-size:13px}
+  .row i{font-style:normal;color:#e6a487;font-size:13px;letter-spacing:.06em;align-self:center}
+  .carta .ctas{margin-top:30px;display:flex;gap:12px}
+  .carta .btn-ink{background:var(--paper);color:var(--ink)}
+  .carta .btn-line{border-color:var(--paper);color:var(--paper)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:var(--paper);font-size:11px;padding:8px 13px;border-radius:4px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .word{font-size:22px;letter-spacing:.26em}
+    .lang{margin-left:auto}
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero .pic{height:340px;order:-1}
+    .stamp{left:auto;right:18px;bottom:-46px;width:112px;height:112px;font-size:15px}
+    .hero .txt{padding:58px 0 46px}
+    .hero h1{font-size:48px}
+    .hero .ctas .btn{flex:1;justify-content:center}
+    .info{grid-template-columns:1fr}
+    .info div{border-right:0;border-bottom:1px solid var(--line);padding:20px}
+    section.week{padding:60px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:12px}
+    .head h2{font-size:40px}
+    .cards{grid-template-columns:1fr;gap:16px}
+    .card .ph,.card.big .ph{height:220px}
+    section.carta{padding:60px 0}
+    .carta .grid{grid-template-columns:1fr;gap:30px}
+    .carta h2{font-size:40px}
+    .carta .ctas{flex-direction:column}
+    .carta .ctas .btn{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="word" href="#">SUELO</a>
+    <nav class="links"><a href="#semana">Esta semana</a><a href="#carta">Carta</a><a href="#">Catas</a><a href="#visitanos">Visítanos</a></nav>
+    <div class="lang"><span class="on">ES</span><span>EN</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="padding-right:0">
+    <div class="txt">
+      <div class="cap">Natural wine bar · Antigua Guatemala</div>
+      <h1>Donde hay vino natural, hay <em>buena comida.</em></h1>
+      <p class="lead">Una mesa al sol, una copa de vino y la tarde pasando sin prisa. Copas por botella abierta, comida simple y catas relajadas en nuestra nueva casa.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="#">Reservar mesa</a>
+        <a class="btn btn-line" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+  </div>
+  <div class="pic"><div class="stamp">Nueva<br>ubicación<small>4ª AV. NORTE</small></div></div>
+</section>
+
+<div class="info" id="visitanos">
+  <div><span class="cap">Dónde</span><b>4 avenida norte 6 C</b><span>Antigua Guatemala · Cómo llegar →</span></div>
+  <div><span class="cap">Miércoles a viernes</span><b>4 PM — 10 PM</b><span>Copas, botellas y comida simple</span></div>
+  <div><span class="cap">Sábado y domingo</span><b>1 PM — 10 PM</b><span>Tardes largas, mesa al sol</span></div>
+</div>
+
+<section class="week" id="semana">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="cap">Esta semana en Suelo</div><h2>Lo que hoy vive<br>en historias, aquí</h2></div>
+      <p>Catas, menú y guías para viajeros: todo lo que hoy se pierde a las 24 horas, en un lugar fijo y en dos idiomas.</p>
+    </div>
+    <div class="cards">
+      <div class="card big"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=70&fit=crop')"></div><div class="bd"><span class="cap">Cata relajada</span><h3>Tres copas, sin solemnidad</h3><p>Vinos de mínima intervención explicados sin tecnicismos. Cupos limitados por sesión.</p><span class="when">Reservar cupo →</span></div></div>
+      <div class="card"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=700&q=70&fit=crop')"></div><div class="bd"><span class="cap">Comida simple</span><h3>Para acompañar la copa</h3><p>Platos de temporada pensados para compartir.</p><span class="when">Ver carta →</span></div></div>
+      <div class="card"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=700&q=70&fit=crop')"></div><div class="bd"><span class="cap">Travel guide</span><h3>Antigua, by Suelo</h3><p>Nuestros lugares favoritos de la ciudad, para quien nos visita por primera vez.</p><span class="when">Read in English →</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="wrap grid">
+    <div>
+      <div class="cap" style="color:#e6a487">La carta</div>
+      <h2>Botellas abiertas hoy</h2>
+      <p class="note">La carta de vinos rota cada semana. En la web se actualiza en minutos y el visitante la lee antes de llegar, en español o inglés.</p>
+      <div class="ctas"><a class="btn btn-ink" href="#">Reservar mesa</a><a class="btn btn-line" href="#">Escribir por WhatsApp</a></div>
+    </div>
+    <div class="list">
+      <div class="row"><div><b>Pét-nat rosado</b><small>Burbuja ligera · copa</small></div><i>DEMO</i></div>
+      <div class="row"><div><b>Naranja de maceración corta</b><small>Textura, té y fruta de hueso · copa</small></div><i>DEMO</i></div>
+      <div class="row"><div><b>Tinto ligero para servir fresco</b><small>Fruta roja, baja graduación · botella</small></div><i>DEMO</i></div>
+      <div class="row"><div><b>Tabla de la casa</b><small>Para dos · comida simple</small></div><i>DEMO</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · carta demo · imágenes de referencia</div>
+</body>
+</html>
