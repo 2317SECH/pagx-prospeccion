@@ -414,6 +414,21 @@
         "bocetos/evidencia/97-colche-team-boxeo-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Colche Team tiene reels con miles de likes, pero el perfil no tiene ningún link para ver horarios o anotarse.\nLes proponemos una web con horarios por nivel (recreativo y amateur), planes y reserva de clase de prueba.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 98,
+      "slug": "98-shore-sauce",
+      "nombre": "Shore Sauce · Hot sauce brand",
+      "ig": "shoresauce",
+      "lugar": "Jersey Shore, NJ, Estados Unidos",
+      "nicho": "Marca de salsas picantes artesanales (e-commerce)",
+      "web": "Deficiente: tienda en Squarespace con menú de dos líneas encima de la foto, sin titular ni propuesta de valor; ya venden en Amazon",
+      "porque": "5K seguidores, activo (24/09/2026), premiada, con prensa local y venta en Amazon. Su tienda propia no vende el producto: no hay titular, sabores ni niveles de picante a la vista. Ideal para migrar a Shopify (como ARVENA). Prioridad MEDIA-ALTA. Mensaje en inglés.",
+      "evidencia": [
+        "bocetos/evidencia/98-shore-sauce-ig.jpg",
+        "bocetos/evidencia/98-shore-sauce-web-actual.png"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe love Shore Sauce's flavors and the award-winning story, but your site's homepage doesn't show the sauces, heat levels or a clear \"shop now.\"\nWe'd build a product-first Shopify store: every flavor, heat level and bundles, ready to buy in one tap.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }

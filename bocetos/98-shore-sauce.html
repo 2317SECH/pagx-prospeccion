@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shore Sauce · Hot Sauce (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--sand:#fff4e2;--sea:#1f6fb2;--sun:#ff8a1f;--mango:#ffb703;--pine:#e9d24a;--rose:#ef5a5a;--ink:#1d1b26;--ink2:#5d5a6b;--line:#f0dfc3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--sand);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Rubik Mono One',sans-serif;font-weight:400;line-height:1;letter-spacing:-.01em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--sea)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-o{background:var(--sun);color:#fff}
+  .btn-l{border:2px solid var(--ink)}
+
+  .bar{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:9px;letter-spacing:.04em}
+  header.nav{position:sticky;top:0;z-index:40;background:var(--sand);border-bottom:2px solid var(--ink)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .sun{width:52px;height:52px;border-radius:50%;background:linear-gradient(180deg,var(--sun) 0 50%,var(--sea) 50%);border:3px solid var(--ink)}
+  .bn{font-family:'Rubik Mono One';font-size:18px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:700}
+  .cart{border:2px solid var(--ink);border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:40px}
+  .hero h1{font-size:64px;margin:16px 0 18px}
+  .hero h1 span{color:var(--sun)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .badges{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .badges span{background:#fff;border:2px solid var(--ink);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800}
+  .shelf{position:relative;height:520px;border-radius:32px;background:linear-gradient(180deg,#ffd7a0 0 55%,#8fd0f0 55%);border:3px solid var(--ink);display:flex;align-items:flex-end;justify-content:center;gap:16px;padding-bottom:40px;overflow:hidden}
+  .shelf::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--sun);top:70px;left:50%;transform:translateX(-50%);opacity:.75}
+  .bottle{position:relative;width:88px;display:flex;flex-direction:column;align-items:center}
+  .bottle .cap{width:30px;height:46px;background:var(--ink);border-radius:6px 6px 2px 2px}
+  .bottle .neck{width:40px;height:30px;background:var(--c);border-left:3px solid var(--ink);border-right:3px solid var(--ink)}
+  .bottle .body{width:88px;height:200px;background:var(--c);border:3px solid var(--ink);border-radius:18px 18px 12px 12px;display:grid;place-items:center}
+  .bottle .label{width:70px;height:90px;background:#fff7ea;border:2px solid var(--ink);border-radius:50% 50% 10px 10px;display:grid;place-items:center;text-align:center;font-family:'Rubik Mono One';font-size:8px;line-height:1.2;padding:6px}
+
+  section.shop{background:#fff;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:40px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .p{border:2px solid var(--ink);border-radius:22px;overflow:hidden;background:var(--sand)}
+  .p .top{height:170px;background:var(--c);display:grid;place-items:center;border-bottom:2px solid var(--ink);font-family:'Rubik Mono One';font-size:20px;color:#fff;text-shadow:2px 2px 0 var(--ink)}
+  .p .bd{padding:16px}
+  .p h3{font-size:15px}
+  .heat{display:flex;gap:3px;margin:8px 0}
+  .heat i{width:16px;height:6px;border-radius:3px;background:#e6d6bd}
+  .heat i.on{background:var(--rose)}
+  .p .row{display:flex;justify-content:space-between;align-items:center;font-weight:800}
+  .p .add{background:var(--ink);color:#fff;border-radius:999px;padding:7px 12px;font-size:12px}
+
+  section.pair{padding:80px 0 100px}
+  .pgrid2{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pr{border-radius:22px;overflow:hidden;border:2px solid var(--ink);background:#fff}
+  .pr .ph{height:200px;background-size:cover;background-position:center}
+  .pr .bd{padding:16px 18px}
+  .pr b{display:block;font-size:17px}
+  .pr span{font-size:14px;color:var(--ink2)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .bn{font-size:14px}
+    .cart{margin-left:auto}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:36px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .shelf{height:380px;gap:8px}
+    .bottle{transform:scale(.72);margin:0 -10px}
+    section.shop{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:26px}
+    .pgrid{grid-template-columns:1fr 1fr;gap:10px}
+    .p .top{height:120px;font-size:14px}
+    .pgrid2{grid-template-columns:1fr;gap:12px}
+    section.pair{padding:56px 0 60px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">FREE SHIPPING ON ORDERS OVER $50</div>
+<header class="nav">
+  <div class="wrap">
+    <span class="sun"></span><span class="bn">SHORE SAUCE</span>
+    <nav class="links"><a href="#shop">Shop sauces</a><a href="#">Shore Spice</a><a href="#pair">Recipes</a><a href="#">Find us</a></nav>
+    <a class="cart" href="#">Cart (0)</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Handcrafted · Jersey Shore</div>
+      <h1>Sunshine in a bottle. <span>With a kick.</span></h1>
+      <p>Award-winning artisanal pepper sauces made with fruit and real peppers. All natural, gluten-free, no preservatives.</p>
+      <div class="ctas"><a class="btn btn-o" href="#shop">Shop the sauces</a><a class="btn btn-l" href="#">Build a bundle</a></div>
+      <div class="badges"><span>ALL NATURAL</span><span>GLUTEN-FREE</span><span>NO PRESERVATIVES</span><span>AWARD WINNING</span></div>
+    </div>
+    <div class="shelf">
+      <div class="bottle" style="--c:var(--mango)"><span class="cap"></span><span class="neck"></span><span class="body"><span class="label">MANGO</span></span></div>
+      <div class="bottle" style="--c:var(--pine)"><span class="cap"></span><span class="neck"></span><span class="body"><span class="label">PINE<br>APPLE</span></span></div>
+      <div class="bottle" style="--c:var(--sun)"><span class="cap"></span><span class="neck"></span><span class="body"><span class="label">SUNSET</span></span></div>
+      <div class="bottle" style="--c:var(--rose)"><span class="cap"></span><span class="neck"></span><span class="body"><span class="label">SUNRISE</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">The lineup</div><h2>Pick your heat</h2></div>
+      <p>A product-first store: every flavor with its heat level, pairings and one-tap add to cart, on a Shopify checkout.</p>
+    </div>
+    <div class="pgrid">
+      <div class="p" style="--c:var(--mango)"><div class="top">MANGO</div><div class="bd"><h3>Mango</h3><div class="heat"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><div class="row"><span>$ demo</span><a class="add" href="#">Add</a></div></div></div>
+      <div class="p" style="--c:#d8c13a"><div class="top">PINEAPPLE</div><div class="bd"><h3>Pineapple</h3><div class="heat"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="row"><span>$ demo</span><a class="add" href="#">Add</a></div></div></div>
+      <div class="p" style="--c:var(--sun)"><div class="top">SUNSET</div><div class="bd"><h3>Sunset</h3><div class="heat"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><div class="row"><span>$ demo</span><a class="add" href="#">Add</a></div></div></div>
+      <div class="p" style="--c:var(--rose)"><div class="top">SUNRISE</div><div class="bd"><h3>Sunrise</h3><div class="heat"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="row"><span>$ demo</span><a class="add" href="#">Add</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pair" id="pair">
+  <div class="wrap">
+    <div class="head"><div><div class="k">Recipes</div><h2>Put it on everything</h2></div><p>Recipes and pairings that sell the bottle, each one linked to the sauce it uses.</p></div>
+    <div class="pgrid2">
+      <div class="pr"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=700&q=70&fit=crop')"></div><div class="bd"><b>Tacos + Mango</b><span>Sweet heat for fish tacos</span></div></div>
+      <div class="pr"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=70&fit=crop')"></div><div class="bd"><b>Pizza + Pineapple</b><span>The pairing nobody argues with</span></div></div>
+      <div class="pr"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=700&q=70&fit=crop')"></div><div class="bd"><b>Burgers + Sunset</b><span>Backyard grill essential</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">PAGX Studio concept · not the live site · demo prices &amp; heat levels · reference images</div>
+</body>
+</html>
