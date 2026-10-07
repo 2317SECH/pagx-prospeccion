@@ -344,6 +344,20 @@
         "bocetos/evidencia/92-anayram-joyeria-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tu collar tricolor tuvo más de 17 mil likes, pero el perfil no tiene ningún link para comprar y todo queda en mensajes.\nTe proponemos una tienda sencilla por categoría (collares, pulseras, aretes) con pedidos personalizados por WhatsApp.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
+    },
+    {
+      "num": 93,
+      "slug": "93-le-grand-frances",
+      "nombre": "Le Grand Francés · Panadería artesanal",
+      "ig": "legrandfrances",
+      "lugar": "Cali, Colombia (planta también en Barranquilla)",
+      "nicho": "Panadería artesanal al por mayor (B2B) + punto de venta",
+      "web": "Sin web y sin link en la bio",
+      "porque": "5,9K seguidores, activo (05/10/2026), vende pan al por mayor a negocios y al público, con planta de producción y domicilios. Un restaurante que busca proveedor de pan no tiene catálogo ni forma de pedir más allá de un teléfono. Prioridad ALTA (cliente B2B).",
+      "evidencia": [
+        "bocetos/evidencia/93-le-grand-frances-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Le Grand Francés vende pan al por mayor a negocios, pero quien busca proveedor no encuentra catálogo ni una forma fácil de pedir.\nLes proponemos una web con catálogo mayorista y solicitud de pedidos recurrentes, además del punto de venta.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

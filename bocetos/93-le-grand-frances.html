@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Grand Francés · Panadería (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--orange:#e8692a;--orange2:#c9541c;--crust:#3a2516;--flour:#fbf6ee;--wheat:#f1e3cb;--ink:#2a1d14;--ink2:#6f5c4d;--line:#ead9c0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--flour);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:900;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:8px;white-space:nowrap}
+  .btn-o{background:var(--orange);color:#fff}
+  .btn-l{border:2px solid var(--crust)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:24px}
+  .badge{width:60px;height:60px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Playfair Display';font-weight:700;font-size:10px;line-height:1.1}
+  .badge b{display:block;font-size:13px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero{position:relative;overflow:hidden;background:var(--crust);color:#fff}
+  .hero .bg{position:absolute;inset:0 0 0 45%;background:url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=1300&q=70&fit=crop') center/cover}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--crust),transparent 40%)}
+  .hero .wrap{position:relative;z-index:2;min-height:580px;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:40px}
+  .hero h1{font-size:80px;max-width:620px;margin:14px 0 18px}
+  .hero h1 span{color:var(--orange)}
+  .hero p{font-size:18px;opacity:.88;max-width:470px;margin-bottom:28px}
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px}
+  .path{background:#fff;color:var(--ink);border-radius:14px;padding:18px}
+  .path small{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--orange)}
+  .path b{display:block;font-family:'Playfair Display';font-size:24px;margin:4px 0}
+  .path span{font-size:13px;color:var(--ink2)}
+
+  section.mayor{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .mgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+  .cat{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pan{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .pan .ph{height:150px;background-size:cover;background-position:center}
+  .pan .bd{padding:12px 14px 14px}
+  .pan h3{font-size:20px}
+  .pan span{font-size:12.5px;color:var(--ink2)}
+  .order{background:var(--crust);color:#fff;border-radius:22px;padding:28px}
+  .order h3{font-size:30px;margin-bottom:6px}
+  .order .sub{opacity:.75;font-size:14px;margin-bottom:18px}
+  .f{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;opacity:.65;text-transform:uppercase}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
+  .chips span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 12px;font-size:13px}
+  .chips .on{background:var(--orange);border-color:var(--orange)}
+  .order .btn{width:100%;justify-content:center}
+
+  section.casa{background:var(--wheat);padding:70px 0 90px}
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .c{background:#fff;border-radius:18px;padding:22px}
+  .c b{display:block;font-family:'Playfair Display';font-size:24px;margin-bottom:4px}
+  .c span{font-size:14px;color:var(--ink2)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--crust);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .badge{width:48px;height:48px;font-size:8px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .bg{inset:0;opacity:.35}
+    .hero .wrap{min-height:0;padding-top:50px;padding-bottom:40px}
+    .hero h1{font-size:48px}
+    .hero p{font-size:16px}
+    .paths{grid-template-columns:1fr}
+    section.mayor{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .mgrid{grid-template-columns:1fr}
+    .pan .ph{height:110px}
+    .cgrid{grid-template-columns:1fr;gap:10px}
+    section.casa{padding:50px 0 60px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="badge"><span>LE GRAND<b>FRANCÉS</b></span></span>
+    <nav class="links"><a href="#mayor">Al por mayor</a><a href="#mayor">Productos</a><a href="#casa">Para tu casa</a><a href="#casa">Domicilios</a><a href="#casa">Ubicación</a></nav>
+    <a class="btn btn-o" href="#mayor">Pedido mayorista</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Panadería artesanal · Cali</div>
+    <h1>El pan que hace <span>quedar bien</span> a tu negocio.</h1>
+    <p>Pan artesanal al por mayor para restaurantes, cafés y hoteles, y para disfrutar en casa. Planta de producción y punto de venta en Cali.</p>
+    <div class="paths">
+      <a class="path" href="#mayor"><small>PARA TU NEGOCIO</small><b>Al por mayor</b><span>Pedidos recurrentes y entregas programadas</span></a>
+      <a class="path" href="#casa"><small>PARA TU CASA</small><b>Punto de venta</b><span>Pan del día y domicilios</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="mayor" id="mayor">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Clientes mayoristas</div><h2>Tu pedido de pan, sin llamadas</h2></div>
+      <p>Hoy un restaurante que quiere comprar al por mayor tiene que escribir sin ver catálogo. Aquí elige productos, cantidades y frecuencia.</p>
+    </div>
+    <div class="mgrid">
+      <div class="cat">
+        <div class="pan"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=500&q=70&fit=crop')"></div><div class="bd"><h3>Pan tajado</h3><span>Ejemplo de catálogo</span></div></div>
+        <div class="pan"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=500&q=70&fit=crop')"></div><div class="bd"><h3>Masa madre</h3><span>Ejemplo de catálogo</span></div></div>
+        <div class="pan"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=70&fit=crop')"></div><div class="bd"><h3>Croissant</h3><span>Ejemplo de catálogo</span></div></div>
+        <div class="pan"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=70&fit=crop')"></div><div class="bd"><h3>Pan integral</h3><span>Ejemplo de catálogo</span></div></div>
+      </div>
+      <div class="order">
+        <h3>Solicitud mayorista</h3>
+        <div class="sub">Te respondemos con precios y días de entrega</div>
+        <div class="f"><small>Tipo de negocio</small>Restaurante</div>
+        <div class="chips"><span class="on">Restaurante</span><span>Café</span><span>Hotel</span><span>Tienda</span></div>
+        <div class="f"><small>Frecuencia</small>Lunes, miércoles y viernes (ejemplo)</div>
+        <div class="f"><small>Productos</small>Baguette x 40 · Pan tajado x 20 (ejemplo)</div>
+        <a class="btn btn-o" href="#">Enviar solicitud por WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="casa" id="casa">
+  <div class="wrap">
+    <div class="head"><div><div class="k">Para tu casa</div><h2>Pásate por tu pan</h2></div><p>Ubicación, horario y domicilios, lo mismo que hoy está en historias, siempre a mano.</p></div>
+    <div class="cgrid">
+      <div class="c"><b>Cra 42 # 8-06</b><span>Barrio Cámbulos, Cali · Cómo llegar →</span></div>
+      <div class="c"><b>Domicilios</b><span>Pide tu pan a casa</span></div>
+      <div class="c"><b>Café gratis</b><span>Con tu compra en el punto (ver condiciones)</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · productos y frecuencias de ejemplo · imágenes de referencia</div>
+</body>
+</html>
