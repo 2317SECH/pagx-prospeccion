@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eva Estudio · Fotografía newborn (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#fbf7f2;--blush:#f3e1dc;--rose:#c9837a;--sage:#a7b49c;--ink:#3f3532;--ink2:#7d706b;--line:#ece1d8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-r{background:var(--rose);color:#fff}
+  .btn-l{border:1.5px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(251,247,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{font-family:'Cormorant Garamond';font-size:30px;font-style:italic;line-height:1}
+  .logo small{display:block;font-family:'Quicksand';font-style:normal;font-size:9.5px;letter-spacing:.26em;color:var(--ink2)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:78px;margin:16px 0 18px}
+  .hero h1 em{color:var(--rose)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .duo{position:relative;height:520px}
+  .duo .a{position:absolute;inset:0 80px 60px 0;border-radius:200px 200px 24px 24px;background:url('https://images.unsplash.com/photo-1544126592-807ade215a0b?w=1000&q=70&fit=crop') center/cover}
+  .duo .b{position:absolute;right:0;bottom:0;width:230px;height:230px;border-radius:50%;border:8px solid var(--cream);background:url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=500&q=70&fit=crop') center/cover}
+  .duo .note{position:absolute;left:18px;bottom:80px;background:#fff;border-radius:16px;padding:12px 16px;font-size:13px;box-shadow:0 16px 36px rgba(63,53,50,.12)}
+  .duo .note b{display:block;font-family:'Cormorant Garamond';font-size:20px}
+
+  section.etapas{background:var(--blush);padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .line{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .et{background:var(--cream);border-radius:22px;overflow:hidden}
+  .et .ph{height:170px;background-size:cover;background-position:center}
+  .et .bd{padding:14px 16px 18px}
+  .et small{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--rose)}
+  .et h3{font-size:24px;margin:2px 0 4px}
+  .et p{font-size:13px;color:var(--ink2)}
+
+  section.reserva{padding:84px 0 100px}
+  .reserva .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .reserva h2{font-size:52px;margin:12px 0 14px}
+  .reserva p{color:var(--ink2);max-width:430px}
+  .tip{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;font-size:14px}
+  .tip b{color:var(--rose)}
+  .form{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 24px 60px rgba(201,131,122,.12)}
+  .form h3{font-size:30px;margin-bottom:14px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+  .chips .on{background:var(--rose);border-color:var(--rose);color:#fff}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:48px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .duo{height:380px}
+    .duo .a{inset:0 40px 50px 0}
+    .duo .b{width:150px;height:150px}
+    section.etapas{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .line{grid-template-columns:1fr 1fr;gap:10px}
+    .et:first-child{grid-column:span 2}
+    .et .ph{height:130px}
+    section.reserva{padding:56px 0 60px}
+    .reserva .wrap{grid-template-columns:1fr;gap:28px}
+    .reserva h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Eva Estudio<small>FOTOGRAFÍA · CÚCUTA</small></a>
+    <nav class="links"><a href="#etapas">Sesiones</a><a href="#etapas">Newborn</a><a href="#etapas">Maternidad</a><a href="#">Workshop</a><a href="#reserva">Reservar</a></nav>
+    <a class="btn btn-r" href="#reserva">Reservar sesión</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Fotógrafos y papás de profesión</div>
+      <h1>Cada etapa de tu bebé, <em>para siempre.</em></h1>
+      <p>Sesiones de maternidad, newborn, mes a mes y familia en Cúcuta, con el cuidado de quienes también son papás.</p>
+      <div class="ctas"><a class="btn btn-r" href="#reserva">Reservar mi sesión</a><a class="btn btn-l" href="#etapas">Ver sesiones</a></div>
+    </div>
+    <div class="duo"><div class="a"></div><div class="b"></div><div class="note"><b>Newborn</b>Los primeros días, con calma y seguridad</div></div>
+  </div>
+</section>
+
+<section class="etapas" id="etapas">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Sesiones por etapa</div><h2>Te acompañamos desde la panza</h2></div>
+      <p>Hoy cada tipo de sesión vive en una historia destacada. Aquí se ven como un camino, con lo que incluye cada una y cuándo agendarla.</p>
+    </div>
+    <div class="line">
+      <div class="et"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=700&q=70&fit=crop')"></div><div class="bd"><small>SEMANA 28–34</small><h3>Maternidad</h3><p>La espera, en estudio o exterior.</p></div></div>
+      <div class="et"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1544126592-807ade215a0b?w=500&q=70&fit=crop')"></div><div class="bd"><small>DÍAS 5–15</small><h3>Newborn</h3><p>Sus primeros días.</p></div></div>
+      <div class="et"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=500&q=70&fit=crop')"></div><div class="bd"><small>CADA MES</small><h3>Mes a mes</h3><p>Su crecimiento, mes a mes.</p></div></div>
+      <div class="et"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1522771930-78848d9293e8?w=500&q=70&fit=crop')"></div><div class="bd"><small>12 MESES</small><h3>Primer año</h3><p>Su primer cumpleaños.</p></div></div>
+      <div class="et"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=500&q=70&fit=crop')"></div><div class="bd"><small>FAMILIA</small><h3>Niños grandes</h3><p>Y quinceañeras.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reserva">
+  <div class="wrap">
+    <div>
+      <div class="k">Reserva</div>
+      <h2>Agenda antes de que llegue</h2>
+      <p>Las sesiones newborn se planean con tiempo. Este formulario guarda la fecha probable de parto y les avisa cuándo confirmar.</p>
+      <div class="tip"><b>Tip:</b> reserva tu sesión newborn entre la semana 28 y 34 de embarazo.</div>
+    </div>
+    <div class="form">
+      <h3>Reservar sesión</h3>
+      <div class="q"><small>Tipo de sesión</small><div class="chips"><span>Maternidad</span><span class="on">Newborn</span><span>Mes a mes</span><span>Primer año</span><span>Familia</span></div></div>
+      <div class="q"><small>Fecha probable de parto</small><div class="chips"><span class="on">15 de noviembre (ejemplo)</span></div></div>
+      <div class="q"><small>Lugar</small><div class="chips"><span class="on">Estudio en Cúcuta</span></div></div>
+      <a class="btn btn-r" href="#">Reservar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · semanas y fechas de ejemplo · imágenes de referencia</div>
+</body>
+</html>
