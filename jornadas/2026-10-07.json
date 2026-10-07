@@ -473,6 +473,20 @@
         "bocetos/evidencia/101-proyecto-teo-coach-web-actual.png"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que con 45 mil seguidores tu landing de Proyecto TEO tiene el titular cortado y los planes se explican por DM.\nTe proponemos una web propia con tus planes, calculadora de IMC, testimonios y aplicación directa.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
+    },
+    {
+      "num": 102,
+      "slug": "102-bernardo-lima-nutri",
+      "nombre": "Bernardo Lima · Nutricionista online",
+      "ig": "bernardolima.nutri",
+      "lugar": "Brasil (atención online)",
+      "nicho": "Nutricionista online para personas activas / marca personal",
+      "web": "Sin web (solo link de WhatsApp)",
+      "porque": "19,4K seguidores, cuenta verificada, contenido educativo constante. Toda la captación va a un link de WhatsApp; el proceso, los feedbacks y su guía 'Fila do Mercado' viven en historias. Prioridad MEDIA-ALTA. Mensaje en portugués (Brasil).",
+      "evidencia": [
+        "bocetos/evidencia/102-bernardo-lima-nutri-ig.jpg"
+      ],
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nVimos que seu conteúdo ajuda muita gente ativa, mas hoje tudo leva direto para um link de WhatsApp, sem mostrar como funciona o acompanhamento.\nPropomos um site com quiz de objetivo, o passo a passo da consulta, feedbacks e o guia Fila do Mercado.\nPreparamos uma prévia (~20%) de como ficaria. Quer ver?"
     }
   ]
 }

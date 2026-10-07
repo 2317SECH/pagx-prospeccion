@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bernardo Lima · Nutricionista online (conceito PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#f8f5ee;--sage:#2f5d4a;--sage2:#e3ece5;--terra:#d9734e;--ink:#1f2a24;--ink2:#61706a;--line:#e3e0d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;line-height:1.03;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-s{background:var(--sage);color:#fff}
+  .btn-l{border:1.5px solid var(--sage);color:var(--sage)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(248,245,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'Fraunces';font-size:22px;font-weight:700}
+  .logo small{display:block;font-family:'Inter';font-size:10px;letter-spacing:.2em;color:var(--ink2);font-weight:600}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:70px;margin:16px 0 18px}
+  .hero h1 em{color:var(--terra);font-style:italic}
+  .hero p{font-size:18px;color:var(--ink2);max-width:460px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 24px 60px rgba(47,93,74,.12)}
+  .quiz .bar{height:6px;border-radius:9px;background:var(--sage2);margin-bottom:20px;overflow:hidden}
+  .quiz .bar i{display:block;width:40%;height:100%;background:var(--sage)}
+  .quiz h3{font-size:26px;margin-bottom:16px}
+  .opt{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:10px;font-weight:600}
+  .opt i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none}
+  .opt.on{border-color:var(--sage);background:var(--sage2)}
+  .opt.on i{border:6px solid var(--sage)}
+  .quiz .btn{width:100%;justify-content:center;margin-top:8px}
+
+  section.como{background:var(--sage);color:#fff;padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;opacity:.85}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .st{background:rgba(255,255,255,.08);border-radius:22px;padding:22px}
+  .st b{display:block;font-family:'Fraunces';font-size:34px;color:#f4b79d}
+  .st h3{font-size:22px;margin:6px 0}
+  .st p{font-size:14px;opacity:.85}
+
+  section.extra{padding:84px 0 100px}
+  .xgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+  .fila{border-radius:26px;overflow:hidden;position:relative;min-height:360px;background:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1000&q=70&fit=crop') center/cover}
+  .fila::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(31,42,36,.88),transparent 55%)}
+  .fila .bd{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;color:#fff}
+  .fila h3{font-size:32px;margin:6px 0}
+  .fb{display:flex;flex-direction:column;gap:12px}
+  .q{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+  .q p{font-family:'Fraunces';font-size:19px;line-height:1.3}
+  .q span{display:block;margin-top:8px;font-size:12.5px;color:var(--ink2)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--sage);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:42px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.como{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:36px}
+    .steps{grid-template-columns:1fr 1fr;gap:10px}
+    .st{padding:16px}
+    .st h3{font-size:18px}
+    section.extra{padding:56px 0 60px}
+    .xgrid{grid-template-columns:1fr}
+    .fila{min-height:280px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Bernardo Lima<small>NUTRICIONISTA ONLINE</small></a>
+    <nav class="links"><a href="#como">Acompanhamento</a><a href="#extra">Fila do mercado</a><a href="#extra">Feedbacks</a></nav>
+    <a class="btn btn-s" href="#">Agendar consulta</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Nutrição para pessoas ativas</div>
+      <h1>O estilo de vida que você quer, <em>sem virar escravo da dieta.</em></h1>
+      <p>Acompanhamento nutricional online para quem treina, trabalha e quer resultado sem deixar de viver.</p>
+      <div class="ctas"><a class="btn btn-s" href="#">Quero começar</a><a class="btn btn-l" href="#como">Como funciona</a></div>
+    </div>
+    <div class="quiz">
+      <div class="bar"><i></i></div>
+      <div class="k" style="margin-bottom:6px">Pergunta 2 de 5</div>
+      <h3>Qual é o seu principal objetivo?</h3>
+      <div class="opt on"><i></i>Perder gordura sem perder massa</div>
+      <div class="opt"><i></i>Ganhar massa muscular</div>
+      <div class="opt"><i></i>Mais energia no dia a dia</div>
+      <div class="opt"><i></i>Performance no esporte</div>
+      <a class="btn btn-s" href="#">Continuar →</a>
+    </div>
+  </div>
+</section>
+
+<section class="como" id="como">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k" style="color:#f4b79d">Acompanhamento</div><h2>Como funciona</h2></div>
+      <p>Hoje tudo começa num link de WhatsApp. Aqui a pessoa entende o processo e já chega pronta para a consulta.</p>
+    </div>
+    <div class="steps">
+      <div class="st"><b>01</b><h3>Questionário</h3><p>Rotina, treino e objetivo.</p></div>
+      <div class="st"><b>02</b><h3>Consulta online</h3><p>Conversa por vídeo.</p></div>
+      <div class="st"><b>03</b><h3>Plano flexível</h3><p>Que cabe na sua vida.</p></div>
+      <div class="st"><b>04</b><h3>Ajustes</h3><p>Acompanhamento contínuo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="extra" id="extra">
+  <div class="wrap xgrid">
+    <div class="fila"><div class="bd"><div class="k" style="color:#f4b79d">Material gratuito</div><h3>Fila do Mercado</h3><p>O guia do destaque, transformado em download que captura contatos.</p></div></div>
+    <div class="fb">
+      <div class="q"><p>"Comecei a comer melhor sem cortar o que eu gosto."</p><span>Feedback de paciente · exemplo</span></div>
+      <div class="q"><p>"Finalmente um plano que encaixa na minha rotina de treino."</p><span>Feedback de paciente · exemplo</span></div>
+      <a class="btn btn-s" href="#" style="justify-content:center">Ver mais feedbacks</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Conceito PAGX Studio · não é o site atual · depoimentos de exemplo · imagens de referência</div>
+</body>
+</html>
