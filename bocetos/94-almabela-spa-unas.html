@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almabela Salón · Spa de uñas (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:wght@500;600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--sage:#5f7a62;--sage2:#43594a;--mint:#dfe8de;--cream:#fbf8f3;--rose:#e9c9c3;--ink:#263129;--ink2:#68736a;--line:#e3e8e0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Karla',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.02}
+  .script{font-family:'Parisienne',cursive;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-s{background:var(--sage);color:#fff}
+  .btn-l{border:1.5px solid var(--sage2);color:var(--sage2)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(251,248,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:24px}
+  .logo{width:58px;height:58px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;font-family:'Parisienne';font-size:18px;line-height:1}
+  .bn{font-family:'Cormorant Garamond';font-size:24px;letter-spacing:.14em}
+  .bn small{display:block;font-family:'Karla';font-size:9.5px;letter-spacing:.28em;color:var(--ink2)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:76px;margin:16px 0 18px}
+  .hero h1 .script{font-size:1.1em;color:var(--sage);display:block}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .pic{position:relative;height:540px;border-radius:30px;background:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=1000&q=70&fit=crop') center/cover}
+  .chip{position:absolute;left:-26px;bottom:50px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px rgba(38,49,41,.14);font-size:13px}
+  .chip b{display:block;font-family:'Cormorant Garamond';font-size:22px}
+
+  section.rituales{background:var(--mint);padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .r{background:var(--cream);border-radius:24px;overflow:hidden}
+  .r .ph{height:200px;background-size:cover;background-position:center}
+  .r .bd{padding:16px 18px 20px}
+  .r h3{font-size:26px}
+  .r p{font-size:13.5px;color:var(--ink2)}
+  .r .t{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:var(--sage)}
+
+  section.agenda{padding:84px 0 100px}
+  .agenda .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .agenda h2{font-size:52px;margin:12px 0 14px}
+  .agenda p{color:var(--ink2);max-width:430px}
+  .rev{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;font-size:14px;font-style:italic}
+  .rev b{font-style:normal;display:block;margin-top:6px;font-size:12px;color:var(--ink2)}
+  .book{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 24px 60px rgba(67,89,74,.1)}
+  .book h3{font-size:30px;margin-bottom:14px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+  .chips .on{background:var(--sage);border-color:var(--sage);color:#fff}
+  .chips .off{opacity:.4;text-decoration:line-through}
+  .book .btn{width:100%;justify-content:center;margin-top:6px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--sage2);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .logo{width:46px;height:46px;font-size:14px}
+    .bn{font-size:18px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:46px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .pic{height:360px}
+    .chip{left:12px;bottom:14px}
+    section.rituales{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .rgrid{grid-template-columns:1fr 1fr;gap:10px}
+    .r .ph{height:140px}
+    .r h3{font-size:21px}
+    section.agenda{padding:56px 0 60px}
+    .agenda .wrap{grid-template-columns:1fr;gap:28px}
+    .agenda h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="logo">Alma<br>Bela</span>
+    <span class="bn">ALMABELA<small>SALÓN · SPA DE UÑAS</small></span>
+    <nav class="links"><a href="#rituales">Rituales</a><a href="#rituales">Nails</a><a href="#rituales">Terapias</a><a href="#agenda">Ubicación</a></nav>
+    <a class="btn btn-s" href="#agenda">Reservar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Spa de uñas · Norte de Cali</div>
+      <h1>Tus manos merecen <span class="script">un ritual</span></h1>
+      <p>Diseño de uñas y rituales de spa en una experiencia premium y relajante. Elige tu ritual, tu día y tu hora.</p>
+      <div class="ctas"><a class="btn btn-s" href="#agenda">Reservar mi cita</a><a class="btn btn-l" href="#rituales">Ver rituales</a></div>
+    </div>
+    <div class="pic"><div class="chip"><b>Jelly Spa</b>El ritual del que todos hablan</div></div>
+  </div>
+</section>
+
+<section class="rituales" id="rituales">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Menú de rituales</div><h2>Elige tu experiencia</h2></div>
+      <p>Hoy servicios y terapias están en historias destacadas. Aquí cada ritual muestra qué incluye y cuánto dura.</p>
+    </div>
+    <div class="rgrid">
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Jelly Spa</h3><p>Ritual de spa para pies.</p><span class="t">Duración · demo</span></div></div>
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Diseño de uñas</h3><p>Diseños a tu gusto.</p><span class="t">Duración · demo</span></div></div>
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Manicure spa</h3><p>Cuidado completo de manos.</p><span class="t">Duración · demo</span></div></div>
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Terapias</h3><p>Para uñas con manchas o daño.</p><span class="t">Duración · demo</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <div>
+      <div class="k">Reserva</div>
+      <h2>Tu cita en un minuto</h2>
+      <p>En vez de preguntar disponibilidad por WhatsApp, la clienta ve horarios libres y confirma de una.</p>
+      <div class="rev">"¿Cómo no conocía este spa de uñas al norte de Cali?"<b>— Lo que dicen sus clientas en Instagram</b></div>
+    </div>
+    <div class="book">
+      <h3>Reservar</h3>
+      <div class="q"><small>Ritual</small><div class="chips"><span class="on">Jelly Spa</span><span>Diseño</span><span>Manicure</span><span>Terapia</span></div></div>
+      <div class="q"><small>Día</small><div class="chips"><span>Jue 9</span><span class="on">Vie 10</span><span>Sáb 11</span></div></div>
+      <div class="q"><small>Hora</small><div class="chips"><span class="off">10:00</span><span>11:30</span><span class="on">2:00</span><span>4:30</span></div></div>
+      <a class="btn btn-s" href="#">Confirmar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · horarios y duraciones demo · imágenes de referencia</div>
+</body>
+</html>
