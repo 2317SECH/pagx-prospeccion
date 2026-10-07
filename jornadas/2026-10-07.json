@@ -288,6 +288,20 @@
         "bocetos/evidencia/88-eva-estudio-fotografia-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el trabajo de Eva Estudio con casi 48 mil seguidores, pero las sesiones (maternidad, newborn, mes a mes) solo se encuentran en historias.\nLes proponemos una web donde las mamás vean cada sesión por etapa y reserven desde el embarazo.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 89,
+      "slug": "89-origen-ceramica-medellin",
+      "nombre": "Origen · Pottery & Painting",
+      "ig": "origen_med",
+      "lugar": "Medellín, Colombia",
+      "nicho": "Taller de cerámica, velas y pintura + tazas personalizadas",
+      "web": "Sin web (solo catálogo de Treinta)",
+      "porque": "12,8K seguidores, activo (01/10/2026), sus tazas con mascotas son virales (posts de 1.400 y 2.600 likes). Talleres, tazas, vajillas y velas se reservan desde un catálogo genérico y la info vive en historias. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/89-origen-ceramica-medellin-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que las tazas con mascotas de Origen se vuelven virales, pero talleres y pedidos dependen de un catálogo genérico e historias.\nLes proponemos una web con talleres por fecha y un pedido guiado de tazas (foto, modelo y envío).\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

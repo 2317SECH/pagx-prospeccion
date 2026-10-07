@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Origen · Pottery &amp; Painting (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--clay:#b97a4f;--clay2:#8f5a37;--sand:#efe2d0;--cream:#faf5ee;--ink:#2e241d;--ink2:#6f6157;--line:#e6d8c6;--sage:#9aa58a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Gloock',serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-c{background:var(--ink);color:#fff}
+  .btn-l{border:1.5px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(250,245,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{font-family:'Gloock';font-size:28px;letter-spacing:.06em;line-height:1}
+  .logo small{display:block;font-family:'Figtree';font-size:9px;letter-spacing:.3em;color:var(--ink2);font-weight:700}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:76px;margin:16px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--clay)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:520px}
+  .grid2 div{border-radius:26px;background-size:cover;background-position:center}
+  .grid2 .t{grid-row:span 2}
+
+  section.talleres{background:var(--sand);padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tl{background:var(--cream);border-radius:24px;overflow:hidden}
+  .tl .ph{height:210px;background-size:cover;background-position:center}
+  .tl .bd{padding:18px 20px 22px}
+  .tl h3{font-size:28px}
+  .tl p{font-size:14px;color:var(--ink2);margin:4px 0 12px}
+  .dates{display:flex;gap:6px;flex-wrap:wrap}
+  .dates span{border:1.5px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700}
+  .dates .on{background:var(--clay);border-color:var(--clay);color:#fff}
+
+  section.taza{padding:84px 0 100px}
+  .taza .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .taza h2{font-size:54px;margin:12px 0 14px}
+  .taza p{color:var(--ink2);max-width:430px}
+  .steps{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .steps div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+  .steps b{display:block;font-family:'Gloock';font-size:26px;color:var(--clay)}
+  .steps span{font-size:13px}
+  .mug{position:relative;height:440px;border-radius:30px;background:url('https://images.unsplash.com/photo-1590422749897-47036da0b0ff?w=900&q=70&fit=crop') center/cover}
+  .pet{position:absolute;right:20px;bottom:20px;width:150px;height:150px;border-radius:50%;border:6px solid var(--cream);background:url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&q=70&fit=crop') center/cover}
+  .up{position:absolute;left:20px;top:20px;background:#fff;border-radius:16px;padding:12px 16px;font-size:13px;box-shadow:0 14px 30px rgba(46,36,29,.15)}
+  .up b{display:block;font-family:'Gloock';font-size:19px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:46px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .grid2{height:340px}
+    section.talleres{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .tgrid{grid-template-columns:1fr;gap:12px}
+    .tl .ph{height:170px}
+    section.taza{padding:56px 0 60px}
+    .taza .wrap{grid-template-columns:1fr;gap:28px}
+    .taza h2{font-size:38px}
+    .mug{height:320px}
+    .pet{width:110px;height:110px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">ORIGEN<small>POTTERY &amp; PAINTING</small></a>
+    <nav class="links"><a href="#talleres">Talleres</a><a href="#taza">Tazas personalizadas</a><a href="#">Vajillas</a><a href="#">Velas</a><a href="#">Envíos</a></nav>
+    <a class="btn btn-c" href="#talleres">Reservar taller</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Taller de cerámica, velas y pintura · Medellín</div>
+      <h1>Ensúciate las manos y <em>llévate algo tuyo.</em></h1>
+      <p>Clases y talleres de cerámica, pintura y velas, piezas personalizadas y tazas con tu mascota. Envíos a todo el país.</p>
+      <div class="ctas"><a class="btn btn-c" href="#talleres">Reservar un taller</a><a class="btn btn-l" href="#taza">Pedir mi taza</a></div>
+    </div>
+    <div class="grid2">
+      <div class="t" style="background-image:url('https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=700&q=70&fit=crop')"></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&q=70&fit=crop')"></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&q=70&fit=crop')"></div>
+    </div>
+  </div>
+</section>
+
+<section class="talleres" id="talleres">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Talleres</div><h2>Elige tu experiencia</h2></div>
+      <p>Hoy las reservas pasan por un catálogo externo. Aquí cada taller muestra fechas y cupos, y se aparta en un clic.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tl"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Modelado en cerámica</h3><p>Crea tu propia pieza desde el barro.</p><div class="dates"><span class="on">Sáb 10:00</span><span>Sáb 3:00</span><span>Dom 11:00</span></div></div></div>
+      <div class="tl"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Pinta tu pieza</h3><p>Elige una pieza y píntala a tu gusto.</p><div class="dates"><span>Vie 6:00</span><span class="on">Sáb 4:00</span></div></div></div>
+      <div class="tl"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Velas</h3><p>Diseña tus propias velas en recipiente cerámico.</p><div class="dates"><span class="on">Dom 3:00</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="taza" id="taza">
+  <div class="wrap">
+    <div class="mug"><div class="up"><b>Sube la foto</b>de tu peludo</div><div class="pet"></div></div>
+    <div>
+      <div class="k">Tazas personalizadas</div>
+      <h2>Tu mascota en tu taza favorita</h2>
+      <p>Su producto más viral, con un pedido guiado: foto, modelo y envío, sin explicar todo por mensaje.</p>
+      <div class="steps"><div><b>1</b><span>Sube la foto</span></div><div><b>2</b><span>Elige el modelo</span></div><div><b>3</b><span>Te la enviamos</span></div></div>
+      <div style="margin-top:22px"><a class="btn btn-c" href="#">Pedir mi taza →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · horarios de ejemplo · imágenes de referencia</div>
+</body>
+</html>
