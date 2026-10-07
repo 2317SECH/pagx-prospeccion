@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academia Colche Team · Boxeo (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0c0d10;--panel:#15171c;--red:#e0222e;--blue:#1f3d8a;--white:#f4f4f6;--ink2:#a2a6b0;--line:#262931}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.92;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:15px 26px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-l{border:1.5px solid #fff}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(12,13,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .shield{width:52px;height:56px;background:var(--blue);clip-path:polygon(50% 0,100% 18%,92% 78%,50% 100%,8% 78%,0 18%);display:grid;place-items:center;font-family:'Bebas Neue';font-size:16px;line-height:.9;text-align:center;border-bottom:3px solid var(--red)}
+  .bn{font-family:'Bebas Neue';font-size:26px;line-height:.9}
+  .bn small{display:block;font-family:'Inter';font-size:9.5px;letter-spacing:.24em;color:var(--ink2);font-weight:700}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em}
+
+  .hero{position:relative;min-height:660px;display:flex;align-items:flex-end;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517438322307-e67111335449?w=1900&q=70&fit=crop') center/cover;filter:saturate(.8)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--black) 8%,rgba(12,13,16,.35) 60%),linear-gradient(90deg,rgba(12,13,16,.9),transparent 65%)}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:56px}
+  .hero h1{font-size:132px;max-width:800px;margin:12px 0 16px}
+  .hero h1 span{color:var(--red)}
+  .hero p{font-size:18px;color:#d7d9df;max-width:470px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  section.horarios{padding:86px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:72px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .table{display:grid;grid-template-columns:140px repeat(5,1fr);border:1px solid var(--line)}
+  .table div{padding:14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
+  .table .h{background:var(--panel);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.1em;color:var(--ink2)}
+  .table .t{font-family:'Bebas Neue';font-size:22px}
+  .table .c{font-weight:700}
+  .table .c small{display:block;font-weight:500;color:var(--ink2);font-size:12px}
+  .table .c.r{background:rgba(224,34,46,.12);color:#ff8d94}
+  .table .c.b{background:rgba(31,61,138,.25);color:#a9bdf5}
+
+  section.planes{background:var(--panel);padding:86px 0 100px;border-top:1px solid var(--line)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pl{border:1px solid var(--line);background:var(--black);padding:26px;display:flex;flex-direction:column}
+  .pl.feat{border-color:var(--red)}
+  .pl h3{font-size:42px}
+  .pl p{color:var(--ink2);font-size:14.5px;margin:6px 0 16px;flex:1}
+  .pl ul{list-style:none;font-size:14px;margin-bottom:20px}
+  .pl li{padding:6px 0;border-bottom:1px solid var(--line)}
+  .pl li::before{content:"■ ";color:var(--red);font-size:10px}
+  .pl .btn{justify-content:center}
+  .gym{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .gym div{height:220px;background-size:cover;background-position:center}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--panel);border:1px solid var(--red);color:#fff;font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .bn small{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero{min-height:620px}
+    .hero h1{font-size:72px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.horarios{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:50px}
+    .table{grid-template-columns:70px repeat(3,1fr);font-size:12px}
+    .table .hide{display:none}
+    .table div{padding:10px 8px}
+    section.planes{padding:56px 0 60px}
+    .pgrid{grid-template-columns:1fr;gap:12px}
+    .gym{grid-template-columns:1fr 1fr}
+    .gym div{height:150px}
+    .gym div:last-child{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="shield">COLCHE<br>TEAM</span>
+    <span class="bn">Academia Colche Team<small>BOX RECREATIVO Y AMATEUR · LANÚS</small></span>
+    <nav class="links"><a href="#horarios">Horarios</a><a href="#planes">Planes</a><a href="#">Comunidad</a><a href="#">Ubicación</a></nav>
+    <a class="btn btn-r" href="#planes">Clase de prueba</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Gimnasio de box · Eva Perón 1621, Lanús Este</div>
+    <h1>Entrená como <span>un equipo.</span></h1>
+    <p>Box recreativo para ponerte en forma y box amateur para competir. Elegí tu horario y vení a probar una clase.</p>
+    <div class="ctas"><a class="btn btn-r" href="#horarios">Ver horarios</a><a class="btn btn-l" href="#planes">Quiero competir</a></div>
+  </div>
+</section>
+
+<section class="horarios" id="horarios">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Horarios</div><h2>Elegí tu turno</h2></div>
+      <p>Hoy los horarios son una historia destacada. Acá están siempre a la vista, por nivel, y se reserva el turno desde el celular.</p>
+    </div>
+    <div class="table">
+      <div class="h">Hora</div><div class="h">Lun</div><div class="h">Mar</div><div class="h">Mié</div><div class="h hide">Jue</div><div class="h hide">Vie</div>
+      <div class="t">08:00</div><div class="c r">Recreativo<small>Todos los niveles</small></div><div class="c">—</div><div class="c r">Recreativo<small>Todos los niveles</small></div><div class="c hide">—</div><div class="c r hide">Recreativo<small>Todos</small></div>
+      <div class="t">19:00</div><div class="c b">Amateur<small>Técnica y sparring</small></div><div class="c r">Recreativo<small>Principiantes</small></div><div class="c b">Amateur<small>Técnica</small></div><div class="c r hide">Recreativo<small>Principiantes</small></div><div class="c b hide">Amateur<small>Sparring</small></div>
+      <div class="t">20:30</div><div class="c r">Recreativo<small>Físico</small></div><div class="c b">Amateur<small>Físico</small></div><div class="c r">Recreativo<small>Físico</small></div><div class="c b hide">Amateur<small>Físico</small></div><div class="c hide">—</div>
+    </div>
+  </div>
+</section>
+
+<section class="planes" id="planes">
+  <div class="wrap">
+    <div class="head"><div><div class="k">Planes</div><h2>Tu forma de entrenar</h2></div><p>Cada plan explicado en simple, con el botón para anotarse que hoy falta en el perfil.</p></div>
+    <div class="pgrid">
+      <div class="pl"><h3>Clase de prueba</h3><p>Conocé el gimnasio y el método.</p><ul><li>Una clase</li><li>Conocé a los profes</li></ul><a class="btn btn-l" href="#">Reservar prueba</a></div>
+      <div class="pl feat"><h3>Box recreativo</h3><p>Para ponerte en forma y descargar.</p><ul><li>Técnica y físico</li><li>Todos los niveles</li><li>Comunidad Colche</li></ul><a class="btn btn-r" href="#">Anotarme</a></div>
+      <div class="pl"><h3>Box amateur</h3><p>Para quienes quieren competir.</p><ul><li>Sparring</li><li>Preparación para peleas</li></ul><a class="btn btn-l" href="#">Consultar</a></div>
+    </div>
+    <div class="gym">
+      <div style="background-image:url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&q=70&fit=crop')"></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?w=600&q=70&fit=crop')"></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=70&fit=crop')"></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · horarios y planes demo · imágenes de referencia</div>
+</body>
+</html>
