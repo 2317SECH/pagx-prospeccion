@@ -316,6 +316,20 @@
         "bocetos/evidencia/90-enduro-colombia-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos la comunidad que tienen en Enduro Colombia, pero las fechas de rodadas y los trips solo están en historias y todo se aparta por WhatsApp.\nLes proponemos una web con el calendario de rodadas por nivel, cupos y reserva directa.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 91,
+      "slug": "91-cali-flores",
+      "nombre": "Floristería Cali Flores",
+      "ig": "floristeria_califlores",
+      "lugar": "Cali, Colombia",
+      "nicho": "Floristería a domicilio (ramos, bouquets, corazones, fúnebres)",
+      "web": "Sin web (solo WhatsApp)",
+      "porque": "7,8K seguidores, cuenta verificada, publica casi a diario (05/10/2026) con captions tipo SEO ('Floristería en Cali | …'), pero no tiene web donde aterrice esa búsqueda: todo es por WhatsApp. Engagement bajo en IG → la web le daría el canal de Google. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/91-cali-flores-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Cali Flores escribe sus posts para quien busca \"floristería en Cali\", pero no hay una web donde esa búsqueda termine en pedido.\nLes proponemos una tienda por ocasión (aniversario, cumpleaños, fúnebres) con entrega en Cali y pedido en dos clics.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
