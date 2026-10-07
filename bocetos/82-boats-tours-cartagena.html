@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boats and Tours Cartagena (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a2e;--navy2:#0d2a47;--sea:#14b8c4;--sand:#f4ead8;--white:#fff;--ink2:#9fb4c8;--line:rgba(255,255,255,.12);--gold:#d8b46a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--navy);color:#fff;font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Italiana',serif;font-weight:400;line-height:1;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--navy)}
+  .btn-l{border:1px solid rgba(255,255,255,.5)}
+
+  header.nav{position:absolute;top:0;left:0;right:0;z-index:40}
+  .nav .wrap{display:flex;align-items:center;height:86px;gap:26px}
+  .logo{font-family:'Italiana';font-size:26px;letter-spacing:.06em;line-height:1}
+  .logo small{display:block;font-family:'Inter';font-size:9.5px;letter-spacing:.34em;color:var(--gold);margin-top:4px}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:#dce7f1}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:700;overflow:hidden}
+  .lang span{padding:6px 11px}.lang .on{background:#fff;color:var(--navy)}
+
+  .hero{position:relative;min-height:700px;display:flex;align-items:flex-end;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--navy) 0%,rgba(7,26,46,.45) 45%,rgba(7,26,46,.35) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:50px}
+  .hero h1{font-size:110px;margin:14px 0 16px;max-width:860px}
+  .hero p{font-size:18px;color:#dce7f1;max-width:500px;margin-bottom:28px}
+  .finder{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:0;background:#fff;color:var(--navy);border-radius:20px;overflow:hidden;margin-top:30px;max-width:1000px}
+  .finder div{padding:16px 20px;border-right:1px solid #e4ebf2}
+  .finder small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;color:#6b7f93;text-transform:uppercase}
+  .finder b{font-size:15px}
+  .finder .btn{border-radius:0;height:100%;background:var(--sea);color:#fff;padding:0 30px}
+
+  section.fleet{padding:90px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:64px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .boat{background:var(--navy2);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+  .boat .ph{height:230px;background-size:cover;background-position:center;position:relative}
+  .boat .cap{position:absolute;left:14px;top:14px;background:rgba(7,26,46,.82);font-size:12px;font-weight:600;padding:6px 11px;border-radius:999px}
+  .boat .bd{padding:22px}
+  .boat h3{font-size:34px}
+  .specs{display:flex;gap:16px;margin:10px 0 16px;font-size:13px;color:var(--ink2)}
+  .boat .row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px}
+  .boat .row b{font-size:17px}
+  .boat .row small{color:var(--ink2);font-size:12px;display:block}
+  .boat .row a{color:var(--sea);font-weight:700;font-size:14px}
+
+  section.routes{padding:20px 0 100px}
+  .rgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+  .map{border-radius:26px;min-height:420px;position:relative;overflow:hidden;background:url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=1100&q=70&fit=crop') center/cover}
+  .map::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,26,46,.85),transparent 55%)}
+  .map .bd{position:absolute;left:26px;bottom:24px;right:26px;z-index:2}
+  .map h3{font-size:44px}
+  .stops{display:flex;flex-direction:column;gap:12px}
+  .stop{border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;gap:16px;align-items:center}
+  .stop .n{font-family:'Italiana';font-size:38px;color:var(--gold);width:40px}
+  .stop h3{font-size:28px}
+  .stop p{font-size:14px;color:var(--ink2)}
+  .extras{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .extras span{border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--navy2);border:1px solid var(--gold);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .lang{margin-left:auto}
+    .hero{min-height:720px}
+    .hero h1{font-size:44px;overflow-wrap:anywhere}.hero .wrap{padding-top:90px}
+    .hero p{font-size:16px}
+    .finder{grid-template-columns:1fr 1fr}
+    .finder div{border-bottom:1px solid #e4ebf2}
+    .finder .btn{grid-column:span 2;padding:16px;justify-content:center}
+    section.fleet{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:44px}
+    .fgrid{grid-template-columns:1fr;gap:14px}
+    .boat .ph{height:190px}
+    section.routes{padding:0 0 60px}
+    .rgrid{grid-template-columns:1fr}
+    .map{min-height:280px}
+    .map h3{font-size:34px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Boats &amp; Tours<small>CARTAGENA</small></a>
+    <nav class="links"><a href="#flota">Flota</a><a href="#rutas">Rutas</a><a href="#">Catering</a><a href="#">DJ a bordo</a><a href="#">Reseñas</a></nav>
+    <div class="lang"><span class="on">ES</span><span>EN</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Charter privado · Yates y lanchas</div>
+    <h1>Lujo sin complicaciones. Tú solo disfrutas.</h1>
+    <p>Islas del Rosario, Cholón y Barú en yate o lancha privada, con catering y DJ a bordo si lo quieres. Elige fecha, grupo y ruta, y reserva en minutos.</p>
+    <a class="btn btn-g" href="#flota">Ver la flota</a>
+    <div class="finder">
+      <div><small>Fecha</small><b>Sáb 24 oct</b></div>
+      <div><small>Personas</small><b>8 a 12</b></div>
+      <div><small>Ruta</small><b>Islas del Rosario</b></div>
+      <div><small>Extras</small><b>Catering + DJ</b></div>
+      <a class="btn" href="#flota">Buscar →</a>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="flota">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">La flota</div><h2>Elige tu embarcación</h2></div>
+      <p>Hoy el catálogo y los precios viven en un link externo. Aquí cada barco tiene fotos, capacidad y precio desde, con reserva directa por WhatsApp.</p>
+    </div>
+    <div class="fgrid">
+      <div class="boat"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=800&q=70&fit=crop')"><span class="cap">Lancha deportiva</span></div><div class="bd"><h3>Lancha · 12 pax</h3><div class="specs"><span>12 personas</span><span>Día completo</span></div><div class="row"><div><small>Desde · demo</small><b>Consultar</b></div><a href="#">Reservar →</a></div></div></div>
+      <div class="boat"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=70&fit=crop')"><span class="cap">Yate</span></div><div class="bd"><h3>Yate · 20 pax</h3><div class="specs"><span>20 personas</span><span>Tripulación</span></div><div class="row"><div><small>Desde · demo</small><b>Consultar</b></div><a href="#">Reservar →</a></div></div></div>
+      <div class="boat"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=70&fit=crop')"><span class="cap">Experiencia VIP</span></div><div class="bd"><h3>Yate VIP</h3><div class="specs"><span>Catering</span><span>DJ a bordo</span></div><div class="row"><div><small>Desde · demo</small><b>Consultar</b></div><a href="#">Reservar →</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="routes" id="rutas">
+  <div class="wrap rgrid">
+    <div class="map"><div class="bd"><div class="k">Rutas</div><h3>El Caribe de Cartagena, a tu ritmo</h3></div></div>
+    <div class="stops">
+      <div class="stop"><span class="n">01</span><div><h3>Islas del Rosario</h3><p>Agua cristalina y playas para el día completo.</p></div></div>
+      <div class="stop"><span class="n">02</span><div><h3>Cholón</h3><p>El plan de fiesta en el agua, con música.</p></div></div>
+      <div class="stop"><span class="n">03</span><div><h3>Barú</h3><p>Playa, relax y beach club.</p></div></div>
+      <div class="extras"><span>Catering</span><span>DJ a bordo</span><span>Beach club</span><span>Equipo humano</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · embarcaciones y precios demo · imágenes de referencia</div>
+</body>
+</html>

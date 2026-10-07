@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herrería Artística Eduardo (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--iron:#151515;--iron2:#1f1f1f;--steel:#2b2b2b;--spark:#ff7a1a;--ash:#f1eee9;--ink2:#a7a19a;--line:#333}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--iron);color:var(--ash);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+  .mono{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--spark)}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:15px 26px;white-space:nowrap}
+  .btn-o{background:var(--spark);color:#111}
+  .btn-l{border:1px solid #555}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(21,21,21,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .seal{width:52px;height:52px;border-radius:50%;border:2px solid var(--ash);display:grid;place-items:center;text-align:center;font-family:'Big Shoulders Display';font-weight:800;font-size:11px;line-height:1}
+  .seal small{display:block;font-family:'IBM Plex Mono';font-size:7px;color:var(--spark)}
+  .bn{font-family:'Big Shoulders Display';font-weight:800;font-size:22px;letter-spacing:.04em;line-height:1}
+  .bn small{display:block;font-family:'IBM Plex Mono';font-size:9px;letter-spacing:.2em;color:var(--ink2)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2)}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,21,21,.96) 0%,rgba(21,21,21,.75) 50%,rgba(21,21,21,.2) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:112px;margin:16px 0 18px;max-width:760px}
+  .hero h1 span{color:var(--spark)}
+  .hero p{font-size:18px;color:#d6d0c8;max-width:470px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .since{position:absolute;right:44px;bottom:40px;z-index:2;text-align:right}
+  .since b{display:block;font-family:'Big Shoulders Display';font-size:90px;line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--ash)}
+
+  section.obras{padding:90px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:70px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .filters{display:flex;gap:0;border:1px solid var(--line);margin-bottom:22px;flex-wrap:wrap}
+  .filters span{padding:12px 18px;font-size:13px;border-right:1px solid var(--line);color:var(--ink2)}
+  .filters .on{background:var(--ash);color:var(--iron);font-weight:600}
+  .ogrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px}
+  .o{position:relative;background-size:cover;background-position:center;border:1px solid var(--line)}
+  .o:first-child{grid-row:span 2}
+  .o .bd{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}
+  .o h3{font-size:28px}
+  .o p{font-size:13px;color:#d6d0c8}
+
+  section.cot{background:var(--iron2);padding:80px 0 100px;border-top:1px solid var(--line)}
+  .cot .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .cot h2{font-size:64px;margin:12px 0 16px}
+  .cot p{color:var(--ink2);max-width:430px}
+  .steps{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .steps div{border:1px solid var(--line);padding:14px}
+  .steps b{display:block;font-family:'Big Shoulders Display';font-size:30px;color:var(--spark);line-height:1}
+  .steps span{font-size:13px;color:#d6d0c8}
+  .form{background:var(--ash);color:var(--iron);padding:28px}
+  .form h3{font-size:36px;margin-bottom:14px}
+  .f{border-bottom:1.5px solid #cfc9c0;padding:12px 0 10px;margin-bottom:6px}
+  .f small{display:block}
+  .f b{font-weight:500;color:#555}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 20px}
+  .chips span{border:1.5px solid var(--iron);padding:7px 12px;font-size:13px}
+  .chips .on{background:var(--iron);color:var(--ash)}
+  .form .btn{width:100%;justify-content:center}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--steel);border:1px solid var(--spark);color:#fff;font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .bn small{display:none}
+    .hero{min-height:620px;align-items:flex-end;padding-bottom:40px}
+    .hero::after{background:linear-gradient(0deg,rgba(21,21,21,.97) 40%,rgba(21,21,21,.35) 100%)}
+    .hero h1{font-size:64px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .since{display:none}
+    section.obras{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:48px}
+    .filters span{padding:10px 12px}
+    .ogrid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}
+    .o:first-child{grid-column:span 2;grid-row:auto}
+    .o h3{font-size:20px}
+    section.cot{padding:56px 0 60px}
+    .cot .wrap{grid-template-columns:1fr;gap:30px}
+    .cot h2{font-size:46px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <span class="seal"><span>EDUARDO<small>DESDE 2014</small></span></span>
+    <span class="bn">Herrería Artística<small>JOSÉ C. PAZ · BUENOS AIRES</small></span>
+    <nav class="links"><a href="#obras">Trabajos</a><a href="#obras">Puertas</a><a href="#obras">Escaleras</a><a href="#obras">Muebles</a><a href="#cotizar">Cotizar</a></nav>
+    <a class="btn btn-o" href="#cotizar">Cotizar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="mono">Muebles y cerramientos a medida</div>
+    <h1>Hierro hecho <span>a tu medida.</span></h1>
+    <p>Puertas, escaleras, cerramientos y muebles de hierro diseñados para cada cliente, desde el plano hasta la colocación.</p>
+    <div class="ctas"><a class="btn btn-o" href="#cotizar">Pedir presupuesto</a><a class="btn btn-l" href="#obras">Ver trabajos</a></div>
+  </div>
+  <div class="since"><span class="mono">Desde</span><b>2014</b></div>
+</section>
+
+<section class="obras" id="obras">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="mono">Trabajos terminados</div><h2>Del taller a tu casa</h2></div>
+      <p>Hoy cada obra queda perdida en el feed. Acá se ordenan por tipo para que el cliente vea exactamente lo que busca.</p>
+    </div>
+    <div class="filters"><span class="on">Todo</span><span>Puertas</span><span>Escaleras</span><span>Cerramientos</span><span>Muebles</span><span>Comercios</span></div>
+    <div class="ogrid">
+      <div class="o" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=70&fit=crop')"><div class="bd"><h3>Puerta granero hierro y vidrio</h3><p>Vidrio repartido laminado · a medida</p></div></div>
+      <div class="o" style="background-image:url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=700&q=70&fit=crop')"><div class="bd"><h3>Escaleras</h3><p>Estructura y barandas</p></div></div>
+      <div class="o" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=700&q=70&fit=crop')"><div class="bd"><h3>Cerramientos</h3><p>Seguridad con diseño</p></div></div>
+      <div class="o" style="background-image:url('https://images.unsplash.com/photo-1617806118233-18e1de247200?w=700&q=70&fit=crop')"><div class="bd"><h3>13 mesas para un café</h3><p>Hierro y pintura al horno</p></div></div>
+      <div class="o" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=700&q=70&fit=crop')"><div class="bd"><h3>Diseño a medida</h3><p>Del plano a la colocación</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cot" id="cotizar">
+  <div class="wrap">
+    <div>
+      <div class="mono">Presupuesto</div>
+      <h2>Contanos qué necesitás</h2>
+      <p>Medidas, tipo de trabajo y una foto del lugar: con eso llega un presupuesto más rápido y sin idas y vueltas por WhatsApp.</p>
+      <div class="steps"><div><b>01</b><span>Nos mandás medidas y fotos</span></div><div><b>02</b><span>Diseño y presupuesto</span></div><div><b>03</b><span>Fabricación y colocación</span></div></div>
+    </div>
+    <div class="form">
+      <h3>Pedí tu presupuesto</h3>
+      <div class="chips"><span class="on">Puerta</span><span>Escalera</span><span>Cerramiento</span><span>Mueble</span></div>
+      <div class="f"><small class="mono">Medidas aproximadas</small><b>Ancho x alto (ejemplo: 1,60 x 2,10 m)</b></div>
+      <div class="f"><small class="mono">Fotos del lugar</small><b>Subí 2 o 3 fotos</b></div>
+      <div class="f"><small class="mono">Zona</small><b>José C. Paz y alrededores</b></div>
+      <div style="height:16px"></div>
+      <a class="btn btn-o" href="#">Enviar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · imágenes de referencia, no son trabajos del taller</div>
+</body>
+</html>
