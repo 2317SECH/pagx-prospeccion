@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AltaMar · Escuela de buceo (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--abyss:#03111f;--deep:#06223a;--ocean:#0b4a6f;--aqua:#4fd6d0;--foam:#e8fbfa;--ink2:#9cc3cf;--line:rgba(255,255,255,.12);--sun:#ffcf6b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--abyss);color:var(--foam);font-family:'Outfit',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .tag{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--aqua);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-aqua{background:var(--aqua);color:var(--abyss)}
+  .btn-line{border:1px solid rgba(255,255,255,.4)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(3,17,31,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:26px}
+  .logo{font-family:'Bebas Neue';font-size:30px;letter-spacing:.04em}
+  .logo span{color:var(--aqua)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2)}
+
+  .hero{position:relative;min-height:660px;display:flex;align-items:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,31,.92) 0%,rgba(3,17,31,.55) 55%,rgba(3,17,31,.15) 100%),linear-gradient(0deg,var(--abyss),transparent 35%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:118px;margin:16px 0 18px;max-width:700px}
+  .hero h1 em{font-style:normal;color:var(--aqua)}
+  .hero p{font-size:19px;color:#cfe7ee;max-width:470px;margin-bottom:32px;font-weight:300}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .certs{display:flex;gap:10px;margin-top:40px;flex-wrap:wrap}
+  .certs span{border:1px solid var(--line);background:rgba(6,34,58,.6);padding:8px 14px;border-radius:10px;font-size:13px;font-weight:600;letter-spacing:.08em}
+  .depth{position:absolute;right:44px;top:120px;bottom:80px;z-index:2;display:flex;flex-direction:column;justify-content:space-between;font-size:11px;color:var(--ink2);letter-spacing:.16em;border-right:1px solid var(--line);padding-right:12px;text-align:right}
+
+  section.cal{padding:90px 0 70px;background:linear-gradient(180deg,var(--abyss),var(--deep))}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:72px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .months{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+  .months span{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--ink2)}
+  .months .on{background:var(--aqua);color:var(--abyss);border-color:var(--aqua);font-weight:600}
+  .trips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .trip{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .trip .ph{height:210px;background-size:cover;background-position:center;position:relative}
+  .trip .date{position:absolute;left:14px;top:14px;background:rgba(3,17,31,.82);border-radius:12px;padding:8px 12px;text-align:center;line-height:1}
+  .trip .date b{display:block;font-family:'Bebas Neue';font-size:28px;font-weight:400}
+  .trip .date small{font-size:10px;letter-spacing:.2em;color:var(--aqua)}
+  .trip .bd{padding:20px 22px 22px}
+  .trip h3{font-size:32px}
+  .trip p{font-size:14px;color:var(--ink2);margin:6px 0 14px}
+  .row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+  .cupos{display:flex;align-items:center;gap:8px;color:var(--sun)}
+  .bar{width:80px;height:6px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--sun)}
+  .trip .go{color:var(--aqua);font-weight:600}
+
+  section.cursos{padding:70px 0 100px;background:var(--deep)}
+  .ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .lv{padding:28px 24px;border-right:1px solid var(--line);position:relative;background:linear-gradient(180deg,rgba(79,214,208,calc(var(--d)*.06)),transparent)}
+  .lv:last-child{border-right:0}
+  .lv .m{font-family:'Bebas Neue';font-size:54px;color:var(--aqua);line-height:1}
+  .lv .m small{font-size:20px;color:var(--ink2)}
+  .lv h3{font-size:26px;margin:10px 0 6px}
+  .lv p{font-size:14px;color:var(--ink2)}
+  .lv .org{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.16em;border:1px solid var(--line);padding:5px 9px;border-radius:7px}
+  .band{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-radius:22px;padding:28px 32px;background:linear-gradient(110deg,#0d6b84,#0b4a6f)}
+  .band h3{font-size:40px}
+  .band p{color:#cfe7ee}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--abyss);border:1px solid var(--aqua);color:var(--foam);font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 16px;font-size:12px}
+    .hero{min-height:640px;align-items:flex-end;padding-bottom:40px}
+    .hero::after{background:linear-gradient(0deg,rgba(3,17,31,.97) 35%,rgba(3,17,31,.3) 100%)}
+    .depth{display:none}
+    .hero h1{font-size:70px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.cal{padding:56px 0 40px}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:50px}
+    .months{flex-wrap:nowrap;overflow:hidden}
+    .trips{grid-template-columns:1fr}
+    .trip .ph{height:180px}
+    section.cursos{padding:50px 0 60px}
+    .ladder{grid-template-columns:1fr 1fr}
+    .lv{border-bottom:1px solid var(--line)}
+    .lv:nth-child(2n){border-right:0}
+    .band{flex-direction:column;align-items:flex-start}
+    .band .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Alta<span>Mar</span></a>
+    <nav class="links"><a href="#cal">Expediciones 2027</a><a href="#cursos">Cursos</a><a href="#">Apnea</a><a href="#">Equipos</a><a href="#">Nosotros</a></nav>
+    <a class="btn btn-aqua" href="#cal">Reservar cupo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="tag">Escuela de buceo y apnea · desde Medellín</div>
+    <h1>Calma, aventura <em>y profundidad.</em></h1>
+    <p>Cursos con certificación internacional y expediciones para seguir explorando el azul. El calendario 2027 ya está abierto.</p>
+    <div class="ctas"><a class="btn btn-aqua" href="#cal">Ver calendario 2027</a><a class="btn btn-line" href="#cursos">Empezar a bucear</a></div>
+    <div class="certs"><span>PADI</span><span>SNSI</span><span>AIDA</span></div>
+  </div>
+  <div class="depth"><span>0 M</span><span>10 M</span><span>18 M</span><span>30 M</span></div>
+</section>
+
+<section class="cal" id="cal">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="tag">Calendario 2027</div><h2>Elige tu próxima inmersión</h2></div>
+      <p>Hoy el calendario es un PDF en Google Drive. Aquí cada salida tiene fecha, cupos en tiempo real y botón para apartar.</p>
+    </div>
+    <div class="months"><span class="on">Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span></div>
+    <div class="trips">
+      <div class="trip"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1518467166778-b88f373ffec7?w=800&q=70&fit=crop')"><div class="date"><b>18</b><small>ENE</small></div></div><div class="bd"><h3>Caribe · Arrecife</h3><p>Expedición de fin de semana, 4 inmersiones guiadas.</p><div class="row"><span class="cupos"><span class="bar"><i style="width:70%"></i></span> Quedan 3 cupos</span><span class="go">Apartar →</span></div></div></div>
+      <div class="trip"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?w=800&q=70&fit=crop')"><div class="date"><b>07</b><small>MAR</small></div></div><div class="bd"><h3>Pacífico · Tiburones</h3><p>Salida para buzos avanzados, temporada de grandes pelágicos.</p><div class="row"><span class="cupos"><span class="bar"><i style="width:40%"></i></span> Quedan 6 cupos</span><span class="go">Apartar →</span></div></div></div>
+      <div class="trip"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=70&fit=crop')"><div class="date"><b>22</b><small>ABR</small></div></div><div class="bd"><h3>Curso + viaje</h3><p>Certifícate en piscina y termina tus inmersiones en el mar.</p><div class="row"><span class="cupos"><span class="bar"><i style="width:20%"></i></span> Cupos abiertos</span><span class="go">Apartar →</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cursos" id="cursos">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="tag">Ruta de formación</div><h2>De la piscina al azul</h2></div>
+      <p>Cada nivel explicado en una frase, con profundidad, certificación y siguiente paso.</p>
+    </div>
+    <div class="ladder">
+      <div class="lv" style="--d:1"><div class="m">0–12<small> M</small></div><h3>Primera inmersión</h3><p>Prueba el buceo sin certificarte, acompañado.</p><span class="org">EXPERIENCIA</span></div>
+      <div class="lv" style="--d:2"><div class="m">18<small> M</small></div><h3>Open Water</h3><p>Tu certificación internacional para bucear en el mundo.</p><span class="org">PADI</span></div>
+      <div class="lv" style="--d:3"><div class="m">30<small> M</small></div><h3>Advanced</h3><p>Profundidad, navegación y nuevas especialidades.</p><span class="org">PADI</span></div>
+      <div class="lv" style="--d:4"><div class="m">1<small> RESPIRACIÓN</small></div><h3>Apnea</h3><p>Entrenamiento de apnea con certificación AIDA.</p><span class="org">AIDA</span></div>
+    </div>
+    <div class="band"><div><h3>¿No sabes por dónde empezar?</h3><p>Responde 3 preguntas y te recomendamos el curso ideal.</p></div><a class="btn btn-aqua" href="#">Hablar por WhatsApp →</a></div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · fechas, destinos y cupos demo · imágenes de referencia</div>
+</body>
+</html>

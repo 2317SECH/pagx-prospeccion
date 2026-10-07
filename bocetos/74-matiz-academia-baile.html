@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matiz Academia de Baile (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--night:#0d0820;--night2:#170f33;--violet:#8f3dff;--pink:#ff3fb4;--cyan:#38e1ff;--ink:#f6f2ff;--ink2:#b9add6;--line:rgba(255,255,255,.12)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--night);color:var(--ink);font-family:'Sora',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:800;letter-spacing:-.025em;line-height:1}
+  .script{font-family:'Pacifico',cursive;font-weight:400;letter-spacing:0}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-glow{background:linear-gradient(90deg,var(--violet),var(--pink));color:#fff;box-shadow:0 10px 34px rgba(255,63,180,.35)}
+  .btn-line{border:1px solid rgba(255,255,255,.35)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(13,8,32,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:26px}
+  .logo{font-family:'Pacifico';font-size:30px;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo small{display:block;font-family:'Sora';font-size:9px;letter-spacing:.24em;color:var(--ink2);-webkit-text-fill-color:var(--ink2);margin-top:-6px}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2);font-weight:600}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 40%,rgba(143,61,255,.25),transparent 55%),linear-gradient(90deg,rgba(13,8,32,.95) 0%,rgba(13,8,32,.7) 50%,rgba(13,8,32,.35) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:92px;max-width:760px;margin:16px 0 20px}
+  .hero h1 .script{font-size:.92em;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:8px}
+  .hero p{font-size:18px;color:#ddd3f5;max-width:480px;margin-bottom:32px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .rhythms{display:flex;gap:10px;margin-top:40px;flex-wrap:wrap}
+  .rhythms span{padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:13px;font-weight:600}
+
+  section.clases{padding:90px 0;background:linear-gradient(180deg,var(--night),var(--night2))}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:58px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .filters{display:flex;gap:26px;flex-wrap:wrap;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:20px;padding:18px 22px;margin-bottom:22px}
+  .fg small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px;font-weight:700}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:600;color:#ddd3f5}
+  .chips .on{background:var(--ink);color:var(--night);border-color:var(--ink)}
+  .sched{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cls{border-radius:20px;padding:22px;background:var(--night);border:1px solid var(--line);position:relative;overflow:hidden}
+  .cls::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+  .cls .when{font-size:13px;color:var(--ink2);font-weight:600}
+  .cls h3{font-size:28px;margin:8px 0 4px}
+  .cls .lvl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08);margin-bottom:14px}
+  .cls .row{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;border-top:1px solid var(--line);padding-top:14px}
+  .cls .row b{color:var(--c)}
+
+  section.sedes{padding:80px 0 100px}
+  .sgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}
+  .sede{border-radius:22px;overflow:hidden;background:var(--night2);border:1px solid var(--line)}
+  .sede .ph{height:200px;background-size:cover;background-position:center}
+  .sede .bd{padding:20px 22px}
+  .sede h3{font-size:26px}
+  .sede p{font-size:14px;color:var(--ink2);margin-top:4px}
+  .trial{margin-top:22px;border-radius:24px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(110deg,var(--violet),var(--pink))}
+  .trial h3{font-size:40px}
+  .trial p{opacity:.9}
+  .trial .btn{background:#fff;color:var(--night)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--night2);border:1px solid var(--pink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 16px;font-size:12px}
+    .hero{min-height:620px;align-items:flex-end;padding-bottom:40px}
+    .hero::after{background:linear-gradient(0deg,rgba(13,8,32,.97) 40%,rgba(13,8,32,.35) 100%)}
+    .hero h1{font-size:52px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.clases{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .filters{flex-direction:column;gap:14px;padding:16px}
+    .sched{grid-template-columns:1fr;gap:12px}
+    section.sedes{padding:50px 0 60px}
+    .sgrid{grid-template-columns:1fr}
+    .sede .ph{height:150px}
+    .trial{flex-direction:column;align-items:flex-start;padding:24px}
+    .trial h3{font-size:30px}
+    .trial .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Matiz<small>ACADEMIA DE BAILE</small></a>
+    <nav class="links"><a href="#clases">Horarios</a><a href="#sedes">Sedes</a><a href="#">Formativos</a><a href="#">Talleres</a><a href="#">Sociales</a></nav>
+    <a class="btn btn-glow" href="#clases">Clase de prueba</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="tag">Medellín · Bello · Robledo · Buenos Aires</div>
+    <h1>El baile que <span class="script">alimenta</span> el alma.</h1>
+    <p>Clases para todos los niveles, desde tu primer paso básico hasta la pista. Encuentra tu horario, tu sede y reserva tu clase de prueba.</p>
+    <div class="ctas"><a class="btn btn-glow" href="#clases">Encontrar mi clase</a><a class="btn btn-line" href="#sedes">Ver sedes</a></div>
+    <div class="rhythms"><span>Salsa</span><span>Bachata</span><span>Twerk</span><span>Formativo Babys</span><span>Talleres</span></div>
+  </div>
+</section>
+
+<section class="clases" id="clases">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="tag">Horarios</div><h2>Tu clase, en 3 toques</h2></div>
+      <p>Hoy horarios y sedes están repartidos en historias y en el Linktree. Aquí se filtran por ritmo, sede y nivel.</p>
+    </div>
+    <div class="filters">
+      <div class="fg"><small>Ritmo</small><div class="chips"><span class="on">Salsa</span><span>Bachata</span><span>Twerk</span><span>Niños</span></div></div>
+      <div class="fg"><small>Sede</small><div class="chips"><span>Bello</span><span class="on">Robledo</span><span>Buenos Aires</span></div></div>
+      <div class="fg"><small>Nivel</small><div class="chips"><span class="on">Desde cero</span><span>Intermedio</span><span>Avanzado</span></div></div>
+    </div>
+    <div class="sched">
+      <div class="cls" style="--c:var(--pink)"><div class="when">Lunes y miércoles · 7:00 PM</div><h3>Salsa desde cero</h3><span class="lvl">Básico</span><div class="row"><span>Sede Robledo</span><b>Reservar →</b></div></div>
+      <div class="cls" style="--c:var(--cyan)"><div class="when">Martes y jueves · 8:00 PM</div><h3>Salsa en pareja</h3><span class="lvl">Intermedio</span><div class="row"><span>Sede Robledo</span><b>Reservar →</b></div></div>
+      <div class="cls" style="--c:var(--violet)"><div class="when">Sábados · 10:00 AM</div><h3>Salsa + bachata</h3><span class="lvl">Básico</span><div class="row"><span>Sede Robledo</span><b>Reservar →</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sedes" id="sedes">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="tag">Sedes</div><h2>Baila cerca de casa</h2></div>
+      <p>Tres sedes con la misma esencia. Cada una con mapa, horarios y contacto directo.</p>
+    </div>
+    <div class="sgrid">
+      <div class="sede"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=900&q=70&fit=crop')"></div><div class="bd"><h3>Sede Robledo</h3><p>Horarios y mapa →</p></div></div>
+      <div class="sede"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1535525153412-5a42439a210d?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Sede Bello</h3><p>Horarios y mapa →</p></div></div>
+      <div class="sede"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1547153760-18fc86324498?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Sede Buenos Aires</h3><p>Horarios y mapa →</p></div></div>
+    </div>
+    <div class="trial"><div><h3>Reserva tu clase de prueba</h3><p>Elige ritmo y sede, y te esperamos en la pista.</p></div><a class="btn" href="#">Reservar por WhatsApp →</a></div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · horarios demo · imágenes de referencia</div>
+</body>
+</html>

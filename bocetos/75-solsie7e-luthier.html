@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLSIE7E · Luthier de vientos (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0c0c0c;--panel:#161616;--gold:#f2c230;--brass:#c99a3b;--ink:#f5f2ea;--ink2:#b3ab98;--line:#2a2824}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Syne',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:.98}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .tag{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:12px;white-space:nowrap}
+  .btn-gold{background:var(--gold);color:var(--black)}
+  .btn-line{border:1px solid #4a463d}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(12,12,12,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .s{width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--black);display:grid;place-items:center;font-family:'Syne';font-weight:800;font-size:20px}
+  .logo b{font-family:'Syne';font-size:20px;letter-spacing:.06em}
+  .logo small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--ink2)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:620px;border-bottom:1px solid var(--line)}
+  .hero .txt{padding:80px 50px 70px 0;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:76px;margin:18px 0 20px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:470px;margin-bottom:32px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{position:relative;background:url('https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=70&fit=crop') center/cover}
+  .ticket{position:absolute;left:-40px;bottom:50px;width:290px;background:var(--ink);color:var(--black);border-radius:18px;padding:18px 20px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+  .ticket small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#7a7364;font-weight:700}
+  .ticket b{display:block;font-family:'Syne';font-size:20px;margin:4px 0 10px}
+  .prog{display:flex;gap:4px}
+  .prog i{flex:1;height:6px;border-radius:9px;background:#ddd5c4}
+  .prog i.on{background:var(--brass)}
+  .ticket span{display:block;font-size:12.5px;margin-top:8px;color:#5a5446}
+
+  section.taller{padding:90px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .inst{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .ins{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .ins .ic{font-family:'Syne';font-size:13px;color:var(--gold);letter-spacing:.14em}
+  .ins h3{font-size:26px;margin:12px 0 6px}
+  .ins p{font-size:14px;color:var(--ink2)}
+  .ins ul{list-style:none;margin-top:14px;border-top:1px solid var(--line);padding-top:12px;font-size:13.5px}
+  .ins li{padding:4px 0;display:flex;gap:8px}
+  .ins li::before{content:"—";color:var(--gold)}
+  .ins.sel{border-color:var(--gold);background:linear-gradient(170deg,#2a2210,#161616)}
+
+  section.restor{padding:20px 0 100px}
+  .rgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
+  .case{position:relative;border-radius:22px;overflow:hidden;min-height:400px;background:url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=1100&q=70&fit=crop') center/cover}
+  .case::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 60%)}
+  .case .bd{position:absolute;left:26px;right:26px;bottom:24px;z-index:2}
+  .case h3{font-size:34px;margin:8px 0 6px}
+  .case p{color:#d8d1c0;font-size:14.5px}
+  .side{display:flex;flex-direction:column;gap:18px}
+  .diag{background:var(--gold);color:var(--black);border-radius:22px;padding:28px;flex:1}
+  .diag h3{font-size:34px;margin-bottom:10px}
+  .diag p{font-size:15px;margin-bottom:18px}
+  .diag .btn{background:var(--black);color:var(--gold)}
+  .shop{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px}
+  .shop h3{font-size:24px}
+  .shop p{font-size:14px;color:var(--ink2);margin:6px 0 10px}
+  .shop a{color:var(--gold);font-weight:700;font-size:14px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--panel);border:1px solid var(--gold);color:var(--ink);font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .logo small{display:none}
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero .pic{height:300px;order:-1}
+    .ticket{left:16px;right:16px;width:auto;bottom:-60px}
+    .hero .txt{padding:90px 0 46px}
+    .hero h1{font-size:36px}.hero .wrap{padding-right:20px!important}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.taller{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:30px}
+    .inst{grid-template-columns:1fr 1fr;gap:10px}
+    .ins{padding:16px}
+    .ins h3{font-size:17px}
+    .ins ul{display:none}
+    .rgrid{grid-template-columns:1fr}
+    .case{min-height:300px}.case h3{font-size:24px}.diag h3{font-size:26px}
+    section.restor{padding:0 0 60px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="s">S</span><span><b>SOLSIE7E</b><small>LUTHIER &amp; STORE · COLOMBIA</small></span></a>
+    <nav class="links"><a href="#taller">Taller</a><a href="#restauraciones">Restauraciones</a><a href="#">Marcas</a><a href="#">Tienda</a><a href="#">Artistas</a></nav>
+    <a class="btn btn-gold" href="#taller">Agendar revisión</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="padding-right:0">
+    <div class="txt">
+      <div class="tag">Especialistas en instrumentos de viento</div>
+      <h1>Tu instrumento suena como <em>debe sonar.</em></h1>
+      <p>Reparación y ajuste de saxofones, clarinetes, flautas y metales con diagnóstico preciso. Agenda tu revisión y sigue cada paso del arreglo.</p>
+      <div class="ctas"><a class="btn btn-gold" href="#taller">Agendar diagnóstico</a><a class="btn btn-line" href="#">Ver tienda</a></div>
+    </div>
+  </div>
+  <div class="pic">
+    <div class="ticket"><small>Orden de taller · ejemplo</small><b>Saxofón alto · ajuste completo</b><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span>Recibido → Diagnóstico → <strong>En ajuste</strong> → Listo</span></div>
+  </div>
+</section>
+
+<section class="taller" id="taller">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="tag">El taller</div><h2>¿Qué instrumento traes?</h2></div>
+      <p>El servicio de luthier es el corazón de SOLSIE7E, y hoy solo se agenda por WhatsApp. Aquí el músico elige su instrumento y el tipo de trabajo antes de escribir.</p>
+    </div>
+    <div class="inst">
+      <div class="ins sel"><div class="ic">01 · SAXOFÓN</div><h3>Saxofones</h3><p>Zapatillas, resortes, corchos y regulación.</p><ul><li>Diagnóstico</li><li>Ajuste completo</li><li>Overhaul</li></ul></div>
+      <div class="ins"><div class="ic">02 · CLARINETE</div><h3>Clarinetes</h3><p>Restauración de cuerpo y llaves, como el RC Prestige.</p><ul><li>Diagnóstico</li><li>Zapatillas</li><li>Restauración</li></ul></div>
+      <div class="ins"><div class="ic">03 · FLAUTA</div><h3>Flautas</h3><p>Ajuste de mecanismo y sellado.</p><ul><li>Diagnóstico</li><li>Ajuste</li><li>Limpieza</li></ul></div>
+      <div class="ins"><div class="ic">04 · METALES</div><h3>Metales</h3><p>Trompetas y trombones: pistones, bombas y abolladuras.</p><ul><li>Diagnóstico</li><li>Desabollado</li><li>Limpieza química</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="restor" id="restauraciones">
+  <div class="wrap rgrid">
+    <div class="case"><div class="bd"><div class="tag">Restauraciones del taller</div><h3>Antes y después, con detalle</h3><p>Cada trabajo con fotos del proceso: lo que hoy está en historias destacadas, organizado como portafolio que genera confianza.</p></div></div>
+    <div class="side">
+      <div class="diag"><h3>Diagnóstico preciso</h3><p>Cuéntanos marca, modelo y qué está fallando. Te respondemos con un estimado antes de que traigas el instrumento.</p><a class="btn" href="#">Enviar por WhatsApp →</a></div>
+      <div class="shop"><h3>Instrumentos y accesorios</h3><p>Nuevos y usados, conectados a la tienda actual.</p><a href="#">Ir a la tienda →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · orden de taller de ejemplo · imágenes de referencia</div>
+</body>
+</html>
