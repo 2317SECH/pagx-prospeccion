@@ -531,6 +531,20 @@
         "bocetos/evidencia/105-discopolis-vinilos-web-actual.png"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Discópolis tiene 70 años de historia, pero su web hoy muestra un error de seguridad y las ventas en línea van por Discogs y PayPal.\nLes proponemos una tienda Shopify propia con catálogo por género, recomendados de la casa y su historia.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 106,
+      "slug": "106-miggys-mobile-detailing",
+      "nombre": "Miggy's Mobile Detailing",
+      "ig": "miggys_mobiledetailing",
+      "lugar": "Estados Unidos (servicio a domicilio)",
+      "nicho": "Detailing móvil: foam wash, cera, motor, clay bar, cerámico",
+      "web": "Sin web para el detailing (el link de la bio lleva a su negocio de alquiler de slingshots)",
+      "porque": "9,6K seguidores, activo (29/09/2026), trabaja autos de alta gama (Corvette C8, Z06, Sprinter) y cobra depósito obligatorio, pero servicios y reservas se manejan por DM y el link de la bio es de otro negocio. Prioridad MEDIA-ALTA. Mensaje en inglés.",
+      "evidencia": [
+        "bocetos/evidencia/106-miggys-mobile-detailing-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nYour details on C8s and Z06s look insane, but your bio link goes to the slingshot rentals and bookings with deposit happen by DM.\nWe'd build a detailing site with clear packages, online booking and the deposit paid at checkout.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miggy's Mobile Detailing (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#07090d;--panel:#10141c;--blue:#1e8bff;--cyan:#5fd8ff;--white:#f3f6fa;--ink2:#97a2b3;--line:#1e2533;--red:#ff3b3b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Teko',sans-serif;font-weight:700;text-transform:uppercase;line-height:.88;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:10px;white-space:nowrap;text-transform:uppercase;letter-spacing:.06em}
+  .btn-b{background:var(--blue);color:#fff;box-shadow:0 10px 30px rgba(30,139,255,.35)}
+  .btn-l{border:1.5px solid #3a4558}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(7,9,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'Teko';font-size:34px;font-weight:700;line-height:.8}
+  .logo span{color:var(--blue)}
+  .logo small{display:block;font-family:'Inter';font-size:9px;letter-spacing:.3em;color:var(--ink2);font-weight:600}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,9,13,.95) 0%,rgba(7,9,13,.6) 50%,rgba(7,9,13,.2) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:132px;max-width:700px;margin:10px 0 10px}
+  .hero h1 span{color:var(--blue)}
+  .hero p{font-size:18px;color:#cfd7e3;max-width:460px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .we{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+  .we span{border:1px solid var(--line);background:rgba(16,20,28,.8);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+
+  section.pk{padding:84px 0;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:74px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .p{border:1px solid var(--line);border-radius:22px;padding:24px;background:var(--black);display:flex;flex-direction:column}
+  .p.feat{border-color:var(--blue);box-shadow:0 20px 60px rgba(30,139,255,.15)}
+  .p .tag{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--cyan);margin-bottom:8px}
+  .p h3{font-size:44px}
+  .p ul{list-style:none;font-size:14px;margin:12px 0 18px;flex:1}
+  .p li{padding:7px 0;border-bottom:1px solid var(--line)}
+  .p li::before{content:"✓ ";color:var(--blue);font-weight:800}
+  .p .price{font-family:'Teko';font-size:32px;color:var(--white);margin-bottom:12px}
+  .p .btn{justify-content:center}
+
+  section.book{padding:84px 0 100px}
+  .book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .book h2{font-size:70px;margin:12px 0 14px}
+  .book p{color:var(--ink2);max-width:430px}
+  .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+  .pics div{height:150px;border-radius:16px;background-size:cover;background-position:center}
+  .form{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:26px}
+  .form h3{font-size:42px;margin-bottom:12px}
+  .f{border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .dep{display:flex;justify-content:space-between;align-items:center;background:rgba(30,139,255,.1);border:1px solid rgba(30,139,255,.4);border-radius:12px;padding:12px 14px;margin:6px 0 14px;font-size:14px}
+  .dep b{color:var(--cyan)}
+  .form .btn{width:100%;justify-content:center}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--panel);border:1px solid var(--blue);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero{min-height:620px;align-items:flex-end;padding-bottom:40px}
+    .hero::after{background:linear-gradient(0deg,rgba(7,9,13,.97) 40%,rgba(7,9,13,.35) 100%)}
+    .hero h1{font-size:76px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.pk{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:54px}
+    .pgrid{grid-template-columns:1fr;gap:12px}
+    section.book{padding:56px 0 60px}
+    .book .wrap{grid-template-columns:1fr;gap:28px}
+    .book h2{font-size:52px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">MIGGY'S<span>.</span><small>MOBILE DETAILING</small></a>
+    <nav class="links"><a href="#pk">Packages</a><a href="#pk">Ceramic coating</a><a href="#book">Book</a><a href="#">Gallery</a></nav>
+    <a class="btn btn-b" href="#book">Book now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Mobile detailing at your home or work</div>
+    <h1>Wet looks <span>only.</span></h1>
+    <p>Foam washes, wax, engine detailing, clay bar and ceramic coating, done where you park. Pick your package and lock your spot with a deposit.</p>
+    <div class="ctas"><a class="btn btn-b" href="#pk">See packages</a><a class="btn btn-l" href="#book">Book a detail</a></div>
+    <div class="we"><span>We come to you</span><span>Ceramic coating</span><span>Exotics welcome</span></div>
+  </div>
+</section>
+
+<section class="pk" id="pk">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Packages</div><h2>Pick your level</h2></div>
+      <p>Today services are listed in the bio and quoted by DM. Here each package shows what's included and books online.</p>
+    </div>
+    <div class="pgrid">
+      <div class="p"><span class="tag">EXTERIOR</span><h3>Foam wash</h3><ul><li>Foam wash</li><li>Wheels &amp; tires</li><li>Wax</li></ul><div class="price">$ demo</div><a class="btn btn-l" href="#book">Book</a></div>
+      <div class="p feat"><span class="tag">MOST BOOKED</span><h3>Full detail</h3><ul><li>Interior deep cleaning</li><li>Foam wash + clay bar</li><li>Engine detailing</li><li>Wax</li></ul><div class="price">$ demo</div><a class="btn btn-b" href="#book">Book</a></div>
+      <div class="p"><span class="tag">PROTECTION</span><h3>Ceramic coat</h3><ul><li>Paint correction</li><li>Ceramic coating</li><li>Long-term gloss</li></ul><div class="price">Quote</div><a class="btn btn-l" href="#book">Request quote</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <div class="k">Booking</div>
+      <h2>Lock your spot</h2>
+      <p>"Deposit a must" becomes a smooth checkout: choose package, address and time, and pay the deposit online.</p>
+      <div class="pics"><div style="background-image:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=500&q=70&fit=crop')"></div><div style="background-image:url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&q=70&fit=crop')"></div></div>
+    </div>
+    <div class="form">
+      <h3>Book a detail</h3>
+      <div class="f"><small>Vehicle</small>Truck · SUV · Sedan · Exotic</div>
+      <div class="f"><small>Package</small>Full detail</div>
+      <div class="f"><small>Where</small>Home or work address</div>
+      <div class="f"><small>When</small>Sat, Oct 18 · 9:00 AM (example)</div>
+      <div class="dep"><span>Deposit to confirm</span><b>$ demo</b></div>
+      <a class="btn btn-b" href="#">Pay deposit &amp; book →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">PAGX Studio concept · not the live site · demo prices · reference images</div>
+</body>
+</html>
