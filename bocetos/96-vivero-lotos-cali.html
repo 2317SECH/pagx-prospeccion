@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vivero Lotos · Jardines acuáticos (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--pond:#0f3b3a;--pond2:#155250;--leaf:#5f9a5a;--lotus:#e88aa6;--mist:#eef4ef;--cream:#fbfaf6;--ink:#17302b;--ink2:#5d716b;--line:#dbe6df}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Outfit',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-p{background:var(--lotus);color:#2a0f19}
+  .btn-w{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+  .btn-d{background:var(--pond);color:#fff}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(251,250,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{font-family:'DM Serif Display';font-size:30px;color:var(--pond);line-height:.9}
+  .logo small{display:block;font-family:'Outfit';font-size:9.5px;letter-spacing:.26em;color:var(--lotus);font-weight:700}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1474557157379-8aa74a6ef541?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,59,58,.94) 0%,rgba(15,59,58,.6) 50%,rgba(15,59,58,.1) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero .k{color:#a9d6a3}
+  .hero h1{font-size:86px;max-width:660px;margin:14px 0 18px}
+  .hero h1 em{color:var(--lotus)}
+  .hero p{font-size:18px;opacity:.9;max-width:470px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .event{position:absolute;right:44px;bottom:44px;z-index:2;background:#fff;color:var(--ink);border-radius:22px;padding:20px 22px;width:300px;box-shadow:0 24px 50px rgba(0,0,0,.25)}
+  .event small{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--lotus)}
+  .event b{display:block;font-family:'DM Serif Display';font-size:26px;font-weight:400;margin:4px 0}
+  .event span{font-size:13px;color:var(--ink2)}
+
+  section.cat{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:56px;color:var(--pond)}
+  .head p{max-width:420px;color:var(--ink2)}
+  .cgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+  .c{position:relative;border-radius:24px;overflow:hidden;background-size:cover;background-position:center}
+  .c:first-child{grid-row:span 2}
+  .c::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,59,58,.8),transparent 55%)}
+  .c .bd{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff}
+  .c h3{font-size:28px}
+  .c p{font-size:13px;opacity:.85}
+  .c.solid{background:var(--mist)}
+  .c.solid::after{display:none}
+  .c.solid .bd{color:var(--ink)}
+
+  section.proy{background:var(--pond);color:#fff;padding:84px 0 100px}
+  .proy .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .proy .k{color:#a9d6a3}
+  .proy h2{font-size:52px;margin:12px 0 14px}
+  .proy p{opacity:.85;max-width:440px}
+  .steps{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .steps div{background:var(--pond2);border-radius:16px;padding:14px}
+  .steps b{display:block;font-family:'DM Serif Display';font-size:26px;color:var(--lotus);font-weight:400}
+  .steps span{font-size:13px}
+  .form{background:#fff;color:var(--ink);border-radius:26px;padding:28px}
+  .form h3{font-size:30px;margin-bottom:14px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+  .chips .on{background:var(--pond);border-color:var(--pond);color:#fff}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--pond);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero{min-height:0;flex-direction:column;align-items:stretch;padding:50px 0 24px}
+    .hero::after{background:rgba(15,59,58,.78)}
+    .hero h1{font-size:52px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .event{position:relative;right:auto;bottom:auto;width:auto;margin:26px 20px 0}
+    section.cat{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .cgrid{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}
+    .c:first-child{grid-column:span 2;grid-row:auto}
+    .c h3{font-size:22px}
+    section.proy{padding:56px 0 60px}
+    .proy .wrap{grid-template-columns:1fr;gap:28px}
+    .proy h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Lotos<small>VIVERO · JARDINES ACUÁTICOS</small></a>
+    <nav class="links"><a href="#cat">Acuáticas</a><a href="#cat">Exóticas</a><a href="#cat">Orquídeas</a><a href="#proy">Proyectos</a><a href="#">Open House</a></nav>
+    <a class="btn btn-d" href="#proy">Cotizar mi jardín</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Productores y comercializadores de plantas acuáticas · Cali</div>
+    <h1>Expertos en <em>jardines acuáticos.</em></h1>
+    <p>Lotos, plantas acuáticas, exóticas y orquídeas, y el diseño de tu propio estanque. Visítanos en el vivero o cotiza tu proyecto.</p>
+    <div class="ctas"><a class="btn btn-p" href="#cat">Ver plantas</a><a class="btn btn-w" href="#proy">Diseñar mi estanque</a></div>
+  </div>
+  <div class="event"><small>4.ª EDICIÓN</small><b>Open House Vivero Lotos</b><span>Talleres, nuevos lanzamientos y descuentos · Inscríbete aquí</span></div>
+</section>
+
+<section class="cat" id="cat">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Catálogo</div><h2>Del estanque a la sala</h2></div>
+      <p>Hoy cada línea vive en una historia destacada. Aquí se exploran por categoría, con cuidados y disponibilidad.</p>
+    </div>
+    <div class="cgrid">
+      <div class="c" style="background-image:url('https://images.unsplash.com/photo-1474557157379-8aa74a6ef541?w=900&q=70&fit=crop')"><div class="bd"><h3>Acuáticas</h3><p>Lotos, ninfas y plantas para estanque</p></div></div>
+      <div class="c" style="background-image:url('https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=70&fit=crop')"><div class="bd"><h3>Exóticas</h3><p>Caladium y follajes</p></div></div>
+      <div class="c" style="background-image:url('https://images.unsplash.com/photo-1526397751294-331021109fbd?w=600&q=70&fit=crop')"><div class="bd"><h3>Ornamentales</h3><p>Para interior y jardín</p></div></div>
+      <div class="c solid"><div class="bd"><h3>Orquídeas</h3><p>Cuidados y variedades</p></div></div>
+      <div class="c solid"><div class="bd"><h3>Cactus y suculentas</h3><p>Fáciles de cuidar</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="proy" id="proy">
+  <div class="wrap">
+    <div>
+      <div class="k">Proyectos</div>
+      <h2>Tu jardín acuático, de la idea al agua</h2>
+      <p>El servicio de proyectos, hoy escondido en historias, con un formulario que llega con medidas y fotos.</p>
+      <div class="steps"><div><b>1</b><span>Nos cuentas tu espacio</span></div><div><b>2</b><span>Diseño y plantas</span></div><div><b>3</b><span>Plantas y entrega</span></div></div>
+    </div>
+    <div class="form">
+      <h3>Cotizar proyecto</h3>
+      <div class="q"><small>Tipo de proyecto</small><div class="chips"><span class="on">Estanque</span><span>Fuente</span><span>Jardín</span><span>Empresa</span></div></div>
+      <div class="q"><small>Espacio aproximado</small><div class="chips"><span>Pequeño</span><span class="on">Mediano</span><span>Grande</span></div></div>
+      <div class="q"><small>Ciudad</small><div class="chips"><span class="on">Cali</span><span>Popayán</span><span>Otra</span></div></div>
+      <a class="btn btn-d" href="#">Enviar por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · imágenes de referencia, no son plantas del vivero</div>
+</body>
+</html>
