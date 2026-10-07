@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anayram · Joyería hecha a mano (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ivory:#faf6ef;--sand:#efe6d6;--ink:#1d1a17;--ink2:#6e665c;--line:#e5dccd;--gold:#b88b3e;--y:#f4c20d;--b:#1f4fa3;--r:#d1262f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Italiana',serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:15px 26px;white-space:nowrap}
+  .btn-d{background:var(--ink);color:#fff}
+  .btn-l{border:1px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo i{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-family:'Italiana';font-style:normal;font-size:24px}
+  .logo b{font-family:'Italiana';font-weight:400;font-size:22px;letter-spacing:.42em}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:600px;padding-top:20px;padding-bottom:50px}
+  .hero h1{font-size:84px;margin:16px 0 18px}
+  .hero p{font-size:18px;color:var(--ink2);max-width:440px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stage{height:520px;background:var(--sand);border-radius:240px 240px 0 0;position:relative;display:grid;place-items:center;overflow:hidden}
+  .collar{position:relative;width:340px;height:200px}
+  .collar span{position:absolute;width:13px;height:30px;border-radius:5px}
+  .viral{position:absolute;left:20px;bottom:20px;background:#fff;padding:12px 16px;font-size:13px;border:1px solid var(--line)}
+  .viral b{display:block;font-family:'Italiana';font-size:22px}
+
+  section.col{padding:84px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .cats{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+  .cats span{padding:9px 16px;border:1px solid var(--line);font-size:13px;letter-spacing:.06em}
+  .cats .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .p .art{height:230px;background:var(--ivory);display:grid;place-items:center;border:1px solid var(--line)}
+  .beads{display:grid;gap:3px}
+  .beads i{width:12px;height:12px;border-radius:50%;display:block}
+  .p h3{font-size:24px;margin-top:12px}
+  .p span{font-size:13px;color:var(--ink2)}
+
+  section.custom{padding:84px 0 100px}
+  .custom .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .custom h2{font-size:54px;margin:12px 0 14px}
+  .custom p{color:var(--ink2);max-width:430px}
+  .form{background:#fff;border:1px solid var(--line);padding:28px}
+  .form h3{font-size:30px;margin-bottom:14px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .sw{display:flex;gap:8px}
+  .sw i{width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+  .sw i.on{box-shadow:0 0 0 2px var(--ink)}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1px solid var(--line);padding:7px 13px;font-size:13px}
+  .chips .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .form .btn{width:100%;justify-content:center;margin-top:8px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .logo b{font-size:17px;letter-spacing:.3em}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:11px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:26px}
+    .hero h1{font-size:52px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .stage{height:360px}
+    .collar{transform:scale(.8)}
+    section.col{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .pgrid{grid-template-columns:1fr 1fr;gap:12px}
+    .p .art{height:170px;overflow:hidden}.beads{transform:scale(.72)}
+    section.custom{padding:56px 0 60px}
+    .custom .wrap{grid-template-columns:1fr;gap:28px}
+    .custom h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><i>A</i><b>ANAYRAM</b></a>
+    <nav class="links"><a href="#col">Collares</a><a href="#col">Pulseras</a><a href="#col">Aretes</a><a href="#col">Bolsos</a><a href="#custom">Personalizado</a></nav>
+    <a class="btn btn-d" href="#col">Comprar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Joyería hecha a mano · Medellín</div>
+      <h1>Colombia, tejida cuenta por cuenta.</h1>
+      <p>Collares, pulseras, aretes y bolsos en chaquira, hechos a mano en Medellín.</p>
+      <div class="ctas"><a class="btn btn-d" href="#col">Ver colección</a><a class="btn btn-l" href="#custom">Diseñar el mío</a></div>
+    </div>
+    <div class="stage"><div class="collar" id="collar"></div><div class="viral"><b>El collar tricolor</b>La pieza que enamoró a miles</div></div>
+  </div>
+</section>
+
+<section class="col" id="col">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Colección</div><h2>Elige tu pieza</h2></div>
+      <p>Hoy cada categoría vive en una historia destacada y se compra por mensaje. Aquí se navega como tienda y se pide en un clic.</p>
+    </div>
+    <div class="cats"><span class="on">Collares</span><span>Pulseras</span><span>Aretes</span><span>Anillos</span><span>Bolsos</span></div>
+    <div class="pgrid">
+      <div class="p"><div class="art"><div class="beads" data-p="tri"></div></div><h3>Collar tricolor</h3><span>Amarillo, azul y rojo</span></div>
+      <div class="p"><div class="art"><div class="beads" data-p="green"></div></div><h3>Collar esmeralda</h3><span>Tonos verdes</span></div>
+      <div class="p"><div class="art"><div class="beads" data-p="multi"></div></div><h3>Aretes triángulo</h3><span>Colores a elección</span></div>
+      <div class="p"><div class="art"><div class="beads" data-p="blue"></div></div><h3>Pulsera azul</h3><span>Ejemplo de catálogo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div>
+      <div class="k">Hecho para ti</div>
+      <h2>Diseña tu pieza</h2>
+      <p>Elige colores y tipo de pieza; el pedido llega a WhatsApp con todo definido, sin ir y venir con fotos.</p>
+    </div>
+    <div class="form">
+      <h3>Pedido personalizado</h3>
+      <div class="q"><small>Pieza</small><div class="chips"><span class="on">Collar</span><span>Pulsera</span><span>Aretes</span><span>Bolso</span></div></div>
+      <div class="q"><small>Colores</small><div class="sw"><i class="on" style="background:#f4c20d"></i><i class="on" style="background:#1f4fa3"></i><i class="on" style="background:#d1262f"></i><i style="background:#1d8a4e"></i><i style="background:#111"></i><i style="background:#f2f0ea"></i></div></div>
+      <div class="q"><small>Envío</small><div class="chips"><span class="on">Medellín</span><span>Resto de Colombia</span></div></div>
+      <a class="btn btn-d" href="#">Pedir por WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · piezas ilustradas, no son fotos de la marca</div>
+<script>
+  const c=document.getElementById('collar'),cols=['#f4c20d','#f4c20d','#1f4fa3','#d1262f'];
+  for(let i=0;i<26;i++){const a=Math.PI*(0.1+0.8*i/25),x=170+150*Math.cos(a)-6,y=10+150*Math.sin(a)-60;const s=document.createElement('span');s.style.left=x+'px';s.style.top=y+'px';s.style.transform='rotate('+((a*180/Math.PI)-90)+'deg)';s.style.background='linear-gradient('+cols.map((k,j)=>k+' '+(j*25)+'% '+((j+1)*25)+'%').join(',')+')';c.appendChild(s)}
+  const P={tri:['#f4c20d','#f4c20d','#1f4fa3','#d1262f'],green:['#1d8a4e','#9bd36a','#0f5b33','#f2f0ea'],multi:['#e94f7c','#f6a623','#3fb6c6','#7a5cd6'],blue:['#1f4fa3','#5aa0e6','#f2f0ea','#1f4fa3']};
+  document.querySelectorAll('.beads').forEach(b=>{const p=P[b.dataset.p];b.style.gridTemplateColumns='repeat(12,12px)';for(let r=0;r<8;r++)for(let k=0;k<12;k++){const i=document.createElement('i');i.style.background=p[(b.dataset.p==='tri'?Math.floor(r/2):(r+k))%p.length];b.appendChild(i)}});
+</script>
+</body>
+</html>
