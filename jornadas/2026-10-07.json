@@ -302,6 +302,20 @@
         "bocetos/evidencia/89-origen-ceramica-medellin-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que las tazas con mascotas de Origen se vuelven virales, pero talleres y pedidos dependen de un catálogo genérico e historias.\nLes proponemos una web con talleres por fecha y un pedido guiado de tazas (foto, modelo y envío).\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 90,
+      "slug": "90-enduro-colombia",
+      "nombre": "Enduro Colombia · Motos y tours",
+      "ig": "endurocolombia",
+      "lugar": "Colombia (Antioquia — rodadas en Doradal y otras rutas)",
+      "nicho": "Tours, eventos y comunidad de enduro",
+      "web": "Sin web (solo WhatsApp)",
+      "porque": "20,6K seguidores, cuenta verificada, activo (16/09/2026). El calendario de rodadas ('Fechas enduro') y los trips viven en historias destacadas; el catálogo y las reservas son solo por WhatsApp. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/90-enduro-colombia-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos la comunidad que tienen en Enduro Colombia, pero las fechas de rodadas y los trips solo están en historias y todo se aparta por WhatsApp.\nLes proponemos una web con el calendario de rodadas por nivel, cupos y reserva directa.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
