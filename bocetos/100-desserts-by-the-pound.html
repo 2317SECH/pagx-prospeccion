@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desserts by the Pound · Miami (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,600;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0e0b0d;--panel:#18131a;--gold:#d8b26a;--pink:#ff5fa8;--teal:#2ad1d1;--cream:#fff6f1;--ink2:#b8a9b3;--line:#2b2228}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--cream);font-family:'Montserrat',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:600;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:15px 26px;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--black)}
+  .btn-l{border:1px solid var(--gold);color:var(--gold)}
+
+  .bar{background:var(--pink);color:#fff;text-align:center;font-size:12px;font-weight:700;letter-spacing:.14em;padding:8px}
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(14,11,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:24px}
+  .logo{font-family:'Bodoni Moda';font-size:24px;line-height:1}
+  .logo i{color:var(--pink)}
+  .logo small{display:block;font-family:'Montserrat';font-style:normal;font-size:9px;letter-spacing:.3em;color:var(--gold)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+  .cart{border:1px solid var(--line);padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.1em}
+
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:640px;border-bottom:1px solid var(--line)}
+  .hero .txt{padding:70px 56px 60px 44px;display:flex;flex-direction:column;justify-content:center;max-width:620px;margin-left:auto}
+  .hero h1{font-size:80px;margin:16px 0 18px}
+  .hero h1 i{color:var(--pink);font-weight:500}
+  .hero p{font-size:17px;color:#e3d6dd;max-width:440px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{position:relative;background:url('https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=1200&q=70&fit=crop') center/cover}
+  .hero .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black),transparent 25%)}
+  .crown{position:absolute;right:26px;bottom:26px;z-index:2;background:rgba(14,11,13,.88);border:1px solid var(--gold);padding:14px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .crown b{display:block;font-family:'Bodoni Moda';font-size:22px;letter-spacing:0;text-transform:none;color:var(--cream)}
+
+  section.menu{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .m{background:var(--panel);border:1px solid var(--line)}
+  .m .ph{height:250px;background-size:cover;background-position:center}
+  .m .bd{padding:16px 18px 20px}
+  .m h3{font-size:24px}
+  .m p{font-size:13px;color:var(--ink2);margin:4px 0 12px}
+  .m .row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
+  .m .row a{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+
+  section.custom{background:var(--panel);border-top:1px solid var(--line);padding:84px 0 100px}
+  .custom .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .custom h2{font-size:52px;margin:12px 0 14px}
+  .custom p{color:var(--ink2);max-width:430px}
+  .steps{margin-top:24px;border-top:1px solid var(--line)}
+  .steps div{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .steps b{font-family:'Bodoni Moda';color:var(--gold);font-size:22px;width:28px}
+  .form{background:var(--black);border:1px solid var(--gold);padding:28px}
+  .form h3{font-size:30px;margin-bottom:16px}
+  .q{margin-bottom:14px}
+  .q small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px;font-weight:700}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1px solid var(--line);padding:7px 12px;font-size:13px}
+  .chips .on{background:var(--pink);border-color:var(--pink);color:#fff}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--panel);border:1px solid var(--gold);color:var(--cream);font-size:11px;padding:8px 13px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:66px}
+    .cart{margin-left:auto}
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero .pic{height:340px;order:-1}
+    .hero .pic::after{background:linear-gradient(0deg,var(--black),transparent 40%)}
+    .hero .txt{padding:30px 20px 46px;margin:0}
+    .hero h1{font-size:46px}
+    .hero p{font-size:15.5px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.menu{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .mgrid{grid-template-columns:1fr 1fr;gap:10px}
+    .m .ph{height:150px}
+    .m h3{font-size:19px}
+    section.custom{padding:56px 0 60px}
+    .custom .wrap{grid-template-columns:1fr;gap:28px}
+    .custom h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">CUSTOM CAKES · MIAMI, FL</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Desserts <i>by the Pound</i><small>LUXURY DESSERT BRAND</small></a>
+    <nav class="links"><a href="#custom">Custom cakes</a><a href="#menu">Birthday box</a><a href="#menu">Slices</a><a href="#">Pop-up shop</a><a href="#">Reviews</a></nav>
+    <a class="cart" href="#">BAG (0)</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="txt">
+    <div class="k">Black-owned luxury dessert brand · Miami</div>
+    <h1>Big flavor. <i>Bigger</i> celebrations.</h1>
+    <p>Custom cakes and elevated treat experiences, made to be the center of the party. Order your cake, birthday box or slices online.</p>
+    <div class="ctas"><a class="btn btn-g" href="#custom">Design your cake</a><a class="btn btn-l" href="#menu">Shop treats</a></div>
+  </div>
+  <div class="pic"><div class="crown">Signature<b>Heart cakes</b></div></div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Shop</div><h2>Ready to order</h2></div>
+      <p>Today the menu and price list live in story highlights. Here each product has photos, options and checkout.</p>
+    </div>
+    <div class="mgrid">
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Heart cakes</h3><p>Personalized with photos and toppers.</p><div class="row"><span>From $ demo</span><a href="#">Order</a></div></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Birthday box</h3><p>Cake + treats, ready to gift.</p><div class="row"><span>From $ demo</span><a href="#">Order</a></div></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Cake slices</h3><p>Fan-favorite flavors by the slice.</p><div class="row"><span>From $ demo</span><a href="#">Order</a></div></div></div>
+      <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600&q=70&fit=crop')"></div><div class="bd"><h3>Treats</h3><p>Cupcakes and party add-ons.</p><div class="row"><span>From $ demo</span><a href="#">Order</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div>
+      <div class="k">Custom cakes</div>
+      <h2>Your cake, your theme</h2>
+      <p>The "How to order" highlight becomes a guided request: theme, servings, date and inspiration photo, all in one place.</p>
+      <div class="steps"><div><b>1</b>Tell us the theme and date</div><div><b>2</b>Get your quote and design</div><div><b>3</b>Ready for your celebration</div></div>
+    </div>
+    <div class="form">
+      <h3>Request a custom cake</h3>
+      <div class="q"><small>Occasion</small><div class="chips"><span class="on">Birthday</span><span>Baby shower</span><span>Graduation</span><span>Corporate</span></div></div>
+      <div class="q"><small>Servings</small><div class="chips"><span>10–15</span><span class="on">20–30</span><span>40+</span></div></div>
+      <div class="q"><small>Inspiration</small><div class="chips"><span>Upload photo</span></div></div>
+      <a class="btn btn-g" href="#">Request quote →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">PAGX Studio concept · not the live site · demo prices · reference images</div>
+</body>
+</html>
