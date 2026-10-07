@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parapente Colombia · Bucaramanga (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--sky:#e9f6ff;--blue:#1f6fd1;--deep:#0d2f5c;--red:#e8262d;--yellow:#ffd23f;--green:#2fae5f;--ink:#0d1b2e;--ink2:#4c5d75;--line:#d6e6f3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#fff;color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1;letter-spacing:.005em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-y{background:var(--yellow);color:var(--ink)}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-l{border:2px solid #fff;color:#fff}
+
+  header.nav{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:26px}
+  .logo{font-family:'Lilita One';font-size:26px;line-height:.9;color:var(--red)}
+  .logo span{display:block;color:var(--blue)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:700;color:var(--ink2)}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1634983353776-92d895d7be7c?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,47,92,.9) 0%,rgba(13,47,92,.55) 50%,rgba(13,47,92,.1) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .hero .k{color:var(--yellow)}
+  .hero h1{font-size:98px;margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .hero p{font-size:18px;opacity:.92;max-width:470px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .wx{background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:24px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+  .wx .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .wx .ok{background:var(--green);color:#fff;font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px}
+  .wx h3{font-size:26px}
+  .wx .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+  .wx .grid div{background:var(--sky);border-radius:14px;padding:12px;text-align:center}
+  .wx .grid b{display:block;font-family:'Lilita One';font-size:24px;font-weight:400;color:var(--deep)}
+  .wx .grid small{font-size:11px;color:var(--ink2);font-weight:700}
+  .slots{display:flex;gap:8px;flex-wrap:wrap}
+  .slots span{border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:700}
+  .slots .on{background:var(--deep);color:#fff;border-color:var(--deep)}
+  .slots .off{opacity:.4;text-decoration:line-through}
+
+  section.planes{padding:90px 0;background:var(--sky)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:62px;color:var(--deep)}
+  .head p{max-width:420px;color:var(--ink2)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pl{background:#fff;border-radius:26px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+  .pl .ph{height:220px;background-size:cover;background-position:center;position:relative}
+  .pl .tag{position:absolute;left:16px;top:16px;background:var(--c);color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+  .pl .bd{padding:22px;flex:1;display:flex;flex-direction:column}
+  .pl h3{font-size:32px;color:var(--deep)}
+  .pl p{font-size:14.5px;color:var(--ink2);margin:6px 0 14px;flex:1}
+  .pl ul{list-style:none;font-size:14px;margin-bottom:16px}
+  .pl li{padding:5px 0;border-bottom:1px dashed var(--line)}
+  .pl li::before{content:"✓ ";color:var(--green);font-weight:800}
+  .pl .btn{justify-content:center}
+
+  section.club{padding:80px 0 100px}
+  .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .cl{border-radius:20px;padding:22px;border:1.5px solid var(--line)}
+  .cl b{display:block;font-family:'Lilita One';font-size:24px;font-weight:400;color:var(--deep);margin-bottom:4px}
+  .cl span{font-size:14px;color:var(--ink2)}
+  .cl .dot{width:40px;height:40px;border-radius:12px;margin-bottom:14px;background:var(--c)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--deep);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 16px;font-size:12px}
+    .hero{min-height:0;padding:46px 0 40px}
+    .hero::after{background:linear-gradient(0deg,rgba(13,47,92,.95) 30%,rgba(13,47,92,.45) 100%)}
+    .hero .wrap{grid-template-columns:1fr;gap:26px}
+    .hero h1{font-size:58px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.planes{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:42px}
+    .pgrid{grid-template-columns:1fr;gap:14px}
+    .pl .ph{height:180px}
+    section.club{padding:50px 0 60px}
+    .cgrid{grid-template-columns:1fr 1fr;gap:10px}
+    .cl{padding:16px}
+    .cl b{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">PARAPENTE<span>COLOMBIA</span></a>
+    <nav class="links"><a href="#planes">Vuelos</a><a href="#planes">Escuela</a><a href="#club">Taller</a><a href="#club">Eventos</a><a href="#">Cómo llegar</a></nav>
+    <a class="btn btn-r" href="#planes">Agendar vuelo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="k">Mesa de Ruitoque · Bucaramanga · Local #1</div>
+      <h1>Vuela acompañado <em>o solo.</em></h1>
+      <p>Vuelos de inducción, escuela para certificarte, taller de mantenimiento y equipos. Elige tu plan, mira si hoy se vuela y aparta tu turno.</p>
+      <div class="ctas"><a class="btn btn-y" href="#planes">Quiero volar</a><a class="btn btn-l" href="#planes">Aprender a volar</a></div>
+    </div>
+    <div class="wx">
+      <div class="top"><h3>Hoy en Ruitoque</h3><span class="ok">SE VUELA · DEMO</span></div>
+      <div class="grid"><div><b>18 km/h</b><small>VIENTO</small></div><div><b>NE</b><small>DIRECCIÓN</small></div><div><b>26°</b><small>TEMP.</small></div></div>
+      <small style="font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--ink2)">TURNOS DISPONIBLES</small>
+      <div class="slots" style="margin-top:8px"><span class="off">9:00</span><span>10:30</span><span class="on">12:00</span><span>2:30</span><span>4:00</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="planes" id="planes">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Elige tu experiencia</div><h2>¿Cómo quieres volar?</h2></div>
+      <p>Lo que hoy está en historias (Vuelos Inducción, Certifícate, Plan Cumple, Letreros aéreos) convertido en planes claros con botón de reserva.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pl" style="--c:var(--red)"><div class="ph" style="background-image:url('https://images.pexels.com/photos/35784826/pexels-photo-35784826.jpeg?auto=compress&w=800')"><span class="tag">Más pedido</span></div><div class="bd"><h3>Vuelo de inducción</h3><p>Tu primer vuelo en biplaza con piloto, sobre la meseta.</p><ul><li>Piloto certificado</li><li>Fotos y video</li><li>Sin experiencia previa</li></ul><a class="btn btn-r" href="#">Agendar vuelo</a></div></div>
+      <div class="pl" style="--c:var(--blue)"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1634983353776-92d895d7be7c?w=800&q=70&fit=crop')"><span class="tag">Escuela</span></div><div class="bd"><h3>Certifícate</h3><p>Curso para volar solo, de la teoría a tu primer vuelo autónomo.</p><ul><li>Teoría y práctica</li><li>Acompañamiento de coach</li><li>Equipos disponibles</li></ul><a class="btn btn-r" href="#">Ver curso</a></div></div>
+      <div class="pl" style="--c:var(--green)"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=800&q=70&fit=crop')"><span class="tag">Celebra</span></div><div class="bd"><h3>Plan cumple</h3><p>Celebra volando, con mensaje especial en el aire.</p><ul><li>Letreros aéreos</li><li>Para grupos</li><li>Recuerdo del día</li></ul><a class="btn btn-r" href="#">Cotizar plan</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="club" id="club">
+  <div class="wrap">
+    <div class="head"><div><div class="k">Club y escuela</div><h2 style="color:var(--deep)">Todo en el Local #1</h2></div><p>Además de volar: el taller, los equipos y la comunidad que hace del parque un punto de encuentro.</p></div>
+    <div class="cgrid">
+      <div class="cl" style="--c:var(--red)"><div class="dot"></div><b>Escuela</b><span>Formación con coach</span></div>
+      <div class="cl" style="--c:var(--blue)"><div class="dot"></div><b>Taller</b><span>Mantenimiento y reparación</span></div>
+      <div class="cl" style="--c:var(--yellow)"><div class="dot"></div><b>Equipos</b><span>Venta y asesoría</span></div>
+      <div class="cl" style="--c:var(--green)"><div class="dot"></div><b>Eventos</b><span>Y souvenirs del club</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · clima y turnos demo · imágenes de referencia</div>
+</body>
+</html>

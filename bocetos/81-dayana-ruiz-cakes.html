@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dayana Ruiz · Cakes &amp; Academy (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--pink:#f2a7c3;--rose:#d9487c;--berry:#7a1f45;--cream:#fff7f2;--blush:#fde7ef;--mint:#a8e3db;--choco:#3a2420;--ink2:#6b5a5f;--line:#f2dce4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--choco);font-family:'Poppins',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;white-space:nowrap}
+  .btn-rose{background:var(--rose);color:#fff}
+  .btn-choco{background:var(--choco);color:#fff}
+  .btn-l{border:1.5px solid var(--choco)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,247,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'DM Serif Display';font-size:26px;line-height:1}
+  .logo i{color:var(--rose)}
+  .logo small{display:block;font-family:'Poppins';font-size:9.5px;letter-spacing:.22em;color:var(--ink2);margin-top:3px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;color:var(--ink2);font-weight:500}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:700;overflow:hidden}
+  .lang span{padding:6px 11px}.lang .on{background:var(--choco);color:#fff}
+
+  .hero{padding:40px 0 70px}
+  .hero .intro{text-align:center;max-width:760px;margin:0 auto 34px}
+  .hero h1{font-size:76px;margin:14px 0 14px}
+  .hero h1 i{color:var(--rose)}
+  .hero .intro p{color:var(--ink2);font-size:17px}
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .path{position:relative;border-radius:30px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;color:#fff}
+  .path .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+  .path::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(58,36,32,.94) 0%,rgba(58,36,32,.7) 45%,rgba(58,36,32,.15) 100%)}
+  .path .bd{position:relative;z-index:2;padding:30px}
+  .path .tag{display:inline-block;background:#fff;color:var(--rose);font-size:11px;font-weight:700;letter-spacing:.14em;padding:6px 12px;border-radius:999px;margin-bottom:12px}
+  .path h2{font-size:46px;margin-bottom:8px}
+  .path p{opacity:.9;max-width:380px;margin-bottom:18px}
+  .path .btn{background:#fff;color:var(--choco)}
+
+  section.order{background:var(--blush);padding:86px 0}
+  .order .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+  .order h2{font-size:54px;margin:12px 0 14px}
+  .order p.l{color:var(--ink2);max-width:440px}
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .gal div{height:150px;border-radius:18px;background-size:cover;background-position:center}
+  .builder{background:#fff;border-radius:28px;padding:28px;box-shadow:0 24px 60px rgba(122,31,69,.12)}
+  .builder h3{font-size:30px;margin-bottom:16px}
+  .q{margin-bottom:16px}
+  .q small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500}
+  .chips .on{background:var(--rose);border-color:var(--rose);color:#fff}
+  .builder .btn{width:100%;justify-content:center;margin-top:6px}
+  .note{font-size:12px;color:var(--ink2);text-align:center;margin-top:10px}
+
+  section.academy{padding:86px 0 100px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ac{border-radius:24px;padding:26px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+  .ac .ic{width:48px;height:48px;border-radius:14px;background:var(--c);margin-bottom:16px}
+  .ac h3{font-size:28px;margin-bottom:6px}
+  .ac p{font-size:14.5px;color:var(--ink2);flex:1}
+  .ac a{margin-top:16px;font-weight:700;color:var(--rose);font-size:14px}
+  .ac.dark{background:var(--choco);color:#fff;border-color:var(--choco)}
+  .ac.dark p{color:#e7d6d0}
+  .ac.dark a{color:var(--pink)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--choco);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .lang{margin-left:auto}
+    .hero{padding:28px 0 50px}
+    .hero h1{font-size:44px}
+    .hero .intro p{font-size:15px}
+    .paths{grid-template-columns:1fr;gap:14px}
+    .path{min-height:320px}
+    .path h2{font-size:34px}
+    section.order{padding:56px 0}
+    .order .wrap{grid-template-columns:1fr;gap:28px}
+    .order h2{font-size:38px}
+    .gal div{height:110px}
+    section.academy{padding:56px 0 60px}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .agrid{grid-template-columns:1fr;gap:12px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Dayana <i>Ruiz</i><small>CAKES · ACADEMY · MIAMI</small></a>
+    <nav class="links"><a href="#pedir">Pedir torta</a><a href="#aprender">Aprender</a><a href="#">Testimonios</a><a href="#">Mis favoritos</a></nav>
+    <div class="lang"><span class="on">ES</span><span>EN</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="intro">
+      <div class="k">Repostería &amp; mentoría · Miami</div>
+      <h1>Tortas que se celebran. <i>Negocios que crecen.</i></h1>
+      <p>Tortas personalizadas cubiertas con ganache de chocolate, y la mentoría de una chef repostera con más de 10 años de experiencia. ¿Qué vienes a buscar hoy?</p>
+    </div>
+    <div class="paths">
+      <a class="path" href="#pedir"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=1000&q=70&fit=crop')"></div><div class="bd"><span class="tag">PARA TU CELEBRACIÓN</span><h2>Quiero una torta</h2><p>Bautizos, cumpleaños y fechas especiales, diseñadas para ti.</p><span class="btn">Pedir mi torta →</span></div></a>
+      <a class="path" href="#aprender"><div class="bg" style="background-image:url('https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&q=70&fit=crop')"></div><div class="bd"><span class="tag">PARA TU NEGOCIO</span><h2>Quiero aprender</h2><p>Talleres online y mentoría para convertir tu pasión en un negocio rentable.</p><span class="btn">Ver cursos →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="pedir">
+  <div class="wrap">
+    <div>
+      <div class="k">Pide tu torta personalizada</div>
+      <h2>Tu pedido, claro desde el primer mensaje</h2>
+      <p class="l">Hoy pedidos, cursos y tiendas comparten la misma lista de links. Aquí quien quiere una torta llega a WhatsApp con ocasión, tamaño y fecha ya definidos.</p>
+      <div class="gal">
+        <div style="background-image:url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=500&q=70&fit=crop')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&q=70&fit=crop')"></div>
+      </div>
+    </div>
+    <div class="builder">
+      <h3>Diseñemos tu torta</h3>
+      <div class="q"><small>Ocasión</small><div class="chips"><span>Cumpleaños</span><span class="on">Bautizo</span><span>Baby shower</span><span>Boda</span></div></div>
+      <div class="q"><small>Porciones</small><div class="chips"><span>10–15</span><span class="on">20–30</span><span>40+</span></div></div>
+      <div class="q"><small>Estilo</small><div class="chips"><span class="on">Ganache de chocolate</span><span>Flores naturales</span><span>Temática</span></div></div>
+      <div class="q"><small>Fecha del evento</small><div class="chips"><span class="on">Sáb 24 oct (ejemplo)</span></div></div>
+      <a class="btn btn-rose" href="#">Enviar pedido por WhatsApp →</a>
+      <div class="note">Te confirmamos disponibilidad y precio por WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<section class="academy" id="aprender">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Aprende conmigo</div><h2>Del horno a tu propio negocio</h2></div>
+      <p>Cursos, mentoría y la academia, cada uno con su página y su forma de inscribirse.</p>
+    </div>
+    <div class="agrid">
+      <div class="ac" style="--c:var(--pink)"><div class="ic"></div><h3>Talleres online</h3><p>Aprende técnicas de repostería desde casa, a tu ritmo.</p><a href="#">Ver talleres →</a></div>
+      <div class="ac dark" style="--c:var(--rose)"><div class="ic"></div><h3>Mentoría</h3><p>Para reposteras que hacen tortas increíbles pero sienten que su emprendimiento no crece.</p><a href="#">Aplicar a la mentoría →</a></div>
+      <div class="ac" style="--c:var(--mint)"><div class="ic"></div><h3>La Dolce House Academy</h3><p>El espacio de formación donde enseña.</p><a href="#">Conocer la academia →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · opciones de pedido de ejemplo · imágenes de referencia</div>
+</body>
+</html>

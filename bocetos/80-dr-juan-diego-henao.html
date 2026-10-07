@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Juan Diego Henao · Diseño de sonrisa (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0f1c22;--ink2:#566a72;--teal:#1f8a9e;--teal2:#0f5f6e;--pearl:#f6f9fa;--mist:#e7f1f3;--line:#d8e6ea;--gold:#c9a96a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#fff;color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Cormorant',serif;font-weight:600;line-height:1;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-t{background:var(--teal);color:#fff}
+  .btn-l{border:1px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .gem{width:38px;height:38px;border:2px solid var(--teal);transform:rotate(45deg);border-radius:8px;position:relative}
+  .gem::after{content:"";position:absolute;inset:8px;border:1.5px solid var(--teal);border-radius:3px}
+  .logo b{font-family:'Cormorant';font-size:22px;font-weight:600;display:block;line-height:1}
+  .logo small{font-size:9.5px;letter-spacing:.22em;color:var(--ink2)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2);font-weight:500}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:700;overflow:hidden}
+  .lang span{padding:6px 11px}
+  .lang .on{background:var(--ink);color:#fff}
+
+  .hero{background:linear-gradient(180deg,var(--pearl),#fff)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;min-height:620px;padding-top:30px;padding-bottom:50px}
+  .hero h1{font-size:86px;margin:16px 0 18px}
+  .hero h1 em{color:var(--teal)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:460px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .trust{display:flex;gap:26px;margin-top:36px;flex-wrap:wrap}
+  .trust div b{display:block;font-family:'Cormorant';font-size:30px;line-height:1}
+  .trust div span{font-size:12.5px;color:var(--ink2)}
+  .portrait{position:relative;height:540px;border-radius:220px 220px 26px 26px;overflow:hidden;background:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1000&q=70&fit=crop') center 30%/cover}
+  .float{position:absolute;left:-30px;bottom:60px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 20px 40px rgba(15,28,34,.14);font-size:13px}
+  .float b{display:block;font-size:15px}
+  .portrait-wrap{position:relative}
+
+  section.intl{padding:90px 0;background:var(--ink);color:#fff}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px}
+  .head h2{font-size:62px}
+  .head p{max-width:420px;color:#a9bcc3}
+  .intl .k{color:#7fd0dd}
+  .journey{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+  .journey::before{content:"";position:absolute;left:30px;right:30px;top:30px;height:1px;background:rgba(255,255,255,.2)}
+  .j{position:relative}
+  .j .n{width:60px;height:60px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-family:'Cormorant';font-size:26px;font-weight:600;margin-bottom:18px;position:relative;z-index:1}
+  .j h3{font-size:28px;margin-bottom:6px}
+  .j p{font-size:14px;color:#a9bcc3}
+  .j small{display:block;margin-top:8px;font-size:11px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+
+  section.trat{padding:90px 0 100px}
+  .tgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+  .ba{position:relative;border-radius:26px;overflow:hidden;min-height:460px;background:url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1100&q=70&fit=crop') center/cover}
+  .ba .half{position:absolute;inset:0 50% 0 0;background:inherit;filter:saturate(.4) brightness(.85) sepia(.25);border-right:3px solid #fff}
+  .ba .t{position:absolute;top:16px;background:rgba(255,255,255,.92);font-size:11px;font-weight:700;letter-spacing:.14em;padding:6px 10px;border-radius:999px}
+  .ba .t.l{left:16px}.ba .t.r{right:16px}
+  .ba .knob{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:700;color:var(--teal)}
+  .list{display:flex;flex-direction:column;gap:12px}
+  .tr{border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+  .tr h3{font-size:28px}
+  .tr p{font-size:14px;color:var(--ink2)}
+  .tr a{flex:none;font-weight:700;color:var(--teal);font-size:14px}
+  .tr.feat{background:var(--mist);border-color:var(--mist)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .logo small{display:none}
+    .lang{margin-left:auto}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:28px;padding-top:26px}
+    .hero h1{font-size:52px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .portrait{height:380px;border-radius:160px 160px 22px 22px}
+    .float{left:12px;bottom:16px}
+    section.intl{padding:56px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:42px}
+    .journey{grid-template-columns:1fr 1fr;gap:22px}
+    .journey::before{display:none}
+    .j h3{font-size:23px}
+    section.trat{padding:56px 0 60px}
+    .tgrid{grid-template-columns:1fr}
+    .ba{min-height:280px}
+    .tr{flex-direction:column;align-items:flex-start;gap:6px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="gem"></span><span><b>Dr. Juan Diego Henao</b><small>ESTÉTICA DENTAL · MEDELLÍN</small></span></a>
+    <nav class="links"><a href="#trat">Tratamientos</a><a href="#intl">Pacientes internacionales</a><a href="#">Resultados</a><a href="#">Testimonios</a></nav>
+    <div class="lang"><span class="on">ES</span><span>EN</span></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Especialista en diseño de sonrisa y microdiseño</div>
+      <h1>Sonrisas naturales, <em>diseñadas</em> para ti.</h1>
+      <p>Diseños en cerámica y resina, microdiseño e implantes, con más de 12 años de experiencia. Vives en Medellín o vienes desde otro país: planeamos tu tratamiento antes de que llegues.</p>
+      <div class="ctas"><a class="btn btn-t" href="#">Agendar valoración</a><a class="btn btn-l" href="#intl">Vengo del exterior</a></div>
+      <div class="trust"><div><b>+12</b><span>años de experiencia</span></div><div><b>26K</b><span>siguen sus resultados</span></div><div><b>★★★★★</b><span>opiniones en Doctoralia</span></div></div>
+    </div>
+    <div class="portrait-wrap"><div class="portrait"></div><div class="float"><b>Valoración virtual</b>Envía tus fotos y recibe tu plan</div></div>
+  </div>
+</section>
+
+<section class="intl" id="intl">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">International patients · Pacientes del exterior</div><h2>Tu nueva sonrisa, planeada desde casa</h2></div>
+      <p>El perfil ya tiene una historia destacada para extranjeros. En la web se vuelve una ruta clara, en español e inglés, que da confianza antes de comprar el tiquete.</p>
+    </div>
+    <div class="journey">
+      <div class="j"><div class="n">1</div><h3>Valoración virtual</h3><p>Nos cuentas qué quieres mejorar y envías fotos.</p><small>ANTES DE VIAJAR</small></div>
+      <div class="j"><div class="n">2</div><h3>Plan y fechas</h3><p>Recibes tu plan de tratamiento y los días que necesitas.</p><small>ANTES DE VIAJAR</small></div>
+      <div class="j"><div class="n">3</div><h3>Diseño en Medellín</h3><p>Valoración presencial y diseño de tu sonrisa.</p><small>EN MEDELLÍN</small></div>
+      <div class="j"><div class="n">4</div><h3>Seguimiento</h3><p>Acompañamiento después de regresar a casa.</p><small>DE VUELTA EN CASA</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="trat" id="trat">
+  <div class="wrap">
+    <div class="head" style="margin-bottom:30px">
+      <div><div class="k">Tratamientos</div><h2>Elige tu camino</h2></div>
+      <p style="color:var(--ink2)">Cada tratamiento con su explicación, su antes y después y un botón para cotizar.</p>
+    </div>
+    <div class="tgrid">
+      <div class="ba"><div class="half"></div><span class="t l">ANTES</span><span class="t r">DESPUÉS</span><span class="knob">⇆</span></div>
+      <div class="list">
+        <div class="tr feat"><div><h3>Diseño en cerámica</h3><p>Láminas personalizadas, naturales y duraderas.</p></div><a href="#">Cotizar →</a></div>
+        <div class="tr"><div><h3>Microdiseño</h3><p>Corrige pequeños detalles de forma conservadora.</p></div><a href="#">Cotizar →</a></div>
+        <div class="tr"><div><h3>Diseño en resina</h3><p>Renueva forma, color y proporción.</p></div><a href="#">Cotizar →</a></div>
+        <div class="tr"><div><h3>Implantes dentales</h3><p>Recupera un diente perdido con planeación precisa.</p></div><a href="#">Cotizar →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · imágenes de referencia, no son pacientes del consultorio</div>
+</body>
+</html>
