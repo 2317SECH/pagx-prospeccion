@@ -458,6 +458,21 @@
         "bocetos/evidencia/100-desserts-by-the-pound-web-actual.png"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nYou call it a luxury dessert brand, and the cakes prove it, but the Shopify store still looks like a flyer and the price list lives in highlights.\nWe'd redesign your store with a premium look, clear products and a guided custom-cake request.\nWe put together a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 101,
+      "slug": "101-proyecto-teo-coach",
+      "nombre": "Proyecto TEO · Mateo Buitrago, coach fitness online",
+      "ig": "teocoachonline",
+      "lugar": "Colombia (asesorados en varios países)",
+      "nicho": "Coach fitness online / marca personal",
+      "web": "Deficiente: landing en subdominio gratuito de GitHub con el titular cortado y encimado sobre el logo",
+      "porque": "45K seguidores, activo (05/10/2026), +6 años como coach online, reel de 69K likes. Planes, testimonios, IMC y preguntas viven en historias; su landing actual se ve rota en el primer pantallazo. Prioridad ALTA (creador con audiencia).",
+      "evidencia": [
+        "bocetos/evidencia/101-proyecto-teo-coach-ig.jpg",
+        "bocetos/evidencia/101-proyecto-teo-coach-web-actual.png"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que con 45 mil seguidores tu landing de Proyecto TEO tiene el titular cortado y los planes se explican por DM.\nTe proponemos una web propia con tus planes, calculadora de IMC, testimonios y aplicación directa.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
     }
   ]
 }

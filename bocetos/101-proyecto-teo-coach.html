@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto TEO · Coach fitness online (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#06080d;--panel:#0e131c;--blue:#2f8bff;--cyan:#4ad7ff;--ink:#f2f5fa;--ink2:#9aa6b8;--line:#1d2533;--lime:#c8ff4a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:900;letter-spacing:-.03em;line-height:.95;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:15px 26px;border-radius:12px;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
+  .btn-b{background:var(--blue);color:#fff;box-shadow:0 10px 30px rgba(47,139,255,.35)}
+  .btn-l{border:1.5px solid #3a465c}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(6,8,13,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-weight:900;font-size:20px;letter-spacing:.18em}
+  .logo small{display:block;font-size:9px;letter-spacing:.3em;color:var(--ink2);font-weight:600}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0 0 0 40%;background:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1300&q=70&fit=crop') center/cover;filter:saturate(.6) brightness(.7)}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg),transparent 50%),radial-gradient(circle at 70% 40%,rgba(47,139,255,.25),transparent 60%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:88px;max-width:700px;margin:14px 0 18px}
+  .hero h1 span{color:var(--blue)}
+  .hero p{font-size:18px;color:#c6cfdc;max-width:470px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stats{display:flex;gap:30px;margin-top:36px}
+  .stats b{display:block;font-size:34px;font-weight:900}
+  .stats span{font-size:12.5px;color:var(--ink2)}
+
+  section.imc{padding:84px 0;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .imc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .imc h2{font-size:54px;margin:12px 0 14px}
+  .imc p{color:var(--ink2);max-width:430px}
+  .calc{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:26px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+  .f{border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;color:var(--ink2);text-transform:uppercase;font-weight:700}
+  .f b{font-size:24px}
+  .gauge{height:12px;border-radius:9px;background:linear-gradient(90deg,#4ad7ff,#4cd964 30%,#ffd23f 60%,#ff4d4d);position:relative;margin:22px 0 10px}
+  .gauge i{position:absolute;top:-7px;left:44%;width:4px;height:26px;background:#fff;border-radius:2px}
+  .res{display:flex;justify-content:space-between;align-items:center}
+  .res b{font-size:40px;font-weight:900}
+  .res span{font-size:13px;color:var(--lime);font-weight:700}
+  .calc .btn{width:100%;justify-content:center;margin-top:18px}
+
+  section.planes{padding:84px 0 100px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:58px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pl{border:1px solid var(--line);border-radius:24px;padding:26px;background:var(--panel);display:flex;flex-direction:column}
+  .pl.feat{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 20px 60px rgba(47,139,255,.15)}
+  .pl .tag{align-self:flex-start;background:var(--blue);font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 10px;border-radius:999px;margin-bottom:12px}
+  .pl h3{font-size:30px}
+  .pl p{color:var(--ink2);font-size:14.5px;margin:6px 0 14px}
+  .pl ul{list-style:none;font-size:14px;margin-bottom:20px;flex:1}
+  .pl li{padding:7px 0;border-bottom:1px solid var(--line)}
+  .pl li::before{content:"+ ";color:var(--cyan);font-weight:800}
+  .pl .btn{justify-content:center}
+  .proof{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .proof div{height:210px;border-radius:20px;background-size:cover;background-position:center;position:relative}
+  .proof span{position:absolute;left:12px;bottom:12px;background:rgba(6,8,13,.85);border-radius:999px;padding:6px 11px;font-size:12px;font-weight:700}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--panel);border:1px solid var(--blue);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero{min-height:620px;align-items:flex-end;padding-bottom:40px}
+    .hero .bg{inset:0;opacity:.5}
+    .hero h1{font-size:48px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .stats{gap:20px}
+    .stats b{font-size:26px}
+    section.imc{padding:56px 0}
+    .imc .wrap{grid-template-columns:1fr;gap:28px}
+    .imc h2{font-size:38px}
+    section.planes{padding:56px 0 60px}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:40px}
+    .pgrid{grid-template-columns:1fr;gap:12px}
+    .proof{grid-template-columns:1fr 1fr}
+    .proof div{height:150px}
+    .proof div:last-child{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">PROYECTO TEO<small>TRANSFORMA · ENFÓCATE · OPTIMIZA</small></a>
+    <nav class="links"><a href="#planes">Planes</a><a href="#imc">Calcula tu IMC</a><a href="#">Testimonios</a><a href="#">Mi historia</a><a href="#">Preguntas</a></nav>
+    <a class="btn btn-b" href="#planes">Empezar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="k">Coach fitness online · Mateo Buitrago</div>
+    <h1>Tu mejor versión <span>no llega sola.</span></h1>
+    <p>Coaching 1 a 1 con rutina personalizada, guía en video y acompañamiento real por WhatsApp, estés donde estés.</p>
+    <div class="ctas"><a class="btn btn-b" href="#planes">Ver planes</a><a class="btn btn-l" href="#imc">Calcular mi IMC</a></div>
+    <div class="stats"><div><b>+6</b><span>años como coach online</span></div><div><b>45K</b><span>te siguen en Instagram</span></div><div><b>Global</b><span>asesorados en varios países</span></div></div>
+  </div>
+</section>
+
+<section class="imc" id="imc">
+  <div class="wrap">
+    <div>
+      <div class="k">Primer paso</div>
+      <h2>¿Dónde estás hoy?</h2>
+      <p>Tu destacada de IMC convertida en una calculadora real: la persona ve su punto de partida y pasa directo a elegir plan.</p>
+    </div>
+    <div class="calc">
+      <div class="row2"><div class="f"><small>Peso</small><b>78 kg</b></div><div class="f"><small>Estatura</small><b>1,75 m</b></div></div>
+      <div class="gauge"><i></i></div>
+      <div class="res"><b>25,5</b><span>Ejemplo · te recomendamos el plan Transformación</span></div>
+      <a class="btn btn-b" href="#planes">Ver mi plan →</a>
+    </div>
+  </div>
+</section>
+
+<section class="planes" id="planes">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Planes</div><h2>Elige tu proceso</h2></div>
+      <p>Hoy los planes se explican por DM. Aquí cada uno muestra qué incluye y la persona aplica en un minuto.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pl"><h3>Rutina</h3><p>Para quien ya entrena y quiere estructura.</p><ul><li>Rutina 100% personalizada</li><li>Guía en video</li></ul><a class="btn btn-l" href="#">Aplicar</a></div>
+      <div class="pl feat"><span class="tag">MÁS ELEGIDO</span><h3>Transformación</h3><p>Coaching 1 a 1 completo.</p><ul><li>Rutina personalizada</li><li>Guía en video</li><li>Acompañamiento por WhatsApp</li><li>Ajustes según progreso</li></ul><a class="btn btn-b" href="#">Aplicar</a></div>
+      <div class="pl"><h3>90 días</h3><p>Reto intensivo con seguimiento.</p><ul><li>Plan por fases</li><li>Revisión de progreso</li></ul><a class="btn btn-l" href="#">Aplicar</a></div>
+    </div>
+    <div class="proof">
+      <div style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=70&fit=crop')"><span>Asesorado · antes/después</span></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=70&fit=crop')"><span>Asesorado · antes/después</span></div>
+      <div style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=70&fit=crop')"><span>Asesorada · antes/después</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · planes e IMC de ejemplo · imágenes de referencia</div>
+</body>
+</html>
