@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centro Artesanal Artelares (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--wine:#8c1d2c;--wine2:#6d1220;--cream:#fbf5ea;--paper:#f3e8d6;--ink:#2b1a14;--ink2:#6e5a4c;--gold:#e8a93a;--green:#2f6b4a;--line:#e6d7bf}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Yeseva One',serif;font-weight:400;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--wine)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;padding:15px 26px;border-radius:12px;white-space:nowrap}
+  .btn-wine{background:var(--wine);color:#fff}
+  .btn-w{background:#fff;color:var(--wine)}
+  .btn-l{border:2px solid #fff;color:#fff}
+  .weave{height:14px;background:repeating-linear-gradient(90deg,var(--wine) 0 22px,var(--gold) 22px 30px,var(--green) 30px 52px,var(--cream) 52px 58px,var(--wine2) 58px 80px)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:var(--cream);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:26px}
+  .logo{font-family:'Yeseva One';font-size:30px;color:var(--wine);line-height:1}
+  .logo small{display:block;font-family:'Nunito Sans';font-size:10px;letter-spacing:.2em;color:var(--ink2);font-weight:800}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:700;color:var(--ink2)}
+
+  .hero{position:relative;background:var(--wine2);color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.pexels.com/photos/27875423/pexels-photo-27875423.jpeg?auto=compress&w=1800') center/cover;opacity:.38}
+  .hero .wrap{position:relative;min-height:600px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:60px}
+  .hero .k{color:var(--gold)}
+  .hero h1{font-size:76px;margin:16px 0 18px}
+  .hero p{font-size:18px;opacity:.92;max-width:480px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .visit{background:var(--cream);color:var(--ink);border-radius:22px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+  .visit h3{font-size:28px;color:var(--wine);margin-bottom:12px}
+  .vrow{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .vrow:last-of-type{border-bottom:0}
+  .vrow .i{width:36px;height:36px;border-radius:10px;background:var(--paper);display:grid;place-items:center;font-weight:800;color:var(--wine);flex:none;font-size:13px}
+  .vrow b{display:block}
+  .vrow span{color:var(--ink2);font-size:13.5px}
+  .visit .btn{width:100%;justify-content:center;margin-top:12px}
+
+  section.cat{padding:90px 0 70px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:56px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .c{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+  .c .ph{height:280px;background-size:cover;background-position:center;position:relative}
+  .c .pill{position:absolute;left:14px;top:14px;background:var(--wine);color:#fff;font-size:11px;font-weight:800;letter-spacing:.12em;padding:6px 10px;border-radius:999px}
+  .c .bd{padding:18px 20px 22px}
+  .c h3{font-size:28px;color:var(--wine)}
+  .c p{font-size:14.5px;color:var(--ink2);margin:4px 0 12px}
+  .c a{font-weight:800;color:var(--green);font-size:14px}
+
+  section.fab{background:var(--paper);padding:80px 0 90px}
+  .fab .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .fab .pic{height:420px;border-radius:24px;background:url('https://images.pexels.com/photos/2121128/pexels-photo-2121128.jpeg?auto=compress&w=1000') center/cover}
+  .fab h2{font-size:50px;margin:12px 0 14px}
+  .fab p{color:var(--ink2);font-size:16px;margin-bottom:20px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .facts div{background:var(--cream);border-radius:14px;padding:14px 16px;border:1px solid var(--line)}
+  .facts b{display:block;font-family:'Yeseva One';font-size:20px;color:var(--wine);font-weight:400}
+  .facts span{font-size:13px;color:var(--ink2)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--wine);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .logo{font-size:24px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:40px;padding-bottom:40px;gap:28px}
+    .hero h1{font-size:46px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    section.cat{padding:56px 0 40px}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:38px}
+    .cgrid{grid-template-columns:1fr;gap:14px}
+    .c .ph{height:200px}
+    section.fab{padding:50px 0 60px}
+    .fab .wrap{grid-template-columns:1fr;gap:26px}
+    .fab .pic{height:240px}
+    .fab h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">artelares<small>CENTRO ARTESANAL · SANTA ROSA DE CABAL</small></a>
+    <nav class="links"><a href="#catalogo">Ponchos</a><a href="#catalogo">Sombreros</a><a href="#catalogo">Accesorios</a><a href="#fabrica">Nuestra fábrica</a><a href="#visita">Cómo llegar</a></nav>
+    <a class="btn btn-wine" href="#visita">Visítanos</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="k">Vía termales · Santa Rosa de Cabal, Risaralda</div>
+      <h1>Completa tu pinta antes o después de las termales.</h1>
+      <p>Ponchos que fabricamos nosotros mismos, sombreros, accesorios y recuerdos de la región. Pasa por el centro artesanal o pídelo por WhatsApp.</p>
+      <div class="ctas"><a class="btn btn-w" href="#catalogo">Ver productos</a><a class="btn btn-l" href="#visita">Cómo llegar</a></div>
+    </div>
+    <div class="visit" id="visita">
+      <h3>Planea tu visita</h3>
+      <div class="vrow"><span class="i">UB</span><div><b>Calle 7 # 4-48</b><span>Santa Rosa de Cabal · vía termales</span></div></div>
+      <div class="vrow"><span class="i">$</span><div><b>Medios de pago</b><span>Consulta las opciones disponibles</span></div></div>
+      <div class="vrow"><span class="i">WA</span><div><b>Pedidos por WhatsApp</b><span>Te ayudamos a elegir talla y color</span></div></div>
+      <a class="btn btn-wine" href="#">Abrir en Google Maps →</a>
+    </div>
+  </div>
+  <div class="weave"></div>
+</section>
+
+<section class="cat" id="catalogo">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Catálogo</div><h2>Lo que te llevas de Santa Rosa</h2></div>
+      <p>Hoy los productos se ven solo en publicaciones e historias. Aquí el visitante explora por categoría y pregunta por lo que le gustó en un toque.</p>
+    </div>
+    <div class="cgrid">
+      <div class="c"><div class="ph" style="background-image:url('https://images.pexels.com/photos/27875423/pexels-photo-27875423.jpeg?auto=compress&w=800')"><span class="pill">FABRICACIÓN PROPIA</span></div><div class="bd"><h3>Ponchos</h3><p>Incluido el poncho oficial de las Fiestas de las Araucarias.</p><a href="#">Preguntar por WhatsApp →</a></div></div>
+      <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?w=800&q=70&fit=crop')"></div><div class="bd"><h3>Sombreros</h3><p>Para la foto en las termales y para el día a día.</p><a href="#">Preguntar por WhatsApp →</a></div></div>
+      <div class="c"><div class="ph" style="background-image:url('https://images.pexels.com/photos/5504766/pexels-photo-5504766.jpeg?auto=compress&w=800')"></div><div class="bd"><h3>Accesorios</h3><p>Detalles y recuerdos de la región para regalar.</p><a href="#">Preguntar por WhatsApp →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="fab" id="fabrica">
+  <div class="wrap">
+    <div class="pic"></div>
+    <div>
+      <div class="k">Nuestra fábrica</div>
+      <h2>Con orgullo, también producimos los ponchos</h2>
+      <p>Una historia que hoy se cuenta en reels y que en la web se convierte en confianza: quiénes somos, cómo se hace cada poncho y por qué vale la pena comprar en el comercio local.</p>
+      <div class="facts"><div><b>Fábrica propia</b><span>Ponchos hechos por nosotros</span></div><div><b>Vía termales</b><span>Parada obligada del recorrido</span></div></div>
+      <a class="btn btn-wine" href="#">Conocer la historia →</a>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · imágenes de referencia, no son productos de la tienda</div>
+</body>
+</html>

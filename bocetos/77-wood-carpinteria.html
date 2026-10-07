@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WooD Carpintería · Muebles a medida (boceto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--linen:#f6f1ea;--oak:#e3d3bd;--walnut:#5b3f2a;--ink:#2a221b;--ink2:#6f6255;--line:#e2d7c8;--sage:#8a9a7b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--linen);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--walnut);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;padding:15px 26px;border-radius:999px;white-space:nowrap}
+  .btn-w{background:var(--walnut);color:#fff}
+  .btn-l{border:1px solid var(--ink)}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(246,241,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:80px;gap:26px}
+  .logo{display:flex;flex-direction:column;align-items:center;line-height:1}
+  .logo b{font-family:'Fraunces';font-weight:400;font-size:26px;letter-spacing:.2em}
+  .logo small{font-size:9px;letter-spacing:.3em;color:var(--ink2);margin-top:4px}
+  nav.links{display:flex;gap:28px;margin-left:auto;font-size:14px;color:var(--ink2)}
+
+  .hero{padding:50px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .hero h1{font-size:74px;margin:16px 0 20px}
+  .hero h1 em{color:var(--walnut)}
+  .hero p{font-size:18px;color:var(--ink2);max-width:450px;margin-bottom:30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stack{position:relative;height:540px}
+  .stack .a{position:absolute;inset:0 90px 70px 0;border-radius:24px;background:url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1100&q=70&fit=crop') center/cover}
+  .stack .b{position:absolute;right:0;bottom:0;width:300px;height:250px;border-radius:20px;border:8px solid var(--linen);background:url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=70&fit=crop') center/cover}
+  .stack .tag3d{position:absolute;left:22px;bottom:92px;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 12px 30px rgba(60,40,20,.15);font-size:13px}
+  .stack .tag3d b{display:block;font-family:'Fraunces';font-size:18px;font-weight:600}
+
+  section.rooms{padding:80px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+  .tabs span{white-space:nowrap;padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;color:var(--ink2)}
+  .tabs .on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .rgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+  .r{border-radius:20px;overflow:hidden;background:var(--linen)}
+  .r .ph{height:260px;background-size:cover;background-position:center}
+  .r:first-child .ph{height:340px}
+  .r .bd{padding:16px 18px 18px}
+  .r h3{font-size:22px}
+  .r p{font-size:13.5px;color:var(--ink2)}
+
+  section.cot{padding:90px 0 100px}
+  .cot .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .cot h2{font-size:54px}
+  .cot p.l{color:var(--ink2);margin:16px 0 22px;max-width:440px}
+  .proc{list-style:none;border-top:1px solid var(--line)}
+  .proc li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .proc li b{font-family:'Fraunces';font-size:22px;color:var(--walnut);width:28px}
+  .form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 20px 50px rgba(60,40,20,.08)}
+  .form h3{font-size:30px;margin-bottom:16px}
+  .f{border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+  .f b{font-weight:500}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center;margin-top:6px}
+  .stars{margin-top:14px;font-size:13px;color:var(--ink2);text-align:center}
+  .stars b{color:var(--walnut)}
+
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:11px;padding:8px 13px;border-radius:10px}
+
+  @media (max-width:860px){
+    .wrap{padding:0 20px}
+    nav.links{display:none}
+    .nav .wrap{height:64px}
+    .nav .btn{margin-left:auto;padding:10px 14px;font-size:12px}
+    .logo b{font-size:20px}
+    .hero{padding:26px 0 50px}
+    .hero .wrap{grid-template-columns:1fr;gap:30px}
+    .hero h1{font-size:46px}
+    .hero p{font-size:16px}
+    .ctas .btn{flex:1;justify-content:center}
+    .stack{height:380px}
+    .stack .a{inset:0 40px 60px 0}
+    .stack .b{width:170px;height:150px}
+    .stack .tag3d{bottom:76px;left:12px}
+    section.rooms{padding:50px 0}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .head h2{font-size:36px}
+    .tabs{flex-wrap:nowrap;overflow:hidden}
+    .rgrid{grid-template-columns:1fr}
+    .r .ph,.r:first-child .ph{height:220px}
+    section.cot{padding:56px 0 60px}
+    .cot .wrap{grid-template-columns:1fr;gap:30px}
+    .cot h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><b>WOOD</b><small>CARPINTERÍA</small></a>
+    <nav class="links"><a href="#espacios">Espacios</a><a href="#cotizar">Diseño 3D</a><a href="#">Proyectos</a><a href="#">Quiénes somos</a></nav>
+    <a class="btn btn-w" href="#cotizar">Cotizar mi mueble</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="k">Muebles a medida · Ciudad de la Costa, Uruguay</div>
+      <h1>Hacemos de ese lugar <em>tu lugar.</em></h1>
+      <p>Camas, placares, cocinas, escritorios, decks y pérgolas diseñados para tu espacio. Recibí tu cotización con diseño 3D antes de fabricar.</p>
+      <div class="ctas"><a class="btn btn-w" href="#cotizar">Quiero mi diseño 3D</a><a class="btn btn-l" href="#espacios">Ver proyectos</a></div>
+    </div>
+    <div class="stack">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="tag3d"><b>Diseño 3D incluido</b>Mirá tu mueble antes de tenerlo</div>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="espacios">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="k">Proyectos por espacio</div><h2>Elegí el ambiente</h2></div>
+      <p>Las mismas categorías que hoy están en historias destacadas, convertidas en un portafolio que se recorre en segundos.</p>
+    </div>
+    <div class="tabs"><span class="on">Dormitorio infantil</span><span>Dormitorio</span><span>Placares</span><span>Cocinas</span><span>Escritorios</span><span>Baños</span><span>Exterior</span></div>
+    <div class="rgrid">
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=900&q=70&fit=crop')"></div><div class="bd"><h3>Una cama que crece con tu hijo</h3><p>Diseño a medida en madera, pensada para muchas etapas.</p></div></div>
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Placar a medida</h3><p>Cada centímetro aprovechado.</p></div></div>
+      <div class="r"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?w=700&q=70&fit=crop')"></div><div class="bd"><h3>Cocina laqueada</h3><p>Proyecto en Ciudad de la Costa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cot" id="cotizar">
+  <div class="wrap">
+    <div>
+      <div class="k">Cotización + diseño 3D</div>
+      <h2>Contanos tu espacio, te mostramos el mueble</h2>
+      <p class="l">Hoy el primer contacto es un WhatsApp sin datos. Con este formulario llegan medidas, ambiente y fotos, y el equipo responde con un diseño 3D.</p>
+      <ul class="proc"><li><b>1</b>Comprensión de tu idea y tu espacio</li><li><b>2</b>Diseño 3D y cotización</li><li><b>3</b>Fabricación precisa</li><li><b>4</b>Entrega, instalación y seguimiento</li></ul>
+    </div>
+    <div class="form">
+      <h3>Pedí tu diseño 3D</h3>
+      <div class="f"><small>Ambiente</small><b>Dormitorio infantil</b></div>
+      <div class="row2"><div class="f"><small>Ancho</small><b>2,40 m</b></div><div class="f"><small>Alto</small><b>2,50 m</b></div></div>
+      <div class="f"><small>Fotos del espacio</small><b>Subir 2 o 3 fotos</b></div>
+      <div class="f"><small>Zona</small><b>El Pinar · Ciudad de la Costa</b></div>
+      <a class="btn btn-w" href="#">Enviar por WhatsApp →</a>
+      <div class="stars"><b>★★★★★ 5.0</b> en reseñas de Google</div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-badge">Boceto conceptual · PAGX Studio · medidas de ejemplo · imágenes de referencia</div>
+</body>
+</html>
