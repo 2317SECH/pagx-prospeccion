@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Banu Spa Quito · Salón y spa — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#141110;--panel:#1f1a18;--gold:#c9a46a;--cream:#f3e9dc;--muted:#a8998a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Outfit,sans-serif;background:var(--bg);color:var(--cream)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(20,17,16,.94);border-bottom:1px solid #2c2522}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:Italiana,serif;font-size:32px;letter-spacing:.12em;white-space:nowrap}
+  .logo small{font-family:Outfit;font-size:11px;letter-spacing:.35em;color:var(--gold);margin-left:8px}
+  .links{display:flex;gap:26px;font-size:14px;font-weight:300;letter-spacing:.05em}
+  .links a{color:var(--cream);text-decoration:none}
+  .btn{display:inline-block;background:var(--gold);color:#1a1410;padding:13px 24px;border-radius:2px;font-weight:600;font-size:14px;letter-spacing:.06em;text-decoration:none}
+  .btn.line{background:transparent;color:var(--cream);border:1px solid var(--gold)}
+  .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;padding-top:60px;padding-bottom:70px}
+  .k{font-size:12px;letter-spacing:.4em;color:var(--gold)}
+  h1{font-family:Italiana,serif;font-size:72px;line-height:1;font-weight:400;margin:18px 0}
+  .lead{font-weight:300;font-size:17px;line-height:1.7;color:#d6cabb;max-width:440px}
+  .cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .duo img{width:100%;height:500px;object-fit:cover;display:block}
+  .duo img:last-child{margin-top:60px;height:440px}
+  .promo{border-top:1px solid #2c2522;border-bottom:1px solid #2c2522;padding:26px 0}
+  .promo .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .promo b{font-family:Italiana;font-size:28px;font-weight:400;color:var(--gold)}
+  .promo span{color:var(--muted)}
+  section.menu{padding:80px 0}
+  h2{font-family:Italiana,serif;font-size:48px;font-weight:400}
+  .sub{color:var(--muted);margin:8px 0 34px;font-weight:300}
+  .svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2c2522;border:1px solid #2c2522}
+  .svc div{background:var(--bg);padding:26px 22px;min-height:150px}
+  .svc h3{font-family:Italiana;font-size:24px;font-weight:400;margin-bottom:8px}
+  .svc p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.55}
+  .svc .num{font-size:12px;color:var(--gold);letter-spacing:.2em;display:block;margin-bottom:14px}
+  .feat{padding:0 0 84px}
+  .feat .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--panel)}
+  .feat img{width:100%;height:100%;min-height:380px;object-fit:cover;display:block}
+  .feat .t{padding:50px}
+  .feat ul{list-style:none;margin:20px 0 26px;display:grid;gap:10px;font-weight:300}
+  .feat li:before{content:"— ";color:var(--gold)}
+  footer{padding:26px 0;color:var(--muted);font-size:13px;border-top:1px solid #2c2522}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:#1a1410;font-size:12px;font-weight:600;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}
+    .logo{font-size:24px}.logo small{display:none}
+    header.nav .btn{padding:10px 14px;font-size:12px}
+    .hero .wrap,.feat .wrap{grid-template-columns:1fr}
+    h1{font-size:48px}
+    .duo img{height:300px}.duo img:last-child{margin-top:30px;height:270px}
+    .svc{grid-template-columns:1fr}
+    .feat .t{padding:30px 22px}
+    h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo">BANU<small>SPA · QUITO</small></div>
+  <nav class="links"><a href="#">Cabello</a><a href="#">Uñas</a><a href="#">Pestañas</a><a href="#">Barbería</a><a href="#">Promos</a></nav>
+  <a class="btn" href="#">Reservar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">NOS REINVENTAMOS</span>
+    <h1>Color, cuidado y un rato solo para ti</h1>
+    <p class="lead">Balayage, alisados, tratamientos capilares, uñas, barbería, micropigmentación y spa en un solo lugar. Elige servicio, profesional y hora desde el celular.</p>
+    <div class="cta"><a class="btn" href="#">Agendar cita</a><a class="btn line" href="#">Ver servicios</a></div>
+  </div>
+  <div class="duo">
+    <img src="https://images.unsplash.com/photo-1638064432604-8da1fc75de09?w=600&h=1000&fit=crop&q=70" alt="Balayage">
+    <img src="https://images.unsplash.com/photo-1712213396688-c6f2d536671f?w=600&h=900&fit=crop&q=70" alt="Color en salón">
+  </div>
+</div></section>
+
+<section class="promo"><div class="wrap">
+  <b>Promos de octubre</b><span>Publicadas en la web y reservables en línea, no solo en historias.</span><a class="btn line" href="#">Ver promos</a>
+</div></section>
+
+<section class="menu"><div class="wrap">
+  <h2>Servicios</h2>
+  <p class="sub">Cada servicio con duración, desde qué precio y la reserva a un toque.</p>
+  <div class="svc">
+    <div><span class="num">01</span><h3>Balayage</h3><p>Color con dimensión y brillo, integrado a tu tono.</p></div>
+    <div><span class="num">02</span><h3>Alisados</h3><p>Cabello manejable y con movimiento.</p></div>
+    <div><span class="num">03</span><h3>Tratamientos</h3><p>Hidratación y detox capilar de medios a puntas.</p></div>
+    <div><span class="num">04</span><h3>Cortes</h3><p>Corte y peinado según tu rostro y estilo.</p></div>
+    <div><span class="num">05</span><h3>Uñas</h3><p>Manicure, pedicure y diseño.</p></div>
+    <div><span class="num">06</span><h3>Lifting de pestañas</h3><p>Mirada abierta sin extensiones.</p></div>
+    <div><span class="num">07</span><h3>Micropigmentación</h3><p>Cejas definidas que duran.</p></div>
+    <div><span class="num">08</span><h3>Barbería y spa</h3><p>Corte, barba y momentos de relajación.</p></div>
+  </div>
+</div></section>
+
+<section class="feat"><div class="wrap">
+  <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?w=900&h=800&fit=crop&q=70" alt="">
+  <div class="t">
+    <span class="k">TRATAMIENTO DESTACADO</span>
+    <h2 style="margin-top:12px">Hydra Detox Davines</h2>
+    <ul><li>Limpieza del cuero cabelludo de impurezas</li><li>Trabajo de la fibra de medios a puntas</li><li>Ideal antes o después del color</li></ul>
+    <a class="btn" href="#">Reservar tratamiento</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Banu Spa · Edificio Shyris 186, Quito, Ecuador — Fotos de stock (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

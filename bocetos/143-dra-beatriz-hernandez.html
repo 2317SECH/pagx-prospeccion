@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dra. Beatriz Hernández · Odontología Estética Barranquilla — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#14302e;--mint:#dff1ec;--teal:#1f7a6d;--gold:#c7a36a;--paper:#fbfaf7;--muted:#5d716e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Manrope,sans-serif;color:var(--ink);background:var(--paper)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e6ece9}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;white-space:nowrap}
+  .logo small{display:block;font-family:Manrope;font-size:10px;letter-spacing:.24em;color:var(--teal);font-weight:800}
+  .links{display:flex;gap:28px;font-size:14px;font-weight:600}
+  .links a{color:var(--ink);text-decoration:none}
+  .btn{display:inline-block;background:var(--teal);color:#fff;padding:13px 22px;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .hero{padding:64px 0 72px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .tag{display:inline-block;background:var(--mint);color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.12em;padding:7px 14px;border-radius:999px}
+  h1{font-family:'Cormorant Garamond',serif;font-size:62px;line-height:1.02;font-weight:600;margin:20px 0 18px}
+  h1 em{color:var(--teal)}
+  .lead{font-size:17px;line-height:1.65;color:var(--muted);max-width:500px}
+  .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:520px;object-fit:cover;border-radius:220px 220px 24px 24px;display:block}
+  .chip{position:absolute;left:-28px;bottom:40px;background:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 18px 40px rgba(20,48,46,.14);font-size:13px;max-width:220px}
+  .chip b{display:block;font-size:22px;color:var(--teal)}
+  .creds{background:var(--ink);color:#e9f3f0;padding:34px 0}
+  .creds .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+  .creds div{font-size:13px;line-height:1.5;border-left:2px solid var(--gold);padding-left:14px}
+  .creds b{display:block;font-size:15px;color:#fff;margin-bottom:3px}
+  section.svc{padding:84px 0}
+  h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;margin-bottom:10px}
+  .sub{color:var(--muted);margin-bottom:38px}
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .card{background:#fff;border:1px solid #e6ece9;border-radius:22px;overflow:hidden}
+  .card img{width:100%;height:180px;object-fit:cover;display:block}
+  .card .b{padding:20px}
+  .card h3{font-size:17px;margin-bottom:8px}
+  .card p{font-size:14px;color:var(--muted);line-height:1.55}
+  .book{padding:0 0 90px}
+  .book .box{background:var(--mint);border-radius:30px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+  .steps{display:grid;gap:12px}
+  .step{background:#fff;border-radius:14px;padding:14px 16px;font-size:14px;display:flex;gap:12px;align-items:center}
+  .step span{width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+  footer{border-top:1px solid #e6ece9;padding:26px 0;font-size:13px;color:var(--muted)}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}
+    .logo{font-size:17px}.logo small{font-size:8px;letter-spacing:.16em}
+    header.nav .btn{padding:9px 12px;font-size:11px;white-space:nowrap}
+    .hero .wrap,.book .box{grid-template-columns:1fr}
+    h1{font-size:42px}
+    .hero-img img{height:380px}
+    .chip{left:12px;bottom:16px}
+    .creds .wrap{grid-template-columns:1fr 1fr}
+    .grid{grid-template-columns:1fr}
+    .book .box{padding:30px 22px}
+    h2{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo">Dra. Beatriz Hernández<small>COOLDENT · BARRANQUILLA</small></div>
+  <nav class="links"><a href="#">Tratamientos</a><a href="#">Antes y después</a><a href="#">Ortodoncia</a><a href="#">Niños</a><a href="#">Ubicación</a></nav>
+  <a class="btn" href="#">Agendar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">ODONTOLOGÍA ESTÉTICA</span>
+    <h1>Una sonrisa que se ve <em>natural</em>, diseñada para ti</h1>
+    <p class="lead">Rehabilitación estética, ortodoncia y armonización orofacial en Barranquilla, con formación en Colombia, Brasil y España. Agenda tu valoración en línea y llega con tu plan claro.</p>
+    <div class="cta"><a class="btn" href="#">Reservar mi cita</a><a class="btn ghost" href="#">Ver casos reales</a></div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1548382131-e0ebb1f0cdea?w=900&h=1100&fit=crop&q=70" alt="Paciente sonriendo">
+    <div class="chip"><b>Valoración</b>Diagnóstico y plan de tratamiento antes de empezar</div>
+  </div>
+</div></section>
+
+<section class="creds"><div class="wrap">
+  <div><b>Odontóloga</b>Universidad El Bosque, Colombia</div>
+  <div><b>Rehabilitación estética</b>Especialista, Brasil</div>
+  <div><b>Armonización orofacial</b>Máster, Brasil</div>
+  <div><b>Medicina estética</b>Máster, España</div>
+</div></section>
+
+<section class="svc"><div class="wrap">
+  <h2>Tratamientos</h2>
+  <p class="sub">Cada tratamiento con su explicación, duración y preguntas frecuentes, para que el paciente llegue decidido.</p>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1654373535457-383a0a4d00f9?w=600&h=400&fit=crop&q=70" alt=""><div class="b"><h3>Diseño de sonrisa</h3><p>Rehabilitación estética con resultados naturales y proporcionados a tu rostro.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop&q=70" alt=""><div class="b"><h3>Ortodoncia</h3><p>Alineación dental con seguimiento cercano en cada control.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?w=600&h=400&fit=crop&q=70" alt=""><div class="b"><h3>Armonización orofacial</h3><p>Equilibrio entre sonrisa, labios y rostro.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1631051103633-24959376b92d?w=600&h=400&fit=crop&q=70" alt=""><div class="b"><h3>Odontología para niños</h3><p>Primeras visitas tranquilas y prevención desde temprano.</p></div></div>
+  </div>
+</div></section>
+
+<section class="book"><div class="wrap"><div class="box">
+  <div>
+    <h2>¿Primera vez? Así funciona</h2>
+    <p class="sub" style="margin-bottom:0">Reserva en línea, recibe confirmación por WhatsApp y llega a tu valoración en el nuevo consultorio.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span>1</span>Elige tratamiento y horario</div>
+    <div class="step"><span>2</span>Confirmación por WhatsApp</div>
+    <div class="step"><span>3</span>Valoración y plan personalizado</div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">Dra. Beatriz Hernández · COOLDENT · Barranquilla, Colombia — Fotos ilustrativas de stock (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

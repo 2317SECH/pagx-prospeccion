@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ft. Sebastián Rengifo · Fisioterapia Medellín — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f4f7fb;--navy:#0f2747;--blue:#2563eb;--orange:#f97316;--muted:#5b6b82;--line:#dde5f0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Sora,sans-serif;background:var(--bg);color:var(--navy)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  header.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{font-weight:800;font-size:19px;white-space:nowrap;display:flex;align-items:center;gap:10px}
+  .logo i{width:36px;height:36px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;font-style:normal;font-size:14px}
+  .logo small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+  .links{display:flex;gap:24px;font-size:14px;font-weight:600}
+  .links a{color:var(--navy);text-decoration:none}
+  .btn{display:inline-block;background:var(--orange);color:#fff;padding:13px 22px;border-radius:12px;font-weight:800;font-size:14px;text-decoration:none}
+  .btn.b{background:var(--navy)}
+  .hero{padding:56px 0 64px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+  .tag{display:inline-flex;gap:8px;align-items:center;background:#e4ecff;color:var(--blue);font-weight:800;font-size:12px;padding:7px 12px;border-radius:999px}
+  h1{font-size:52px;line-height:1.06;font-weight:800;margin:18px 0;letter-spacing:-.02em}
+  h1 span{color:var(--orange)}
+  .lead{font-size:17px;line-height:1.65;color:var(--muted);max-width:500px}
+  .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .stats{display:flex;gap:28px;margin-top:30px}
+  .stats b{display:block;font-size:28px}
+  .stats span{font-size:13px;color:var(--muted)}
+  .pic{position:relative}
+  .pic img{width:100%;height:500px;object-fit:cover;border-radius:28px;display:block}
+  .pic .loc{position:absolute;left:18px;bottom:18px;right:18px;background:#fff;border-radius:16px;padding:14px 16px;font-size:13px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .pic .loc b{font-size:14px}
+  .quiz{background:var(--navy);color:#fff;padding:60px 0}
+  .quiz h2{font-size:34px}
+  .quiz p{color:#b9c6db;margin:8px 0 22px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chips span{border:1.5px solid #3a5480;border-radius:999px;padding:11px 18px;font-size:14px;font-weight:600}
+  .chips span.on{background:var(--orange);border-color:var(--orange)}
+  section.svc{padding:76px 0}
+  h2{font-size:38px;font-weight:800;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:8px 0 30px}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .c{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .c img{width:100%;height:190px;object-fit:cover;display:block}
+  .c .t{padding:20px}
+  .c h3{font-size:18px;margin-bottom:6px}
+  .c p{font-size:14px;color:var(--muted);line-height:1.55}
+  .c .d{display:inline-block;margin-top:12px;font-size:12px;font-weight:800;color:var(--blue);background:#e4ecff;padding:5px 10px;border-radius:999px}
+  footer{padding:26px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--blue);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}
+    .logo{font-size:15px}.logo small{display:none}
+    header.nav .btn{padding:10px 12px;font-size:12px}
+    .hero .wrap,.grid{grid-template-columns:1fr}
+    h1{font-size:36px}
+    .pic img{height:380px}
+    .quiz h2,h2{font-size:28px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo"><i>SR</i><div>Ft. Sebastián Rengifo<small>Fisioterapia · Medellín</small></div></div>
+  <nav class="links"><a href="#">Servicios</a><a href="#">Dolor lumbar</a><a href="#">Experiencias</a><a href="#">Ponencias</a><a href="#">Ubicación</a></nav>
+  <a class="btn" href="#">Agendar cita</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">FISIOTERAPIA Y QUIROPRAXIA</span>
+    <h1>Vuelve a moverte <span>sin dolor</span> de espalda</h1>
+    <p class="lead">Más de 5 años tratando dolor lumbar en Medellín, con atención personalizada en cada sesión. Cuéntanos qué te duele y agenda tu valoración en línea.</p>
+    <div class="cta"><a class="btn" href="#">Reservar valoración</a><a class="btn b" href="#">Ver servicios</a></div>
+    <div class="stats"><div><b>+5 años</b><span>de experiencia</span></div><div><b>1 a 1</b><span>sesiones personalizadas</span></div></div>
+  </div>
+  <div class="pic">
+    <img src="https://images.unsplash.com/photo-1706353399656-210cca727a33?w=900&h=1000&fit=crop&q=70" alt="Sesión de fisioterapia">
+    <div class="loc"><div><b>Velódromo · Estadio</b><br>Cra. 77B # 45G-61, Medellín</div><a class="btn b" href="#" style="padding:9px 14px;font-size:12px">Cómo llegar</a></div>
+  </div>
+</div></section>
+
+<section class="quiz"><div class="wrap">
+  <h2>¿Dónde te duele?</h2>
+  <p>Elige tu caso y te sugerimos el tipo de sesión antes de agendar.</p>
+  <div class="chips"><span class="on">Espalda baja</span><span>Cuello y hombros</span><span>Lesión deportiva</span><span>Rodilla</span><span>Estrés y tensión</span><span>Postura</span></div>
+</div></section>
+
+<section class="svc"><div class="wrap">
+  <h2>Servicios</h2>
+  <p class="sub">Descripción y duración de ejemplo para cada tipo de sesión.</p>
+  <div class="grid">
+    <div class="c"><img src="https://images.unsplash.com/photo-1645005513713-9e2b92a687d3?w=700&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Fisioterapia para dolor lumbar</h3><p>Evaluación, terapia manual y ejercicio para recuperar movimiento.</p><span class="d">60 min</span></div></div>
+    <div class="c"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=700&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Masaje terapéutico</h3><p>Liberar tensión, bajar el estrés y mejorar el rango de movimiento.</p><span class="d">50 min</span></div></div>
+    <div class="c"><img src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?w=700&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Lesiones deportivas</h3><p>Recuperación y prevención para volver a entrenar con seguridad.</p><span class="d">60 min</span></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Ft. Sebastián Rengifo · Medellín, Antioquia — Fotos de stock y duraciones de ejemplo (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

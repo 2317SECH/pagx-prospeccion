@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAIN Activewear · Tienda online — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#0b0b0b;--wh:#f4f4f2;--gr:#8a8a86;--line:#222;--acc:#c8ff3d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,sans-serif;background:var(--wh);color:var(--bk)}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 26px}
+  .tick{background:var(--bk);color:var(--wh);font-size:12px;font-weight:800;letter-spacing:.2em;padding:9px 0;overflow:hidden;white-space:nowrap}
+  .tick span{color:var(--acc)}
+  header.nav{position:sticky;top:0;z-index:50;background:var(--wh);border-bottom:2px solid var(--bk)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:Anton,sans-serif;font-size:34px;letter-spacing:.14em;white-space:nowrap}
+  .links{display:flex;gap:26px;font-weight:800;font-size:13px;letter-spacing:.08em}
+  .links a{color:var(--bk);text-decoration:none}
+  .cart{font-weight:800;font-size:13px;border:2px solid var(--bk);padding:8px 14px}
+  .hero{background:var(--bk);color:var(--wh)}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:600px}
+  .ht{display:flex;flex-direction:column;justify-content:center;padding:50px 40px 50px 0}
+  .drop{display:inline-block;background:var(--acc);color:var(--bk);font-weight:800;font-size:12px;letter-spacing:.2em;padding:7px 12px;align-self:flex-start}
+  h1{font-family:Anton,sans-serif;font-size:104px;line-height:.9;font-weight:400;margin:22px 0;text-transform:uppercase}
+  .ht p{color:#c9c9c4;font-size:17px;line-height:1.6;max-width:420px}
+  .btn{display:inline-block;background:var(--wh);color:var(--bk);padding:15px 28px;font-weight:800;font-size:14px;letter-spacing:.08em;text-decoration:none;margin-top:28px;align-self:flex-start}
+  .hi{position:relative}
+  .hi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tabs{padding:50px 0 20px}
+  .tabs .wrap{display:flex;gap:10px;flex-wrap:wrap}
+  .tabs a{border:2px solid var(--bk);padding:10px 18px;font-weight:800;font-size:13px;letter-spacing:.06em;color:var(--bk);text-decoration:none}
+  .tabs a.on{background:var(--bk);color:var(--wh)}
+  .shop{padding:20px 0 70px}
+  h2{font-family:Anton;font-size:52px;font-weight:400;text-transform:uppercase;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .p img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#ddd}
+  .p .r{display:flex;justify-content:space-between;margin-top:10px;font-weight:800;font-size:15px}
+  .p small{display:block;color:var(--gr);font-size:13px;margin-top:2px}
+  .add{display:block;text-align:center;border:2px solid var(--bk);margin-top:10px;padding:9px;font-weight:800;font-size:12px;letter-spacing:.1em}
+  .info{background:var(--bk);color:var(--wh);padding:46px 0}
+  .info .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .info b{font-family:Anton;font-size:28px;font-weight:400;display:block;text-transform:uppercase}
+  .info span{color:#b5b5b0;font-size:14px}
+  footer{padding:24px 0;color:var(--gr);font-size:13px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--acc);color:var(--bk);font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}
+    .logo{font-size:26px}
+    .hero .wrap{grid-template-columns:1fr}
+    .ht{padding:40px 0}
+    .hi{height:380px}
+    h1{font-size:64px}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .info .wrap{grid-template-columns:1fr}
+    h2{font-size:40px}
+  }
+</style>
+</head>
+<body>
+<div class="tick"><div class="wrap">DROP #2 YA DISPONIBLE · <span>BUILT BY DISCIPLINE</span> · ROPA Y ACCESORIOS PARA TU ENTRENAMIENTO</div></div>
+<header class="nav"><div class="wrap">
+  <div class="logo">MAIN</div>
+  <nav class="links"><a href="#">HOMBRE</a><a href="#">MUJER</a><a href="#">ACCESORIOS</a><a href="#">DROP #2</a></nav>
+  <span class="cart">CARRITO (0)</span>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="ht">
+    <span class="drop">DROP #2</span>
+    <h1>Built by discipline</h1>
+    <p>Conjuntos, shorts y accesorios para entrenar. Elige talla, paga en línea y sigue tu pedido, todo en tu propia tienda.</p>
+    <a class="btn" href="#">COMPRAR EL DROP</a>
+  </div>
+  <div class="hi"><img src="https://images.unsplash.com/photo-1606903037631-f09fd0bd74b4?w=900&h=1100&fit=crop&q=70" alt="Conjunto deportivo"></div>
+</div></section>
+
+<section class="tabs"><div class="wrap">
+  <a class="on" href="#">TODO</a><a href="#">CONJUNTOS</a><a href="#">R-MUJER</a><a href="#">R-HOMBRE</a><a href="#">ACCESORIOS</a>
+</div></section>
+
+<section class="shop"><div class="wrap">
+  <h2>Lo más vendido</h2>
+  <div class="grid">
+    <div class="p"><img src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=600&h=750&fit=crop&q=70" alt=""><div class="r"><span>Conjunto campana</span><span>$—</span></div><small>Mujer · S M L</small><span class="add">AGREGAR</span></div>
+    <div class="p"><img src="https://images.unsplash.com/photo-1624513764370-f29d72dc4e19?w=600&h=750&fit=crop&q=70" alt=""><div class="r"><span>Short H-Main</span><span>$14</span></div><small>Hombre · 3 colores</small><span class="add">AGREGAR</span></div>
+    <div class="p"><img src="https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=600&h=750&fit=crop&q=70" alt=""><div class="r"><span>Top deportivo</span><span>$—</span></div><small>Mujer · S M L</small><span class="add">AGREGAR</span></div>
+    <div class="p"><img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=600&h=750&fit=crop&q=70" alt=""><div class="r"><span>Guantillas</span><span>$8</span></div><small>Accesorios</small><span class="add">AGREGAR</span></div>
+  </div>
+</div></section>
+
+<section class="info"><div class="wrap">
+  <div><b>Métodos de pago</b><span>Visibles antes de comprar, sin preguntar por DM</span></div>
+  <div><b>Guía de tallas</b><span>Por prenda, hombre y mujer</span></div>
+  <div><b>Clientes</b><span>Reseñas y fotos de la comunidad MAIN</span></div>
+</div></section>
+
+<footer><div class="wrap">MAIN Activewear — Fotos de stock; precios de ejemplo salvo los publicados en su catálogo (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

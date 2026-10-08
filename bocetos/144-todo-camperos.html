@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Todo Camperos · Autopartes y Taller en Bucaramanga — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0e1116;--panel:#171c24;--line:#262e3a;--red:#e2231a;--blue:#1d4ed8;--txt:#e9edf3;--muted:#9aa5b5}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Barlow,sans-serif;background:var(--bg);color:var(--txt)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  header.nav{position:sticky;top:0;z-index:50;background:#0b0d11;border-bottom:3px solid var(--red)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Barlow Condensed';font-size:26px;font-weight:800;white-space:nowrap;letter-spacing:.02em}
+  .logo i{width:40px;height:40px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;color:var(--blue);font-style:normal;font-size:17px}
+  .links{display:flex;gap:26px;font-weight:600;font-size:15px}
+  .links a{color:var(--txt);text-decoration:none}
+  .btn{display:inline-block;background:var(--red);color:#fff;padding:13px 22px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px}
+  .btn.alt{background:transparent;border:2px solid #fff}
+  .hero{position:relative;min-height:560px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(14,17,22,.96) 0%,rgba(14,17,22,.75) 48%,rgba(14,17,22,.15) 100%),url(https://images.unsplash.com/photo-1735361039382-d78a0a0cc185?w=1600&h=900&fit=crop&q=70) center/cover}
+  .since{display:inline-block;font-family:'Barlow Condensed';font-weight:800;letter-spacing:.18em;color:var(--red);font-size:16px}
+  h1{font-family:'Barlow Condensed';font-size:76px;line-height:.95;font-weight:800;text-transform:uppercase;margin:12px 0 18px;max-width:640px}
+  h1 span{color:var(--red)}
+  .lead{font-size:18px;color:#cdd5e0;max-width:520px;line-height:1.55}
+  .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .sedes{margin-top:-60px;position:relative;z-index:2}
+  .sedes .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .sede{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:center}
+  .sede img{width:120px;height:110px;object-fit:cover;border-radius:8px}
+  .sede h3{font-family:'Barlow Condensed';font-size:26px;text-transform:uppercase}
+  .sede p{color:var(--muted);font-size:15px;margin:4px 0 10px}
+  .sede a{color:#fff;font-weight:700;font-size:14px}
+  section.cot{padding:80px 0}
+  h2{font-family:'Barlow Condensed';font-size:46px;text-transform:uppercase;font-weight:800}
+  .sub{color:var(--muted);margin:6px 0 30px;font-size:17px}
+  .cot .box{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:14px}
+  label{font-size:13px;color:var(--muted);font-weight:600;display:grid;gap:6px}
+  .f{background:#0e1116;border:1px solid var(--line);border-radius:6px;padding:12px 14px;color:var(--txt);font-size:15px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .brands{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .brands span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;background:var(--panel)}
+  .cats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+  .cats div{background:var(--panel);border-left:4px solid var(--blue);padding:14px 16px;border-radius:6px;font-weight:700}
+  .cats small{display:block;color:var(--muted);font-weight:400;margin-top:3px}
+  .fraud{background:var(--red);padding:30px 0}
+  .fraud .wrap{display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .fraud h3{font-family:'Barlow Condensed';font-size:32px;text-transform:uppercase}
+  .fraud p{max-width:620px;font-size:16px}
+  footer{padding:26px 0;color:var(--muted);font-size:13px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}
+    .logo{font-size:20px}
+    header.nav .btn{padding:10px 12px;font-size:13px}
+    h1{font-size:50px}
+    .hero{min-height:520px;background:linear-gradient(180deg,rgba(14,17,22,.7),rgba(14,17,22,.95)),url(https://images.unsplash.com/photo-1735361039382-d78a0a0cc185?w=900&h=1200&fit=crop&q=70) center/cover}
+    .sedes{margin-top:24px}
+    .sedes .wrap,.cot .box,.row,.cats{grid-template-columns:1fr}
+    .sede{grid-template-columns:90px minmax(0,1fr)}
+    .sede img{width:90px;height:90px}
+    h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo"><i>TC</i>TODO CAMPEROS</div>
+  <nav class="links"><a href="#">Repuestos</a><a href="#">Taller</a><a href="#">Japoneses</a><a href="#">Coreanos</a><a href="#">Contacto</a></nav>
+  <a class="btn" href="#">Cotizar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="since">EMPRESA FAMILIAR DESDE 1997</span>
+  <h1>Repuestos y taller para tu <span>campero</span></h1>
+  <p class="lead">Almacén de repuestos originales y homologados + taller mecánico en Bucaramanga. Cotiza en línea por referencia o placa y te respondemos por el canal oficial.</p>
+  <div class="cta"><a class="btn" href="#">Cotizar repuesto</a><a class="btn alt" href="#">Agendar en taller</a></div>
+</div></section>
+
+<section class="sedes"><div class="wrap">
+  <div class="sede"><img src="https://images.unsplash.com/photo-1611633235555-45e252fe48c8?w=300&h=280&fit=crop&q=70" alt=""><div><h3>Almacén de repuestos</h3><p>Cra 15 # 20-73, Bucaramanga</p><a href="#">Cómo llegar →</a></div></div>
+  <div class="sede"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=300&h=280&fit=crop&q=70" alt=""><div><h3>Taller mecánico</h3><p>Cra 12 # 20-14, Bucaramanga</p><a href="#">Cómo llegar →</a></div></div>
+</div></section>
+
+<section class="cot"><div class="wrap"><div class="box">
+  <div>
+    <h2>Cotiza sin intermediarios</h2>
+    <p class="sub">Deja los datos de tu vehículo y la pieza; el equipo te responde con precio y disponibilidad.</p>
+    <div class="brands"><span>Toyota</span><span>Nissan</span><span>Mitsubishi</span><span>Suzuki</span><span>Hyundai</span><span>Kia</span></div>
+    <div class="cats">
+      <div>Japoneses<small>Repuestos y mantenimiento</small></div>
+      <div>Coreanos<small>Repuestos y mantenimiento</small></div>
+      <div>Originales<small>Y homologados</small></div>
+      <div>Taller<small>Diagnóstico y reparación</small></div>
+    </div>
+  </div>
+  <form onsubmit="return false">
+    <div class="row"><label>Marca<input class="f" placeholder="Ej. Toyota"></label><label>Modelo y año<input class="f" placeholder="Ej. Land Cruiser 2012"></label></div>
+    <label>Repuesto que necesitas<input class="f" placeholder="Ej. kit de embrague"></label>
+    <div class="row"><label>Placa (opcional)<input class="f" placeholder="ABC123"></label><label>¿Necesitas instalación?<input class="f" placeholder="Sí / No"></label></div>
+    <a class="btn" href="#" style="text-align:center">Enviar cotización</a>
+  </form>
+</div></div></section>
+
+<section class="fraud"><div class="wrap">
+  <div><h3>Solo canales oficiales</h3><p>En Todo Camperos no trabajamos con intermediarios. En la web quedan publicados los únicos números oficiales del almacén y del taller.</p></div>
+  <a class="btn alt" href="#">Ver canales oficiales</a>
+</div></section>
+
+<footer><div class="wrap">Todo Camperos · Bucaramanga, Santander — Marcas listadas e imágenes como ejemplo (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

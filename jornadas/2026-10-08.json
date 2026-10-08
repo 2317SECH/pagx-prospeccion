@@ -1,0 +1,21 @@
+{
+  "fecha": "08/10/2026",
+  "persona": "Sergio",
+  "nota": "",
+  "prospectos": [
+    {
+      "num": 143,
+      "slug": "143-dra-beatriz-hernandez",
+      "nombre": "Dra. Beatriz Hernández · COOLDENT",
+      "ig": "dra.beatrizhernandezod",
+      "lugar": "Barranquilla, Colombia",
+      "nicho": "Odontología estética, ortodoncia y armonización orofacial",
+      "web": "Sin web (solo WhatsApp en bio)",
+      "porque": "5,4K seguidores, activa (03/10/2026, 48 likes/11 comentarios). Formación en Colombia, Brasil y España, nuevo consultorio inaugurado en 2026 y destacados de antes/después. Todo se agenda por WhatsApp; no hay página que explique tratamientos ni reserve citas. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/143-dra-beatriz-hernandez-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos tus casos de antes y después y tu nuevo consultorio, pero hoy toda cita pasa por WhatsApp y no hay una página que muestre tus tratamientos y tu formación.\nTe proponemos una web con tratamientos, casos reales y reserva de valoración en línea, para que el paciente llegue decidido.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?"
+    }
+  ]
+}
