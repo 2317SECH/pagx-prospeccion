@@ -615,6 +615,20 @@
         "bocetos/evidencia/111-the-pets-bakery-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nNos encantó el concepto de onces para peludos y su humano, pero el menú, los cumpleaños y el day care están repartidos en destacadas de Instagram.\nLes proponemos una web con el menú para perros y humanos, reservas de cumpleaños, day care y hotel en un solo lugar.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 112,
+      "slug": "112-sinergia-coffee",
+      "nombre": "Sinergia Specialty Coffee",
+      "ig": "sinergiacoffee",
+      "lugar": "Quito, Ecuador (Av. Inglaterra y Las Guayanas, edificio LEEDS)",
+      "nicho": "Cafetería de especialidad + café tostado + catas",
+      "web": "Sin web y sin link en la bio",
+      "porque": "1K seguidores, publica seguido (06/10/2026): bebidas de temporada (Latte del Bosque), sándwiches de masa madre, catas de café. Venden café tostado pero no hay dónde comprarlo online ni ver la carta; cero link en la bio. Interacción baja: una web + Google ayudaría a captar público fuera de IG. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/112-sinergia-coffee-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus creaciones como el Latte del Bosque y que venden café tostado, pero su perfil no tiene ningún link para ver la carta o comprar.\nLes proponemos una web con la carta, la bebida del mes, venta de café en grano e inscripción a las catas.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

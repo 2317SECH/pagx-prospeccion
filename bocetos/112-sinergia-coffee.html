@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sinergia Specialty Coffee (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0f1d2b;--navy2:#162a3d;--gold:#d6a75c;--cream:#f6efe4;--ink:#1b1b1b;--muted:#8a95a3;--line:#24384c}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy);color:var(--cream);font-family:'Manrope',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:4px;font-weight:700;font-size:14px;letter-spacing:.04em;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--navy)}
+  .btn-o{border:1px solid rgba(246,239,228,.4)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(15,29,43,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px;white-space:nowrap}
+  .logo .s{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:'Fraunces';font-size:24px;color:var(--gold);font-style:italic}
+  .logo b{font-family:'Fraunces';font-size:22px;letter-spacing:.06em}
+  .logo small{display:block;font-size:10px;letter-spacing:.28em;color:var(--muted)}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:600;color:#c9d0d8}
+  .hero{min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,29,43,.96) 0%,rgba(15,29,43,.75) 50%,rgba(15,29,43,.3) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:84px;max-width:680px;margin:14px 0 18px}
+  .hero h1 em{color:var(--gold);font-style:italic;font-weight:400}
+  .hero p{font-size:18px;color:#cfd6de;max-width:480px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hours{display:flex;gap:30px;margin-top:34px;font-size:14px;color:#cfd6de;flex-wrap:wrap}
+  .hours b{display:block;color:var(--cream);font-family:'Fraunces';font-size:20px}
+  section.mes{background:var(--cream);color:var(--ink);padding:84px 0}
+  .mes .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .mes .img{aspect-ratio:4/5;border-radius:6px;background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=70&fit=crop') center/cover}
+  .mes .k{color:#a1742c}
+  .mes h2{font-size:62px;margin:12px 0 16px}
+  .mes h2 em{font-style:italic;font-weight:400;color:#a1742c}
+  .mes p{color:#5b5b5b;font-size:17px;max-width:480px}
+  .notes{display:flex;gap:10px;margin:22px 0 26px;flex-wrap:wrap}
+  .notes span{border:1px solid #d9cdb8;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700}
+  .mes .btn-g{background:var(--navy);color:var(--cream)}
+  section.carta{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:54px}
+  .head p{color:var(--muted);max-width:400px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .c{background:var(--navy2);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .c .ph{height:220px;background-size:cover;background-position:center}
+  .c .b{padding:22px}
+  .c h3{font-size:26px;margin-bottom:6px}
+  .c p{color:var(--muted);font-size:14px}
+  .c .meta{display:flex;justify-content:space-between;margin-top:14px;font-weight:700;font-size:14px;color:var(--gold)}
+  .note{font-size:12px;color:var(--muted);margin-top:16px}
+  section.visit{border-top:1px solid var(--line);padding:60px 0}
+  .visit .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .visit h3{font-size:36px}
+  .visit p{color:var(--muted)}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo small{display:none}.logo b{font-size:18px}
+    .hero{min-height:560px}
+    .hero::after{background:rgba(15,29,43,.86)}
+    .hero h1{font-size:50px}
+    .mes .wrap,.grid{grid-template-columns:1fr}
+    .mes h2,.head h2{font-size:40px}
+    .head{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="s">S</span><span><b>SINERGIA</b><small>SPECIALTY COFFEE</small></span></a>
+  <nav class="links"><a href="#carta">Carta</a><a href="#mes">Del mes</a><a href="#">Café para casa</a><a href="#">Catas</a><a href="#visit">Visítanos</a></nav>
+  <a class="btn btn-g" href="#">Comprar café</a>
+</div></header>
+
+<section class="hero"><div class="bg"></div><div class="wrap">
+  <span class="k">Cafetería de especialidad · Quito</span>
+  <h1>Pasión por el café, <em>taza a taza.</em></h1>
+  <p>Café tostado, métodos de filtrado, postres y sándwiches de masa madre en el norte de Quito. Ven a probar, o llévate tu café a casa.</p>
+  <div class="ctas"><a class="btn btn-g" href="#carta">Ver la carta</a><a class="btn btn-o" href="#visit">Cómo llegar</a></div>
+  <div class="hours"><span><b>Lun–Vie</b>10:00 – 19:00</span><span><b>Sábado</b>9:30 – 15:00</span><span><b>Edificio LEEDS</b>Av. Inglaterra y Las Guayanas</span></div>
+</div></section>
+
+<section class="mes" id="mes"><div class="wrap">
+  <div class="img"></div>
+  <div>
+    <span class="k">Creación de octubre</span>
+    <h2>Latte <em>del Bosque</em></h2>
+    <p>Espresso, leche cremosa y una infusión de eucalipto y especias. Una bebida de temporada que hoy solo vive en un post del feed; aquí tiene su propio espacio.</p>
+    <div class="notes"><span>Eucalipto</span><span>Especias</span><span>Espresso</span><span>Edición limitada</span></div>
+    <a class="btn btn-g" href="#">Reservar mesa</a>
+  </div>
+</div></section>
+
+<section class="carta" id="carta"><div class="wrap">
+  <div class="head"><h2>La carta</h2><p>Bebidas, platos y café en grano, con fotos y precios siempre actualizados.</p></div>
+  <div class="grid">
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=70&fit=crop')"></div><div class="b"><h3>Café en grano</h3><p>Tostado de especialidad para preparar en casa.</p><div class="meta"><span>250 g · 500 g</span><span>$ —</span></div></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=70&fit=crop')"></div><div class="b"><h3>Métodos</h3><p>V60, Chemex y espresso con el origen del día.</p><div class="meta"><span>Barra</span><span>$ —</span></div></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=70&fit=crop')"></div><div class="b"><h3>Sándwich italiano</h3><p>Pan de masa madre, salami, jamón y pesto artesanal.</p><div class="meta"><span>Cocina</span><span>$ —</span></div></div></div>
+  </div>
+  <p class="note">*Precios y presentaciones de ejemplo (demo).</p>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div><h3>Catas de café</h3><p>Inscripciones a la próxima cata directamente desde la web.</p></div>
+  <a class="btn btn-g" href="#">Quiero ir a la próxima</a>
+</div></section>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
