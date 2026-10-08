@@ -115,6 +115,20 @@
         "bocetos/evidencia/150-dermalashes-miami-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw your October Full Set offer and your lash courses, but right now your only link is a Setmore booking page.\nWe'd build you a bilingual site with your services, offers, courses and booking in one place.\nWe put together a quick preview (~20%). Want to see it?"
+    },
+    {
+      "num": 151,
+      "slug": "151-main-activewear",
+      "nombre": "MAIN Activewear",
+      "ig": "main_activewear",
+      "lugar": "Ubicación no indicada (menciona clientes en Cuba)",
+      "nicho": "Marca de ropa deportiva por drops (e-commerce)",
+      "web": "Catálogo básico en Netlify (main-catalog-web.netlify.app), sin pagos ni marca propia",
+      "porque": "2,1K seguidores con reels virales (11K y 2,2K likes), Drop #2 activo (última publicación 12/09/2026). Vende desde un catálogo simple en Netlify: candidata a tienda Shopify con dominio propio. Ubicación sin confirmar. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/151-main-activewear-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que sus reels del drop se hicieron virales, pero la compra se queda en un catálogo básico sin pago en línea ni dominio propio.\nLes proponemos una tienda online de marca con tallas, carrito y pagos, lista para el próximo drop.\nLes preparamos una vista previa (~20%). ¿Se la mostramos?"
     }
   ]
 }
