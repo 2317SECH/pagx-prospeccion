@@ -854,6 +854,20 @@
         "bocetos/evidencia/128-san-antonio-bakery-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus pasteles y pan dulce en Compton, pero su perfil no tiene ningún link para ver el pan del día ni pedir un pastel.\nLes proponemos una web bilingüe con el pan dulce, pedidos de pasteles personalizados en línea y preventa de Rosca de Reyes.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 129,
+      "slug": "129-marea-nail-salon",
+      "nombre": "MAREA Nail Salon",
+      "ig": "mareanailsalon",
+      "lugar": "Miami, FL, Estados Unidos",
+      "nicho": "Salón de uñas (manicure, gel, nail art)",
+      "web": "Sin web (solo Linktree para reservar)",
+      "porque": "4,7K seguidores, cuenta verificada, publica a diario (07/10/2026), abre mar–sáb con agenda llena. Toda su presencia es Linktree + destacadas (faq, client love, our work): una web propia con menú, galería y reservas refuerza la marca. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/129-marea-nail-salon-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe love MAREA's calm, clean sets, but your bookings, FAQ and work all live in a Linktree and story highlights.\nWe'd build you a site under your own name with the service menu, a gallery of recent sets and online booking with deposits.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }
