@@ -1022,6 +1022,20 @@
         "bocetos/evidencia/140-las-mas-fresas-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen dos sedes con horarios distintos y que el pedido de fresas con crema se arma por mensaje.\nLes proponemos una web donde el cliente arma su vaso (tamaño, crema, toppings), ve qué sede está abierta y pide para recoger.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 141,
+      "slug": "141-empanadas-miami",
+      "nombre": "Empanadas Miami",
+      "ig": "empanadasmiamiusa",
+      "lugar": "Aventura, FL, Estados Unidos (21004 West Dixie Hwy)",
+      "nicho": "Empanadería (empanada specialists) + delivery por apps",
+      "web": "Sin web y sin link en la bio (pedidos por 2 teléfonos, Uber y Grubhub)",
+      "porque": "4,2K seguidores, activo (28/08/2026), abre desde las 7 AM todos los días. Los pedidos llegan por dos números de teléfono o apps con comisión; no hay menú propio ni pedidos para recoger/bandejas. Engagement bajo. Prioridad MEDIA-BAJA.",
+      "evidencia": [
+        "bocetos/evidencia/141-empanadas-miami-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw your empanadas in Aventura, and that orders still come in through two phone numbers or delivery apps that take a cut.\nWe'd build you a site with your menu, online pickup orders and party trays for offices, commission-free.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }
