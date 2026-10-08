@@ -686,6 +686,20 @@
         "bocetos/evidencia/116-empanadas-deluxe-web-actual.png"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw the truck's busy fall schedule and your catering push, but the Canva site doesn't show where the truck is this week or let people request catering.\nWe'd build you a site with the weekly truck schedule, the menu and a catering quote form.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 117,
+      "slug": "117-nicoland-bordados",
+      "nombre": "Nicoland Bordados Personalizados",
+      "ig": "nicoland_bordados",
+      "lugar": "Pereira, Colombia (envíos a todo el país)",
+      "nicho": "Bordados personalizados: cobijas, toallas y sets de bebé (e-commerce)",
+      "web": "Sin web (solo link de WhatsApp)",
+      "porque": "3K seguidores, 503 publicaciones, activo (17/09/2026). Vende producto personalizado con envío nacional pero todo el pedido (nombre, diseño, color, pago) se hace por WhatsApp o comentarios. Candidata clara a tienda Shopify con personalizador. Interacción baja en posts. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/117-nicoland-bordados-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus cobijas y toallas bordadas con nombre, y que cada pedido se arma por WhatsApp o en los comentarios.\nLes proponemos una tienda Shopify donde el cliente escribe el nombre, ve el bordado, elige color y paga en línea.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
