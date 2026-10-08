@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queenz Kix Sneaker Care (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#0b0b0b;--pn:#151515;--gold:#f5c518;--white:#f4f4f2;--ink2:#9a9a96;--line:#262626;--blue:#7fd3ff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bk);color:var(--white);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--bk)}
+  .btn-o{border:1.5px solid #444}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(11,11,11,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Anton';font-size:30px;letter-spacing:.04em;white-space:nowrap}
+  .logo span{color:var(--gold)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:var(--ink2)}
+  .tick{background:var(--gold);color:var(--bk);font-family:'Anton';font-size:18px;letter-spacing:.06em;white-space:nowrap;overflow:hidden;padding:8px 0}
+  .tick div{display:inline-block;padding-left:20px}
+  .hero{padding:60px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .loc{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  .hero h1{font-size:118px;margin:12px 0 16px}
+  .hero h1 span{color:transparent;-webkit-text-stroke:2px var(--white)}
+  .hero p{font-size:18px;color:#c9c9c4;max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .ba div{position:relative;aspect-ratio:3/4;background-size:cover;background-position:center;border:1px solid var(--line)}
+  .ba b{position:absolute;left:10px;top:10px;background:var(--bk);padding:5px 10px;font-size:12px;letter-spacing:.14em}
+  .ba .af b{background:var(--gold);color:var(--bk)}
+  .ba .bf{filter:sepia(.5) saturate(.6) brightness(.75)}
+  section.svc{background:var(--pn);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:76px}
+  .head p{max-width:400px;color:var(--ink2)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .t{border:1px solid var(--line);background:var(--bk);padding:26px;display:flex;flex-direction:column}
+  .t.hot{border-color:var(--gold)}
+  .t .lbl{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--gold);margin-bottom:8px}
+  .t h3{font-size:42px}
+  .t ul{list-style:none;margin:14px 0 18px;font-size:14px;flex:1}
+  .t li{padding:8px 0;border-bottom:1px solid var(--line)}
+  .t li::before{content:"+ ";color:var(--gold);font-weight:700}
+  .t .pr{font-family:'Anton';font-size:34px;margin-bottom:12px}
+  .t .btn{justify-content:center}
+  .note{font-size:12px;color:var(--ink2);margin-top:14px}
+  section.book{padding:80px 0}
+  .book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .book h2{font-size:70px;margin-bottom:14px}
+  .book p{color:var(--ink2);margin-bottom:18px}
+  .steps{display:grid;gap:10px}
+  .steps div{display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:14px}
+  .steps i{font-style:normal;font-family:'Anton';font-size:26px;color:var(--gold);width:32px}
+  .form{background:var(--pn);border:1px solid var(--line);padding:26px}
+  .form h3{font-size:36px;margin-bottom:14px}
+  .f{border:1px solid var(--line);padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .tog{display:flex;margin-bottom:12px;border:1px solid var(--line)}
+  .tog span{flex:1;text-align:center;padding:10px;font-weight:700;font-size:13px;letter-spacing:.08em}
+  .tog span.on{background:var(--gold);color:var(--bk)}
+  .form .btn{width:100%;justify-content:center}
+  .pol{font-size:12px;color:var(--ink2);margin-top:10px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--bk);font-size:12px;font-weight:700;padding:9px 14px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:24px}
+    .hero .wrap,.book .wrap,.grid{grid-template-columns:1fr}
+    .hero h1{font-size:72px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.book h2{font-size:52px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">QUEENZ <span>KIX</span></a>
+  <nav class="links"><a href="#svc">Services</a><a href="#">Before / After</a><a href="#book">Book</a><a href="#">FAQ</a></nav>
+  <a class="btn btn-g" href="#book">Book a clean</a>
+</div></header>
+<div class="tick"><div>DEEP CLEAN · SUEDE · TIMBERLAND SEASON · UNYELLOWING · DIOR · JORDANS · DUNKS · DEEP CLEAN · SUEDE · TIMBERLAND SEASON · UNYELLOWING</div></div>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="loc">Queens, NYC · Sneaker care</span>
+    <h1>The future of <span>sneaker</span> care</h1>
+    <p>Top-quality, affordable cleaning for everything from beaters to designer pairs. Pick your service, choose drop-off or pickup, and book in under a minute. No more back-and-forth in DMs.</p>
+    <div class="ctas"><a class="btn btn-g" href="#book">Book now</a><a class="btn btn-o" href="#svc">See services</a></div>
+  </div>
+  <div class="ba">
+    <div class="bf" style="background-image:url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=70&fit=crop')"><b>BEFORE</b></div>
+    <div class="af" style="background-image:url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=70&fit=crop')"><b>AFTER</b></div>
+  </div>
+</div></section>
+
+<section class="svc" id="svc"><div class="wrap">
+  <div class="head"><h2>Services</h2><p>Clear menu, clear prices. Your price list lives in one story highlight today; here it works 24/7.</p></div>
+  <div class="grid">
+    <div class="t"><span class="lbl">STARTER</span><h3>Basic clean</h3><ul><li>Uppers + midsoles</li><li>Laces wash</li><li>Quick dry</li></ul><div class="pr">$ —</div><a class="btn btn-o" href="#book">Select</a></div>
+    <div class="t hot"><span class="lbl">MOST BOOKED</span><h3>Deep clean</h3><ul><li>Full interior + exterior</li><li>Insoles deodorized</li><li>Suede / nubuck safe</li></ul><div class="pr">$ —</div><a class="btn btn-g" href="#book">Select</a></div>
+    <div class="t"><span class="lbl">RESTORE</span><h3>Restoration</h3><ul><li>Unyellowing</li><li>Paint touch-ups</li><li>Designer pairs</li></ul><div class="pr">$ —</div><a class="btn btn-o" href="#book">Select</a></div>
+  </div>
+  <p class="note">*Service names and prices are placeholders (demo). We load your real menu.</p>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div>
+    <h2>Book in 3 steps</h2>
+    <p>Customers book themselves. You get every order with photos and details.</p>
+    <div class="steps"><div><i>1</i>Pick a service and number of pairs</div><div><i>2</i>Choose drop-off or pickup in Queens</div><div><i>3</i>Upload photos and confirm</div></div>
+  </div>
+  <div class="form">
+    <h3>Schedule a clean</h3>
+    <div class="tog"><span class="on">DROP-OFF</span><span>PICKUP</span></div>
+    <div class="row"><div class="f"><small>Service</small>Deep clean</div><div class="f"><small>Pairs</small>2</div></div>
+    <div class="f"><small>Sneakers</small>Jordan 11 · Timberland 6"</div>
+    <div class="f"><small>Date</small>Sat, Oct 18 · 12:00 PM</div>
+    <a class="btn btn-g" href="#">Confirm booking</a>
+    <p class="pol">No refunds — store credit when needed. Demo data.</p>
+  </div>
+</div></section>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>
