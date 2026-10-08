@@ -16,6 +16,21 @@
         "bocetos/evidencia/143-dra-beatriz-hernandez-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos tus casos de antes y después y tu nuevo consultorio, pero hoy toda cita pasa por WhatsApp y no hay una página que muestre tus tratamientos y tu formación.\nTe proponemos una web con tratamientos, casos reales y reserva de valoración en línea, para que el paciente llegue decidido.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?"
+    },
+    {
+      "num": 144,
+      "slug": "144-todo-camperos",
+      "nombre": "Todo Camperos · Autopartes y Taller",
+      "ig": "todocamperosbga",
+      "lugar": "Bucaramanga, Colombia",
+      "nicho": "Almacén de repuestos para camperos + taller mecánico",
+      "web": "Web antigua y rota (todocamperos.com: slider negro, PBX viejo, no enlazada en IG); bio con Linktree de WhatsApp",
+      "porque": "5,8K seguidores, empresa familiar desde 1997, muy activa (07/10/2026) con reels virales (uno de 33K likes). Tuvieron que publicar una alerta de fraude por intermediarios: una web oficial con sus canales y cotizador resolvería eso. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/144-todo-camperos-ig.jpg",
+        "bocetos/evidencia/144-todo-camperos-web-actual.png"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos su alerta de fraude por intermediarios y que la web todocamperos.com está desactualizada y no aparece en su Instagram.\nLes proponemos una web nueva con sus canales oficiales, las dos sedes y un cotizador de repuestos por marca y modelo.\nLes preparamos una vista previa (~20%). ¿Se la mostramos?"
     }
   ]
 }
