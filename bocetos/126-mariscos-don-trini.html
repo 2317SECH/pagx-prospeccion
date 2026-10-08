@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mariscos Don Trini (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#d7262e;--teal:#0f8b8d;--teal2:#d9f2f0;--sun:#ffb703;--cream:#fffaf2;--ink:#1d1a19;--muted:#6e6461;--line:#eedfcd}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Alfa Slab One',serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-t{background:var(--teal);color:#fff}
+  .btn-o{border:2px solid var(--ink)}
+  .waves{height:14px;background:radial-gradient(circle at 12px -4px,transparent 12px,var(--teal) 13px) 0 0/24px 14px repeat-x}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Alfa Slab One';font-size:24px;color:var(--red)}
+  .logo small{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--teal);margin-top:4px}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px;color:var(--muted)}
+  .hero{padding:50px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .from{display:inline-flex;gap:8px;align-items:center;background:var(--teal2);color:#0a5f60;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
+  .hero h1{font-size:74px;margin:16px 0 14px}
+  .hero h1 span{color:var(--red)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px;max-width:470px}
+  .hrs div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+  .hrs b{display:block}
+  .hrs small{color:var(--muted)}
+  .cup{position:relative}
+  .cup .img{height:520px;border-radius:30px;background:url('https://images.unsplash.com/photo-1626663011352-cacdcfe333f8?w=900&q=70&fit=crop') center/cover}
+  .cup .st{position:absolute;left:-18px;bottom:28px;background:var(--sun);border-radius:18px;padding:14px 18px;transform:rotate(-4deg);font-weight:700}
+  .cup .st b{font-family:'Alfa Slab One';font-size:22px;display:block;color:var(--red)}
+  section.menu{background:var(--teal);color:#fff;padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;opacity:.85}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .m{background:#fff;color:var(--ink);border-radius:24px;overflow:hidden}
+  .m .ph{height:210px;background-size:cover;background-position:center}
+  .m .b{padding:18px}
+  .m h3{font-size:22px}
+  .m p{font-size:14px;color:var(--muted);margin:6px 0 12px}
+  .m .row{display:flex;justify-content:space-between;align-items:center;font-weight:700}
+  .m .row span:first-child{color:var(--red)}
+  .m .tag{font-size:12px;background:var(--teal2);color:#0a5f60;padding:4px 10px;border-radius:999px}
+  .note{font-size:12px;opacity:.8;margin-top:14px}
+  section.order{padding:76px 0}
+  .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .order h2{font-size:48px;margin-bottom:12px}
+  .order p{color:var(--muted);margin-bottom:16px}
+  .form{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px}
+  .form h3{font-size:28px;margin-bottom:14px;color:var(--red)}
+  .li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .li b{font-weight:700}
+  .qty{font-weight:700;color:var(--teal)}
+  .form .btn{width:100%;justify-content:center;margin-top:16px}
+  footer{background:var(--ink);color:#cfc6c2;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:19px}.logo small{display:none}
+    .hero .wrap>*{min-width:0}
+    .hero .wrap,.grid,.order .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:46px}
+    .cup .img{height:300px}
+    .cup .st{left:0}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.order h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Mariscos Don Trini</b><small>ESTE DE LOS ÁNGELES · FOOD TRUCK</small></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#order">Ordenar</a><a href="#">Horarios</a><a href="#">Ubicación</a></nav>
+  <a class="btn btn-r" href="#order">Ordenar</a>
+</div></header>
+<div class="waves"></div>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="from">De Culiacán, Sinaloa a East LA</span>
+    <h1>Mariscos <span>estilo Culiacán</span> en el Este de LA</h1>
+    <p>Cócteles, botanas y micheladas preparadas al momento. Mira el menú, arma tu orden y pásala a recoger sin esperar en la línea del teléfono.</p>
+    <div class="ctas"><a class="btn btn-r" href="#order">Ordenar para recoger</a><a class="btn btn-o" href="#menu">Ver menú</a></div>
+    <div class="hrs"><div><b>Viernes</b><small>1 PM – 6 PM</small></div><div><b>Sábado a martes</b><small>11 AM – 5:30 PM</small></div></div>
+  </div>
+  <div class="cup"><div class="img"></div><div class="st"><b>Estilo Culiacán</b>preparados al momento</div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>Del mar al vaso</h2><p>Lo que hoy se ve en posts sueltos, en un menú con fotos y precios.</p></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1740500203238-5165ae25834a?w=700&q=70&fit=crop')"></div><div class="b"><h3>Cóctel de camarón y pulpo</h3><p>En salsa negra.</p><div class="row"><span>$ —</span><span class="tag">Favorito</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1562707774-553917f561df?w=700&q=70&fit=crop')"></div><div class="b"><h3>Botana Campechana Seca</h3><p>Para compartir.</p><div class="row"><span>$ —</span><span class="tag">Botanas</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1626663011352-cacdcfe333f8?w=700&q=70&fit=crop')"></div><div class="b"><h3>Miche Mix</h3><p>De la casa.</p><div class="row"><span>$ —</span><span class="tag">Bebidas</span></div></div></div>
+  </div>
+  <p class="note">*Precios de ejemplo (demo). Los nombres de los platos salen de sus publicaciones.</p>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div>
+    <h2>Ordena en línea</h2>
+    <p>Hoy las órdenes entran por llamada. Con la web el cliente arma su pedido, elige hora de recogida y el truck recibe todo por escrito.</p>
+  </div>
+  <div class="form">
+    <h3>Tu orden</h3>
+    <div class="li"><b>Cóctel camarón y pulpo</b><span class="qty">x2</span></div>
+    <div class="li"><b>Botana Campechana Seca</b><span class="qty">x1</span></div>
+    <div class="li"><b>Recoger</b><span class="qty">Sáb · 1:30 PM</span></div>
+    <a class="btn btn-r" href="#">Enviar orden</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Mariscos Don Trini · Este de Los Ángeles</span><span>@mariscosdontrini</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
