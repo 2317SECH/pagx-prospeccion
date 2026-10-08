@@ -952,6 +952,20 @@
         "bocetos/evidencia/135-cafe-brunch-ctg-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que fueron pioneros del café en taza de galleta en Cartagena, pero la carta y el horario solo están en destacadas y no hay forma de reservar el brunch.\nLes proponemos una web con la carta con fotos, su bebida firma y reservas de mesa, pensada también para turistas.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 136,
+      "slug": "136-coctel-coffee",
+      "nombre": "Coctel Coffee · Café de Especialidad",
+      "ig": "coctelcoffee",
+      "lugar": "Medellín, Colombia (Calle 42c # 89-29)",
+      "nicho": "Cafetería de especialidad (cafés de temporada, filtrados, tartas de queso)",
+      "web": "Sin web (solo WhatsApp y Google Maps)",
+      "porque": "3,4K seguidores, activa (07/10/2026), un post de 355 likes y 109 comentarios. Barista con nombre propio, cafés de temporada y tartas de queso; avisos importantes (vacaciones 7–14 oct) solo en posts. Web para carta, avisos y venta de café en grano. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/136-coctel-coffee-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus cafés de temporada y que avisos como las vacaciones solo quedan en un post, sin un lugar fijo para la carta o los pedidos.\nLes proponemos una web con los cafés de la barra, avisos siempre visibles y venta de café en grano para la casa.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
