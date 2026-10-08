@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pet's Bakery (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--mus:#f4b63f;--brown:#5a3a22;--cream:#fffaf0;--peach:#ffe2c6;--sage:#a9c79a;--ink:#3a2616;--muted:#86705d;--line:#f0e1c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Chewy',cursive;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-b{background:var(--brown);color:#fff}
+  .btn-m{background:var(--mus);color:var(--ink)}
+  .btn-o{border:2px solid var(--brown)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--cream);border-bottom:2px dashed var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .c{width:50px;height:50px;border-radius:50%;background:var(--mus);border:3px solid var(--brown);display:grid;place-items:center;font-family:'Chewy';font-size:18px;color:var(--brown)}
+  .logo b{font-family:'Chewy';font-size:28px;font-weight:400;color:var(--brown)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;font-size:15px;color:var(--muted)}
+  .hero{padding:56px 0 76px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .badge{display:inline-block;background:var(--peach);color:var(--brown);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
+  .hero h1{font-size:76px;color:var(--brown);margin:16px 0 14px}
+  .hero h1 span{color:var(--mus);-webkit-text-stroke:0}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .tags{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+  .tags span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700}
+  .photo{position:relative}
+  .photo .main{aspect-ratio:4/5;border-radius:200px 200px 32px 32px;background:url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900&q=70&fit=crop') center/cover;border:10px solid #fff;box-shadow:0 30px 60px rgba(90,58,34,.18)}
+  .photo .mini{position:absolute;left:-40px;bottom:30px;width:190px;height:150px;border-radius:24px;background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=70&fit=crop') center/cover;border:6px solid #fff;transform:rotate(-5deg);box-shadow:0 14px 30px rgba(0,0,0,.15)}
+  .photo .lbl{position:absolute;right:-10px;top:40px;background:var(--brown);color:#fff;border-radius:18px;padding:12px 16px;font-weight:700;transform:rotate(4deg)}
+  .photo .lbl b{font-family:'Chewy';font-size:26px;font-weight:400;display:block;color:var(--mus)}
+  section.menu{background:#fff;border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);padding:76px 0}
+  .head{text-align:center;margin-bottom:30px}
+  .head h2{font-size:54px;color:var(--brown)}
+  .head p{color:var(--muted)}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .col{background:var(--cream);border:1px solid var(--line);border-radius:28px;padding:26px}
+  .col h3{font-size:32px;color:var(--brown);margin-bottom:10px}
+  .it{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .it b{display:block}
+  .it small{color:var(--muted)}
+  .it .p{font-weight:700;color:var(--brown);white-space:nowrap}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:16px}
+  section.serv{padding:76px 0}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border-radius:28px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+  .card .ph{height:190px;background-size:cover;background-position:center}
+  .card .b{padding:20px}
+  .card h3{font-size:30px;color:var(--brown)}
+  .card p{font-size:14px;color:var(--muted);margin:6px 0 14px}
+  .card a{font-weight:700;color:var(--brown)}
+  .cta{margin-top:40px;background:var(--brown);color:#fff;border-radius:32px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .cta h3{font-size:38px}
+  .cta p{color:#e9d6c1}
+  footer{padding:26px 0;font-size:14px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--brown);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 16px}
+    .logo b{font-size:22px}
+    .hero .wrap,.split,.grid{grid-template-columns:1fr}
+    .hero h1{font-size:52px}
+    .head h2{font-size:40px}
+    .photo .mini{left:0;width:140px;height:110px}
+    .photo .lbl{right:0}
+    .cta{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="c">TPB</span><b>The Pet's Bakery</b></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#serv">Cumpleaños</a><a href="#serv">Day care</a><a href="#serv">Hotel</a><a href="#">Domicilios</a></nav>
+  <a class="btn btn-b" href="#serv">Reservar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="badge">#HumanFriendly · Bogotá</span>
+    <h1>El primer salón de onces para <span>peludos</span> y su humano</h1>
+    <p>Snacks naturales hechos con amor, café para ti y un plan perfecto para tu perro. Además, day care y hotel de lujo para cuando no puedes llevarlo contigo.</p>
+    <div class="ctas"><a class="btn btn-m" href="#serv">Reservar mesa o cumpleaños</a><a class="btn btn-o" href="#menu">Ver menú</a></div>
+    <div class="tags"><span>Snacks naturales</span><span>Cumpleaños</span><span>Day care</span><span>Hotel</span><span>Talleres</span></div>
+  </div>
+  <div class="photo"><div class="main"></div><div class="mini"></div><div class="lbl"><b>Onces</b>para 2 (y 4 patas)</div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>Un menú, dos clientes</h2><p>Lo que hoy está en una destacada de Instagram, aquí claro y fácil de compartir.</p></div>
+  <div class="split">
+    <div class="col"><h3>Para peludos</h3>
+      <div class="it"><span><b>Tapitas para perro</b><small>Snacks naturales horneados</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Torta de cumpleaños</b><small>Apta para perros</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Pupcake</b><small>Mini ponqué para peludos</small></span><span class="p">$ —</span></div>
+    </div>
+    <div class="col"><h3>Para humanos</h3>
+      <div class="it"><span><b>Café y bebidas</b><small>Para acompañar las onces</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Combo dupla</b><small>Algo para ti + algo para él</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Postres</b><small>De la casa</small></span><span class="p">$ —</span></div>
+    </div>
+  </div>
+  <p class="note">*Productos y precios ilustrativos (demo). Se reemplazan por el menú real.</p>
+</div></section>
+
+<section class="serv" id="serv"><div class="wrap">
+  <div class="grid">
+    <div class="card"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=70&fit=crop')"></div><div class="b"><h3>Cumpleaños</h3><p>Celebra a tu peludo con torta, decoración y sus amigos.</p><a href="#">Cotizar fiesta →</a></div></div>
+    <div class="card"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&q=70&fit=crop')"></div><div class="b"><h3>Day care</h3><p>Su segundo hogar mientras trabajas: juego, cuidado y compañía.</p><a href="#">Ver horarios →</a></div></div>
+    <div class="card"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=700&q=70&fit=crop')"></div><div class="b"><h3>Hotel de lujo</h3><p>Noches tranquilas con cuidado personalizado.</p><a href="#">Reservar noches →</a></div></div>
+  </div>
+  <div class="cta"><div><h3>Ven a visitarnos</h3><p>Transversal 3C #55-37, Bogotá · Domicilios disponibles</p></div><a class="btn btn-m" href="#">Cómo llegar</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>The Pet's Bakery · Bogotá</span><span>@thepetsbakery_</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
