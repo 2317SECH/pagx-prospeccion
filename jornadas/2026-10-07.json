@@ -714,6 +714,20 @@
         "bocetos/evidencia/118-el-jardin-taqueria-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw Chicago foodies raving about your tacos + matcha combo, but your bio only links to a Toast order page, with no menu, story or events.\nWe'd build you a site with the taquería and matcha menus, your family story since 2001, and an events page.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 119,
+      "slug": "119-carolinas-bakery",
+      "nombre": "Carolina's Bakery Orlando",
+      "ig": "carolinasbakeryorlando",
+      "lugar": "Orlando, FL, Estados Unidos",
+      "nicho": "Pastelería chilena + tortas personalizadas",
+      "web": "Sin web y sin link en la bio",
+      "porque": "2,6K seguidores, 1.341 publicaciones, activa (03/10/2026). Salió en un reportaje de página completa en el diario de su ciudad en Chile (post con 536 likes). Tortas chilenas (Torta Amor, lúcuma manjar nuez, tres leches) y personalizadas, todo por DM y sin ningún link. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/119-carolinas-bakery-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el reportaje en el diario de Chile y sus tortas chilenas en Orlando, pero su perfil no tiene ningún link para ver sabores ni cotizar.\nLe proponemos una web con las clásicas chilenas, las promos del mes y un formulario para cotizar tortas personalizadas.\nLe preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

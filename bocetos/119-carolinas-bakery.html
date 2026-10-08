@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carolina's Bakery Orlando (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--pink:#f2b8c6;--rose:#d9587a;--plum:#5b2a3c;--cream:#fff8f6;--blue:#1f3d8a;--red:#d52b1e;--ink:#3a2229;--muted:#8a6e75;--line:#f1dde2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--rose);color:#fff}
+  .btn-o{border:2px solid var(--plum);color:var(--plum)}
+  .flagbar{height:6px;background:linear-gradient(90deg,var(--blue) 0 33%,#fff 33% 66%,var(--red) 66%)}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .c{width:48px;height:48px;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-family:'Playfair Display';font-style:italic;font-size:22px;color:var(--plum)}
+  .logo b{font-family:'Playfair Display';font-size:24px;font-style:italic;color:var(--plum)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;font-size:15px;color:var(--muted)}
+  .hero{padding:56px 0 76px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px;color:var(--plum)}
+  .hero h1{font-size:72px;color:var(--plum);margin:16px 0 16px}
+  .hero h1 em{color:var(--rose)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .cake{position:relative}
+  .cake .img{aspect-ratio:4/5;border-radius:36px;background:url('https://images.unsplash.com/photo-1615735487485-e52b9af610c1?w=900&q=70&fit=crop') center/cover;box-shadow:0 30px 60px rgba(91,42,60,.18)}
+  .press{position:absolute;left:-26px;bottom:34px;background:#fff;border-radius:20px;padding:14px 18px;max-width:260px;box-shadow:0 14px 30px rgba(0,0,0,.12);font-size:13px}
+  .press b{display:block;font-family:'Playfair Display';font-size:18px;color:var(--plum)}
+  section.cl{background:var(--plum);color:#fff;padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:54px}
+  .head p{max-width:420px;opacity:.8}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .t{background:#fff;color:var(--ink);border-radius:26px;overflow:hidden}
+  .t .ph{height:200px;background-size:cover;background-position:center}
+  .t .b{padding:20px}
+  .t h3{font-size:26px;color:var(--plum)}
+  .t p{font-size:14px;color:var(--muted);margin:4px 0 12px}
+  .t .row{display:flex;justify-content:space-between;font-weight:800;font-size:14px}
+  .t .row span:last-child{color:var(--rose)}
+  .promo{margin-top:26px;background:var(--pink);color:var(--plum);border-radius:22px;padding:18px 22px;font-weight:800;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+  section.order{padding:76px 0}
+  .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .order h2{font-size:52px;color:var(--plum);margin-bottom:12px}
+  .order p{color:var(--muted);margin-bottom:16px}
+  .cats{display:flex;gap:8px;flex-wrap:wrap}
+  .cats span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px}
+  .form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 20px 50px rgba(91,42,60,.08)}
+  .form h3{font-size:30px;color:var(--plum);margin-bottom:14px}
+  .f{border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  footer{background:var(--pink);color:var(--plum);padding:24px 0;font-size:14px;font-weight:700}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--plum);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:19px}.logo .c{width:40px;height:40px;font-size:18px}
+    .hero .wrap,.grid,.order .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:48px}
+    .press{left:10px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.order h2{font-size:40px}
+  }
+</style>
+</head>
+<body>
+<div class="flagbar"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="c">C</span><b>Carolina's Bakery</b></a>
+  <nav class="links"><a href="#cl">Tortas chilenas</a><a href="#order">Personalizadas</a><a href="#">Postres</a><a href="#">Prensa</a></nav>
+  <a class="btn btn-r" href="#order">Pedir torta</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="badge">Pastelería chilena en Orlando, FL</span>
+    <h1>El sabor de las tortas de Chile, <em>en Orlando.</em></h1>
+    <p>Torta Amor, lúcuma con manjar, tres leches y tortas personalizadas para cumpleaños y fiestas. Hechas a mano, con recetas chilenas de verdad.</p>
+    <div class="ctas"><a class="btn btn-r" href="#order">Cotizar mi torta</a><a class="btn btn-o" href="#cl">Ver tortas chilenas</a></div>
+  </div>
+  <div class="cake"><div class="img"></div><div class="press"><b>En la prensa de Chile</b>Reportaje de página completa en el diario de su ciudad natal (agosto 2026).</div></div>
+</div></section>
+
+<section class="cl" id="cl"><div class="wrap">
+  <div class="head"><h2>Las clásicas chilenas</h2><p>Lo que hoy se pierde entre 1.300 publicaciones, ordenado por sabor, tamaño y porciones.</p></div>
+  <div class="grid">
+    <div class="t"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1602663491496-73f07481dbea?w=700&q=70&fit=crop')"></div><div class="b"><h3>Torta Amor</h3><p>Hojarasca y manjar · hasta 25 porciones</p><div class="row"><span>Desde</span><span>$ —</span></div></div></div>
+    <div class="t"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1693464331668-7f46e1b613ef?w=700&q=70&fit=crop')"></div><div class="b"><h3>Lúcuma Manjar Nuez</h3><p>Bizcocho de vainilla, lúcuma, manjar y nuez</p><div class="row"><span>Desde</span><span>$ —</span></div></div></div>
+    <div class="t"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1664589100646-9750f07714a9?w=700&q=70&fit=crop')"></div><div class="b"><h3>Tres Leches</h3><p>Promo de octubre con regalito incluido</p><div class="row"><span>Desde</span><span>$ —</span></div></div></div>
+  </div>
+  <div class="promo"><span>Octubre: cada Torta 3 Leches viene con un regalito extra</span><a class="btn btn-r" href="#order">Aprovechar</a></div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div>
+    <h2>Tortas personalizadas</h2>
+    <p>Cumpleaños, baby showers y fiestas temáticas. El cliente elige sabor, porciones y diseño, y sube su foto de referencia.</p>
+    <div class="cats"><span>Tortas 2 pisos</span><span>Cupcakes</span><span>Mini donuts</span><span>Galletas</span><span>Postres shot</span></div>
+  </div>
+  <div class="form">
+    <h3>Cotiza tu torta</h3>
+    <div class="row2"><div class="f"><small>Sabor</small>Torta Amor</div><div class="f"><small>Porciones</small>25</div></div>
+    <div class="row2"><div class="f"><small>Fecha</small>Sáb 25 oct</div><div class="f"><small>Entrega</small>Retiro en Orlando</div></div>
+    <div class="f"><small>Diseño</small>Temática Batman · foto de referencia adjunta</div>
+    <a class="btn btn-r" href="#">Enviar cotización</a>
+    <p class="note">*Precios y opciones de ejemplo (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Carolina's Bakery · Orlando, FL · Chilean pastry</span><span>@carolinasbakeryorlando</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
