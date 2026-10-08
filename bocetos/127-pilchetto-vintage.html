@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilchetto Vintage (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f1ebdf;--bk:#111;--green:#1f7a4d;--orange:#ff5a1f;--muted:#6d665b;--line:#d8cfbe}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--bk);font-family:'Archivo',system-ui,sans-serif;line-height:1.5}
+  h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92}
+  .mono{font-family:'Space Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;border:2px solid var(--bk)}
+  .btn-b{background:var(--bk);color:var(--paper)}
+  .btn-g{background:var(--green);color:#fff;border-color:var(--green)}
+  .ann{background:var(--bk);color:var(--paper);font-family:'Space Mono';font-size:12px;text-align:center;padding:8px 10px;letter-spacing:.06em}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:2px solid var(--bk)}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Archivo Black';font-size:30px;letter-spacing:-.01em;white-space:nowrap}
+  .logo span{color:var(--orange)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:14px;text-transform:uppercase}
+  .bag{font-family:'Space Mono';font-weight:700;font-size:13px;border:2px solid var(--bk);padding:7px 12px}
+  .hero{padding:44px 0 60px;border-bottom:2px solid var(--bk)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .drop{display:inline-block;background:var(--orange);color:#fff;font-family:'Space Mono';font-weight:700;font-size:13px;padding:6px 12px;transform:rotate(-2deg)}
+  .hero h1{font-size:96px;margin:16px 0 14px}
+  .hero h1 span{color:var(--green)}
+  .hero p{font-size:18px;color:var(--muted);max-width:460px;margin-bottom:24px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stats{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+  .stats b{display:block;font-family:'Archivo Black';font-size:30px}
+  .stats small{font-family:'Space Mono';font-size:12px;color:var(--muted)}
+  .poster{position:relative;border:2px solid var(--bk);background:#fff;padding:12px;transform:rotate(1.5deg)}
+  .poster div{height:470px;background:url('https://images.unsplash.com/photo-1600709487035-f5d21265155d?w=900&q=70&fit=crop') center/cover;filter:contrast(1.05) saturate(.9)}
+  .poster .tape{position:absolute;top:-12px;left:40%;width:90px;height:24px;background:rgba(255,90,31,.75);transform:rotate(-4deg)}
+  section.shop{padding:64px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:22px}
+  .head h2{font-size:60px}
+  .head p{max-width:420px;color:var(--muted)}
+  .filters{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .filters span{border:2px solid var(--bk);padding:6px 12px;font-family:'Space Mono';font-size:12px;font-weight:700}
+  .filters span.on{background:var(--bk);color:var(--paper)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .it{border:2px solid var(--bk);background:#fff}
+  .it .ph{aspect-ratio:4/5;background-size:cover;background-position:center;position:relative;border-bottom:2px solid var(--bk)}
+  .it .ph i{position:absolute;left:8px;top:8px;font-style:normal;background:var(--green);color:#fff;font-family:'Space Mono';font-size:11px;font-weight:700;padding:3px 8px}
+  .it .ph i.sold{background:var(--bk)}
+  .it .b{padding:12px}
+  .it h3{font-size:16px;line-height:1.1}
+  .it .meas{font-family:'Space Mono';font-size:11px;color:var(--muted);margin:6px 0 8px}
+  .it .row{display:flex;justify-content:space-between;align-items:center;font-weight:700}
+  .it .row span:last-child{font-family:'Space Mono';font-size:12px;text-decoration:underline}
+  .note{font-family:'Space Mono';font-size:11px;color:var(--muted);margin-top:14px}
+  section.info{border-top:2px solid var(--bk);padding:50px 0 70px}
+  .info .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .i{border:2px solid var(--bk);padding:22px;background:#fff}
+  .i h3{font-size:22px;margin-bottom:8px}
+  .i p{color:var(--muted);font-size:15px}
+  .i.g{background:var(--green);color:#fff;border-color:var(--green)}
+  .i.g p{color:#d8f0e3}
+  footer{background:var(--bk);color:var(--paper);padding:22px 0;font-family:'Space Mono';font-size:12px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--orange);color:#fff;font-family:'Space Mono';font-size:12px;font-weight:700;padding:9px 14px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .bag{margin-left:auto}
+    .logo{font-size:24px}
+    .hero .wrap,.info .wrap{grid-template-columns:1fr}
+    .hero .wrap>*{min-width:0}
+    .hero h1{font-size:58px}
+    .poster div{height:300px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:44px}
+  }
+</style>
+</head>
+<body>
+<div class="ann">ENVÍOS A TODO EL PAÍS POR CORREO ARGENTINO · PIEZAS ÚNICAS · NUEVO DROP: TNF</div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">PILCHETTO<span>.</span></a>
+  <nav class="links"><a href="#shop">Disponible</a><a href="#shop">Drops</a><a href="#shop">Joyas vintage</a><a href="#info">Envíos</a></nav>
+  <span class="bag">BOLSA (0)</span>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="drop">DROP DISPONIBLE YA</span>
+    <h1>Ropa vintage <span>con historia</span></h1>
+    <p>Trackpants 90s, rompevientos y joyas vintage elegidas una por una en La Plata. Cada prenda es única: la ves, la medís y la comprás antes que nadie.</p>
+    <div class="ctas"><a class="btn btn-b" href="#shop">Ver lo disponible</a><a class="btn" href="#info">Cómo comprar</a></div>
+    <div class="stats"><div><b>+300</b><small>prendas vendidas</small></div><div><b>1/1</b><small>piezas únicas</small></div><div><b>AR</b><small>envíos al país</small></div></div>
+  </div>
+  <div class="poster"><span class="tape"></span><div></div></div>
+</div></section>
+
+<section class="shop" id="shop"><div class="wrap">
+  <div class="head"><h2>Disponible</h2><p>Hoy cada prenda es un post y se vende por DM. Acá queda con talle, medidas y botón de compra; lo vendido se marca solo.</p></div>
+  <div class="filters"><span class="on">TODO</span><span>TRACKPANTS</span><span>CAMPERAS</span><span>REMERAS</span><span>JOYAS</span><span>TALLE L</span></div>
+  <div class="grid">
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=70&fit=crop')"><i>NUEVO</i></div><div class="b"><h3>Adidas Trackpant 08</h3><p class="meas">Talle L · rompeviento · ripstop</p><div class="row"><span>$ —</span><span>COMPRAR</span></div></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1647664856968-880b8eccd588?w=600&q=70&fit=crop')"><i>NUEVO</i></div><div class="b"><h3>Adidas Trackpant 90s VTG</h3><p class="meas">Talle L/XL · red interna</p><div class="row"><span>$ —</span><span>COMPRAR</span></div></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1600709487035-f5d21265155d?w=600&q=70&fit=crop')"><i>DROP</i></div><div class="b"><h3>TNF Drop</h3><p class="meas">Camperas y rompevientos</p><div class="row"><span>$ —</span><span>COMPRAR</span></div></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=70&fit=crop');filter:grayscale(1)"><i class="sold">VENDIDO</i></div><div class="b"><h3>Joya vintage</h3><p class="meas">Pieza única</p><div class="row"><span>$ —</span><span>AVISAME</span></div></div></div>
+  </div>
+  <p class="note">*Precios y fotos de ejemplo (demo). Prendas y detalles tomados de sus drops; se cargan sus fotos reales.</p>
+</div></section>
+
+<section class="info" id="info"><div class="wrap">
+  <div class="i"><h3>Medidas reales</h3><p>Cada prenda con largo, ancho y tiro, como ya lo publicás en la descripción.</p></div>
+  <div class="i"><h3>Envíos</h3><p>Por Correo Argentino a todo el país.</p></div>
+  <div class="i g"><h3>Sin cambios</h3><p>Política clara antes de comprar: consultá medidas y dudas, sin cambios después.</p></div>
+</div></section>
+
+<footer><div class="wrap"><span>PILCHETTO · TIENDA DE ROPA VINTAGE · LA PLATA, BS AS</span><span>@pilchetto</span></div></footer>
+<div class="demo-badge">CONCEPTO PAGX STUDIO · DEMO ~20%</div>
+</body>
+</html>
