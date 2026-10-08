@@ -573,6 +573,20 @@
         "bocetos/evidencia/108-casa-de-las-pupusas-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen 10 sucursales en la ciudad, pero el menú se abre como una carpeta de Google Drive y no hay forma de ver la sucursal más cercana.\nLes proponemos una web con menú con fotos, localizador de las 10 sucursales y pedido directo sin comisión de apps.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 109,
+      "slug": "109-supremo-acai",
+      "nombre": "Supremo Açaí",
+      "ig": "supremo.acaipel",
+      "lugar": "Pelotas, RS, Brasil (Av. São Francisco de Paula 2555, Areal)",
+      "nicho": "Açaiteria con delivery",
+      "web": "Sin web (solo link de instadelivery)",
+      "porque": "3,6K seguidores, activo (03/10/2026), colaboraciones con creadoras locales y un reel compartido con 77K likes. Los pedidos van por un link genérico de instadelivery: sin marca, sin 'monte seu copo' propio ni promos fijas. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/109-supremo-acai-ig.jpg"
+      ],
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nVimos que os pedidos do Supremo vão por um link genérico de delivery, sem a cara da marca nem um 'monte seu copo' próprio.\nPropomos um site com cardápio, montagem do açaí passo a passo e pedido direto, com entrega ou retirada.\nPreparamos uma prévia (~20%) de como ficaria. Quer ver?"
     }
   ]
 }

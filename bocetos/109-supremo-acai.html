@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supremo Açaí (conceito PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--pur:#3d0f5c;--pur2:#5b1a85;--vio:#8f3fd1;--lime:#b9f04a;--pink:#ff5fa2;--bg:#fbf7ff;--ink:#1f0a2e;--muted:#6f5c80;--line:#eadcf6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Baloo 2',sans-serif;font-weight:800;line-height:.95}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:16px;font-weight:700;font-size:15px}
+  .btn-l{background:var(--lime);color:var(--pur)}
+  .btn-w{border:2px solid rgba(255,255,255,.5);color:#fff}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--pur);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Baloo 2';font-size:30px;font-weight:800;letter-spacing:.02em}
+  .logo span{color:var(--lime)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:600;opacity:.9}
+  .nav .btn{padding:10px 18px}
+  .hero{background:linear-gradient(135deg,var(--pur) 0%,var(--pur2) 60%,var(--vio) 100%);color:#fff;padding:60px 0 90px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(185,240,74,.12);right:-120px;top:-160px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative}
+  .open{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600}
+  .open i{width:9px;height:9px;border-radius:50%;background:var(--lime)}
+  .hero h1{font-size:88px;margin:16px 0 14px}
+  .hero h1 span{color:var(--lime)}
+  .hero p{font-size:18px;opacity:.85;max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .info{display:flex;gap:26px;margin-top:30px;font-size:14px;flex-wrap:wrap}
+  .info b{display:block;font-family:'Baloo 2';font-size:22px;color:var(--lime)}
+  .bowl{aspect-ratio:1/1;border-radius:40px;background:url('https://images.unsplash.com/photo-1590301157411-8686d4a34f10?w=1000&q=70&fit=crop') center/cover;transform:rotate(3deg);box-shadow:0 30px 70px rgba(0,0,0,.35);border:8px solid rgba(255,255,255,.15)}
+  section.monte{padding:80px 0}
+  .monte .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+  .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--vio)}
+  .monte h2{font-size:58px;margin:8px 0 22px;color:var(--pur)}
+  .step{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;margin-bottom:14px}
+  .step h3{font-size:22px;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .step h3 i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--pur);color:#fff;display:grid;place-items:center;font-size:15px}
+  .opts{display:flex;gap:8px;flex-wrap:wrap}
+  .opts span{border:2px solid var(--line);border-radius:12px;padding:8px 14px;font-size:14px;font-weight:600}
+  .opts span.on{border-color:var(--vio);background:#f3e8fd;color:var(--pur)}
+  .cart{position:sticky;top:96px;background:var(--pur);color:#fff;border-radius:26px;padding:24px;overflow:hidden}
+  .cart .ph{height:180px;border-radius:18px;background:url('https://images.unsplash.com/photo-1627308594190-a057cd4bfac8?w=700&q=70&fit=crop') center/cover;margin-bottom:16px}
+  .cart h3{font-size:28px}
+  .cart ul{list-style:none;font-size:14px;margin:10px 0 16px;opacity:.9}
+  .cart li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tot{display:flex;justify-content:space-between;align-items:center;font-family:'Baloo 2';font-size:30px;margin-bottom:14px}
+  .tot small{font-family:'Poppins';font-size:12px;opacity:.7}
+  .cart .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  section.loc{background:#fff;border-top:1px solid var(--line);padding:60px 0}
+  .loc .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--line);border-radius:22px;padding:22px;background:var(--bg)}
+  .card b{font-family:'Baloo 2';font-size:22px;color:var(--pur);display:block}
+  .card p{font-size:14px;color:var(--muted)}
+  footer{background:var(--ink);color:#d9c9ea;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--lime);color:var(--pur);font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto}
+    .hero .wrap,.monte .wrap,.loc .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:58px}
+    .monte h2{font-size:42px}
+    .cart{position:static}
+    .logo{font-size:22px;white-space:nowrap}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">SUPREMO <span>AÇAÍ</span></a>
+  <nav class="links"><a href="#monte">Monte seu copo</a><a href="#">Cardápio</a><a href="#">Promoções</a><a href="#loc">Onde estamos</a></nav>
+  <a class="btn btn-l" href="#monte">Pedir agora</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="open"><i></i> Aberto hoje · 14:00 às 23:30</span>
+    <h1>Seu dia melhora com <span>Supremo Açaí</span></h1>
+    <p>Açaí cremoso no Areal, em Pelotas. Monte seu copo do seu jeito e peça direto pelo site, com entrega ou retirada.</p>
+    <div class="ctas"><a class="btn btn-l" href="#monte">Montar meu açaí</a><a class="btn btn-w" href="#loc">Ver endereço</a></div>
+    <div class="info"><span><b>Delivery</b>no Areal e região</span><span><b>Qua–Seg</b>folga às terças</span><span><b>Pelotas</b>RS</span></div>
+  </div>
+  <div class="bowl"></div>
+</div></section>
+
+<section class="monte" id="monte"><div class="wrap">
+  <div>
+    <span class="k">Monte seu copo</span>
+    <h2>Do seu jeito, em 3 passos</h2>
+    <div class="step"><h3><i>1</i>Tamanho</h3><div class="opts"><span>300 ml</span><span class="on">500 ml</span><span>700 ml</span><span>1 litro</span></div></div>
+    <div class="step"><h3><i>2</i>Base</h3><div class="opts"><span class="on">Açaí tradicional</span><span>Açaí com cupuaçu</span><span>Creme de ninho</span></div></div>
+    <div class="step"><h3><i>3</i>Complementos</h3><div class="opts"><span class="on">Banana</span><span class="on">Morango</span><span>Granola</span><span class="on">Leite em pó</span><span>Paçoca</span><span>Nutella</span><span>Leite condensado</span></div></div>
+  </div>
+  <aside class="cart">
+    <div class="ph"></div>
+    <h3>Seu açaí</h3>
+    <ul><li>500 ml · Açaí tradicional</li><li>Banana, morango, leite em pó</li><li>Entrega · Areal</li></ul>
+    <div class="tot"><span>R$ —</span><small>preço demo</small></div>
+    <a class="btn btn-l" href="#">Finalizar pedido</a>
+  </aside>
+</div>
+<div class="wrap"><p class="note">*Tamanhos, complementos e preços são de exemplo (demo). Entram os do cardápio real.</p></div>
+</section>
+
+<section class="loc" id="loc"><div class="wrap">
+  <div class="card"><b>Endereço</b><p>Av. São Francisco de Paula, 2555 · Areal, Pelotas – RS</p></div>
+  <div class="card"><b>Horário</b><p>Quarta a segunda, 14:00 às 23:30. Folga às terças.</p></div>
+  <div class="card"><b>Promo da semana</b><p>Espaço para as promoções que hoje só aparecem no feed.</p></div>
+</div></section>
+
+<footer><div class="wrap"><span>Supremo Açaí · Pelotas</span><span>@supremo.acaipel</span></div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>
