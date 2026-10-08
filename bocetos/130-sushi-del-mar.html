@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sushi del Mar Cali (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#0b0b0d;--pn:#151519;--red:#e63946;--salmon:#ff8a5c;--white:#f5f3f0;--ink2:#a3a3ad;--line:#26262d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bk);color:var(--white);font-family:'Noto Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Dela Gothic One',sans-serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-o{border:1.5px solid #444}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .c{width:44px;height:44px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-family:'Dela Gothic One';font-size:14px}
+  .logo b{font-family:'Dela Gothic One';font-size:20px;font-weight:400}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:15px;color:var(--ink2)}
+  .hero{padding:56px 0 70px;position:relative;overflow:hidden}
+  .hero::before{content:"寿司";position:absolute;right:-20px;top:-40px;font-size:320px;font-weight:700;color:rgba(230,57,70,.07);line-height:1}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative}
+  .hero .wrap>*{min-width:0}
+  .tag{display:inline-block;border:1px solid var(--red);color:#ff9aa2;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700}
+  .hero h1{font-size:66px;margin:16px 0 14px}
+  .hero h1 span{color:var(--red)}
+  .hero p{font-size:18px;color:#cfcfd6;max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .info{display:flex;gap:26px;margin-top:26px;font-size:14px;color:var(--ink2);flex-wrap:wrap}
+  .info b{display:block;color:var(--white);font-size:16px}
+  .plate{height:480px;border-radius:24px;background:url('https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=900&q=70&fit=crop') center/cover;border:1px solid var(--line)}
+  section.menu{background:var(--pn);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:26px}
+  .head h2{font-size:48px}
+  .head p{color:var(--ink2);max-width:420px}
+  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .tabs span{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700}
+  .tabs span.on{background:var(--red);border-color:var(--red)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .m{background:var(--bk);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .m .ph{height:170px;background-size:cover;background-position:center}
+  .m .b{padding:14px}
+  .m h3{font-size:16px}
+  .m p{font-size:13px;color:var(--ink2);margin:4px 0 10px}
+  .m .row{display:flex;justify-content:space-between;align-items:center;font-weight:700}
+  .m .row span:first-child{color:var(--salmon)}
+  .add{background:var(--red);border-radius:8px;padding:5px 10px;font-size:12px}
+  .note{font-size:12px;color:var(--ink2);margin-top:14px}
+  section.zone{padding:76px 0}
+  .zone .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .z{border:1px solid var(--line);border-radius:24px;padding:28px;background:var(--pn)}
+  .z h3{font-size:26px;margin-bottom:10px}
+  .z p{color:#cfcfd6;margin-bottom:16px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chips span{background:#24242b;border-radius:999px;padding:6px 12px;font-size:13px}
+  .z.r{background:var(--red);border-color:var(--red)}
+  .z.r p{color:#ffe1e3}
+  footer{border-top:1px solid var(--line);padding:24px 0;font-size:14px;color:var(--ink2)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:16px}
+    .hero::before{font-size:180px}
+    .hero .wrap,.zone .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:42px}
+    .plate{height:300px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="c">SDM</span><b>Sushi del Mar</b></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#menu">Sushitacos</a><a href="#zone">Domicilios</a><a href="#zone">Ubicación</a></nav>
+  <a class="btn btn-r" href="#menu">Pedir</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Sushi · Sushitacos · Cali</span>
+    <h1>Aquí rompemos <span>paradigmas</span> de la comida asiática</h1>
+    <p>Rollos, sushitacos y combos para compartir en el norte de Cali. Pide a domicilio desde la web, sin pasar por un link genérico.</p>
+    <div class="ctas"><a class="btn btn-r" href="#menu">Ver menú y pedir</a><a class="btn btn-o" href="#zone">Cobertura</a></div>
+    <div class="info"><span><b>Lunes a domingo</b>5:00 – 10:30 PM</span><span><b>Calle 47N # 6N-36</b>Norte de Cali</span></div>
+  </div>
+  <div class="plate"></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>El menú</h2><p>Hoy el menú vive en una destacada y en un atom.bio. Aquí queda con fotos, filtros y carrito.</p></div>
+  <div class="tabs"><span class="on">Rollos</span><span>Sushitacos</span><span>Combos</span><span>Entradas</span><span>Bebidas</span></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500&q=70&fit=crop')"></div><div class="b"><h3>Rollo de salmón</h3><p>Clásico de la casa</p><div class="row"><span>$ —</span><span class="add">+ Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=500&q=70&fit=crop')"></div><div class="b"><h3>Sushitaco</h3><p>La firma de Sushi del Mar</p><div class="row"><span>$ —</span><span class="add">+ Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=500&q=70&fit=crop')"></div><div class="b"><h3>Combo nigiri</h3><p>Para uno o para compartir</p><div class="row"><span>$ —</span><span class="add">+ Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=500&q=70&fit=crop')"></div><div class="b"><h3>Tabla para compartir</h3><p>Ideal para el plan</p><div class="row"><span>$ —</span><span class="add">+ Agregar</span></div></div></div>
+  </div>
+  <p class="note">*Platos y precios de ejemplo (demo). Se carga el menú real.</p>
+</div></section>
+
+<section class="zone" id="zone"><div class="wrap">
+  <div class="z"><h3>Domicilios norte de Cali</h3><p>El cliente escribe su dirección y ve si está en cobertura, el valor del domicilio y el tiempo estimado.</p><div class="chips"><span>Norte de Cali</span><span>Cobertura por barrio</span><span>Pago en línea</span></div></div>
+  <div class="z r"><h3>Ven al restaurante</h3><p>Calle 47N # 6N-36. Abierto todos los días de 5:00 a 10:30 PM.</p><a class="btn" style="background:#fff;color:var(--red)" href="#">Cómo llegar</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>Sushi del Mar · Cali</span><span>@sushi.delmar</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

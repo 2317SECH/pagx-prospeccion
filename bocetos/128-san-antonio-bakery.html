@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>San Antonio Bakery (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--pink:#e8457b;--turq:#1aa7a1;--yel:#ffc94a;--cream:#fff7ee;--brown:#5a2e1a;--ink:#2a1a12;--muted:#7b6457;--line:#f0dfcc}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Mulish',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Abril Fatface',serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-p{background:var(--pink);color:#fff}
+  .btn-o{border:2px solid var(--brown);color:var(--brown)}
+  .papel{height:22px;background:repeating-linear-gradient(90deg,var(--pink) 0 40px,var(--yel) 40px 80px,var(--turq) 80px 120px);clip-path:polygon(0 0,100% 0,100% 60%,97% 100%,94% 60%,91% 100%,88% 60%,85% 100%,82% 60%,79% 100%,76% 60%,73% 100%,70% 60%,67% 100%,64% 60%,61% 100%,58% 60%,55% 100%,52% 60%,49% 100%,46% 60%,43% 100%,40% 60%,37% 100%,34% 60%,31% 100%,28% 60%,25% 100%,22% 60%,19% 100%,16% 60%,13% 100%,10% 60%,7% 100%,4% 60%,1% 100%,0 60%)}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Abril Fatface';font-size:26px;color:var(--brown)}
+  .logo small{display:block;font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--pink);margin-top:3px}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;font-size:15px;color:var(--muted)}
+  .hero{padding:50px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .open{display:inline-flex;gap:8px;align-items:center;background:#e6f7f6;color:#0d6e6a;border-radius:999px;padding:7px 14px;font-weight:800;font-size:13px}
+  .hero h1{font-size:76px;color:var(--brown);margin:16px 0 14px}
+  .hero h1 span{color:var(--pink)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hrs{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;font-size:14px}
+  .hrs b{display:block;font-family:'Abril Fatface';font-size:20px;color:var(--brown);font-weight:400}
+  .tray{position:relative}
+  .tray .img{height:480px;border-radius:28px;background:url('https://images.unsplash.com/photo-1601034693303-8f8848f3ffa1?w=900&q=70&fit=crop') center/cover;border:8px solid #fff;box-shadow:0 24px 50px rgba(90,46,26,.18)}
+  .tray .st{position:absolute;right:-12px;top:26px;background:var(--yel);border-radius:18px;padding:12px 16px;font-weight:800;transform:rotate(5deg)}
+  .tray .st b{font-family:'Abril Fatface';font-weight:400;font-size:22px;display:block;color:var(--brown)}
+  section.cases{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:52px;color:var(--brown)}
+  .head p{color:var(--muted);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .c{border-radius:26px;overflow:hidden;background:var(--cream);border:1px solid var(--line)}
+  .c .ph{height:220px;background-size:cover;background-position:center}
+  .c .b{padding:20px}
+  .c h3{font-size:26px;color:var(--brown)}
+  .c p{font-size:14px;color:var(--muted);margin:4px 0 12px}
+  .c a{font-weight:800;color:var(--pink)}
+  .season{margin-top:24px;background:var(--turq);color:#fff;border-radius:24px;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .season b{font-family:'Abril Fatface';font-weight:400;font-size:26px}
+  .season .btn{background:#fff;color:var(--turq)}
+  section.order{padding:76px 0}
+  .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .order h2{font-size:50px;color:var(--brown);margin-bottom:12px}
+  .order p{color:var(--muted)}
+  .form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px}
+  .form h3{font-size:28px;color:var(--brown);margin-bottom:14px}
+  .f{border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  footer{background:var(--brown);color:#f3dccb;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--brown);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:20px}.logo small{display:none}
+    .hero .wrap,.grid,.order .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:48px}
+    .tray .img{height:300px}
+    .tray .st{right:0}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.order h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+<div class="papel"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>San Antonio Bakery</b><small>PANADERÍA · COMPTON</small></a>
+  <nav class="links"><a href="#cases">Pan dulce</a><a href="#cases">Cakes</a><a href="#order">Order a cake</a><a href="#">Visit</a></nav>
+  <a class="btn btn-p" href="#order">Order a cake</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="open">Open today · 6 AM – 9 PM</span>
+    <h1>Pan dulce &amp; <span>cakes</span> made fresh every morning</h1>
+    <p>Mexican pastries, custom cakes and Rosca de Reyes in Compton. See what's on the shelf today and order your cake online, en inglés o en español.</p>
+    <div class="ctas"><a class="btn btn-p" href="#order">Order a custom cake</a><a class="btn btn-o" href="#cases">See pan dulce</a></div>
+    <div class="hrs"><span><b>Mon–Sat</b>6 AM – 9 PM</span><span><b>Sunday</b>7 AM – 9 PM</span><span><b>344 W Rosecrans Ave</b>Compton, CA 90222</span></div>
+  </div>
+  <div class="tray"><div class="img"></div><div class="st"><b>Pan dulce</b>fresh daily</div></div>
+</div></section>
+
+<section class="cases" id="cases"><div class="wrap">
+  <div class="head"><h2>From our cases</h2><p>Pan, cakes and seasonal favorites, in one place instead of scattered across story highlights.</p></div>
+  <div class="grid">
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1639667051433-568f35be2003?w=700&q=70&fit=crop')"></div><div class="b"><h3>Pan dulce</h3><p>Conchas, cuernos and more, baked daily.</p><a href="#">See today's pan →</a></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=700&q=70&fit=crop')"></div><div class="b"><h3>Custom cakes</h3><p>Birthdays, quinceañeras and every celebration.</p><a href="#order">Order a cake →</a></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?w=700&q=70&fit=crop')"></div><div class="b"><h3>Bread</h3><p>Bolillos and everyday bread.</p><a href="#">See bread →</a></div></div>
+  </div>
+  <div class="season"><b>Rosca de Reyes</b><span>Pre-order for January, without calling the store.</span><a class="btn" href="#">Reserve yours</a></div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div><h2>Order your cake online</h2><p>Flavor, size, design and pickup date in one form. You get every order in writing, with the reference photo attached.</p></div>
+  <div class="form">
+    <h3>Custom cake order</h3>
+    <div class="row"><div class="f"><small>Size</small>Serves 30</div><div class="f"><small>Flavor</small>Tres leches</div></div>
+    <div class="f"><small>Design</small>Pink butterflies · photo attached</div>
+    <div class="f"><small>Pickup</small>Saturday · 11:00 AM</div>
+    <a class="btn btn-p" href="#">Send order</a>
+    <p class="note">*Sizes, flavors and prices are placeholders (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>San Antonio Bakery · 344 W Rosecrans Ave, Compton, CA</span><span>@sanantoniobakery_</span></div></footer>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>

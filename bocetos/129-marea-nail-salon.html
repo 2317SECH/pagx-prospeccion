@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marea Nail Salon (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--sand:#f4ede4;--shell:#ead9cc;--sea:#5d8a8c;--sea2:#2f5557;--ink:#2a2826;--muted:#857b72;--line:#e2d6ca;--white:#fffdf9}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--sand);color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:400;line-height:1.6}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .k{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--sea)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;white-space:nowrap}
+  .btn-s{background:var(--sea2);color:#fff}
+  .btn-o{border:1px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(244,237,228,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:78px;gap:24px}
+  .logo{font-family:'Cormorant Garamond';font-size:30px;letter-spacing:.5em;white-space:nowrap}
+  nav.links{display:flex;gap:28px;margin-left:auto;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero{padding:60px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .hero h1{font-size:78px;margin:16px 0 18px}
+  .hero h1 em{color:var(--sea)}
+  .hero p{font-size:18px;color:var(--muted);max-width:450px;margin-bottom:28px;font-weight:300}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .meta{display:flex;gap:34px;margin-top:32px;font-size:14px;color:var(--muted)}
+  .meta b{display:block;font-family:'Cormorant Garamond';font-size:24px;color:var(--ink);font-weight:500}
+  .arch{height:540px;border-radius:280px 280px 0 0;background:url('https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=900&q=70&fit=crop') center/cover}
+  section.menu{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:84px 0}
+  .head{text-align:center;margin-bottom:40px}
+  .head h2{font-size:54px;margin-top:8px}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+  .col h3{font-size:28px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .it{display:flex;justify-content:space-between;gap:12px;padding:10px 0;font-size:15px}
+  .it span:last-child{color:var(--sea2);font-weight:500}
+  .it small{display:block;color:var(--muted);font-size:13px}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:24px}
+  section.work{padding:84px 0}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gal div{aspect-ratio:3/4;background-size:cover;background-position:center}
+  section.book{padding:0 0 84px}
+  .bk{display:grid;grid-template-columns:1fr 1fr;background:var(--sea2);color:#fff}
+  .bk .t{padding:46px}
+  .bk h2{font-size:48px;margin:10px 0 14px}
+  .bk p{color:#d3e2e2;margin-bottom:22px;font-weight:300}
+  .bk .k{color:#bcd6d6}
+  .slots{padding:46px;background:#3a6668}
+  .day{display:flex;gap:8px;margin-bottom:16px}
+  .day span{border:1px solid rgba(255,255,255,.3);padding:8px 12px;font-size:13px}
+  .day span.on{background:#fff;color:var(--sea2)}
+  .times{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .times span{border:1px solid rgba(255,255,255,.3);padding:10px;text-align:center;font-size:14px}
+  .times span.on{background:#fff;color:var(--sea2)}
+  .times span.x{opacity:.35;text-decoration:line-through}
+  footer{padding:26px 0;font-size:13px;color:var(--muted);letter-spacing:.06em}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;padding:9px 14px;letter-spacing:.06em}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:22px;letter-spacing:.35em}
+    .hero .wrap,.cols,.bk{grid-template-columns:1fr}
+    .hero h1{font-size:50px}
+    .arch{height:360px}
+    .gal{grid-template-columns:1fr 1fr}
+    .head h2,.bk h2{font-size:38px}
+    .bk .t,.slots{padding:26px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">MAREA</a>
+  <nav class="links"><a href="#menu">Services</a><a href="#work">Our work</a><a href="#">FAQ</a><a href="#">Client love</a></nav>
+  <a class="btn btn-s" href="#book">Book</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Nail salon · Miami</span>
+    <h1>Quiet hands, <em>clean</em> nails.</h1>
+    <p>A calm Miami nail studio for structured manicures, gel and nail art. See the full menu and book your exact time in seconds.</p>
+    <div class="ctas"><a class="btn btn-s" href="#book">Book an appointment</a><a class="btn btn-o" href="#menu">View services</a></div>
+    <div class="meta"><span><b>Tue – Sat</b>9 AM – 6 PM</span><span><b>Miami, FL</b>Last appt. 6 PM</span></div>
+  </div>
+  <div class="arch"></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><span class="k">The menu</span><h2>Services</h2></div>
+  <div class="cols">
+    <div class="col"><h3>Manicure</h3><div class="it"><span>Classic manicure<small>Shape, cuticle, polish</small></span><span>$ —</span></div><div class="it"><span>Gel manicure<small>Long-wear finish</small></span><span>$ —</span></div><div class="it"><span>Structured gel<small>Builder for strength</small></span><span>$ —</span></div></div>
+    <div class="col"><h3>Pedicure</h3><div class="it"><span>Classic pedicure<small>Soak, scrub, polish</small></span><span>$ —</span></div><div class="it"><span>Gel pedicure<small>Long-wear finish</small></span><span>$ —</span></div></div>
+    <div class="col"><h3>Add-ons</h3><div class="it"><span>Nail art<small>Per set</small></span><span>$ —</span></div><div class="it"><span>Removal<small>Gel or builder</small></span><span>$ —</span></div><div class="it"><span>French<small>Classic or micro</small></span><span>$ —</span></div></div>
+  </div>
+  <p class="note">Service names and prices are placeholders (demo). Your real menu and policies load here.</p>
+</div></section>
+
+<section class="work" id="work"><div class="wrap">
+  <div class="head"><span class="k">Our work</span><h2>Recent sets</h2></div>
+  <div class="gal">
+    <div style="background-image:url('https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=500&q=70&fit=crop')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=70&fit=crop')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&q=70&fit=crop')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=500&q=70&fit=crop')"></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap"><div class="bk">
+  <div class="t"><span class="k">Booking</span><h2>Your time, reserved</h2><p>Today booking goes through a Linktree. Here it lives on your own site, with deposits and reminders, under your name.</p><a class="btn" style="background:#fff;color:var(--sea2)" href="#">Confirm appointment</a></div>
+  <div class="slots">
+    <div class="day"><span>TUE</span><span class="on">WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
+    <div class="times"><span>9:00</span><span class="x">10:30</span><span class="on">12:00</span><span>1:30</span><span class="x">3:00</span><span>4:30</span></div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap"><span>MAREA Nail Salon · Miami, FL</span><span>@mareanailsalon</span></div></footer>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>
