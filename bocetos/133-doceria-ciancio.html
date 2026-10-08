@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doceria Ciancio (conceito PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--magenta:#c2185b;--pink:#fbd3e3;--choc:#4a2618;--choc2:#6b3a26;--cream:#fff8f4;--ink:#2d1812;--muted:#86685d;--line:#f2dfd8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:800;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-m{background:var(--magenta);color:#fff}
+  .btn-o{border:2px solid var(--choc);color:var(--choc)}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .c{width:46px;height:46px;border-radius:50%;background:var(--magenta);color:#fff;display:grid;place-items:center;font-family:'Fraunces';font-style:italic;font-size:22px}
+  .logo b{font-family:'Fraunces';font-size:24px;color:var(--magenta)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:500;font-size:15px;color:var(--muted)}
+  .hero{padding:54px 0 76px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .tag{display:inline-block;background:var(--pink);color:var(--magenta);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
+  .hero h1{font-size:72px;color:var(--choc);margin:16px 0 14px}
+  .hero h1 em{color:var(--magenta)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .pics div{border-radius:24px;background-size:cover;background-position:center;height:240px}
+  .pics .a{grid-column:span 2;height:280px;background-image:url('https://images.unsplash.com/photo-1630953900113-ab915924aab2?w=900&q=70&fit=crop')}
+  section.temas{background:var(--choc);color:#fff;padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:52px}
+  .head p{max-width:420px;opacity:.8}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .t{background:var(--choc2);border-radius:22px;padding:20px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between}
+  .t h3{font-size:24px}
+  .t p{font-size:14px;opacity:.8}
+  .t b{color:var(--pink);font-size:14px}
+  section.calc{padding:76px 0}
+  .calc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .calc h2{font-size:48px;color:var(--choc);margin-bottom:12px}
+  .calc p{color:var(--muted)}
+  .box{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px}
+  .box h3{font-size:26px;color:var(--magenta);margin-bottom:14px}
+  .op{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .op b{display:block}
+  .op small{color:var(--muted)}
+  .q{display:flex;align-items:center;gap:10px;font-weight:700}
+  .q span{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center}
+  .tot{display:flex;justify-content:space-between;font-family:'Fraunces';font-size:26px;margin:16px 0}
+  .box .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  footer{background:var(--pink);color:var(--choc);padding:24px 0;font-size:14px;font-weight:500}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--choc);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:20px}
+    .hero .wrap,.calc .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:46px}
+    .pics div{height:150px}.pics .a{height:200px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.calc h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="c">C</span><b>Doceria Ciancio</b></a>
+  <nav class="links"><a href="#temas">Temas</a><a href="#calc">Monte seu pedido</a><a href="#">Brownies</a><a href="#">Feedbacks</a></nav>
+  <a class="btn btn-m" href="#calc">Encomendar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Magé · RJ · Somente sob encomenda</span>
+    <h1>Brigadeiros gourmet que <em>viram tema</em> da festa</h1>
+    <p>Especialista em brigadeiros gourmet e brownies, com apliques e carimbos personalizados para cada tema. Monte sua encomenda e reserve a data online.</p>
+    <div class="ctas"><a class="btn btn-m" href="#calc">Montar encomenda</a><a class="btn btn-o" href="#temas">Ver temas</a></div>
+  </div>
+  <div class="pics"><div class="a"></div><div style="background-image:url('https://images.unsplash.com/photo-1630953899906-d16511a72558?w=600&q=70&fit=crop')"></div><div style="background-image:url('https://images.unsplash.com/photo-1702982852429-e0d0b27eb990?w=600&q=70&fit=crop')"></div></div>
+</div></section>
+
+<section class="temas" id="temas"><div class="wrap">
+  <div class="head"><h2>Temas e personalização</h2><p>O que hoje está espalhado nos destaques, organizado para o cliente escolher rápido.</p></div>
+  <div class="grid">
+    <div class="t"><h3>Temas</h3><p>Infantis, chá revelação, aniversários.</p><b>Ver galeria →</b></div>
+    <div class="t"><h3>Apliques</h3><p>Decoração no topo de cada doce.</p><b>Ver opções →</b></div>
+    <div class="t"><h3>Carimbos</h3><p>Nome ou logo no brigadeiro.</p><b>Ver opções →</b></div>
+    <div class="t"><h3>Brownies</h3><p>Para presentear ou para a festa.</p><b>Ver sabores →</b></div>
+  </div>
+</div></section>
+
+<section class="calc" id="calc"><div class="wrap">
+  <div><h2>Monte sua encomenda</h2><p>Hoje o cardápio é um catálogo no WhatsApp. Aqui o cliente escolhe quantidades e tema, vê o total e reserva a data com sinal.</p></div>
+  <div class="box">
+    <h3>Sua encomenda</h3>
+    <div class="op"><span><b>Brigadeiro gourmet</b><small>Tradicional</small></span><span class="q"><span>−</span>50<span>+</span></span></div>
+    <div class="op"><span><b>Brigadeiro com aplique</b><small>Tema da festa</small></span><span class="q"><span>−</span>30<span>+</span></span></div>
+    <div class="op"><span><b>Brownie</b><small>Embalado</small></span><span class="q"><span>−</span>10<span>+</span></span></div>
+    <div class="tot"><span>Total</span><span>R$ —</span></div>
+    <a class="btn btn-m" href="#">Reservar data</a>
+    <p class="note">*Itens e preços de exemplo (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Doceria Ciancio · Brigadeiro Gourmet e Brownie · Magé, RJ</span><span>@doceriaciancio</span></div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>

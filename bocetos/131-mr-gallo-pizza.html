@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr. Gallo Cartagena (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--orange:#ff6b1a;--yel:#ffcf33;--red:#d62828;--cream:#fff8ec;--ink:#24160f;--muted:#7a6656;--line:#f1e0c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Bungee',sans-serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-o{background:var(--orange);color:#fff;box-shadow:0 6px 0 #c84d0a}
+  .btn-l{border:2.5px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--orange);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Bungee';font-size:26px;white-space:nowrap}
+  .logo span{color:var(--yel)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:800;font-size:15px}
+  .nav .btn{background:var(--yel);color:var(--ink);box-shadow:none}
+  .hero{padding:50px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .award{display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:var(--yel);border-radius:14px;padding:8px 14px;font-weight:800;font-size:14px}
+  .hero h1{font-size:68px;margin:18px 0 14px}
+  .hero h1 span{color:var(--orange)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .pz{position:relative}
+  .pz .img{aspect-ratio:1/1;border-radius:50%;background:url('https://images.unsplash.com/photo-1628840042765-356cda07504e?w=900&q=70&fit=crop') center/cover;border:12px solid var(--yel)}
+  .pz .st{position:absolute;left:0;bottom:30px;background:var(--red);color:#fff;border-radius:16px;padding:12px 16px;font-weight:800;transform:rotate(-5deg)}
+  .pz .st b{font-family:'Bungee';font-size:18px;display:block}
+  section.menu{background:var(--ink);color:#fff;padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:50px;color:var(--yel)}
+  .head p{max-width:420px;opacity:.8}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .m{background:#352419;border-radius:24px;overflow:hidden}
+  .m .ph{height:210px;background-size:cover;background-position:center}
+  .m .b{padding:18px}
+  .m h3{font-size:22px}
+  .m p{font-size:14px;opacity:.75;margin:6px 0 12px}
+  .m .row{display:flex;justify-content:space-between;font-weight:800}
+  .m .row span:first-child{color:var(--yel)}
+  .note{font-size:12px;opacity:.7;margin-top:14px}
+  section.plan{padding:76px 0}
+  .plan .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .p{border:2.5px solid var(--ink);border-radius:24px;padding:24px;background:#fff}
+  .p h3{font-size:24px;margin-bottom:8px;color:var(--orange)}
+  .p p{color:var(--muted);margin-bottom:14px}
+  .p b{font-size:14px}
+  .p.dark{background:var(--orange);border-color:var(--orange);color:#fff}
+  .p.dark h3{color:var(--yel)}
+  .p.dark p{color:#ffe6d6}
+  footer{background:var(--ink);color:#d9c8b8;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:var(--yel);font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:20px}
+    .hero .wrap,.grid,.plan .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:42px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">MR. <span>GALLO</span></a>
+  <nav class="links"><a href="#menu">Pizzas</a><a href="#menu">Alitas</a><a href="#plan">Cafetería</a><a href="#plan">Celebraciones</a></nav>
+  <a class="btn" href="#menu">Pedir domicilio</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="award">Ganadores Pizza Legend 2023</span>
+    <h1>La pizza <span>ganadora</span> de Cartagena</h1>
+    <p>Pizzas, alitas y cafetería en Villa del Sol. Mira el menú, pide a domicilio o reserva para celebrar, todo desde un solo lugar.</p>
+    <div class="ctas"><a class="btn btn-o" href="#menu">Ver menú y pedir</a><a class="btn btn-l" href="#plan">Reservar celebración</a></div>
+  </div>
+  <div class="pz"><div class="img"></div><div class="st"><b>Pizza Legend</b>campeones 2023</div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>El menú</h2><p>Hoy el menú está en una plataforma externa y las promos en destacadas. Aquí todo queda con fotos y pedido directo.</p></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=700&q=70&fit=crop')"></div><div class="b"><h3>Pizzas</h3><p>La receta que ganó Pizza Legend.</p><div class="row"><span>Desde $ —</span><span>Pedir</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=700&q=70&fit=crop')"></div><div class="b"><h3>Alitas</h3><p>Para acompañar la pizza.</p><div class="row"><span>Desde $ —</span><span>Pedir</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=70&fit=crop')"></div><div class="b"><h3>Cafetería</h3><p>Café y antojos en la tarde.</p><div class="row"><span>Desde $ —</span><span>Ver</span></div></div></div>
+  </div>
+  <p class="note">*Precios y descripciones de ejemplo (demo). Se carga el menú real.</p>
+</div></section>
+
+<section class="plan" id="plan"><div class="wrap">
+  <div class="p dark"><h3>Celebraciones</h3><p>Cumpleaños y reuniones: reserva tu mesa y arma tu combo.</p><b>Reserva en línea</b></div>
+  <div class="p"><h3>Horario</h3><p>Lun a jue 4–10 PM · Vie y sáb 4–10:30 PM · Dom 2–10 PM</p><b>Abierto hoy</b></div>
+  <div class="p"><h3>Ubicación</h3><p>Urb. Villa del Sol, Mz E lote 18, frente a Mi Vaquita, Cartagena.</p><b>Cómo llegar →</b></div>
+</div></section>
+
+<footer><div class="wrap"><span>Mr. Gallo · Pizzas · Alitas · Cafetería · Cartagena</span><span>@mrgallo.co</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

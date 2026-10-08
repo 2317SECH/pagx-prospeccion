@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bogotana de Pizzas (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#c8102e;--red2:#9a0b22;--yel:#ffd23f;--cream:#fff7f0;--ink:#1f1414;--muted:#7a6464;--line:#f2dcd4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-y{background:var(--yel);color:var(--ink)}
+  .btn-o{border:2px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--red);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Lilita One';font-size:26px;font-weight:400}
+  .logo small{display:block;font-size:11px;letter-spacing:.2em;opacity:.8}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px}
+  .hero{background:linear-gradient(180deg,var(--red) 0,var(--red2) 100%);color:#fff;padding:50px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .ver{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;font-weight:600;font-size:13px}
+  .hero h1{font-size:76px;margin:16px 0 14px}
+  .hero h1 span{color:var(--yel)}
+  .hero p{font-size:18px;color:#ffd9de;max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .slice{height:460px;border-radius:30px;background:url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=900&q=70&fit=crop') center/cover;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(2deg)}
+  section.sedes{padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:52px;color:var(--red)}
+  .head p{color:var(--muted);max-width:420px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .s{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px}
+  .s .t{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--red);text-transform:uppercase}
+  .s h3{font-size:36px;margin:6px 0 10px}
+  .s p{color:var(--muted);margin-bottom:16px}
+  .s .row{display:flex;gap:10px;flex-wrap:wrap}
+  section.menu{background:var(--ink);color:#fff;padding:76px 0}
+  .menu .head h2{color:var(--yel)}
+  .menu .head p{color:#c9b6b6}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .m{background:#2c1e1e;border-radius:22px;overflow:hidden}
+  .m .ph{height:170px;background-size:cover;background-position:center}
+  .m .b{padding:14px}
+  .m h3{font-size:20px}
+  .m p{font-size:13px;color:#c9b6b6;margin:4px 0 10px}
+  .m .row{display:flex;justify-content:space-between;font-weight:700;font-size:14px}
+  .m .row span:first-child{color:var(--yel)}
+  .note{font-size:12px;color:#c9b6b6;margin-top:14px}
+  footer{background:var(--red2);color:#ffd9de;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--yel);color:var(--ink);font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:20px}.logo small{display:none}
+    .hero .wrap,.two{grid-template-columns:1fr}
+    .hero h1{font-size:50px}
+    .slice{height:280px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Bogotana de Pizzas</b><small>BELLO · ARMENIA</small></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#sedes">Sedes</a><a href="#sedes">Domicilios</a><a href="#">Clientes</a></nav>
+  <a class="btn btn-y" href="#sedes">Pedir</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="ver">Abiertos todos los días · 4 PM a 12 AM</span>
+    <h1>Pizza <span>bogotana</span> hasta la medianoche</h1>
+    <p>Dos sedes, Cabañas en Bello y Armenia, Quindío. Elige tu sede, arma tu pedido y recíbelo en casa sin buscar el número correcto.</p>
+    <div class="ctas"><a class="btn btn-y" href="#sedes">Elegir sede y pedir</a><a class="btn btn-o" style="border-color:#fff;color:#fff" href="#menu">Ver menú</a></div>
+  </div>
+  <div class="slice"></div>
+</div></section>
+
+<section class="sedes" id="sedes"><div class="wrap">
+  <div class="head"><h2>Elige tu sede</h2><p>Hoy cada sede tiene su número en la bio y los domicilios pasan por un Linktree. Aquí el cliente elige y pide directo.</p></div>
+  <div class="two">
+    <div class="s"><span class="t">Antioquia</span><h3>Cabañas, Bello</h3><p>Todos los días de 4:00 PM a 12:00 AM. Domicilios en la zona.</p><div class="row"><a class="btn btn-r" href="#">Pedir en Bello</a><a class="btn btn-o" href="#">Cómo llegar</a></div></div>
+    <div class="s"><span class="t">Quindío</span><h3>Armenia</h3><p>Todos los días de 4:00 PM a 12:00 AM. Domicilios en la zona.</p><div class="row"><a class="btn btn-r" href="#">Pedir en Armenia</a><a class="btn btn-o" href="#">Cómo llegar</a></div></div>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>El menú</h2><p>Pizzas, bebidas y combos con foto, tamaño y precio.</p></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&q=70&fit=crop')"></div><div class="b"><h3>Pepperoni</h3><p>La clásica</p><div class="row"><span>$ —</span><span>Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&q=70&fit=crop')"></div><div class="b"><h3>Especial de la casa</h3><p>Con todo</p><div class="row"><span>$ —</span><span>Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&q=70&fit=crop')"></div><div class="b"><h3>Familiar</h3><p>Para compartir</p><div class="row"><span>$ —</span><span>Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=500&q=70&fit=crop')"></div><div class="b"><h3>Por porción</h3><p>Para el antojo</p><div class="row"><span>$ —</span><span>Agregar</span></div></div></div>
+  </div>
+  <p class="note">*Productos y precios de ejemplo (demo). Se carga la carta real de cada sede.</p>
+</div></section>
+
+<footer><div class="wrap"><span>Bogotana de Pizzas · Cabañas, Bello · Armenia, Quindío</span><span>@bogotanadepizzas</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

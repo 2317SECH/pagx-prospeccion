@@ -882,6 +882,20 @@
         "bocetos/evidencia/130-sushi-del-mar-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Sushi del Mar hace domicilios en el norte de Cali, pero el menú está en destacadas y los pedidos pasan por un link genérico.\nLes proponemos una web con el menú con fotos, carrito de domicilio con cobertura por barrio y su ubicación.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 131,
+      "slug": "131-mr-gallo-pizza",
+      "nombre": "Mr. Gallo · Pizzas, Alitas y Cafetería",
+      "ig": "mrgallo.co",
+      "lugar": "Cartagena, Colombia (Urb. Villa del Sol, frente a Mi Vaquita)",
+      "nicho": "Pizzería + alitas + cafetería (ganadores Pizza Legend 2023)",
+      "web": "Sin web (el link de la bio es un menú en una plataforma externa)",
+      "porque": "8,4K seguidores, activo (07/10/2026), ganadores de Pizza Legend 2023. Promos, domicilios, celebraciones y eventos están en destacadas y el menú en una plataforma de terceros. Una web propia con pedido y reservas capitaliza el premio. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/131-mr-gallo-pizza-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Mr. Gallo ganó Pizza Legend 2023, pero el menú está en una plataforma externa y los domicilios y celebraciones solo en destacadas.\nLes proponemos una web propia con el menú, pedidos a domicilio y reservas para celebraciones, destacando el premio.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
