@@ -742,6 +742,20 @@
         "bocetos/evidencia/120-cherry-eli-pasteleria-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que todo el agendado de sus pastelitos es solo por WhatsApp y que explican el proceso con posts y destacadas.\nLes proponemos una web donde el cliente elige estilo, tamaño y fecha de recogida y aparta con anticipo, con las FAQs a la vista.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 121,
+      "slug": "121-lilos-heladeria",
+      "nombre": "Heladería Artesanal Lilos",
+      "ig": "heladerialilos_bigand",
+      "lugar": "Bigand, Santa Fe, Argentina (Rivadavia 1121)",
+      "nicho": "Heladería artesanal + cafetería premium + delivery",
+      "web": "Sin web y sin link en la bio",
+      "porque": "2,3K seguidores en un pueblo chico, publica casi a diario (07/10/2026): sabores nuevos (Candy), ensalada de frutas, promos 2x1, Octubre Rosa. Abre de 7 a 00 y hace delivery jue–dom pero no hay forma de ver sabores ni pedir por kilo sin escribir. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/121-lilos-heladeria-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que en Lilos sacan sabores nuevos seguido y tienen delivery, pero no hay ningún link para ver los gustos o pedir por kilo.\nLes proponemos una web donde el cliente elige 1/4, 1/2 o 1 kilo, arma sus gustos y pide, más la cafetería y las promos.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
