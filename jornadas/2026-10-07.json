@@ -728,6 +728,20 @@
         "bocetos/evidencia/119-carolinas-bakery-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el reportaje en el diario de Chile y sus tortas chilenas en Orlando, pero su perfil no tiene ningún link para ver sabores ni cotizar.\nLe proponemos una web con las clásicas chilenas, las promos del mes y un formulario para cotizar tortas personalizadas.\nLe preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 120,
+      "slug": "120-cherry-eli-pasteleria",
+      "nombre": "Pastelería Cherry Eli",
+      "ig": "pasteleriacherryelimty",
+      "lugar": "Monterrey, N.L., México (taller en Céntrika Crisoles)",
+      "nicho": "Repostería personalizada (pasteles vintage, glitter, temáticos)",
+      "web": "Sin web (solo link de WhatsApp y Google Maps)",
+      "porque": "6K seguidores, 1.277 publicaciones, activa (06/10/2026), posts de hasta 342 likes. Todo el agendado es 'SÓLO WHATSAPP' y explican el proceso con posts ('¿Cómo agendar tu pastelito?'), FAQs y avisos en destacadas. Un flujo de agenda + anticipo en línea les ahorra horas de chat. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/120-cherry-eli-pasteleria-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que todo el agendado de sus pastelitos es solo por WhatsApp y que explican el proceso con posts y destacadas.\nLes proponemos una web donde el cliente elige estilo, tamaño y fecha de recogida y aparta con anticipo, con las FAQs a la vista.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
