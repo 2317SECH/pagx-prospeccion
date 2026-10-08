@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Du Lima Clínica Veterinária (conceito PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--teal:#169c94;--teal2:#0d6f6a;--mint:#dff5f2;--orange:#ff8a3d;--bg:#f7fbfa;--ink:#123331;--muted:#5d7674;--line:#d8ebe8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:700;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-t{background:var(--teal);color:#fff}
+  .btn-o{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(255,138,61,.35)}
+  .btn-l{border:2px solid var(--line);background:#fff}
+  .topbar{background:var(--teal2);color:#dff5f2;font-size:13px;font-weight:600;padding:8px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:12px}
+  .topbar b{color:#fff}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .paw{width:44px;height:44px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:'Fredoka';font-size:20px}
+  .logo b{font-family:'Fredoka';font-size:24px}
+  .logo small{display:block;font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-size:15px;font-weight:600;color:var(--muted)}
+  .hero{padding:56px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff1e7;color:#c45a14;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
+  .pill i{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,138,61,.25)}
+  .hero h1{font-size:66px;margin:16px 0 14px}
+  .hero h1 span{color:var(--teal)}
+  .hero p{font-size:18px;color:var(--muted);max-width:500px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .trust{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+  .trust b{display:block;font-family:'Fredoka';font-size:28px;color:var(--teal)}
+  .trust span{font-size:13px;color:var(--muted)}
+  .pics{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:220px 220px;gap:14px}
+  .pics div{border-radius:26px;background-size:cover;background-position:center}
+  .pics .a{grid-row:span 2;background-image:url('https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=800&q=70&fit=crop')}
+  .pics .b{background-image:url('https://images.unsplash.com/photo-1611173622933-91942d394b04?w=600&q=70&fit=crop')}
+  .pics .c{background-image:url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=70&fit=crop')}
+  section.serv{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}
+  .head{text-align:center;max-width:620px;margin:0 auto 34px}
+  .head h2{font-size:48px}
+  .head p{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .s{border:1px solid var(--line);border-radius:24px;padding:24px;background:var(--bg)}
+  .s .ic{width:52px;height:52px;border-radius:16px;background:var(--mint);color:var(--teal2);display:grid;place-items:center;font-family:'Fredoka';font-size:22px;margin-bottom:14px}
+  .s h3{font-size:24px;margin-bottom:6px}
+  .s p{font-size:14px;color:var(--muted);margin-bottom:12px}
+  .s a{font-weight:700;color:var(--teal);font-size:14px}
+  .s.em{background:var(--teal2);color:#fff;border-color:var(--teal2)}
+  .s.em .ic{background:rgba(255,255,255,.15);color:#fff}
+  .s.em p{color:#cdeeea}
+  .s.em a{color:#fff}
+  section.agenda{padding:76px 0}
+  .agenda .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .agenda h2{font-size:48px;margin-bottom:12px}
+  .agenda p{color:var(--muted);margin-bottom:18px}
+  .list{list-style:none}
+  .list li{padding:10px 0;border-bottom:1px solid var(--line);font-weight:600}
+  .list li::before{content:"✓  ";color:var(--teal);font-weight:800}
+  .form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:0 20px 50px rgba(18,51,49,.08)}
+  .form h3{font-size:28px;margin-bottom:14px}
+  .f{border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin-bottom:10px;font-size:15px}
+  .f small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .slots{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
+  .slots span{border:2px solid var(--line);border-radius:10px;padding:7px 12px;font-weight:700;font-size:14px}
+  .slots span.on{border-color:var(--teal);background:var(--mint);color:var(--teal2)}
+  .form .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  footer{background:var(--ink);color:#bcd6d3;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .topbar .wrap span:last-child{display:none}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo small{display:none}.logo b{font-size:20px}
+    .hero .wrap,.agenda .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:44px}
+    .head h2,.agenda h2{font-size:36px}
+    .pics{grid-template-rows:150px 150px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span><b>Clínica 24h</b> · Atendimento todos os dias</span><span>Pet shop · Banho e tosa · Vacinação</span></div></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="paw">DL</span><span><b>Du Lima</b><small>Clínica veterinária & pet shop</small></span></a>
+  <nav class="links"><a href="#serv">Serviços</a><a href="#agenda">Banho e tosa</a><a href="#">Pet shop</a><a href="#">Como chegar</a></nav>
+  <a class="btn btn-o" href="#">Emergência 24h</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="pill"><i></i> Plantão 24 horas</span>
+    <h1>Cuidado completo para o seu <span>melhor amigo</span>.</h1>
+    <p>Consultas, castrações, vacinas, pet shop completo e banho e tosa no mesmo lugar. Agende online e fale com a clínica a qualquer hora.</p>
+    <div class="ctas"><a class="btn btn-t" href="#agenda">Agendar consulta</a><a class="btn btn-l" href="#agenda">Marcar banho e tosa</a></div>
+    <div class="trust"><div><b>24h</b><span>clínica aberta</span></div><div><b>8 mil+</b><span>tutores no Instagram</span></div><div><b>Tudo</b><span>em um só lugar</span></div></div>
+  </div>
+  <div class="pics"><div class="a"></div><div class="b"></div><div class="c"></div></div>
+</div></section>
+
+<section class="serv" id="serv"><div class="wrap">
+  <div class="head"><h2>Nossos serviços</h2><p>Hoje tudo está espalhado em destaques do Instagram. Aqui cada serviço tem sua página e seu botão de agendamento.</p></div>
+  <div class="grid">
+    <div class="s em"><div class="ic">24</div><h3>Clínica 24h</h3><p>Consultas, exames e emergências a qualquer hora.</p><a href="#">Falar agora →</a></div>
+    <div class="s"><div class="ic">+</div><h3>Castração</h3><p>Cirurgias com pré e pós-operatório acompanhados.</p><a href="#">Agendar →</a></div>
+    <div class="s"><div class="ic">V</div><h3>Vacinação</h3><p>Campanhas e carteira de vacinas em dia.</p><a href="#">Ver calendário →</a></div>
+    <div class="s"><div class="ic">PS</div><h3>Pet shop</h3><p>Rações, petiscos, brinquedos e acessórios.</p><a href="#">Ver produtos →</a></div>
+  </div>
+</div></section>
+
+<section class="agenda" id="agenda"><div class="wrap">
+  <div>
+    <h2>Banho e tosa sem fila no WhatsApp</h2>
+    <p>O tutor escolhe o serviço, o porte do pet e o horário. A equipe recebe tudo organizado.</p>
+    <ul class="list"><li>Horários disponíveis em tempo real</li><li>Lembrete automático no dia</li><li>Promoções e sorteios do pet shop no site</li></ul>
+  </div>
+  <div class="form">
+    <h3>Agendar banho e tosa</h3>
+    <div class="row"><div class="f"><small>Nome do pet</small>Thor</div><div class="f"><small>Porte</small>Médio</div></div>
+    <div class="f"><small>Serviço</small>Banho + tosa higiênica</div>
+    <small style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Horário</small>
+    <div class="slots"><span>09:00</span><span class="on">10:30</span><span>14:00</span><span>16:30</span></div>
+    <a class="btn btn-t" href="#">Confirmar agendamento</a>
+    <p class="note">*Dados e horários de exemplo (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Clínica Veterinária e Pet Shop Du Lima</span><span>@dulimaclinicaveterinaria</span></div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>
