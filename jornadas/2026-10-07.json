@@ -784,6 +784,20 @@
         "bocetos/evidencia/123-las-callejeras-medallo-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el reel de 15 mil likes del truck en Paterson, pero el menú está en una sola destacada y no hay link para pedir.\nLes proponemos una web con el menú con fotos, pedido para recoger, horario de madrugada y cotización para eventos.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 124,
+      "slug": "124-burn-off-box",
+      "nombre": "Burn Off Box · CrossFit Cali",
+      "ig": "burnoffbox",
+      "lugar": "Cali, Colombia (Cr 83B # 16-13, Local 6, Piso 2)",
+      "nicho": "Box de CrossFit + acondicionamiento físico + recuperación",
+      "web": "Sin web (solo wa.link)",
+      "porque": "3,5K seguidores, retomó publicaciones (30/09/2026), lanzó servicio nuevo de sueroterapia/recuperación y hace promos para nuevos usuarios (3 días gratis). Horarios, reglas y ubicación están en destacadas; no hay reserva de cupos ni planes visibles. Engagement medio. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/124-burn-off-box-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que en Burn Off Box lanzaron el servicio de recuperación y hacen promos para nuevos, pero horarios y planes están solo en destacadas y todo pasa por WhatsApp.\nLes proponemos una web con reserva de cupos por clase, planes con pago en línea y agenda del nuevo servicio.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
