@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morin Pastelería Barranquilla (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--lav:#b79ce0;--lav2:#7a55b8;--lilac:#f1e9fb;--mint:#c9eee0;--cream:#fffcfe;--ink:#2c1f3a;--muted:#7a6b88;--line:#ebe0f6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;line-height:1.55;font-weight:500}
+  h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:700;line-height:1.05}
+  .sc{font-family:'Pacifico',cursive;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-l{background:var(--lav2);color:#fff}
+  .btn-o{border:2px solid var(--lav2);color:var(--lav2)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--lilac);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Pacifico';font-size:30px;font-weight:400;color:var(--lav2)}
+  .logo small{display:block;font-size:10px;font-weight:700;letter-spacing:.24em;color:var(--muted)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;font-size:15px;color:var(--muted)}
+  .hero{padding:50px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .tag{display:inline-block;background:var(--mint);color:#1f6a50;border-radius:999px;padding:6px 14px;font-weight:700;font-size:13px}
+  .hero h1{font-size:62px;margin:16px 0 14px}
+  .hero h1 .sc{color:var(--lav2);font-size:1.05em}
+  .hero p{font-size:18px;color:var(--muted);max-width:460px;margin-bottom:24px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .by{margin-top:24px;font-weight:700;color:var(--lav2)}
+  .blob{height:480px;border-radius:46% 54% 42% 58%/55% 45% 55% 45%;background:url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=900&q=70&fit=crop') center/cover;border:10px solid var(--lilac)}
+  section.cat{background:var(--lilac);padding:76px 0}
+  .head{text-align:center;margin-bottom:30px}
+  .head h2{font-size:46px}
+  .head h2 .sc{color:var(--lav2)}
+  .head p{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .c{background:#fff;border-radius:26px;overflow:hidden}
+  .c .ph{height:190px;background-size:cover;background-position:center}
+  .c .b{padding:16px}
+  .c h3{font-size:20px}
+  .c p{font-size:14px;color:var(--muted)}
+  section.cal{padding:76px 0}
+  .cal .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .cal h2{font-size:44px;margin-bottom:12px}
+  .cal p{color:var(--muted);margin-bottom:16px}
+  .rule{background:var(--mint);border-radius:18px;padding:14px 18px;font-weight:700;color:#1f6a50}
+  .month{background:#fff;border:1px solid var(--line);border-radius:26px;padding:24px}
+  .month h3{font-size:22px;margin-bottom:14px}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;font-size:14px;font-weight:700}
+  .days span{padding:10px 0;border-radius:10px}
+  .days .x{color:#c9bfd4;text-decoration:line-through}
+  .days .ok{background:var(--lilac)}
+  .days .on{background:var(--lav2);color:#fff}
+  .month .btn{width:100%;justify-content:center;margin-top:16px}
+  .note{font-size:12px;color:var(--muted);margin-top:10px}
+  footer{background:var(--lav2);color:#efe6fb;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:24px}.logo small{display:none}
+    .hero .wrap,.cal .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:40px}
+    .blob{height:320px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head h2,.cal h2{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Morin</b><small>PASTELERÍA · BARRANQUILLA</small></a>
+  <nav class="links"><a href="#cat">Tortas</a><a href="#cat">Lunchbox</a><a href="#cat">Mesa de dulces</a><a href="#cal">Pedidos</a></nav>
+  <a class="btn btn-l" href="#cal">Agendar torta</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Tortas · Postres · Mesa de dulces</span>
+    <h1>Tortas que se ven <span class="sc">tan bonitas</span> como saben</h1>
+    <p>Tortas personalizadas, lunchbox cakes y mesas de dulces en Barranquilla. Elige el diseño, revisa las fechas libres y agenda tu pedido con anticipación.</p>
+    <div class="ctas"><a class="btn btn-l" href="#cal">Ver fechas disponibles</a><a class="btn btn-o" href="#cat">Ver diseños</a></div>
+    <p class="by">Hecho a mano por Maureen</p>
+  </div>
+  <div class="blob"></div>
+</div></section>
+
+<section class="cat" id="cat"><div class="wrap">
+  <div class="head"><h2>Elige tu <span class="sc">antojo</span></h2><p>Las categorías que hoy están en destacadas, listas para cotizar.</p></div>
+  <div class="grid">
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1664589100646-9750f07714a9?w=500&q=70&fit=crop')"></div><div class="b"><h3>Tortas personalizadas</h3><p>Diseño a tu medida.</p></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1765150399819-ed5b9e13ff1b?w=500&q=70&fit=crop')"></div><div class="b"><h3>Lunchbox cakes</h3><p>Mini tortas para regalar.</p></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1527481138388-31827a7c94d5?w=500&q=70&fit=crop')"></div><div class="b"><h3>Cumpleaños</h3><p>Con velas y mensaje.</p></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1693464331668-7f46e1b613ef?w=500&q=70&fit=crop')"></div><div class="b"><h3>Mesa de dulces</h3><p>Para eventos.</p></div></div>
+  </div>
+</div></section>
+
+<section class="cal" id="cal"><div class="wrap">
+  <div>
+    <h2>Agenda con anticipación</h2>
+    <p>La regla ya existe; la web la hace cumplir sola. El cliente solo ve los días que sí se pueden pedir.</p>
+    <div class="rule">Pedidos con mínimo 2–3 días de anticipación</div>
+  </div>
+  <div class="month">
+    <h3>Octubre</h3>
+    <div class="days"><span class="x">8</span><span class="x">9</span><span class="x">10</span><span class="ok">11</span><span class="on">12</span><span class="ok">13</span><span class="ok">14</span><span class="ok">15</span><span class="x">16</span><span class="ok">17</span><span class="ok">18</span><span class="ok">19</span><span class="ok">20</span><span class="ok">21</span></div>
+    <a class="btn btn-l" href="#">Agendar el 12 de octubre</a>
+    <p class="note">*Disponibilidad de ejemplo (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Morin Pastelería · Barranquilla</span><span>@morin_pasteleria</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

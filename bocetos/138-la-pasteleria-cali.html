@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Pastelería Cali (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--rose:#e9c9c4;--rose2:#b56f66;--cocoa:#3e2620;--cream:#fdf8f4;--ink:#2b1c18;--muted:#86716b;--line:#efe1db}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--rose2)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-c{background:var(--cocoa);color:#fff}
+  .btn-o{border:1.5px solid var(--cocoa);color:var(--cocoa)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--cream);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'Playfair Display';font-style:italic;font-weight:500;font-size:30px;color:var(--rose2);white-space:nowrap}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:15px;color:var(--muted)}
+  .hero{padding:56px 0 76px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .hero h1{font-size:70px;color:var(--cocoa);margin:14px 0 16px}
+  .hero h1 em{color:var(--rose2);font-weight:500}
+  .hero p{font-size:18px;color:var(--muted);max-width:460px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .cake{position:relative}
+  .cake .img{height:500px;border-radius:24px;background:url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=900&q=70&fit=crop') center/cover}
+  .cake .lbl{position:absolute;left:-20px;bottom:40px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 14px 30px rgba(62,38,32,.15)}
+  .cake .lbl b{display:block;font-family:'Playfair Display';font-size:20px;color:var(--cocoa)}
+  .cake .lbl small{color:var(--muted)}
+  section.vit{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+  .head{text-align:center;margin-bottom:34px}
+  .head h2{font-size:52px;color:var(--cocoa);margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .p .ph{aspect-ratio:1/1;border-radius:22px;background-size:cover;background-position:center;margin-bottom:14px}
+  .p h3{font-size:24px;color:var(--cocoa)}
+  .p .row{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+  .p small{color:var(--muted)}
+  .p b{color:var(--rose2)}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:20px}
+  section.order{padding:80px 0}
+  .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .order h2{font-size:48px;color:var(--cocoa);margin:10px 0 12px}
+  .order p{color:var(--muted);margin-bottom:16px}
+  .opts{display:flex;gap:10px;flex-wrap:wrap}
+  .opts span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px}
+  .card{background:var(--cocoa);color:#fff;border-radius:28px;padding:30px}
+  .card h3{font-size:30px;margin-bottom:12px}
+  .card .li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+  .card .tot{display:flex;justify-content:space-between;font-family:'Playfair Display';font-size:24px;margin:16px 0}
+  .card .btn{background:var(--rose);color:var(--cocoa);width:100%;justify-content:center}
+  footer{background:var(--rose);color:var(--cocoa);padding:24px 0;font-size:14px;font-weight:500}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--cocoa);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:24px}
+    .hero .wrap,.grid,.order .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:46px}
+    .cake .img{height:320px}
+    .cake .lbl{left:10px}
+    .head h2,.order h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">La Pastelería</a>
+  <nav class="links"><a href="#vit">Vitrina</a><a href="#">Café</a><a href="#">Eventos</a><a href="#">Historia</a></nav>
+  <a class="btn btn-c" href="#order">Pedir</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Postres y café · Santa Mónica, Cali</span>
+    <h1>Cheesecakes, éclairs y <em>buen café.</em></h1>
+    <p>Tortas de chocolate, brownies, blondies y marquesas hechos en casa. Mira la vitrina del día y pide tu postre para recoger o a domicilio.</p>
+    <div class="ctas"><a class="btn btn-c" href="#order">Hacer pedido</a><a class="btn btn-o" href="#vit">Ver vitrina</a></div>
+  </div>
+  <div class="cake"><div class="img"></div><div class="lbl"><b>Cheesecake de la casa</b><small>El más pedido</small></div></div>
+</div></section>
+
+<section class="vit" id="vit"><div class="wrap">
+  <div class="head"><span class="k">La vitrina</span><h2>Lo que hay hoy</h2></div>
+  <div class="grid">
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=600&q=70&fit=crop')"></div><h3>Cheesecakes</h3><div class="row"><small>Porción o entera</small><b>$ —</b></div></div>
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?w=600&q=70&fit=crop')"></div><h3>Torta de chocolate</h3><div class="row"><small>Porción o entera</small><b>$ —</b></div></div>
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&q=70&fit=crop')"></div><h3>Marquesas</h3><div class="row"><small>Porción o entera</small><b>$ —</b></div></div>
+  </div>
+  <p class="note">*Presentaciones y precios de ejemplo (demo). Los postres salen de su bio.</p>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <div>
+    <span class="k">Pedidos</span>
+    <h2>Tu pedido, sin chat de por medio</h2>
+    <p>Hoy cada pedido arranca con un wa.link. Aquí el cliente arma su caja, elige hora y paga.</p>
+    <div class="opts"><span>Recoger en Santa Mónica</span><span>Domicilio</span><span>Para eventos</span></div>
+  </div>
+  <div class="card">
+    <h3>Tu caja</h3>
+    <div class="li"><span>Cheesecake · porción</span><span>x2</span></div>
+    <div class="li"><span>Brownie</span><span>x2</span></div>
+    <div class="li"><span>Éclair</span><span>x1</span></div>
+    <div class="tot"><span>Total</span><span>$ —</span></div>
+    <a class="btn" href="#">Confirmar pedido</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>La Pastelería · Calle 27 Norte # 6AN-31, Santa Mónica, Cali</span><span>@lapasteleria.cali</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

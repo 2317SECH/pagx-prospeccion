@@ -966,6 +966,20 @@
         "bocetos/evidencia/136-coctel-coffee-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus cafés de temporada y que avisos como las vacaciones solo quedan en un post, sin un lugar fijo para la carta o los pedidos.\nLes proponemos una web con los cafés de la barra, avisos siempre visibles y venta de café en grano para la casa.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 137,
+      "slug": "137-siete-chinos",
+      "nombre": "Blanca Nieves y sus Siete Chinos",
+      "ig": "sietechinos.infarto",
+      "lugar": "La Candelaria, Bogotá, Colombia (Calle 10 # 6-36, Casa Manuelita Sáenz)",
+      "nicho": "Restaurante de comida asiática + panadería artesanal (Grupo Infarto)",
+      "web": "Sin web (el link de la bio es un artículo de Semana; reservas por mensaje)",
+      "porque": "2,9K seguidores, activo (23/09/2026), concepto con historia (salió en Semana), en una casa histórica de La Candelaria con flujo turístico. Los menús son imágenes en destacadas y las reservas no tienen página. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/137-siete-chinos-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos la historia de Blanca Nieves y sus Siete Chinos en Semana, pero su bio lleva al artículo y los menús solo están como imágenes en destacadas.\nLes proponemos una web con la historia, los dos menús legibles y en Google, y reservas en línea para La Candelaria.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

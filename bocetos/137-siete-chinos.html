@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blanca Nieves y sus Siete Chinos (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#b5121b;--red2:#7e0b12;--paper:#f5efe4;--gold:#d9a441;--ink:#1d1411;--muted:#7a6b62;--line:#e4d8c6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Rozha One',serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-o{border:1.5px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--red);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Rozha One';font-size:24px;font-weight:400}
+  .logo small{display:block;font-size:10px;letter-spacing:.24em;opacity:.8;margin-top:3px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px}
+  .nav .btn{background:var(--gold);color:var(--ink)}
+  .hero{padding:56px 0 76px;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .hero h1{font-size:76px;margin:14px 0 16px}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .casa{margin-top:28px;border-left:3px solid var(--gold);padding-left:14px;font-size:14px;color:var(--muted)}
+  .casa b{display:block;color:var(--ink);font-size:16px}
+  .book{position:relative;height:500px}
+  .book div{position:absolute;background-size:cover;background-position:center;border:6px solid #fff;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+  .book .a{left:0;top:0;width:62%;height:76%;background-image:url('https://images.unsplash.com/photo-1589047133481-02b4a5327d89?w=800&q=70&fit=crop')}
+  .book .b{right:0;bottom:0;width:52%;height:58%;background-image:url('https://images.unsplash.com/photo-1549413468-cd78edb7e75c?w=600&q=70&fit=crop')}
+  .seal{position:absolute;right:20px;top:20px;width:110px;height:110px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Rozha One';font-size:18px;line-height:1.05;transform:rotate(-10deg);z-index:2}
+  section.menus{background:var(--ink);color:var(--paper);padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:52px}
+  .head p{max-width:420px;color:#c3b6aa}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .mn{border:1px solid #3a2e29;padding:28px}
+  .mn .t{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:600}
+  .mn h3{font-size:34px;margin:8px 0 14px}
+  .it{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed #3a2e29}
+  .it small{display:block;color:#a99c90;font-size:13px}
+  .it span:last-child{color:var(--gold);font-weight:600;white-space:nowrap}
+  .note{font-size:12px;color:#a99c90;margin-top:14px}
+  section.res{padding:80px 0}
+  .res .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .res h2{font-size:48px;margin-bottom:12px}
+  .res p{color:var(--muted);margin-bottom:16px}
+  .press{background:#fff;border:1px solid var(--line);padding:18px;font-size:14px}
+  .press b{display:block;font-family:'Rozha One';font-size:20px;font-weight:400;margin-bottom:4px}
+  .form{background:#fff;border:1px solid var(--line);padding:26px}
+  .form h3{font-size:28px;margin-bottom:14px;color:var(--red)}
+  .f{border:1px solid var(--line);padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center}
+  footer{background:var(--red2);color:#f1d6d0;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--ink);font-size:12px;font-weight:600;padding:9px 14px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 12px;font-size:12px}
+    .logo b{font-size:17px}.logo small{display:none}
+    .hero .wrap,.two,.res .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:46px}
+    .book{height:320px}
+    .seal{width:84px;height:84px;font-size:14px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.res h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Blanca Nieves y sus Siete Chinos</b><small>LA CANDELARIA · BOGOTÁ</small></a>
+  <nav class="links"><a href="#menus">Menús</a><a href="#res">Reservas</a><a href="#">La ruta</a><a href="#">Preguntas</a></nav>
+  <a class="btn" href="#res">Reservar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Comida asiática + panadería artesanal</span>
+    <h1>Un cuento que se volvió <em>comida.</em></h1>
+    <p>Cocina asiática y pan artesanal en una casa histórica de La Candelaria. Mira los menús, reserva tu mesa y llega a la ruta del cuento.</p>
+    <div class="ctas"><a class="btn btn-r" href="#res">Reservar mesa</a><a class="btn btn-o" href="#menus">Ver menús</a></div>
+    <div class="casa"><b>Casa Manuelita Sáenz</b>Calle 10 # 6-36, La Candelaria, Bogotá</div>
+  </div>
+  <div class="book"><span class="seal">Siete<br>Chinos</span><div class="a"></div><div class="b"></div></div>
+</div></section>
+
+<section class="menus" id="menus"><div class="wrap">
+  <div class="head"><h2>Dos menús, un cuento</h2><p>Los menús hoy viven en destacadas como imágenes. Aquí son legibles, buscables y aparecen en Google.</p></div>
+  <div class="two">
+    <div class="mn"><span class="t">Cocina</span><h3>Menú asiático</h3>
+      <div class="it"><span>Dumplings<small>Al vapor o a la plancha</small></span><span>$ —</span></div>
+      <div class="it"><span>Wok de la casa<small>Plato principal</small></span><span>$ —</span></div>
+      <div class="it"><span>Para compartir<small>Entradas</small></span><span>$ —</span></div>
+    </div>
+    <div class="mn"><span class="t">Horno</span><h3>Panadería artesanal</h3>
+      <div class="it"><span>Pan de masa madre<small>Del horno de la casa</small></span><span>$ —</span></div>
+      <div class="it"><span>Pan dulce<small>Para el café</small></span><span>$ —</span></div>
+      <div class="it"><span>Para llevar<small>Pedido anticipado</small></span><span>$ —</span></div>
+    </div>
+  </div>
+  <p class="note">*Platos y precios de ejemplo (demo). Se cargan los menús reales.</p>
+</div></section>
+
+<section class="res" id="res"><div class="wrap">
+  <div>
+    <h2>Reserva tu mesa</h2>
+    <p>Para planes en La Candelaria, grupos y visitantes de las exposiciones del sector.</p>
+    <div class="press"><b>Su historia, en Semana</b>La historia detrás del concepto ya salió en prensa. En la web queda enlazada y contada a su manera.</div>
+  </div>
+  <div class="form">
+    <h3>Reserva</h3>
+    <div class="row"><div class="f"><small>Personas</small>4</div><div class="f"><small>Fecha</small>Sáb 18 oct</div></div>
+    <div class="f"><small>Hora</small>1:00 PM</div>
+    <a class="btn btn-r" href="#">Confirmar reserva</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Blanca Nieves y sus Siete Chinos · Calle 10 # 6-36, La Candelaria · Grupo Infarto</span><span>@sietechinos.infarto</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
