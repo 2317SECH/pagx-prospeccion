@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las Más Fresas Medellín (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#e8233c;--red2:#b5162b;--pink:#ffd9df;--cream:#fffaf6;--leaf:#2f9e5b;--ink:#2a1216;--muted:#7d5f63;--line:#f6dde0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Chewy',cursive;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red2)}
+  .btn-o{border:2.5px solid var(--red);color:var(--red);background:#fff}
+  .dots{height:18px;background:radial-gradient(circle,#fff 3px,transparent 4px) 0 0/18px 18px,var(--red)}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Chewy';font-size:30px;color:var(--red)}
+  .logo small{display:block;font-size:10px;font-weight:800;letter-spacing:.22em;color:var(--leaf)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:800;font-size:15px;color:var(--muted)}
+  .hero{padding:50px 0 70px;background:radial-gradient(circle at 80% 40%,var(--pink) 0,transparent 50%)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .tag{display:inline-block;background:#e6f6ec;color:var(--leaf);border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+  .hero h1{font-size:78px;margin:16px 0 14px;color:var(--red)}
+  .hero h1 span{color:var(--ink)}
+  .hero p{font-size:18px;color:var(--muted);max-width:460px;margin-bottom:26px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .cup{position:relative}
+  .cup .img{height:480px;border-radius:40px;background:url('https://images.unsplash.com/photo-1551198297-e490636298ba?w=900&q=70&fit=crop') center/cover;border:10px solid #fff;box-shadow:0 24px 50px rgba(232,35,60,.18)}
+  .cup .st{position:absolute;left:-14px;bottom:30px;background:var(--leaf);color:#fff;border-radius:18px;padding:12px 16px;font-weight:800;transform:rotate(-5deg)}
+  .cup .st b{font-family:'Chewy';font-size:22px;display:block}
+  section.arma{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}
+  .head{text-align:center;margin-bottom:30px}
+  .head h2{font-size:50px;color:var(--red)}
+  .head p{color:var(--muted)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .st2{background:var(--cream);border:2px solid var(--line);border-radius:26px;padding:22px}
+  .st2 h3{font-size:26px;margin-bottom:10px}
+  .ops{display:flex;gap:8px;flex-wrap:wrap}
+  .ops span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:7px 12px;font-weight:800;font-size:14px}
+  .ops span.on{border-color:var(--red);color:var(--red);background:#fff1f3}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:16px}
+  section.sedes{padding:76px 0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .s{border-radius:28px;padding:28px;background:#fff;border:2px solid var(--line)}
+  .s .t{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--leaf)}
+  .s h3{font-size:32px;margin:8px 0 8px}
+  .s p{color:var(--muted);margin-bottom:16px}
+  .s.r{background:var(--red);border-color:var(--red);color:#fff}
+  .s.r .t{color:var(--pink)}
+  .s.r p{color:#ffe3e7}
+  .s.r .btn{background:#fff;color:var(--red);box-shadow:none}
+  footer{background:var(--red2);color:#ffe3e7;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px;box-shadow:0 4px 0 var(--red2)}
+    .logo b{font-size:24px}.logo small{display:none}
+    .hero .wrap,.steps,.two{grid-template-columns:1fr}
+    .hero h1{font-size:50px}
+    .cup .img{height:300px}
+    .cup .st{left:0}
+    .head h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+<div class="dots"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Las Más Fresas</b><small>FRESAS CON CREMA · MEDELLÍN</small></a>
+  <nav class="links"><a href="#arma">Arma tu vaso</a><a href="#sedes">Sedes</a><a href="#">Preguntas</a><a href="#">Clientes</a></nav>
+  <a class="btn btn-r" href="#arma">Pedir</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Heladería · 2 sedes en Medellín</span>
+    <h1>Fresas con crema <span>de las buenas</span></h1>
+    <p>Fresas frescas, crema de la casa, toppings y limonada de fresa. Arma tu vaso, mira cuál sede está abierta hoy y pide para recoger.</p>
+    <div class="ctas"><a class="btn btn-r" href="#arma">Armar mi vaso</a><a class="btn btn-o" href="#sedes">Ver sedes</a></div>
+  </div>
+  <div class="cup"><div class="img"></div><div class="st"><b>Limonada de fresa</b>también en la carta</div></div>
+</div></section>
+
+<section class="arma" id="arma"><div class="wrap">
+  <div class="head"><h2>Arma tu vaso</h2><p>Lo que hoy se pregunta en DM, resuelto en tres pasos.</p></div>
+  <div class="steps">
+    <div class="st2"><h3>1. Tamaño</h3><div class="ops"><span>Pequeño</span><span class="on">Mediano</span><span>Grande</span></div></div>
+    <div class="st2"><h3>2. Crema</h3><div class="ops"><span class="on">Crema de la casa</span><span>Light</span></div></div>
+    <div class="st2"><h3>3. Toppings</h3><div class="ops"><span class="on">Chocolate</span><span>Arequipe</span><span class="on">Galleta</span><span>Leche condensada</span></div></div>
+  </div>
+  <p class="note">*Tamaños, cremas y toppings de ejemplo (demo). Se carga la carta real.</p>
+</div></section>
+
+<section class="sedes" id="sedes"><div class="wrap">
+  <div class="two">
+    <div class="s r"><span class="t">SEDE 1</span><h3>Prados del Campo 2</h3><p>Martes a domingo, 2:00 a 8:00 PM.</p><a class="btn" href="#">Cómo llegar</a></div>
+    <div class="s"><span class="t">SEDE 2</span><h3>Mirador Finca El Paraíso</h3><p>Sábados, domingos y festivos, 1:00 a 8:00 PM.</p><a class="btn btn-o" href="#">Cómo llegar</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Las Más Fresas · Fresas con crema · Medellín</span><span>@lasmasfresasmed</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

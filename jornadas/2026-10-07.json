@@ -1008,6 +1008,20 @@
         "bocetos/evidencia/139-morin-pasteleria-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus tortas y lunchbox cakes en Barranquilla, y que piden 2–3 días de anticipación, pero no hay forma de ver las fechas libres.\nTe proponemos una web con tus diseños y un calendario donde el cliente solo agenda en los días disponibles.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
+    },
+    {
+      "num": 140,
+      "slug": "140-las-mas-fresas",
+      "nombre": "Las Más Fresas · Fresas con crema",
+      "ig": "lasmasfresasmed",
+      "lugar": "Medellín, Colombia (2 sedes: Prados del Campo 2 y Mirador Finca El Paraíso)",
+      "nicho": "Heladería de fresas con crema",
+      "web": "Sin web (el link de la bio va a su TikTok)",
+      "porque": "4,5K seguidores, cuenta verificada, publica casi a diario (30/09/2026). Dos sedes con horarios distintos (una solo fines de semana y festivos) y armado de vaso por DM; toda la info está en destacadas. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/140-las-mas-fresas-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen dos sedes con horarios distintos y que el pedido de fresas con crema se arma por mensaje.\nLes proponemos una web donde el cliente arma su vaso (tamaño, crema, toppings), ve qué sede está abierta y pide para recoger.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

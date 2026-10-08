@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzaria São Paulo Paripueira (conceito PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#0f6b3a;--red:#c8202f;--cream:#fbf5ea;--ink:#1c1612;--muted:#71665c;--line:#ebdfcc;--wood:#3b2a1e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Rubik',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-g{background:var(--green);color:#fff}
+  .btn-o{border:2px solid #fff;color:#fff}
+  .flag{height:8px;background:linear-gradient(90deg,var(--green) 0 33%,#fff 33% 66%,var(--red) 66%)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--wood);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Anton';font-size:26px;text-transform:uppercase;white-space:nowrap}
+  .logo span{color:#ffcf5a}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px;opacity:.9}
+  .hero{position:relative;min-height:580px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,22,18,.95) 0,rgba(28,22,18,.7) 55%,rgba(28,22,18,.2) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .k{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#ffcf5a}
+  .hero h1{font-size:96px;max-width:680px;margin:14px 0 16px}
+  .hero h1 span{color:#ffcf5a}
+  .hero p{font-size:19px;color:#e8ded2;max-width:480px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  section.menu{padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:24px}
+  .head h2{font-size:60px}
+  .head p{color:var(--muted);max-width:420px}
+  .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .tabs span{border:2px solid var(--line);border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
+  .tabs span.on{background:var(--green);border-color:var(--green);color:#fff}
+  .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .it{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px}
+  .it .ph{width:90px;height:90px;border-radius:14px;background-size:cover;background-position:center;flex:none}
+  .it b{display:block;font-size:17px}
+  .it small{color:var(--muted)}
+  .it .p{margin-left:auto;font-weight:700;color:var(--red);white-space:nowrap}
+  .note{font-size:12px;color:var(--muted);margin-top:14px}
+  section.deliv{padding:0 0 76px}
+  .dd{background:var(--green);color:#fff;border-radius:26px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .dd h2{font-size:48px;margin-bottom:10px}
+  .dd p{color:#d6efe0}
+  .steps{display:grid;gap:10px}
+  .steps div{background:rgba(255,255,255,.12);border-radius:14px;padding:14px 16px;font-weight:600}
+  .steps b{color:#ffcf5a;margin-right:8px}
+  footer{background:var(--wood);color:#e3d6c6;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:20px}
+    .hero::after{background:rgba(28,22,18,.82)}
+    .hero h1{font-size:56px}
+    .list,.dd{grid-template-columns:1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.dd h2{font-size:40px}
+  }
+</style>
+</head>
+<body>
+<div class="flag"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">Pizzaria <span>São Paulo</span></a>
+  <nav class="links"><a href="#menu">Pizzas</a><a href="#menu">Esfihas</a><a href="#deliv">Delivery</a><a href="#">Onde estamos</a></nav>
+  <a class="btn btn-r" href="#menu">Pedir agora</a>
+</div></header>
+
+<section class="hero"><div class="bg"></div><div class="wrap">
+  <span class="k">Paripueira · Alagoas</span>
+  <h1>O melhor de <span>São Paulo</span> em Paripueira</h1>
+  <p>Pizzas e esfihas com o padrão das pizzarias paulistanas. Veja o cardápio completo, monte seu pedido e receba em casa.</p>
+  <div class="ctas"><a class="btn btn-r" href="#menu">Ver cardápio</a><a class="btn btn-o" href="#deliv">Como funciona o delivery</a></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>Cardápio</h2><p>Hoje o cardápio é pedido pelo WhatsApp. Aqui ele fica sempre aberto, com fotos e preços.</p></div>
+  <div class="tabs"><span class="on">Pizzas</span><span>Esfihas</span><span>Doces</span><span>Bebidas</span></div>
+  <div class="list">
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=300&q=70&fit=crop')"></div><span><b>Calabresa</b><small>Molho, mussarela, calabresa e cebola</small></span><span class="p">R$ —</span></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1628840042765-356cda07504e?w=300&q=70&fit=crop')"></div><span><b>Pepperoni</b><small>Mussarela e pepperoni</small></span><span class="p">R$ —</span></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=300&q=70&fit=crop')"></div><span><b>Quatro queijos</b><small>A preferida dos queijeiros</small></span><span class="p">R$ —</span></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=300&q=70&fit=crop')"></div><span><b>Especial da casa</b><small>Recheio completo</small></span><span class="p">R$ —</span></div>
+  </div>
+  <p class="note">*Sabores e preços de exemplo (demo). Entra o cardápio real.</p>
+</div></section>
+
+<section class="deliv" id="deliv"><div class="wrap"><div class="dd">
+  <div><h2>Delivery sem enrolação</h2><p>O cliente monta o pedido no site e ele chega organizado, com endereço e forma de pagamento.</p></div>
+  <div class="steps"><div><b>1</b>Escolha pizzas e esfihas</div><div><b>2</b>Informe endereço em Paripueira</div><div><b>3</b>Pague no site ou na entrega</div></div>
+</div></div></section>
+
+<footer><div class="wrap"><span>Pizzaria São Paulo · Paripueira, AL</span><span>@pizzaria_saopaulo.matrix</span></div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>

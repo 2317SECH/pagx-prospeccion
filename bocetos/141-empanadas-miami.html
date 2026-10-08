@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empanadas Miami (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--yel:#ffc21a;--teal:#00a6a6;--pink:#ff4f8b;--cream:#fffaf0;--ink:#1a1a24;--muted:#6b6878;--line:#efe5d0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Figtree',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Righteous',sans-serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-k{background:var(--ink);color:var(--yel)}
+  .btn-p{background:var(--pink);color:#fff}
+  .btn-o{border:2px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--yel)}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{font-family:'Righteous';font-size:26px;white-space:nowrap}
+  .logo span{color:var(--pink)}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:800;font-size:15px}
+  .hero{padding:50px 0 70px;background:linear-gradient(180deg,var(--yel) 0,var(--yel) 30%,var(--cream) 30%)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .card{background:#fff;border-radius:30px;padding:36px;box-shadow:0 20px 50px rgba(26,26,36,.1)}
+  .spec{display:inline-block;background:var(--teal);color:#fff;border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+  .card h1{font-size:64px;margin:16px 0 14px}
+  .card h1 span{color:var(--pink)}
+  .card p{font-size:17px;color:var(--muted);margin-bottom:22px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .apps{margin-top:18px;font-size:14px;font-weight:700;color:var(--muted)}
+  .pic{height:500px;border-radius:30px;background:url('https://images.unsplash.com/photo-1626004780818-2d86aa3fb60f?w=900&q=70&fit=crop') center/cover}
+  section.menu{padding:70px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:26px}
+  .head h2{font-size:50px}
+  .head p{color:var(--muted);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .m{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .m .ph{height:160px;background-size:cover;background-position:center}
+  .m .b{padding:14px}
+  .m h3{font-size:19px}
+  .m p{font-size:13px;color:var(--muted);margin:4px 0 10px}
+  .m .row{display:flex;justify-content:space-between;align-items:center;font-weight:800}
+  .m .row span:last-child{background:var(--yel);border-radius:10px;padding:5px 10px;font-size:13px}
+  .note{font-size:12px;color:var(--muted);margin-top:14px}
+  section.cater{padding:0 0 70px}
+  .cc{background:var(--teal);color:#fff;border-radius:30px;padding:36px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .cc h2{font-size:44px;margin-bottom:10px}
+  .cc p{color:#d9f5f5}
+  .hrs{display:grid;gap:10px}
+  .hrs div{background:rgba(255,255,255,.14);border-radius:16px;padding:14px 16px}
+  .hrs b{display:block;font-size:17px}
+  footer{background:var(--ink);color:#cfccd8;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--pink);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:21px}
+    .hero .wrap,.cc{grid-template-columns:1fr}
+    .card{padding:24px}
+    .card h1{font-size:42px}
+    .pic{height:280px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.cc h2{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">EMPANADAS <span>MIAMI</span></a>
+  <nav class="links"><a href="#menu">Menu</a><a href="#cater">Party trays</a><a href="#cater">Hours</a><a href="#">Visit</a></nav>
+  <a class="btn btn-k" href="#menu">Order pickup</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="card">
+    <span class="spec">Empanada specialists · Aventura</span>
+    <h1>Fresh empanadas, <span>every morning</span></h1>
+    <p>Empanadas from 7 AM in Aventura. Order ahead for pickup, grab party trays for the office, or find us on your delivery app.</p>
+    <div class="ctas"><a class="btn btn-p" href="#menu">Order for pickup</a><a class="btn btn-o" href="#cater">Party trays</a></div>
+    <p class="apps">Also on Uber Eats &amp; Grubhub</p>
+  </div>
+  <div class="pic"></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>The menu</h2><p>Today orders come in by phone. Here customers pick flavors, quantities and a pickup time on their own.</p></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1624128082323-beb6b8b508db?w=500&q=70&fit=crop')"></div><div class="b"><h3>Beef</h3><p>The classic</p><div class="row"><span>$ —</span><span>Add</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1609525313344-a56b96f20718?w=500&q=70&fit=crop')"></div><div class="b"><h3>Chicken</h3><p>Shredded, seasoned</p><div class="row"><span>$ —</span><span>Add</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1626004780818-2d86aa3fb60f?w=500&q=70&fit=crop')"></div><div class="b"><h3>Dominican-style</h3><p>From our latest drop</p><div class="row"><span>$ —</span><span>Add</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1624128082309-35000879a89f?w=500&q=70&fit=crop')"></div><div class="b"><h3>Cheese</h3><p>Melty inside</p><div class="row"><span>$ —</span><span>Add</span></div></div></div>
+  </div>
+  <p class="note">*Flavors and prices are placeholders (demo). We load your real menu.</p>
+</div></section>
+
+<section class="cater" id="cater"><div class="wrap"><div class="cc">
+  <div><h2>Party trays &amp; offices</h2><p>Dozens for meetings, birthdays and events, ordered online with a pickup time, without calling two different numbers.</p></div>
+  <div class="hrs"><div><b>Mon – Fri</b>7:00 AM – 5:00 PM</div><div><b>Sat – Sun</b>7:00 AM – 2:00 PM</div><div><b>21004 West Dixie Hwy</b>Aventura, FL 33180</div></div>
+</div></div></section>
+
+<footer><div class="wrap"><span>Empanadas Miami · Aventura, FL</span><span>@empanadasmiamiusa</span></div></footer>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>
