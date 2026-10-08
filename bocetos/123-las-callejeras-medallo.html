@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las Callejeras de Medallo (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--night:#0e1230;--night2:#171c45;--yel:#ffd400;--blue:#2f6bff;--red:#ff2e4d;--white:#f7f7ff;--ink2:#a9addb;--line:#2a3070}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--night);color:var(--white);font-family:'Rubik',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Rubik Mono One',sans-serif;font-weight:400;line-height:1.02;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-y{background:var(--yel);color:var(--night);box-shadow:0 0 30px rgba(255,212,0,.35)}
+  .btn-o{border:2px solid var(--blue);color:#cfdcff}
+  .flag{height:8px;background:linear-gradient(90deg,var(--yel) 0 50%,var(--blue) 50% 75%,var(--red) 75%)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(14,18,48,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:72px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Rubik Mono One';font-size:20px;font-weight:400;color:var(--yel)}
+  .logo small{display:block;font-size:11px;letter-spacing:.24em;color:var(--ink2);margin-top:4px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-weight:600;font-size:15px;color:var(--ink2)}
+  .hero{padding:56px 0 76px;background:radial-gradient(circle at 80% 30%,rgba(47,107,255,.35) 0,transparent 45%),radial-gradient(circle at 15% 85%,rgba(255,46,77,.2) 0,transparent 40%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .live{display:inline-flex;gap:8px;align-items:center;background:rgba(255,46,77,.15);border:1px solid var(--red);color:#ffb3bf;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
+  .live i{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red)}
+  .hero h1{font-size:60px;margin:16px 0 14px}
+  .hero h1 span{color:var(--yel)}
+  .hero p{font-size:18px;color:#cfd2f3;max-width:480px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hrs{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap;font-size:14px;color:var(--ink2)}
+  .hrs b{display:block;color:var(--white);font-size:18px}
+  .pic{position:relative}
+  .pic .img{height:500px;border-radius:30px;background:url('https://images.unsplash.com/photo-1619683909099-03814b162136?w=900&q=70&fit=crop') center/cover;border:3px solid var(--yel)}
+  .pic .st{position:absolute;right:-14px;bottom:30px;background:var(--red);border-radius:18px;padding:14px 18px;font-weight:800;transform:rotate(4deg);max-width:220px}
+  .pic .st b{font-family:'Rubik Mono One';font-size:18px;display:block}
+  section.menu{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:44px}
+  .head h2 span{color:var(--yel)}
+  .head p{color:var(--ink2);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .m{background:var(--night);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+  .m .ph{height:210px;background-size:cover;background-position:center}
+  .m .b{padding:18px}
+  .m h3{font-size:18px}
+  .m p{font-size:14px;color:var(--ink2);margin:6px 0 12px}
+  .m .row{display:flex;justify-content:space-between;align-items:center}
+  .m .p{font-weight:800;color:var(--yel)}
+  .add{background:var(--yel);color:var(--night);border-radius:10px;padding:6px 12px;font-weight:800;font-size:13px}
+  .note{font-size:12px;color:var(--ink2);margin-top:14px}
+  section.find{padding:76px 0}
+  .find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{border:1px solid var(--line);border-radius:26px;padding:28px;background:var(--night2)}
+  .card h3{font-size:24px;margin-bottom:10px;color:var(--yel)}
+  .card p{color:#cfd2f3}
+  .card .btn{margin-top:18px}
+  .card.alt{background:var(--blue);border-color:var(--blue)}
+  .card.alt h3{color:#fff}
+  footer{border-top:1px solid var(--line);padding:24px 0;font-size:14px;color:var(--ink2)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--yel);color:var(--night);font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo b{font-size:15px}
+    .hero .wrap,.grid,.find .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:36px}
+    .pic .img{height:300px}
+    .pic .st{right:0}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:30px}
+  }
+</style>
+</head>
+<body>
+<div class="flag"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>Las Callejeras</b><small>DE MEDALLO · FOOD TRUCK</small></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#find">Dónde estamos</a><a href="#find">Eventos</a></nav>
+  <a class="btn btn-y" href="#menu">Pedir ya</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="live"><i></i> Abiertos hoy desde las 6 PM</span>
+    <h1>La comida callejera <span>más chimba</span> de Paterson</h1>
+    <p>Arepas rellenas, las famosas perras colombianas y comida rápida paisa hasta la madrugada. Mirá el menú, pedí para recoger y llegá directo al truck.</p>
+    <div class="ctas"><a class="btn btn-y" href="#menu">Ver menú y pedir</a><a class="btn btn-o" href="#find">Cómo llegar</a></div>
+    <div class="hrs"><span><b>Mar–Dom</b>6 PM – 2 AM</span><span><b>Vie–Sáb</b>6 PM – 4 AM</span><span><b>297 Getty Ave</b>Paterson, NJ</span></div>
+  </div>
+  <div class="pic"><div class="img"></div><div class="st"><b>Food truck colombiano</b>con sabor de Medellín</div></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>El <span>menú</span></h2><p>Hoy el menú vive en una sola destacada. Acá queda con fotos, precios y pedido para recoger.</p></div>
+  <div class="grid">
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1619683551667-4bc326abff44?w=700&q=70&fit=crop')"></div><div class="b"><h3>Arepa rellena</h3><p>Bien cargada, como en Medallo.</p><div class="row"><span class="p">$ —</span><span class="add">+ Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1612392061981-9d086fe894ed?w=700&q=70&fit=crop')"></div><div class="b"><h3>Perra colombiana</h3><p>Las famosas, con todo.</p><div class="row"><span class="p">$ —</span><span class="add">+ Agregar</span></div></div></div>
+    <div class="m"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1619683909099-03814b162136?w=700&q=70&fit=crop')"></div><div class="b"><h3>Para compartir</h3><p>Combos para el parche.</p><div class="row"><span class="p">$ —</span><span class="add">+ Agregar</span></div></div></div>
+  </div>
+  <p class="note">*Precios y descripciones de ejemplo (demo). Se carga el menú real del truck.</p>
+</div></section>
+
+<section class="find" id="find"><div class="wrap">
+  <div class="card"><h3>Dónde estamos</h3><p>297 Getty Ave, Paterson, NJ. Martes a domingo desde las 6 PM; viernes y sábado hasta las 4 AM.</p><a class="btn btn-y" href="#">Abrir en Maps</a></div>
+  <div class="card alt"><h3>Eventos y fiestas</h3><p>¿Querés el truck en tu evento? Pedí cotización en línea con fecha, lugar y número de invitados.</p><a class="btn btn-y" href="#">Cotizar evento</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>Las Callejeras de Medallo · Food truck colombiano · Paterson, NJ</span><span>@lascallejerasdemedallo</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
