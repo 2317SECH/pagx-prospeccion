@@ -910,6 +910,20 @@
         "bocetos/evidencia/132-bogotana-de-pizzas-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen sedes en Bello y Armenia, pero cada una tiene su número en la bio y los domicilios pasan por un Linktree.\nLes proponemos una web donde el cliente elige su sede, ve el menú con fotos y pide directo hasta la medianoche.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 133,
+      "slug": "133-doceria-ciancio",
+      "nombre": "Doceria Ciancio · Brigadeiro Gourmet e Brownie",
+      "ig": "doceriaciancio",
+      "lugar": "Magé, RJ, Brasil",
+      "nicho": "Brigadeiros gourmet y brownies personalizados (sob encomenda)",
+      "web": "Sin web (solo catálogo de WhatsApp)",
+      "porque": "4,5K seguidores, 1.628 publicaciones, activa (01/10/2026), un reel con 1.997 likes. Trabaja solo por encomienda con temas, apliques y carimbos personalizados; el cardápio es un catálogo de WhatsApp. Una web para armar el pedido y reservar fecha con seña le ahorra chats. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/133-doceria-ciancio-ig.jpg"
+      ],
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nVimos seus brigadeiros gourmet com apliques e carimbos por tema, e que toda encomenda é montada no WhatsApp.\nPropomos um site onde o cliente escolhe tema e quantidades, vê o total e reserva a data com sinal.\nPreparamos uma prévia (~20%) de como ficaria. Quer ver?"
     }
   ]
 }
