@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charlie's Ice Cream (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#e2231a;--navy:#1d2a6b;--pink:#ffd6e0;--cream:#fffaf3;--yellow:#ffd23f;--ink:#1a1a2e;--muted:#6b6b80;--line:#f1e4d8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Rubik',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Rubik',sans-serif;font-weight:800;line-height:.98;letter-spacing:-.01em}
+  .script{font-family:'Pacifico',cursive;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff;box-shadow:0 8px 0 #a3150f}
+  .btn-n{background:var(--navy);color:#fff}
+  .btn-o{border:2.5px solid var(--navy);color:var(--navy)}
+  .stripe{height:10px;background:repeating-linear-gradient(90deg,var(--red) 0 30px,#fff 30px 60px)}
+  header.nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo .c{width:52px;height:52px;border-radius:50%;background:var(--red);border:4px solid var(--navy);display:grid;place-items:center;color:#fff;font-family:'Pacifico';font-size:16px}
+  .logo b{font-family:'Pacifico';font-size:26px;font-weight:400;color:var(--red)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-weight:600;font-size:15px}
+  .hero{padding:56px 0 70px;background:radial-gradient(circle at 80% 30%,var(--pink) 0,transparent 50%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .since{display:inline-block;background:var(--navy);color:#fff;font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;letter-spacing:.06em}
+  .hero h1{font-size:84px;color:var(--navy);margin:16px 0 14px}
+  .hero h1 .script{color:var(--red);font-size:.85em;display:block;margin-top:6px}
+  .hero p{font-size:18px;color:var(--muted);max-width:480px;margin-bottom:28px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .open{margin-top:26px;font-weight:700;color:var(--navy)}
+  .open span{color:var(--red)}
+  .cone{position:relative}
+  .cone .img{aspect-ratio:1/1;border-radius:50% 50% 32px 32px;background:url('https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900&q=70&fit=crop') center/cover;border:10px solid #fff;box-shadow:0 24px 50px rgba(29,42,107,.18)}
+  .fom{position:absolute;left:-20px;bottom:30px;background:var(--yellow);border:3px solid var(--navy);border-radius:20px;padding:14px 18px;transform:rotate(-5deg)}
+  .fom small{display:block;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+  .fom b{font-family:'Pacifico';font-weight:400;font-size:26px;color:var(--navy)}
+  section.fav{background:var(--navy);color:#fff;padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:58px}
+  .head h2 .script{color:var(--yellow);font-size:.8em}
+  .head p{max-width:400px;opacity:.8}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .it{background:#fff;color:var(--ink);border-radius:24px;overflow:hidden}
+  .it .ph{height:180px;background-size:cover;background-position:center}
+  .it .b{padding:16px}
+  .it h3{font-size:20px}
+  .it p{font-size:14px;color:var(--muted);margin:4px 0 0}
+  .it .new{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;margin-bottom:6px;letter-spacing:.08em}
+  section.loc{padding:80px 0}
+  .loc h2{font-size:52px;color:var(--navy);margin-bottom:24px}
+  .lgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  .l{background:#fff;border:2px solid var(--line);border-radius:26px;padding:26px}
+  .l .t{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+  .l h3{font-size:30px;color:var(--navy);margin:6px 0}
+  .l p{color:var(--muted);margin-bottom:16px}
+  .l.fund{background:var(--red);color:#fff;border-color:var(--red)}
+  .l.fund .t{color:var(--yellow)}
+  .l.fund h3{color:#fff}
+  .l.fund p{color:#ffe0dd}
+  .l.fund .btn{background:#fff;color:var(--red)}
+  footer{background:var(--ink);color:#c9c9d6;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--navy);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 16px;box-shadow:0 5px 0 #a3150f}
+    .logo b{font-size:20px}.logo .c{width:42px;height:42px;font-size:13px}
+    .hero .wrap,.lgrid{grid-template-columns:1fr}
+    .hero h1{font-size:54px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.loc h2{font-size:40px}
+    .fom{left:0}
+  }
+</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="c">C's</span><b>Charlie's Ice Cream</b></a>
+  <nav class="links"><a href="#fav">Menu</a><a href="#">Flavor of the month</a><a href="#loc">Locations</a><a href="#loc">Fundraisers</a></nav>
+  <a class="btn btn-r" href="#loc">Find us</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="since">MIAMI · SINCE 2015</span>
+    <h1>Serving tasty cold treats <span class="script">from the ventanita</span></h1>
+    <p>Soft serve, sundaes, banana splits and the famous Ice Cream Nachos. Two Miami locations, open every day until 11 PM.</p>
+    <div class="ctas"><a class="btn btn-r" href="#fav">See the menu</a><a class="btn btn-o" href="#loc">Closest location</a></div>
+    <p class="open">Open daily <span>12 PM – 11 PM</span> · Hialeah & Westchester</p>
+  </div>
+  <div class="cone"><div class="img"></div><div class="fom"><small>Flavor of the month</small><b>Rocky Road</b></div></div>
+</div></section>
+
+<section class="fav" id="fav"><div class="wrap">
+  <div class="head"><h2>Miami <span class="script">favorites</span></h2><p>Your menu lives in reels today. Here every treat has a photo, a description and directions to the nearest window.</p></div>
+  <div class="grid">
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=70&fit=crop')"></div><div class="b"><span class="new">FAN FAVE</span><h3>Ice Cream Nachos</h3><p>Two soft serve flavors, hot fudge or caramel, toppings.</p></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&q=70&fit=crop')"></div><div class="b"><h3>Old Fashioned Banana Split</h3><p>One of the most popular items at Charlie's.</p></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1560008581-09826d1de69e?w=600&q=70&fit=crop')"></div><div class="b"><h3>Cookie Lovers Sundae</h3><p>Loaded with cookies and fudge.</p></div></div>
+    <div class="it"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1488900128323-21503983a07e?w=600&q=70&fit=crop')"></div><div class="b"><h3>Double Chocolate Dip</h3><p>Soft serve dipped twice.</p></div></div>
+  </div>
+</div></section>
+
+<section class="loc" id="loc"><div class="wrap">
+  <h2>Two windows, one Charlie's</h2>
+  <div class="lgrid">
+    <div class="l"><span class="t">Original</span><h3>Hialeah</h3><p>510 Hialeah Dr · Open daily 12–11 PM</p><a class="btn btn-n" href="#">Directions</a></div>
+    <div class="l"><span class="t">New in 2026</span><h3>Westchester</h3><p>2475 SW 97th Ave · Open daily 12–11 PM</p><a class="btn btn-n" href="#">Directions</a></div>
+    <div class="l fund"><span class="t">Schools & events</span><h3>Fundraisers</h3><p>PTSA nights, school events and parties. Request a date online.</p><a class="btn" href="#">Request a fundraiser</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Charlie's Ice Cream · Miami</span><span>@charliesicecream · Demo concept, menu details from public posts</span></div></footer>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>

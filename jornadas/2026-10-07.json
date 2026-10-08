@@ -657,6 +657,20 @@
         "bocetos/evidencia/114-luthier-ursus-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el trabajo del taller con músicos vallenatos y que venden acordeones y hacen letras y correas personalizadas, pero todo pasa por mensajes.\nLe proponemos una web con los servicios, catálogo de acordeones disponibles y un pedido de personalización paso a paso.\nLe preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 115,
+      "slug": "115-charlies-ice-cream",
+      "nombre": "Charlie's Ice Cream",
+      "ig": "charliesicecream",
+      "lugar": "Miami, FL, Estados Unidos (Hialeah: 510 Hialeah Dr · Westchester: 2475 SW 97th Ave)",
+      "nicho": "Heladería (soft serve, sundaes, ventanita) · 2 locales",
+      "web": "Sin web y sin link en la bio",
+      "porque": "24,4K seguidores, activo (04/10/2026), posts de 500–4.900 likes; abrió segundo local en Westchester (enero 2026), hace sabor del mes, menú nuevo (Ice Cream Nachos) y fundraisers con colegios (PTSA). Cero link en la bio: ni menú, ni ubicaciones, ni forma de pedir un fundraiser. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/115-charlies-ice-cream-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw Charlie's now has two Miami windows and does school fundraisers, but there's no link in your bio for the menu, locations or event requests.\nWe'd build you a site with the menu, flavor of the month, both locations and a fundraiser request form.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }
