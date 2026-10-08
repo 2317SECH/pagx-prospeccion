@@ -1036,6 +1036,20 @@
         "bocetos/evidencia/141-empanadas-miami-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw your empanadas in Aventura, and that orders still come in through two phone numbers or delivery apps that take a cut.\nWe'd build you a site with your menu, online pickup orders and party trays for offices, commission-free.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 142,
+      "slug": "142-pizzaria-sao-paulo",
+      "nombre": "Pizzaria São Paulo · Paripueira",
+      "ig": "pizzaria_saopaulo.matrix",
+      "lugar": "Paripueira, Alagoas, Brasil",
+      "nicho": "Pizzaria e esfiharia com delivery",
+      "web": "Sin web (cardápio solo por link de WhatsApp)",
+      "porque": "4,5K seguidores, activa (25/09/2026), pizzas y esfihas con delivery en una ciudad de playa. El cardápio se pide por WhatsApp; no hay menú abierto ni pedido online. Engagement medio-bajo. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/142-pizzaria-sao-paulo-ig.jpg"
+      ],
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nVimos que o cardápio da Pizzaria São Paulo hoje só sai pelo WhatsApp, sem um lugar onde o cliente veja tudo e peça direto.\nPropomos um site com cardápio de pizzas e esfihas com fotos e pedido de delivery online em Paripueira.\nPreparamos uma prévia (~20%) de como ficaria. Quer ver?"
     }
   ]
 }
