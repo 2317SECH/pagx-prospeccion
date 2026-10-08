@@ -559,6 +559,20 @@
         "bocetos/evidencia/107-pablo-villota-fotografia-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos tus fotos de más de 30 países y que ya vendes impresiones, pero tu perfil no tiene ningún link para verlas o comprarlas.\nTe proponemos una web con tu portafolio por expedición y una tienda Shopify de impresiones por tamaño.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
+    },
+    {
+      "num": 108,
+      "slug": "108-casa-de-las-pupusas",
+      "nombre": "La Casa de las Pupusas",
+      "ig": "lacasadelaspupusas",
+      "lugar": "Ciudad de Guatemala, Guatemala (10 sucursales)",
+      "nicho": "Cadena de pupuserías (comida salvadoreña) + delivery",
+      "web": "Sin web (el menú es una carpeta de Google Drive; pedidos por Uber Eats / Pedidos Ya)",
+      "porque": "13,6K seguidores, activo (14/09/2026), 10 sucursales (C.C. Miraflores, Naranjo Mall…). El menú vive en un link de Google Drive y no hay localizador de sucursales ni pedido directo: dependen 100% de las apps de delivery. Prioridad ALTA (cadena con volumen).",
+      "evidencia": [
+        "bocetos/evidencia/108-casa-de-las-pupusas-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen 10 sucursales en la ciudad, pero el menú se abre como una carpeta de Google Drive y no hay forma de ver la sucursal más cercana.\nLes proponemos una web con menú con fotos, localizador de las 10 sucursales y pedido directo sin comisión de apps.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

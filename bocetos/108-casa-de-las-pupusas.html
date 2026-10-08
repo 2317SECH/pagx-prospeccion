@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Casa de las Pupusas (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#b3192b;--red2:#8e0f1f;--cream:#fff6e8;--corn:#f2c14e;--ink:#2b1a12;--muted:#7a6656;--line:#ecdcc4}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Lilita One',sans-serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;font-size:15px}
+  .btn-r{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(179,25,43,.3)}
+  .btn-c{background:var(--corn);color:var(--ink)}
+  .btn-o{border:2px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--red);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .seal{width:48px;height:48px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-family:'Lilita One';font-size:20px;border:3px solid var(--corn)}
+  .logo b{font-family:'Lilita One';font-size:24px;font-weight:400;line-height:1}
+  .logo small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+  nav.links{display:flex;gap:22px;margin-left:auto;font-weight:700;font-size:15px}
+  .nav .btn{padding:10px 18px}
+  .hero{padding:64px 0 70px;background:radial-gradient(circle at 85% 20%,#ffe2a8 0,transparent 45%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .tag{display:inline-block;background:#fff;border:2px dashed var(--red);color:var(--red);font-weight:800;padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:.06em}
+  .hero h1{font-size:84px;color:var(--red);margin:18px 0 16px}
+  .hero h1 span{color:var(--ink)}
+  .hero p{font-size:19px;color:var(--muted);max-width:500px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .apps{display:flex;gap:10px;margin-top:22px;font-size:14px;font-weight:700;color:var(--muted);align-items:center;flex-wrap:wrap}
+  .apps span{background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:10px;color:var(--ink)}
+  .plate{position:relative}
+  .plate .img{aspect-ratio:1/1;border-radius:50%;background:url('https://images.unsplash.com/photo-1644753787071-8933b5daed2d?w=1000&q=70&fit=crop') center/cover;border:14px solid #fff;box-shadow:0 30px 60px rgba(43,26,18,.2)}
+  .sticker{position:absolute;background:var(--corn);border-radius:18px;padding:12px 16px;font-weight:800;box-shadow:0 10px 20px rgba(0,0,0,.12)}
+  .sticker b{font-family:'Lilita One';font-size:30px;font-weight:400;display:block;line-height:1;color:var(--red)}
+  .s1{left:-10px;bottom:40px;transform:rotate(-6deg)}
+  .s2{right:0;top:20px;background:#fff;transform:rotate(5deg)}
+  section.menu{background:#fff;padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:56px;color:var(--red)}
+  .head p{color:var(--muted);max-width:420px}
+  .tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+  .tabs span{padding:8px 16px;border-radius:999px;border:2px solid var(--line);font-weight:800;font-size:14px}
+  .tabs span.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .item{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--cream)}
+  .item .ph{height:170px;background-size:cover;background-position:center}
+  .item .b{padding:16px}
+  .item h3{font-size:22px}
+  .item p{font-size:14px;color:var(--muted);margin:4px 0 12px}
+  .item .row{display:flex;justify-content:space-between;align-items:center}
+  .item .pr{font-family:'Lilita One';font-size:22px;color:var(--red)}
+  .add{width:36px;height:36px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px}
+  .note{font-size:13px;color:var(--muted);margin-top:16px}
+  section.suc{padding:80px 0}
+  .suc .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+  .suc h2{font-size:56px;margin:10px 0 14px}
+  .suc p{color:var(--muted)}
+  .search{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--line);border-radius:16px;padding:14px 16px;margin:22px 0;font-weight:700;color:var(--muted)}
+  .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .s{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+  .s b{display:block;font-size:17px}
+  .s small{color:var(--muted);font-size:13px}
+  .s .chips{display:flex;gap:6px;margin-top:10px}
+  .s .chips i{font-style:normal;font-size:12px;font-weight:800;background:var(--cream);border-radius:999px;padding:4px 10px}
+  .s.ph2{background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:center}
+  .s.ph2 small{color:#ffd9d9}
+  footer{background:var(--ink);color:#e9dccb;padding:30px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto}
+    .hero .wrap,.suc .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:54px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.suc h2{font-size:42px}
+    .grid{grid-template-columns:1fr 1fr}
+    .list{grid-template-columns:1fr}
+    .s1{left:0}
+    .logo small{display:none}.logo b{font-size:18px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="seal">CP</span><span><b>La Casa de las Pupusas</b><small>Sabor salvadoreño · Guatemala</small></span></a>
+  <nav class="links"><a href="#menu">Menú</a><a href="#suc">Sucursales</a><a href="#">Combos</a><a href="#">Eventos</a></nav>
+  <a class="btn btn-c" href="#">Pedir ahora</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">10 SUCURSALES EN CIUDAD DE GUATEMALA</span>
+    <h1>Pupusas hechas a mano, <span>calientitas.</span></h1>
+    <p>El auténtico sabor salvadoreño en Guatemala. Mira el menú completo, arma tu combo y encuentra la sucursal más cerca, sin descargar un PDF.</p>
+    <div class="ctas"><a class="btn btn-r" href="#menu">Ver menú</a><a class="btn btn-o" href="#suc">Sucursal más cercana</a></div>
+    <div class="apps">También en <span>Uber Eats</span><span>Pedidos Ya</span></div>
+  </div>
+  <div class="plate">
+    <div class="img"></div>
+    <div class="sticker s1"><b>Combos</b>para compartir</div>
+    <div class="sticker s2"><b>Q15</b>promo del día*</div>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>Nuestro menú</h2><p>El menú hoy vive en una carpeta de Google Drive. Aquí queda siempre a la mano, con fotos, filtros y botón de pedido.</p></div>
+  <div class="tabs"><span class="on">Pupusas</span><span>Combos</span><span>Platos</span><span>Bebidas</span><span>Postres</span></div>
+  <div class="grid">
+    <div class="item"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1617902271850-21d560795d60?w=600&q=70&fit=crop')"></div><div class="b"><h3>Revueltas</h3><p>Chicharrón, frijol y queso</p><div class="row"><span class="pr">Q—</span><span class="add">+</span></div></div></div>
+    <div class="item"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1605613160690-4606345d5d39?w=600&q=70&fit=crop')"></div><div class="b"><h3>Queso con loroco</h3><p>La clásica de la casa</p><div class="row"><span class="pr">Q—</span><span class="add">+</span></div></div></div>
+    <div class="item"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1747671730852-357e42bb9372?w=600&q=70&fit=crop')"></div><div class="b"><h3>Combo familiar</h3><p>Para compartir, con curtido y salsa</p><div class="row"><span class="pr">Q—</span><span class="add">+</span></div></div></div>
+    <div class="item"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1644753787071-8933b5daed2d?w=600&q=70&fit=crop')"></div><div class="b"><h3>Frijol con queso</h3><p>Masa de maíz o de arroz</p><div class="row"><span class="pr">Q—</span><span class="add">+</span></div></div></div>
+  </div>
+  <p class="note">*Productos y precios de ejemplo (demo). Se cargan con el menú real de la marca.</p>
+</div></section>
+
+<section class="suc" id="suc"><div class="wrap">
+  <div>
+    <span class="tag">LOCALIZADOR</span>
+    <h2>Tu sucursal más cerca</h2>
+    <p>Horarios, cómo llegar y pedido directo por sucursal. Ideal para quien te encuentra en Google buscando "pupusas cerca de mí".</p>
+    <div class="search">Buscar por zona o centro comercial…</div>
+  </div>
+  <div class="list">
+    <div class="s"><b>C.C. Miraflores</b><small>Ciudad de Guatemala</small><div class="chips"><i>Abierto</i><i>Cómo llegar</i></div></div>
+    <div class="s"><b>Naranjo Mall</b><small>Ciudad de Guatemala</small><div class="chips"><i>Abierto</i><i>Cómo llegar</i></div></div>
+    <div class="s"><b>Sucursal 3</b><small>Dirección real por cargar</small><div class="chips"><i>Horario</i><i>Mapa</i></div></div>
+    <div class="s ph2"><b>+7 sucursales más</b><small>Las 10 ubicaciones con mapa y horario</small></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>La Casa de las Pupusas · Ciudad de Guatemala</span><span>@lacasadelaspupusas</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
