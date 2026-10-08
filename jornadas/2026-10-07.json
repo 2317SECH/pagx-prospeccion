@@ -643,6 +643,20 @@
         "bocetos/evidencia/113-queenz-kix-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw your sneaker cleans (those Dior and Timberland jobs look clean), but every booking still goes through DMs and prices live in one highlight.\nWe'd build you a site with your service menu, before/after gallery and online booking for drop-off or pickup.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 114,
+      "slug": "114-luthier-ursus",
+      "nombre": "Luthier Ursus · Taller de acordeones",
+      "ig": "luthierursus",
+      "lugar": "Valledupar, Cesar, Colombia",
+      "nicho": "Luthier de acordeones (reparación, afinación, personalización y venta)",
+      "web": "Sin web (el link de la bio solo lleva a su Facebook)",
+      "porque": "23,8K seguidores, cuenta verificada, activa (02/10/2026), posts de hasta 1.199 likes con músicos vallenatos reconocidos. Vende acordeones ('en venta, entrega inmediata') y tiene un servicio propio de letras y correas personalizadas, pero todo se gestiona por teléfono/DM. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/114-luthier-ursus-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos el trabajo del taller con músicos vallenatos y que venden acordeones y hacen letras y correas personalizadas, pero todo pasa por mensajes.\nLe proponemos una web con los servicios, catálogo de acordeones disponibles y un pedido de personalización paso a paso.\nLe preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }

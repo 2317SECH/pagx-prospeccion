@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luthier Ursus · Taller de acordeones (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#a8141f;--red2:#7a0c15;--gold:#e7b54a;--cream:#fbf3e6;--ink:#1d1210;--muted:#7d6a60;--line:#ecdcc7;--dark:#150c0a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Work Sans',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Abril Fatface',serif;font-weight:400;line-height:1.02}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:6px;font-weight:700;font-size:14px;letter-spacing:.04em;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--dark)}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-o{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--dark);color:#fff;border-bottom:3px solid var(--gold)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px;white-space:nowrap}
+  .logo .m{width:48px;height:48px;border-radius:50%;background:var(--red);border:2px solid var(--gold);display:grid;place-items:center;font-family:'Abril Fatface';font-size:24px;color:var(--gold)}
+  .logo b{font-family:'Abril Fatface';font-size:24px;font-weight:400}
+  .logo small{display:block;font-size:10px;letter-spacing:.26em;color:#c9b8a8;text-transform:uppercase}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;font-weight:600;color:#d8c9bb}
+  .hero{position:relative;min-height:640px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1563485572084-eb7405aa3b5a?w=1900&q=70&fit=crop') center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,12,10,.95) 0%,rgba(122,12,21,.75) 55%,rgba(21,12,10,.25) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-size:88px;max-width:700px;margin:14px 0 18px}
+  .hero h1 em{color:var(--gold);font-style:normal}
+  .hero p{font-size:18px;color:#ecdccd;max-width:500px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap}
+  .stats b{display:block;font-family:'Abril Fatface';font-size:34px;color:var(--gold);font-weight:400}
+  .stats span{font-size:13px;color:#d8c9bb}
+  section.serv{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+  .head h2{font-size:58px;color:var(--red2)}
+  .head p{color:var(--muted);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .s{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;border-top:4px solid var(--red)}
+  .s .n{font-family:'Abril Fatface';font-size:34px;color:var(--gold)}
+  .s h3{font-size:24px;margin:6px 0 8px}
+  .s p{font-size:14px;color:var(--muted)}
+  section.custom{background:var(--dark);color:#fff;padding:84px 0}
+  .custom .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .custom .img{aspect-ratio:1/1;border-radius:10px;background:url('https://images.unsplash.com/photo-1758816011831-d5d17ae7e44e?w=900&q=70&fit=crop') center/cover;border:3px solid var(--gold)}
+  .custom h2{font-size:56px;margin:12px 0 16px}
+  .custom h2 em{color:var(--gold);font-style:normal}
+  .custom p{color:#d8c9bb;margin-bottom:20px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+  .opts div{border:1px solid #3a2a24;border-radius:8px;padding:14px}
+  .opts b{display:block;color:var(--gold)}
+  .opts small{color:#bfae9f}
+  section.venta{padding:84px 0}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .c{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .c .ph{height:220px;background-size:cover;background-position:center}
+  .c .b{padding:20px}
+  .c h3{font-size:24px}
+  .c p{font-size:14px;color:var(--muted);margin:4px 0 12px}
+  .c .row{display:flex;justify-content:space-between;align-items:center}
+  .c .tag{font-size:12px;font-weight:700;background:#e9f6e9;color:#22722a;padding:5px 10px;border-radius:999px}
+  .c .pr{font-weight:700;color:var(--red)}
+  .note{font-size:12px;color:var(--muted);margin-top:14px}
+  footer{background:var(--red2);color:#f3dcd0;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--dark);font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo small{display:none}.logo b{font-size:20px}
+    .hero::after{background:rgba(21,12,10,.82)}
+    .hero h1{font-size:52px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.custom h2{font-size:40px}
+    .grid,.cards,.custom .wrap{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><span class="m">U</span><span><b>Luthier Ursus</b><small>Taller de acordeones · Valledupar</small></span></a>
+  <nav class="links"><a href="#serv">Servicios</a><a href="#custom">Personalización</a><a href="#venta">Acordeones en venta</a><a href="#">Músicos</a></nav>
+  <a class="btn btn-g" href="#">Cotizar</a>
+</div></header>
+
+<section class="hero"><div class="bg"></div><div class="wrap">
+  <span class="k">La señora de los acordeones</span>
+  <h1>El taller donde el vallenato <em>vuelve a sonar.</em></h1>
+  <p>Reparación, afinación y personalización de acordeones en Valledupar, con la confianza de los músicos de la tierra. Hagan todo con amor.</p>
+  <div class="ctas"><a class="btn btn-g" href="#">Cotizar reparación</a><a class="btn btn-o" href="#venta">Ver acordeones disponibles</a></div>
+  <div class="stats"><div><b>23,8 mil</b><span>seguidores en Instagram</span></div><div><b>Valledupar</b><span>capital del vallenato</span></div><div><b>A medida</b><span>letras y correas personalizadas</span></div></div>
+</div></section>
+
+<section class="serv" id="serv"><div class="wrap">
+  <div class="head"><h2>Servicios del taller</h2><p>Cada servicio explicado, con formulario para enviar fotos del acordeón y recibir cotización.</p></div>
+  <div class="grid">
+    <div class="s"><span class="n">01</span><h3>Reparación</h3><p>Fuelles, teclados, bajos y mecánica en general.</p></div>
+    <div class="s"><span class="n">02</span><h3>Afinación</h3><p>Afinación de voces para tarima y estudio.</p></div>
+    <div class="s"><span class="n">03</span><h3>Personalización</h3><p>Diseño de letras en el acordeón y correas con nombre.</p></div>
+    <div class="s"><span class="n">04</span><h3>Venta</h3><p>Acordeones disponibles con entrega inmediata.</p></div>
+  </div>
+</div></section>
+
+<section class="custom" id="custom"><div class="wrap">
+  <div class="img"></div>
+  <div>
+    <span class="k">Creación propia</span>
+    <h2>Tu nombre en el <em>acordeón</em></h2>
+    <p>El diseño de letras sobre el acordeón y las correas personalizadas con nombre son una creación de la casa. Aquí el músico arma su pedido y lo ve antes de hacerlo.</p>
+    <div class="opts"><div><b>Letras</b><small>Nombre o apodo artístico</small></div><div><b>Correas</b><small>Con nombre bordado</small></div><div><b>Colores</b><small>A gusto del músico</small></div><div><b>Entrega</b><small>Envíos a toda Colombia</small></div></div>
+    <a class="btn btn-g" href="#">Diseñar el mío</a>
+  </div>
+</div></section>
+
+<section class="venta" id="venta"><div class="wrap">
+  <div class="head"><h2>Acordeones disponibles</h2><p>Lo que hoy se anuncia en un post de "En venta" queda en un catálogo siempre visible.</p></div>
+  <div class="cards">
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1758815990572-261665f2e1b9?w=700&q=70&fit=crop')"></div><div class="b"><h3>Acordeón de botones</h3><p>Revisado y afinado en el taller</p><div class="row"><span class="tag">Entrega inmediata</span><span class="pr">$ —</span></div></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1675428405584-4fc8920ca384?w=700&q=70&fit=crop')"></div><div class="b"><h3>Acordeón personalizado</h3><p>Con letras y correa a medida</p><div class="row"><span class="tag">Por encargo</span><span class="pr">$ —</span></div></div></div>
+    <div class="c"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1673964019486-b34f80ac05ec?w=700&q=70&fit=crop')"></div><div class="b"><h3>Para principiantes</h3><p>Ideal para empezar en el vallenato</p><div class="row"><span class="tag">Disponible</span><span class="pr">$ —</span></div></div></div>
+  </div>
+  <p class="note">*Modelos, disponibilidad y precios de ejemplo (demo). Se cargan los del taller.</p>
+</div></section>
+
+<footer><div class="wrap"><span>Taller de acordeones URSUS · Valledupar</span><span>@luthierursus</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
