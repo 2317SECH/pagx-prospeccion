@@ -896,6 +896,20 @@
         "bocetos/evidencia/131-mr-gallo-pizza-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Mr. Gallo ganó Pizza Legend 2023, pero el menú está en una plataforma externa y los domicilios y celebraciones solo en destacadas.\nLes proponemos una web propia con el menú, pedidos a domicilio y reservas para celebraciones, destacando el premio.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 132,
+      "slug": "132-bogotana-de-pizzas",
+      "nombre": "Bogotana de Pizzas",
+      "ig": "bogotanadepizzas",
+      "lugar": "Cabañas, Bello (Antioquia) y Armenia (Quindío), Colombia",
+      "nicho": "Pizzería con 2 sedes + domicilios",
+      "web": "Sin web (solo Linktree)",
+      "porque": "6,9K seguidores, cuenta verificada, activa (06/10/2026), posts de 477–631 likes. Dos sedes en dos departamentos, abiertas todos los días hasta medianoche; números y domicilios repartidos en bio y Linktree. Una web con selector de sede y pedido directo ordena todo. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/132-bogotana-de-pizzas-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que tienen sedes en Bello y Armenia, pero cada una tiene su número en la bio y los domicilios pasan por un Linktree.\nLes proponemos una web donde el cliente elige su sede, ve el menú con fotos y pide directo hasta la medianoche.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
