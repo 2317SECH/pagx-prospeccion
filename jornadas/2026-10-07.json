@@ -994,6 +994,20 @@
         "bocetos/evidencia/138-la-pasteleria-cali-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos su vitrina de cheesecakes, éclairs y marquesas en Santa Mónica, pero cada pedido empieza con un link de WhatsApp.\nLes proponemos una web con la vitrina del día y pedidos en línea para recoger o a domicilio, con pago incluido.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 139,
+      "slug": "139-morin-pasteleria",
+      "nombre": "Morin Pastelería",
+      "ig": "morin_pasteleria",
+      "lugar": "Barranquilla, Colombia",
+      "nicho": "Tortas personalizadas, lunchbox cakes y mesas de dulces",
+      "web": "Sin web (solo Linktree)",
+      "porque": "4,8K seguidores, activa (06/10/2026), un post reciente con 924 likes y 111 comentarios. Exige pedidos con 2–3 días de anticipación, pero no hay calendario ni catálogo: todo es Linktree + destacadas. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/139-morin-pasteleria-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus tortas y lunchbox cakes en Barranquilla, y que piden 2–3 días de anticipación, pero no hay forma de ver las fechas libres.\nTe proponemos una web con tus diseños y un calendario donde el cliente solo agenda en los días disponibles.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
     }
   ]
 }
