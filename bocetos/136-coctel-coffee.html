@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coctel Coffee Medellín (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#121110;--pn:#1c1a18;--gold:#c8a165;--cream:#f2ead9;--ink2:#a59d8e;--line:#2c2926}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bk);color:var(--cream);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;line-height:.98}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--bk)}
+  .btn-o{border:1px solid #4a453f}
+  .notice{background:var(--gold);color:var(--bk);text-align:center;font-weight:600;font-size:13px;padding:8px 10px}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(18,17,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{font-family:'Syne';font-weight:800;font-size:24px;white-space:nowrap}
+  .logo span{color:var(--gold)}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:14px;color:var(--ink2)}
+  .hero{padding:60px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .hero .wrap>*{min-width:0}
+  .hero h1{font-size:62px;margin:14px 0 18px}
+  .hero h1 span{color:var(--gold)}
+  .hero p{font-size:18px;color:#cfc6b4;max-width:480px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hrs{display:flex;gap:28px;margin-top:28px;font-size:14px;color:var(--ink2);flex-wrap:wrap}
+  .hrs b{display:block;color:var(--cream);font-family:'Syne';font-size:18px}
+  .pour{height:520px;border-radius:300px 300px 30px 30px;background:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&q=70&fit=crop') center/cover}
+  section.season{background:var(--pn);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:52px}
+  .head p{color:var(--ink2);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .c{border:1px solid var(--line);border-radius:24px;padding:24px;background:var(--bk)}
+  .c .o{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+  .c h3{font-size:26px;margin:8px 0 8px}
+  .c p{font-size:14px;color:var(--ink2);margin-bottom:14px}
+  .notes{display:flex;gap:6px;flex-wrap:wrap}
+  .notes span{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px}
+  .note{font-size:12px;color:var(--ink2);margin-top:14px}
+  section.barista{padding:80px 0}
+  .barista .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .barista .img{height:400px;border-radius:24px;background:url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=70&fit=crop') center/cover}
+  .barista h2{font-size:50px;margin:12px 0 14px}
+  .barista p{color:#cfc6b4;margin-bottom:20px}
+  .cake{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:14px;margin-bottom:20px}
+  .cake div{width:90px;height:90px;border-radius:16px;background:url('https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=300&q=70&fit=crop') center/cover;flex:none}
+  .cake b{display:block;font-family:'Syne';font-size:18px}
+  .cake small{color:var(--ink2)}
+  footer{border-top:1px solid var(--line);padding:24px 0;font-size:14px;color:var(--ink2)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--bk);font-size:12px;font-weight:600;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 14px}
+    .logo{font-size:16px}.nav .wrap{gap:10px}.nav .btn{font-size:13px}
+    .hero .wrap,.grid,.barista .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:33px}
+    .hero .wrap>*{min-width:0}
+    .pour{height:340px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.barista h2{font-size:38px}
+  }
+</style>
+</head>
+<body>
+<div class="notice">Aviso: estamos de vacaciones del 7 al 14 de octubre · avisos así, siempre visibles en la web</div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">COCTEL <span>COFFEE</span></a>
+  <nav class="links"><a href="#season">Cafés de temporada</a><a href="#barista">Filtrados</a><a href="#barista">Tartas de queso</a><a href="#">Pedidos</a></nav>
+  <a class="btn btn-g" href="#">Pedir café</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Café de especialidad · Medellín</span>
+    <h1>Café de <span>temporada</span>, servido con oficio</h1>
+    <p>Filtrados, cafés de temporada y tartas de queso preparados por Sebastián, barista experto. Mira lo que hay en la barra hoy y pide tu café en grano para la casa.</p>
+    <div class="ctas"><a class="btn btn-g" href="#season">Ver cafés de temporada</a><a class="btn btn-o" href="#">Cómo llegar</a></div>
+    <div class="hrs"><span><b>Mar – Vie</b>2 PM – 8 PM</span><span><b>Sáb – Dom</b>10 AM – 8 PM</span><span><b>Calle 42c # 89-29</b>Medellín</span></div>
+  </div>
+  <div class="pour"></div>
+</div></section>
+
+<section class="season" id="season"><div class="wrap">
+  <div class="head"><h2>En la barra</h2><p>Los cafés de temporada con origen, proceso y notas. Hoy viven en destacadas; aquí se pueden pedir.</p></div>
+  <div class="grid">
+    <div class="c"><span class="o">Temporada</span><h3>Café de origen 1</h3><p>Filtrado en V60 o Chemex.</p><div class="notes"><span>Frutal</span><span>Panela</span><span>Lavado</span></div></div>
+    <div class="c"><span class="o">Temporada</span><h3>Café de origen 2</h3><p>Ideal en espresso.</p><div class="notes"><span>Chocolate</span><span>Caramelo</span><span>Natural</span></div></div>
+    <div class="c"><span class="o">Para la casa</span><h3>Café en grano</h3><p>Molido a tu método.</p><div class="notes"><span>250 g</span><span>500 g</span><span>Envío</span></div></div>
+  </div>
+  <p class="note">*Orígenes y notas de ejemplo (demo). Se cargan los cafés reales de la temporada.</p>
+</div></section>
+
+<section class="barista" id="barista"><div class="wrap">
+  <div class="img"></div>
+  <div>
+    <span class="k">Detrás de la barra</span>
+    <h2>Sebastián, barista experto</h2>
+    <p>Cada filtrado preparado al momento, con recomendación según tu gusto. Y para acompañar, las tartas de queso de la casa.</p>
+    <div class="cake"><div></div><span><b>Tartas de queso</b><small>Las de la casa, para acompañar tu café.</small></span></div>
+    <a class="btn btn-g" href="#">Pedir café para la casa</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Coctel Coffee · Café de Especialidad · Medellín</span><span>@coctelcoffee</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Mascotería Perú (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--yel:#ffd21f;--red:#d91e2a;--blue:#1d4ed8;--cream:#fffbea;--ink:#1d1a12;--muted:#6f6650;--line:#efe4bf}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'Baloo 2',sans-serif;font-weight:800;line-height:.98}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:15px;white-space:nowrap}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-k{background:var(--ink);color:var(--yel)}
+  .btn-o{border:2.5px solid var(--ink)}
+  .ann{background:var(--red);color:#fff;text-align:center;font-weight:800;font-size:13px;padding:8px 10px}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--yel)}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:20px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'Baloo 2';font-size:26px;font-weight:800}
+  .logo small{display:block;font-size:11px;font-weight:800;letter-spacing:.18em;color:#7a6400}
+  .search{flex:1;max-width:380px;margin-left:24px;background:#fff;border-radius:12px;padding:11px 14px;color:var(--muted);font-weight:600;font-size:14px}
+  .cart{margin-left:auto;background:var(--ink);color:#fff;border-radius:12px;padding:10px 14px;font-weight:800;font-size:14px;white-space:nowrap}
+  .cats{background:#fff;border-bottom:1px solid var(--line)}
+  .cats .wrap{display:flex;gap:22px;height:48px;align-items:center;font-weight:800;font-size:14px;overflow:hidden;white-space:nowrap}
+  .hero{padding:40px 0 60px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}
+  .hero .wrap>*{min-width:0}
+  .main{background:var(--ink);color:#fff;border-radius:30px;padding:40px;position:relative;overflow:hidden}
+  .main::after{content:"";position:absolute;right:-40px;bottom:-40px;width:300px;height:300px;border-radius:50%;background:var(--yel);opacity:.15}
+  .since{display:inline-block;background:var(--yel);color:var(--ink);border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+  .main h1{font-size:62px;margin:16px 0 12px}
+  .main h1 span{color:var(--yel)}
+  .main p{color:#dcd6c4;font-size:17px;max-width:460px;margin-bottom:22px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .side{display:grid;gap:14px}
+  .side div{border-radius:26px;background-size:cover;background-position:center;min-height:190px;position:relative}
+  .side span{position:absolute;left:14px;bottom:14px;background:#fff;border-radius:12px;padding:8px 12px;font-weight:800;font-size:14px}
+  section.prod{padding:30px 0 70px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:22px}
+  .head h2{font-size:44px}
+  .head p{color:var(--muted);max-width:420px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .p{background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px}
+  .p .ph{height:150px;border-radius:16px;background-size:cover;background-position:center;margin-bottom:10px}
+  .p h3{font-size:18px}
+  .p small{color:var(--muted)}
+  .p .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-weight:800}
+  .p .row span:last-child{background:var(--yel);border-radius:10px;padding:6px 10px;font-size:13px}
+  .note{font-size:12px;color:var(--muted);margin-top:12px}
+  section.copa{background:var(--blue);color:#fff;padding:70px 0}
+  .copa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .copa h2{font-size:52px;margin:10px 0 12px}
+  .copa h2 span{color:var(--yel)}
+  .copa p{color:#dbe4ff;margin-bottom:20px}
+  .vote{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .v{background:#fff;color:var(--ink);border-radius:20px;overflow:hidden}
+  .v .ph{height:150px;background-size:cover;background-position:center}
+  .v .b{padding:12px;display:flex;justify-content:space-between;align-items:center;font-weight:800}
+  .v .b span:last-child{background:var(--red);color:#fff;border-radius:10px;padding:5px 10px;font-size:13px}
+  footer{background:var(--ink);color:#d8d0b8;padding:24px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    .search{display:none}
+    .logo b{font-size:20px}.logo small{display:none}
+    .hero .wrap,.copa .wrap{grid-template-columns:1fr}
+    .main{padding:26px}
+    .main h1{font-size:40px}
+    .grid{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.copa h2{font-size:34px}
+  }
+</style>
+</head>
+<body>
+<div class="ann">Envíos a todo el Perú · Atención por WhatsApp · Desde 2011</div>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>La Mascotería Perú</b><small>TODO PARA TU MASCOTA</small></a>
+  <div class="search">Buscar alimento, juguetes, camas…</div>
+  <span class="cart">Carrito (0)</span>
+</div></header>
+<div class="cats"><div class="wrap"><span>Perros</span><span>Gatos</span><span>Alimento</span><span>Snacks</span><span>Accesorios</span><span>Ropa</span><span>Copa Mascotería</span></div></div>
+
+<section class="hero"><div class="wrap">
+  <div class="main">
+    <span class="since">Acompañando familias desde 2011</span>
+    <h1>Especialistas en <span>bienestar animal</span></h1>
+    <p>Tu tienda de mascotas de Jesús María, ahora en línea: compra alimento y accesorios y recíbelos en cualquier parte del Perú.</p>
+    <div class="ctas"><a class="btn btn-r" href="#prod">Comprar ahora</a><a class="btn btn-o" style="border-color:#fff;color:#fff" href="#copa">Copa Mascotería</a></div>
+  </div>
+  <div class="side">
+    <div style="background-image:url('https://images.unsplash.com/photo-1625316708582-7c38734be31d?w=700&q=70&fit=crop')"><span>Perros</span></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=700&q=70&fit=crop')"><span>Gatos</span></div>
+  </div>
+</div></section>
+
+<section class="prod" id="prod"><div class="wrap">
+  <div class="head"><h2>Lo más pedido</h2><p>Hoy todo se pregunta por WhatsApp. Aquí el cliente ve stock, precio y compra con envío.</p></div>
+  <div class="grid">
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500&q=70&fit=crop')"></div><h3>Alimento seco</h3><small>Perro adulto · 15 kg</small><div class="row"><span>S/ —</span><span>Agregar</span></div></div>
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1577611612381-e4fb6f980ab7?w=500&q=70&fit=crop')"></div><h3>Ropa y abrigo</h3><small>Tallas XS a L</small><div class="row"><span>S/ —</span><span>Agregar</span></div></div>
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=70&fit=crop')"></div><h3>Juguetes</h3><small>Para todas las razas</small><div class="row"><span>S/ —</span><span>Agregar</span></div></div>
+    <div class="p"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=70&fit=crop')"></div><h3>Arena para gatos</h3><small>Aglomerante</small><div class="row"><span>S/ —</span><span>Agregar</span></div></div>
+  </div>
+  <p class="note">*Productos y precios de ejemplo (demo). Se conecta el catálogo real.</p>
+</div></section>
+
+<section class="copa" id="copa"><div class="wrap">
+  <div>
+    <h3 style="font-size:16px;letter-spacing:.14em;color:var(--yel)">CONCURSOS DE LA COMUNIDAD</h3>
+    <h2>Copa Mundial <span>Mascotería</span></h2>
+    <p>Sus concursos por grupos ya mueven a la comunidad. En la web cada mascota tiene su ficha y la gente vota ahí mismo, sin perderse entre historias.</p>
+    <a class="btn btn-k" href="#">Inscribir a mi mascota</a>
+  </div>
+  <div class="vote">
+    <div class="v"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=500&q=70&fit=crop')"></div><div class="b"><span>Grupo A</span><span>Votar</span></div></div>
+    <div class="v"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=70&fit=crop')"></div><div class="b"><span>Grupo B</span><span>Votar</span></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>La Mascotería Perú · Av. República Dominicana 386, Jesús María, Lima</span><span>@mascoteriaperu</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
