@@ -756,6 +756,20 @@
         "bocetos/evidencia/121-lilos-heladeria-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que en Lilos sacan sabores nuevos seguido y tienen delivery, pero no hay ningún link para ver los gustos o pedir por kilo.\nLes proponemos una web donde el cliente elige 1/4, 1/2 o 1 kilo, arma sus gustos y pide, más la cafetería y las promos.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 122,
+      "slug": "122-azazel-tattoo",
+      "nombre": "Azazel Piercing & Tattoo Studio",
+      "ig": "azazel.artist",
+      "lugar": "El Poblado (Provenza), Medellín, Colombia",
+      "nicho": "Estudio de tatuajes y piercing (anillador profesional)",
+      "web": "Sin web (solo link de Google Maps; agenda por DM)",
+      "porque": "6,8K seguidores, activo (27/09/2026), tatuaje tradicional/neotradicional a color y proyectos de piercing (hasta 693 likes). Está en El Poblado con clientela extranjera (publica en inglés y español) pero todo se agenda por DM y no hay portafolio ordenado. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/122-azazel-tattoo-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos tu trabajo de tatuaje tradicional y piercing en El Poblado, y que todas las citas se agendan por DM, también las de clientes extranjeros.\nTe proponemos una web bilingüe con portafolio por estilo, servicios de piercing y agenda con referencia adjunta.\nTe preparamos una vista previa (~20%) de cómo se vería. ¿Te la mostramos?"
     }
   ]
 }

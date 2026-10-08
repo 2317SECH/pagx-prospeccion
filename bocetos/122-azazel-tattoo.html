@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azazel Piercing &amp; Tattoo (concepto PAGX)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bk:#0c0a0a;--pn:#161212;--gold:#d4a14a;--red:#b3261e;--white:#f2ebe1;--ink2:#a59a8c;--line:#2a2220}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bk);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
+  h1,h2,h3{font-family:'Cinzel',serif;font-weight:700;line-height:1.05;letter-spacing:.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .k{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+  .btn-g{background:var(--gold);color:var(--bk)}
+  .btn-o{border:1px solid var(--gold);color:var(--gold)}
+  header.nav{position:sticky;top:0;z-index:30;background:rgba(12,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;height:76px;gap:24px}
+  .logo{font-family:'Cinzel Decorative';font-size:28px;color:var(--gold);white-space:nowrap}
+  nav.links{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--ink2)}
+  .lang{border:1px solid var(--line);font-size:12px;font-weight:600;padding:6px 10px;color:var(--ink2)}
+  .lang b{color:var(--gold)}
+  .hero{padding:70px 0 80px;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .hero h1{font-size:72px;margin:16px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p{font-size:18px;color:#cfc4b6;max-width:470px;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .two{display:flex;gap:30px;margin-top:32px;flex-wrap:wrap}
+  .two div{border-left:2px solid var(--gold);padding-left:14px}
+  .two b{display:block;font-family:'Cinzel';font-size:20px}
+  .two small{color:var(--ink2)}
+  .frame{border:1px solid var(--gold);padding:12px;position:relative}
+  .frame::before{content:"";position:absolute;inset:-8px;border:1px solid var(--line)}
+  .frame div{height:520px;background:url('https://images.unsplash.com/photo-1564426622559-5af68da63b96?w=900&q=70&fit=crop') center/cover}
+  section.work{padding:84px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:30px}
+  .head h2{font-size:52px}
+  .head p{max-width:420px;color:var(--ink2)}
+  .tabs{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+  .tabs span{border:1px solid var(--line);padding:8px 16px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .tabs span.on{border-color:var(--gold);color:var(--gold)}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .gal div{aspect-ratio:3/4;background-size:cover;background-position:center;position:relative;border:1px solid var(--line)}
+  .gal span{position:absolute;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:13px}
+  section.pierce{background:var(--pn);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:84px 0}
+  .pierce .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .pierce h2{font-size:48px;margin:12px 0 16px}
+  .pierce p{color:var(--ink2);margin-bottom:18px}
+  .list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .list div{border:1px solid var(--line);padding:14px}
+  .list b{display:block;color:var(--gold);font-family:'Cinzel'}
+  .list small{color:var(--ink2)}
+  .form{border:1px solid var(--gold);padding:26px;background:var(--bk)}
+  .form h3{font-size:28px;margin-bottom:14px}
+  .f{border:1px solid var(--line);padding:11px 14px;margin-bottom:10px}
+  .f small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form .btn{width:100%;justify-content:center}
+  .note{font-size:12px;color:var(--ink2);margin-top:10px}
+  footer{padding:26px 0;font-size:14px;color:var(--ink2)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--gold);color:var(--bk);font-size:12px;font-weight:700;padding:9px 14px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .lang{margin-left:auto}
+    .nav .btn{padding:10px 12px;font-size:12px}
+    .logo{font-size:22px}
+    .hero .wrap,.pierce .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:46px}
+    .frame div{height:320px}
+    .gal{grid-template-columns:1fr 1fr}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2,.pierce h2{font-size:36px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#">Azazel</a>
+  <nav class="links"><a href="#work">Tattoo</a><a href="#pierce">Piercing</a><a href="#">Cuidados</a><a href="#">Ubicación</a></nav>
+  <span class="lang"><b>ES</b> / EN</span>
+  <a class="btn btn-g" href="#pierce">Agendar</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Piercing &amp; Tattoo Studio · El Poblado, Medellín</span>
+    <h1>Tinta y metal <em>con oficio.</em></h1>
+    <p>Tatuaje tradicional y neotradicional, piercing y anillado profesional en El Poblado. Agenda en línea en español o inglés, con tu idea y tu referencia.</p>
+    <div class="ctas"><a class="btn btn-g" href="#pierce">Agendar cita</a><a class="btn btn-o" href="#work">Ver portafolio</a></div>
+    <div class="two"><div><b>Tattoo artist</b><small>Profesional</small></div><div><b>Piercer anillador</b><small>Dermal · oreja · nariz</small></div></div>
+  </div>
+  <div class="frame"><div></div></div>
+</div></section>
+
+<section class="work" id="work"><div class="wrap">
+  <div class="head"><h2>Portafolio</h2><p>Los trabajos que hoy se pierden en el feed, ordenados por estilo para que el cliente llegue con la idea clara.</p></div>
+  <div class="tabs"><span class="on">Todo</span><span>Tradicional</span><span>Flores</span><span>Color</span><span>Piercing</span></div>
+  <div class="gal">
+    <div style="background-image:url('https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=500&q=70&fit=crop')"><span>Ave del paraíso</span></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1513078094721-e7b6e0394a6a?w=500&q=70&fit=crop')"><span>Traditional girl</span></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=500&q=70&fit=crop')"><span>Clavel rojo</span></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1564426622559-5af68da63b96?w=500&q=70&fit=crop')"><span>Mariposa monarca</span></div>
+  </div>
+  <p class="note">*Fotos de referencia (demo). Los títulos son trabajos reales del perfil; se reemplazan por sus fotos.</p>
+</div></section>
+
+<section class="pierce" id="pierce"><div class="wrap">
+  <div>
+    <span class="k">Piercing profesional</span>
+    <h2>Anillado con joyería de titanio</h2>
+    <p>Del flat con pieza de telaraña a proyectos de nariz completos. Cada servicio con su cuidado posterior explicado.</p>
+    <div class="list"><div><b>Dermal</b><small>Microdermal</small></div><div><b>Oreja</b><small>Flat, helix, proyectos</small></div><div><b>Nariz</b><small>High nostril, cadenas</small></div><div><b>Joyería</b><small>Titanio</small></div></div>
+  </div>
+  <div class="form">
+    <h3>Agenda tu cita</h3>
+    <div class="row"><div class="f"><small>Servicio</small>Tattoo</div><div class="f"><small>Tamaño</small>Mediano · antebrazo</div></div>
+    <div class="f"><small>Idea</small>Flor tradicional a color · referencia adjunta</div>
+    <div class="f"><small>Fecha preferida</small>Semana del 20 de octubre</div>
+    <a class="btn btn-g" href="#">Enviar solicitud</a>
+    <p class="note">*Datos de ejemplo (demo).</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Azazel Piercing &amp; Tattoo Studio · El Poblado, Medellín</span><span>@azazel.artist</span></div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
