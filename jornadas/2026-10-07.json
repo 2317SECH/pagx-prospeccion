@@ -671,6 +671,21 @@
         "bocetos/evidencia/115-charlies-ice-cream-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw Charlie's now has two Miami windows and does school fundraisers, but there's no link in your bio for the menu, locations or event requests.\nWe'd build you a site with the menu, flavor of the month, both locations and a fundraiser request form.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 116,
+      "slug": "116-empanadas-deluxe",
+      "nombre": "Empanadas Deluxe 603 · Food Truck & Catering",
+      "ig": "empanadasdeluxe603",
+      "lugar": "Salem, NH, Estados Unidos (eventos en NH y MA)",
+      "nicho": "Food truck de empanadas y comida dominicana + catering",
+      "web": "Deficiente: página en Canva (empanadasdeluxe603.my.canva.site) con el logo gigante, una flecha 'Menu Navigation' y sin calendario ni formulario de catering",
+      "porque": "2,6K seguidores, publica a diario (07/10/2026), salió en NH Chronicle, va a ferias (Deerfield Fair, Amesbury) y empuja catering ('WE CATER! Email us'). La web actual en Canva no muestra dónde está el truck ni deja pedir catering. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/116-empanadas-deluxe-ig.jpg",
+        "bocetos/evidencia/116-empanadas-deluxe-web-actual.png"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw the truck's busy fall schedule and your catering push, but the Canva site doesn't show where the truck is this week or let people request catering.\nWe'd build you a site with the weekly truck schedule, the menu and a catering quote form.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }
