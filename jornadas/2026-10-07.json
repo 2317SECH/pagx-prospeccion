@@ -868,6 +868,20 @@
         "bocetos/evidencia/129-marea-nail-salon-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nWe love MAREA's calm, clean sets, but your bookings, FAQ and work all live in a Linktree and story highlights.\nWe'd build you a site under your own name with the service menu, a gallery of recent sets and online booking with deposits.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
+    },
+    {
+      "num": 130,
+      "slug": "130-sushi-del-mar",
+      "nombre": "Sushi del Mar",
+      "ig": "sushi.delmar",
+      "lugar": "Cali, Colombia (Calle 47N # 6N-36)",
+      "nicho": "Restaurante de sushi y sushitacos + domicilios",
+      "web": "Sin web (solo atom.bio)",
+      "porque": "6,6K seguidores, activo (06/10/2026), posts de 100–200 likes. Abre todos los días y hace domicilios en el norte de Cali, pero el menú está en destacadas y los pedidos van por un link genérico de atom.bio. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/130-sushi-del-mar-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Sushi del Mar hace domicilios en el norte de Cali, pero el menú está en destacadas y los pedidos pasan por un link genérico.\nLes proponemos una web con el menú con fotos, carrito de domicilio con cobertura por barrio y su ubicación.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
