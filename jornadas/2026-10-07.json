@@ -980,6 +980,20 @@
         "bocetos/evidencia/137-siete-chinos-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos la historia de Blanca Nieves y sus Siete Chinos en Semana, pero su bio lleva al artículo y los menús solo están como imágenes en destacadas.\nLes proponemos una web con la historia, los dos menús legibles y en Google, y reservas en línea para La Candelaria.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 138,
+      "slug": "138-la-pasteleria-cali",
+      "nombre": "La Pastelería · Cali",
+      "ig": "lapasteleria.cali",
+      "lugar": "Santa Mónica, Cali, Colombia (Calle 27 Norte # 6AN-31)",
+      "nicho": "Pastelería y café (cheesecakes, tortas de chocolate, éclairs, marquesas)",
+      "web": "Sin web (solo wa.link)",
+      "porque": "9,4K seguidores, publica casi a diario (07/10/2026). Vitrina variada (cheesecakes, éclairs, brownies, blondies, marquesas) y café, pero todos los pedidos empiezan con un wa.link y la vitrina del día solo se ve en historias. Prioridad MEDIA-ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/138-la-pasteleria-cali-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos su vitrina de cheesecakes, éclairs y marquesas en Santa Mónica, pero cada pedido empieza con un link de WhatsApp.\nLes proponemos una web con la vitrina del día y pedidos en línea para recoger o a domicilio, con pago incluido.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
     }
   ]
 }
