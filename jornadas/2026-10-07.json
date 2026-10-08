@@ -700,6 +700,20 @@
         "bocetos/evidencia/117-nicoland-bordados-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos sus cobijas y toallas bordadas con nombre, y que cada pedido se arma por WhatsApp o en los comentarios.\nLes proponemos una tienda Shopify donde el cliente escribe el nombre, ve el bordado, elige color y paga en línea.\nLes preparamos una vista previa (~20%) de cómo se vería. ¿Se la mostramos?"
+    },
+    {
+      "num": 118,
+      "slug": "118-el-jardin-taqueria",
+      "nombre": "El Jardín · Family Owned Taquería",
+      "ig": "el.jardinnnn",
+      "lugar": "West Town, Chicago, IL, Estados Unidos (1303 W Huron St)",
+      "nicho": "Taquería familiar + matcha bar de especialidad",
+      "web": "Sin web (solo link de pedidos de Toast)",
+      "porque": "4,7K seguidores y engagement muy alto (posts de 2.000–3.300 likes, foodies locales hablando de 'tacos + matcha'), activa (06/10/2026). Negocio familiar desde 2001 con matcha bar nuevo y eventos (sesiones de sonido). Solo tienen el link de Toast: no hay menú visible, historia ni calendario de eventos. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/118-el-jardin-taqueria-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nWe saw Chicago foodies raving about your tacos + matcha combo, but your bio only links to a Toast order page, with no menu, story or events.\nWe'd build you a site with the taquería and matcha menus, your family story since 2001, and an events page.\nWe made a quick preview (~20%) of how it could look. Want to see it?"
     }
   ]
 }

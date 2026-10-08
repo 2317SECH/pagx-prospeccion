@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Jardín Taquería (PAGX concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#1f5a3a;--green2:#2f7a50;--matcha:#a8c97f;--terra:#c8553d;--cream:#f8f2e6;--ink:#1d2a22;--muted:#66756b;--line:#e3dccb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap}
+  .btn-t{background:var(--terra);color:#fff}
+  .btn-g{background:var(--green);color:#fff}
+  .btn-o{border:2px solid var(--ink)}
+  header.nav{position:sticky;top:0;z-index:30;background:var(--green);color:#fff}
+  .nav .wrap{display:flex;align-items:center;height:74px;gap:24px}
+  .logo{white-space:nowrap;line-height:1}
+  .logo b{font-family:'DM Serif Display';font-size:28px;font-weight:400}
+  .logo small{display:block;font-size:10px;letter-spacing:.26em;opacity:.75;margin-top:3px}
+  nav.links{display:flex;gap:24px;margin-left:auto;font-size:15px;font-weight:500;opacity:.92}
+  .hero{padding:56px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .k{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+  .hero h1{font-size:82px;margin:14px 0 16px;color:var(--green)}
+  .hero h1 em{color:var(--terra)}
+  .hero p{font-size:18px;color:var(--muted);max-width:470px;margin-bottom:26px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hrs{display:flex;gap:26px;margin-top:28px;font-size:14px;flex-wrap:wrap}
+  .hrs b{display:block;font-family:'DM Serif Display';font-size:22px;font-weight:400;color:var(--green)}
+  .duo{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+  .duo div{border-radius:28px;background-size:cover;background-position:center}
+  .duo .a{height:470px;background-image:url('https://images.unsplash.com/photo-1687881063470-a78e6ea2590e?w=900&q=70&fit=crop')}
+  .duo .b{height:470px;background-image:url('https://images.unsplash.com/photo-1749280447307-31a68eb38673?w=600&q=70&fit=crop');margin-top:40px}
+  section.story{background:var(--green);color:#fff;padding:76px 0}
+  .story .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+  .story .yr{font-family:'DM Serif Display';font-size:150px;line-height:.8;color:var(--matcha)}
+  .story h2{font-size:46px;margin-bottom:14px}
+  .story p{color:#d6e6da;font-size:17px}
+  section.menu{padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:28px}
+  .head h2{font-size:58px;color:var(--green)}
+  .head p{color:var(--muted);max-width:420px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .col{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px}
+  .col h3{font-size:34px;margin-bottom:6px}
+  .col .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+  .it{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .it b{display:block}
+  .it small{color:var(--muted)}
+  .it .p{font-weight:700;color:var(--terra);white-space:nowrap}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;background:#eef5e4;color:var(--green);padding:3px 8px;border-radius:999px;margin-left:6px}
+  .note{font-size:12px;color:var(--muted);margin-top:14px}
+  section.ev{padding:0 0 80px}
+  .evc{background:var(--terra);color:#fff;border-radius:32px;padding:36px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+  .evc h3{font-size:40px;margin-bottom:8px}
+  .evc p{color:#ffe1d8}
+  .evc .btn{background:#fff;color:var(--terra);justify-self:end}
+  footer{background:var(--ink);color:#c8d3cb;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .wrap{padding:0 18px}
+    nav.links{display:none}
+    .nav .btn{margin-left:auto;padding:10px 16px}
+    .logo b{font-size:22px}
+    .hero .wrap,.story .wrap,.cols,.evc{grid-template-columns:1fr}
+    .hero h1{font-size:52px}
+    .duo .a,.duo .b{height:260px}
+    .story .yr{font-size:96px}
+    .head{flex-direction:column;align-items:flex-start}
+    .head h2{font-size:42px}
+    .evc .btn{justify-self:start}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#"><b>El Jardín</b><small>TAQUERÍA · WEST TOWN</small></a>
+  <nav class="links"><a href="#menu">Menu</a><a href="#menu">Matcha bar</a><a href="#story">Our story</a><a href="#ev">Events</a></nav>
+  <a class="btn btn-t" href="#">Order online</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="k">Family owned since 2001 · Chicago</span>
+    <h1>Tacos de asada <em>&amp;</em> matcha, under one roof.</h1>
+    <p>A West Town family taquería with a specialty matcha bar. Dine in, take out, or order ahead and skip the line.</p>
+    <div class="ctas"><a class="btn btn-t" href="#">Order pickup</a><a class="btn btn-o" href="#menu">See the menu</a></div>
+    <div class="hrs"><span><b>Mon–Fri</b>9 AM – 6 PM</span><span><b>Saturday</b>9 AM – 5 PM</span><span><b>1303 W Huron St</b>Chicago, IL 60642</span></div>
+  </div>
+  <div class="duo"><div class="a"></div><div class="b"></div></div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="yr">2001</div>
+  <div>
+    <h2>Started by Alicia and Rigoberto</h2>
+    <p>With love and dedication, Alicia and Rigoberto Zermeño opened El Jardín in 2001. Twenty-five years later the tacos still come from the same family kitchen, now with a matcha bar next to them. That story deserves more than an Instagram caption.</p>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="head"><h2>The menu</h2><p>Taquería classics on one side, the matcha bar on the other. Your current menu is a photo in a post; here it's searchable and always up to date.</p></div>
+  <div class="cols">
+    <div class="col"><h3>Taquería</h3><p class="sub">Corn tortillas · salsa bar</p>
+      <div class="it"><span><b>Asada</b><small>Grilled steak, onion, cilantro</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Barbacoa</b><small>A customer favorite</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Al pastor</b><small>With pineapple</small></span><span class="p">$ —</span></div>
+    </div>
+    <div class="col"><h3>Matcha bar</h3><p class="sub">Signature menu</p>
+      <div class="it"><span><b>Coke Matcha<span class="tag">NEW</span></b><small>Now on the signature menu</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Strawberry Hibiscus<span class="tag">NEW</span></b><small>Now on the signature menu</small></span><span class="p">$ —</span></div>
+      <div class="it"><span><b>Pumpkin Chai</b><small>Autumn special</small></span><span class="p">$ —</span></div>
+    </div>
+  </div>
+  <p class="note">*Prices and taco descriptions are placeholders (demo); drink names come from your posts.</p>
+</div></section>
+
+<section class="ev" id="ev"><div class="wrap"><div class="evc">
+  <div><h3>Events at El Jardín</h3><p>Sound sessions, pop-ups and private events. One page with dates and RSVP, so nobody has to dig through a link in someone else's bio.</p></div>
+  <a class="btn" href="#">See upcoming events</a>
+</div></div></section>
+
+<footer><div class="wrap"><span>El Jardín · Family Owned Taquería · West Town Chicago</span><span>@el.jardinnnn</span></div></footer>
+<div class="demo-badge">PAGX Studio concept · ~20% demo</div>
+</body>
+</html>
