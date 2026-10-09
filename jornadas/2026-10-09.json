@@ -44,6 +44,20 @@
       "evidencia": [
         "bocetos/evidencia/165-travelmania-cali-ig.jpg"
       ]
+    },
+    {
+      "num": 166,
+      "slug": "166-floristeria-rose-bogota",
+      "nombre": "Floristería Bogotá Rose",
+      "ig": "floristeriabogotarose",
+      "lugar": "Bogotá, Colombia (domicilios)",
+      "nicho": "Floristería a domicilio",
+      "web": "Sin web (dice 'tienda virtual' pero solo WhatsApp)",
+      "porque": "5K seguidores, publica diario (oct 2026). Bio dice 'Tienda virtual' pero todo es por WhatsApp. Ideal para Shopify con catálogo, pago y programación de entrega. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSu bio dice “tienda virtual”, pero hoy cada ramo se pide y se paga por WhatsApp.\nTe proponemos una tienda online con catálogo, pago y entrega programada en Bogotá.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/166-floristeria-rose-bogota-ig.jpg"
+      ]
     }
   ]
 }
