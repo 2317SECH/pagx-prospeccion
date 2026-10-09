@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hostal Vistaguila Salento — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f6f2ea;--ink:#1f2a22;--green:#2f5d46;--sage:#dbe5d6;--clay:#c56b3d;--muted:#5f6b62}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e5ddcf}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:Fraunces,serif;font-weight:700;font-size:22px;white-space:nowrap;color:var(--green)}
+  .logo small{font-family:'DM Sans';font-size:11px;letter-spacing:.18em;color:var(--muted);display:block;font-weight:700}
+  .links{display:flex;gap:26px;font-size:14px;font-weight:500}.links a{color:var(--ink);text-decoration:none}
+  .lang{font-size:12px;font-weight:700;border:1px solid #cfc6b6;border-radius:999px;padding:6px 10px;margin-right:10px}
+  .btn{display:inline-block;background:var(--clay);color:#fff;padding:13px 22px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+  .btn.o{background:transparent;color:#fff;border:1.5px solid #fff}
+  .hero{position:relative;height:640px;color:#fff;display:flex;align-items:flex-end}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(10,25,15,.78))}
+  .hero .wrap{position:relative;z-index:2;padding-bottom:64px;width:100%}
+  .kick{font-size:13px;letter-spacing:.2em;font-weight:700;opacity:.9}
+  h1{font-family:Fraunces,serif;font-size:66px;line-height:1.02;font-weight:700;margin:14px 0 16px;max-width:760px}
+  .hero p{font-size:18px;max-width:560px;line-height:1.6;opacity:.92}
+  .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .book{position:relative;z-index:3;margin-top:-40px}
+  .book .box{background:#fff;border-radius:22px;box-shadow:0 20px 50px rgba(30,40,30,.12);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;overflow:hidden}
+  .book .f{padding:20px 24px;border-right:1px solid #eee}.book .f span{font-size:11px;letter-spacing:.14em;color:var(--muted);font-weight:700}.book .f b{display:block;margin-top:6px;font-size:16px}
+  .book .go{background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700}
+  section.well{padding:90px 0 70px}
+  h2{font-family:Fraunces,serif;font-size:44px;font-weight:700;line-height:1.1}
+  .sub{color:var(--muted);margin:10px 0 34px;max-width:560px;line-height:1.6}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .c{background:#fff;border-radius:24px;overflow:hidden}
+  .c img{width:100%;height:240px;object-fit:cover;display:block}
+  .c .t{padding:22px}.c h3{font-family:Fraunces,serif;font-size:22px;margin-bottom:8px}.c p{font-size:14px;color:var(--muted);line-height:1.6}
+  .daily{background:var(--green);color:#f1efe6;padding:70px 0}
+  .daily .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  .daily h2{color:#fff}
+  .sched{display:grid;gap:12px}
+  .sched div{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border-radius:14px;padding:16px 20px;font-size:15px}
+  .sched b{font-family:Fraunces,serif;font-size:18px}.sched em{font-style:normal;font-size:12px;background:var(--clay);padding:5px 10px;border-radius:999px;font-weight:700}
+  footer{padding:28px 0;color:var(--muted);font-size:13px}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--clay);color:#fff;font-size:12px;font-weight:700;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links,.lang{display:none}
+    .logo{font-size:18px}
+    header.nav .btn{padding:10px 14px;font-size:12px}
+    .hero{height:560px}h1{font-size:40px}.hero p{font-size:16px}
+    .book .box,.grid,.daily .wrap{grid-template-columns:1fr}
+    .book .f{border-right:0;border-bottom:1px solid #eee}.book .go{padding:18px}
+    h2{font-size:32px}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo">Vistaguila<small>WELLNESS HOSTEL · SALENTO</small></div>
+  <nav class="links"><a href="#">Rooms</a><a href="#">Wellness</a><a href="#">Healthy Food</a><a href="#">Magic View</a><a href="#">Location</a></nav>
+  <div><span class="lang">EN | ES</span><a class="btn" href="#">Book direct</a></div>
+</div></header>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1568489711036-9c94a7d5aea6?w=1800&h=1100&fit=crop&q=70" alt="">
+  <div class="wrap">
+    <div class="kick">SALENTO · QUINDÍO · COLOMBIA</div>
+    <h1>We are your home in Salento</h1>
+    <p>A wellness hostel in the coffee region: Turkish bath, heated pool, massages and healthy food — with the mountains as your view.</p>
+    <div class="cta"><a class="btn" href="#">Check availability</a><a class="btn o" href="#">See the rooms</a></div>
+  </div>
+</section>
+
+<div class="book"><div class="wrap"><div class="box">
+  <div class="f"><span>CHECK-IN</span><b>Fri 16 Oct</b></div>
+  <div class="f"><span>CHECK-OUT</span><b>Mon 19 Oct</b></div>
+  <div class="f"><span>GUESTS</span><b>2 adults · dorm/private</b></div>
+  <div class="go">Search rooms →</div>
+</div></div></div>
+
+<section class="well"><div class="wrap">
+  <h2>Slow down. Breathe. Recover.</h2>
+  <p class="sub">Everything included in your stay to rest after hiking the Cocora Valley.</p>
+  <div class="grid">
+    <div class="c"><img src="https://images.unsplash.com/photo-1598095736960-4b3958d08bb9?w=700&h=480&fit=crop&q=70" alt=""><div class="t"><h3>Heated pool</h3><p>Warm water and mountain views, morning to night.</p></div></div>
+    <div class="c"><img src="https://images.unsplash.com/photo-1543244176-a2586eaf1278?w=700&h=480&fit=crop&q=70" alt=""><div class="t"><h3>Turkish bath &amp; massages</h3><p>Steam, relaxation and massages to recover after the trails.</p></div></div>
+    <div class="c"><img src="https://images.unsplash.com/photo-1578398192993-b64a40ecb690?w=700&h=480&fit=crop&q=70" alt=""><div class="t"><h3>The Magic View</h3><p>Wake up to green valleys and the wax palms of Quindío.</p></div></div>
+  </div>
+</div></section>
+
+<section class="daily"><div class="wrap">
+  <div><h2>Free activities for guests</h2><p class="sub" style="color:#cfd8cc">Weekly programme (schedule shown as demo).</p></div>
+  <div class="sched">
+    <div><b>Morning fitness session</b><em>FREE</em></div>
+    <div><b>Guided meditation</b><em>FREE</em></div>
+    <div><b>Holotropic breathing</b><em>FREE</em></div>
+    <div><b>Healthy breakfast</b><span>7:30 – 10:00</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Hostal Vistaguila · Salento, Quindío — Stock photos, dates and schedule are demo examples</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

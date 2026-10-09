@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Montu Gafas Medellín — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fafafa;--ink:#111;--y:#ffd23f;--muted:#666;--line:#e7e7e7}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  header.nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:'Space Grotesk';font-weight:700;font-size:24px;letter-spacing:-.02em;white-space:nowrap}
+  .logo b{background:var(--y);padding:0 6px;border-radius:6px}
+  .links{display:flex;gap:24px;font-size:14px;font-weight:600}.links a{color:var(--ink);text-decoration:none}
+  .btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 22px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none}
+  .btn.y{background:var(--y);color:var(--ink)}
+  .hero{padding:50px 0 60px}
+  .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  h1{font-family:'Space Grotesk';font-size:60px;line-height:1.02;font-weight:700;letter-spacing:-.03em}
+  h1 mark{background:var(--y);padding:0 8px}
+  .lead{font-size:17px;color:var(--muted);line-height:1.6;margin:18px 0 24px;max-width:480px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .pic{position:relative}
+  .hero .pic img{width:100%;height:520px;object-fit:cover;border-radius:24px;display:block}
+  .float{position:absolute;left:-24px;bottom:30px;background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 14px 40px rgba(0,0,0,.12);font-size:13px}
+  .float b{font-family:'Space Grotesk';font-size:22px;display:block}
+  .steps{background:var(--ink);color:#fff;padding:70px 0}
+  h2{font-family:'Space Grotesk';font-size:42px;font-weight:700;letter-spacing:-.02em}
+  .steps .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:30px}
+  .s{border:1px solid #333;border-radius:20px;padding:26px}
+  .s i{font-style:normal;font-family:'Space Grotesk';font-size:40px;color:var(--y);font-weight:700}
+  .s h3{font-size:19px;margin:10px 0 6px}.s p{color:#aaa;font-size:14px;line-height:1.55}
+  .upload{margin-top:26px;background:#1d1d1d;border:2px dashed #444;border-radius:20px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .upload span{color:#bbb;font-size:14px}
+  section.cat{padding:76px 0}
+  .sub{color:var(--muted);margin:8px 0 28px}
+  .tabs{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+  .tabs span{border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;background:#fff}
+  .tabs span.on{background:var(--ink);color:#fff}
+  .grid4{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .p{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .p img{width:100%;height:220px;object-fit:cover;display:block}
+  .p .t{padding:18px}.p h3{font-size:17px}.p p{font-size:13px;color:var(--muted);margin-top:4px}
+  footer{padding:26px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+  .demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:var(--y);color:var(--ink);font-size:12px;font-weight:600;padding:9px 14px;border-radius:999px}
+  @media (max-width:860px){
+    .links{display:none}.logo{font-size:20px}
+    header.nav .btn{padding:10px 12px;font-size:12px}
+    .hero .wrap,.steps .grid,.grid4{grid-template-columns:1fr}
+    h1{font-size:40px}.hero .pic img{height:380px}.float{left:12px}
+    h2{font-size:30px}.upload{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <div class="logo"><b>Montu</b> Gafas</div>
+  <nav class="links"><a href="#">Monturas</a><a href="#">Gafas de sol</a><a href="#">Lentes formulados</a><a href="#">Examen visual</a><a href="#">Sedes</a></nav>
+  <a class="btn" href="#">Cotizar fórmula</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Tus lentes formulados, <mark>sin enredos</mark></h1>
+    <p class="lead">Monturas modernas, examen visual y la opción de cotizar tu fórmula en línea. Dos sedes en Medellín para que te los pruebes.</p>
+    <div class="cta"><a class="btn y" href="#">Sube tu fórmula</a><a class="btn" href="#">Agendar examen visual</a></div>
+  </div>
+  <div class="pic">
+    <img src="https://images.unsplash.com/photo-1525786210598-d527194d3e9a?w=900&h=1000&fit=crop&q=70" alt="">
+    <div class="float"><b>2 sedes</b>en Medellín</div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="wrap">
+  <h2>¿No sabes por dónde empezar?</h2>
+  <div class="grid">
+    <div class="s"><i>01</i><h3>Examen visual</h3><p>Agenda tu examen o trae la fórmula que ya tienes.</p></div>
+    <div class="s"><i>02</i><h3>Elige montura</h3><p>Metálicas, acetato, de sol o Transitions — pruébatelas en sede.</p></div>
+    <div class="s"><i>03</i><h3>Cotiza en línea</h3><p>Sube la foto de tu fórmula y recibe la cotización por WhatsApp.</p></div>
+  </div>
+  <div class="upload"><span>Arrastra aquí la foto de tu fórmula (vista de ejemplo)</span><a class="btn y" href="#">Cotizar ahora</a></div>
+</div></section>
+
+<section class="cat"><div class="wrap">
+  <h2>Catálogo</h2>
+  <p class="sub">Categorías reales de la óptica; productos y fotos de ejemplo (demo).</p>
+  <div class="tabs"><span class="on">Monturas</span><span>Gafas de sol</span><span>Transitions</span><span>Filtro luz azul</span></div>
+  <div class="grid4">
+    <div class="p"><img src="https://images.unsplash.com/photo-1759910546772-73e4bb7fdadd?w=600&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Monturas en acetato</h3><p>Estilos clásicos y modernos</p></div></div>
+    <div class="p"><img src="https://images.unsplash.com/photo-1554250660-d8ba2d397fed?w=600&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Monturas metálicas</h3><p>Livianas y elegantes</p></div></div>
+    <div class="p"><img src="https://images.unsplash.com/photo-1539036776273-021ec1d78bec?w=600&h=440&fit=crop&q=70" alt=""><div class="t"><h3>Examen visual</h3><p>Agenda en la sede más cercana</p></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Montu Gafas · Medellín — Fotos de stock y productos de ejemplo (demo)</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>
