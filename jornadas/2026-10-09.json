@@ -809,6 +809,20 @@
       "evidencia": [
         "bocetos/evidencia/219-titan-limpieza-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 220,
+      "slug": "220-estampa-tu-pinta-chile",
+      "nombre": "Estampa tu Pinta",
+      "ig": "estampa_tu_pinta",
+      "lugar": "Santiago de Chile",
+      "nicho": "Estampados personalizados (e-commerce)",
+      "web": "Sin tienda (tienda por WhatsApp)",
+      "porque": "30K seguidores, activa (oct 2026), despacho a todo Chile, muchas categorías (familia, colegios, corporativo). Shopify con personalizador. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nTu “tienda online” hoy funciona por WhatsApp, con despachos a todo Chile.\nTe proponemos una tienda con categorías, cotizador por cantidad y subida de diseño.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/220-estampa-tu-pinta-chile-ig.jpg"
+      ]
     }
   ]
 }
