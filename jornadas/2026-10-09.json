@@ -399,6 +399,20 @@
         "bocetos/evidencia/190-chebs-beauty-bar-houston-ig.jpg",
         "bocetos/evidencia/190-chebs-beauty-bar-houston-web-actual.jpg"
       ]
+    },
+    {
+      "num": 191,
+      "slug": "191-upholstery-by-junior",
+      "nombre": "Auto Upholstery By Junior",
+      "ig": "auto_upholsterybyjr",
+      "lugar": "San Bernardino, CA, USA (544 N Waterman Ave)",
+      "nicho": "Auto upholstery / custom interiors",
+      "web": "No website",
+      "porque": "4.5K seguidores, activo (oct 2026). Trabajos de alto valor (interior completo '53 Bel Air, C10 build), financiamiento. Cotizaciones solo por llamada. Web con galería y formulario de cotización con fotos. Prioridad MEDIA.",
+      "mensaje": "Hi 👋 We're PAGX Studio.\nThat '53 Bel Air full interior is amazing, but quotes still only happen by phone.\nWe'd build you a site with a project gallery and a quote form where clients upload photos.\nWe made a quick preview (~20%). Want to see it?",
+      "evidencia": [
+        "bocetos/evidencia/191-upholstery-by-junior-ig.jpg"
+      ]
     }
   ]
 }
