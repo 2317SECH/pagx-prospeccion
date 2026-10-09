@@ -384,6 +384,21 @@
       "evidencia": [
         "bocetos/evidencia/189-av-studio-pilates-rio-ig.jpg"
       ]
+    },
+    {
+      "num": 190,
+      "slug": "190-chebs-beauty-bar-houston",
+      "nombre": "Cheb's Beauty Bar",
+      "ig": "chebsbeautybarhtx",
+      "lugar": "Houston, TX, USA (15948 S Post Oak Rd Suite B)",
+      "nicho": "Hair braiding salon",
+      "web": "Weak site (netlify subdomain, view-only, no booking)",
+      "porque": "13.8K seguidores, publica diario (oct 2026). Su 'booking site' en un subdominio de netlify dice que solo es para ver precios: hay que llamar. Web con reserva y depósito online. Prioridad ALTA.",
+      "mensaje": "Hi 👋 We're PAGX Studio.\nYour booking page says it's for viewing prices only, so clients still have to call to book.\nWe'd build you a site where clients pick a style, choose a time and pay the deposit online.\nWe made a quick preview (~20%). Want to see it?",
+      "evidencia": [
+        "bocetos/evidencia/190-chebs-beauty-bar-houston-ig.jpg",
+        "bocetos/evidencia/190-chebs-beauty-bar-houston-web-actual.jpg"
+      ]
     }
   ]
 }
