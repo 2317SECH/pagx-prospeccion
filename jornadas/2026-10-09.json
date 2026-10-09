@@ -1103,6 +1103,20 @@
       "evidencia": [
         "bocetos/evidencia/240-mistico-manizales-ig.jpg"
       ]
+    },
+    {
+      "num": 241,
+      "slug": "241-rosso-manizales",
+      "nombre": "Rosso Restaurante Parrilla",
+      "ig": "rosso.mzl",
+      "lugar": "Palogrande, Manizales, Colombia",
+      "nicho": "Restaurante parrilla",
+      "web": "Sin web (QR de reservas)",
+      "porque": "11K seguidores, activo (oct 2026), marca cuidada ('Stay for the mood'). Web con menú y reservas. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nRosso tiene una marca muy cuidada, pero menú y reservas viven en enlaces sueltos.\nTe proponemos una web con menú, reservas y ubicación con la misma estética.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/241-rosso-manizales-ig.jpg"
+      ]
     }
   ]
 }
