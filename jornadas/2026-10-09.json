@@ -115,6 +115,20 @@
         "bocetos/evidencia/170-tecniracer-bucaramanga-ig.jpg",
         "bocetos/evidencia/170-tecniracer-bucaramanga-web-actual.jpg"
       ]
+    },
+    {
+      "num": 171,
+      "slug": "171-aldebaran-barberia-pereira",
+      "nombre": "Aldebaran Barbería Premium",
+      "ig": "aldebaranclub",
+      "lugar": "Pereira, Colombia",
+      "nicho": "Barbería premium",
+      "web": "Sin web (solo wa.me)",
+      "porque": "4K seguidores, activa (ago 2026). Posicionamiento premium (bebida de cortesía, bioseguridad) sin web ni reservas online. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSe venden como barbería premium en Pereira, pero las reservas siguen solo por WhatsApp.\nTe proponemos una web con reservas por barbero, servicios y promociones.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/171-aldebaran-barberia-pereira-ig.jpg"
+      ]
     }
   ]
 }
