@@ -640,6 +640,20 @@
         "bocetos/evidencia/207-sanadent-medellin-ig.jpg",
         "bocetos/evidencia/207-sanadent-medellin-web-actual.jpg"
       ]
+    },
+    {
+      "num": 208,
+      "slug": "208-las-guaduas-santa-marta",
+      "nombre": "Hostal Las Guaduas",
+      "ig": "hostallasguaduas",
+      "lugar": "Santa Marta, Colombia (Calle 10 # 12-03, Miraflores)",
+      "nicho": "Hostal",
+      "web": "Sin web (solo wa.link)",
+      "porque": "15K seguidores, activo (ago 2026). Reservas por WhatsApp; web de reserva directa con promociones. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nCon 15K seguidores, las reservas de Las Guaduas siguen pasando solo por WhatsApp.\nTe proponemos una web con habitaciones, promociones y reserva directa.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/208-las-guaduas-santa-marta-ig.jpg"
+      ]
     }
   ]
 }
