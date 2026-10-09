@@ -766,6 +766,21 @@
       "evidencia": [
         "bocetos/evidencia/216-wm-estetica-automotiva-ig.jpg"
       ]
+    },
+    {
+      "num": 217,
+      "slug": "217-sorri-leste-fortaleza",
+      "nombre": "Clínica Sorri Leste",
+      "ig": "sorrialeste",
+      "lugar": "Fortaleza, CE, Brasil (Barra do Ceará, Vila União, Pirambu)",
+      "nicho": "Clínica odontológica (3 unidades)",
+      "web": "Site fora do ar (sorrialeste.com.br: DEPLOYMENT_NOT_FOUND)",
+      "porque": "16K seguidores, +30 mil pacientes, 3 unidades, activa (oct 2026). Su dominio da error de Vercel. Prioridad ALTA.",
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nVimos que sorrialeste.com.br está fora do ar (erro DEPLOYMENT_NOT_FOUND).\nPropomos colocar no ar um site com tratamentos, unidades e agendamento.\nPreparamos uma prévia (~20%). Quer ver?",
+      "evidencia": [
+        "bocetos/evidencia/217-sorri-leste-fortaleza-ig.jpg",
+        "bocetos/evidencia/217-sorri-leste-fortaleza-web-actual.jpg"
+      ]
     }
   ]
 }
