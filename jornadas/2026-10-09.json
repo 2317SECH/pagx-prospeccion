@@ -257,6 +257,20 @@
       "evidencia": [
         "bocetos/evidencia/180-inmigrants-barber-santiago-ig.jpg"
       ]
+    },
+    {
+      "num": 181,
+      "slug": "181-aventureros-lima",
+      "nombre": "Aventureros Agencia de Viajes",
+      "ig": "aventureros.pe.travel",
+      "lugar": "Lima, Perú",
+      "nicho": "Agencia de viajes / trekking y campamentos",
+      "web": "Sin web (beacons.ai)",
+      "porque": "7.3K seguidores, +10.000 en comunidad de WhatsApp, activa (oct 2026). 12+ rutas (Vichaycocha, Rupac, Huayhuash). Web con calendario de salidas, cupos y pago. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nTienen más de 10.000 aventureros en WhatsApp y salidas cada fin de semana, pero sin web propia.\nTe proponemos una web con calendario de salidas, cupos en vivo y reserva en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/181-aventureros-lima-ig.jpg"
+      ]
     }
   ]
 }
