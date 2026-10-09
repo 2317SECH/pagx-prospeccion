@@ -795,6 +795,20 @@
       "evidencia": [
         "bocetos/evidencia/218-parrilla-buenos-aires-sp-ig.jpg"
       ]
+    },
+    {
+      "num": 219,
+      "slug": "219-titan-limpieza-bogota",
+      "nombre": "Titán Limpieza",
+      "ig": "titanlimpieza",
+      "lugar": "Bogotá, Colombia",
+      "nicho": "Lavado de muebles, colchones y tapicería",
+      "web": "Sin web (bit.ly a WhatsApp)",
+      "porque": "15.8K seguidores, activo (sept 2026). Su link es un bit.ly directo a WhatsApp. Web con servicios, antes/después y cotizador. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSus antes y después convencen, pero el link de la bio va directo a WhatsApp.\nTe proponemos una web con servicios, galería y cotizador por número de puestos.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/219-titan-limpieza-bogota-ig.jpg"
+      ]
     }
   ]
 }
