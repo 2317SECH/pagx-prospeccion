@@ -823,6 +823,20 @@
       "evidencia": [
         "bocetos/evidencia/220-estampa-tu-pinta-chile-ig.jpg"
       ]
+    },
+    {
+      "num": 221,
+      "slug": "221-posh-salon-cr",
+      "nombre": "Posh Salon Costa Rica",
+      "ig": "poshsalon.cr",
+      "lugar": "San Francisco de Heredia, Costa Rica (Plaza Comercial Alicia, local 11)",
+      "nicho": "Salón de belleza (uñas, cabello, maquillaje)",
+      "web": "Sin web (sin link en bio)",
+      "porque": "2.6K seguidores, activa (oct 2026). Agenda 'aquí ⬇️' pero no hay link de reservas en la bio. Web con servicios y agenda. Prioridad MEDIA-BAJA (primer prospecto en Costa Rica).",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nTu bio dice “agenda tu cita aquí”, pero no hay un link para reservar.\nTe proponemos una web con servicios, horarios y agenda en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/221-posh-salon-cr-ig.jpg"
+      ]
     }
   ]
 }
