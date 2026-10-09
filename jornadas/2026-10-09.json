@@ -991,6 +991,20 @@
       "evidencia": [
         "bocetos/evidencia/232-club41-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 233,
+      "slug": "233-enjoy-punta-cana",
+      "nombre": "Enjoy Restaurant Punta Cana",
+      "ig": "enjoypcrestaurante",
+      "lugar": "Punta Cana, República Dominicana (cerca de Playa Corales)",
+      "nicho": "Restaurante y bar con música en vivo",
+      "web": "No website (QR menu link only)",
+      "porque": "16.1K seguidores, activo (oct 2026). Clientela turista; reservas y delivery por WhatsApp, menú en un QR. Primer prospecto en RD. Prioridad MEDIA.",
+      "mensaje": "Hi 👋 We're PAGX Studio.\nLive music every night near Corales Beach, but tourists can only find a QR menu and a WhatsApp number.\nWe'd build you a site with your menu, live music schedule and table reservations.\nWe made a quick preview (~20%). Want to see it?",
+      "evidencia": [
+        "bocetos/evidencia/233-enjoy-punta-cana-ig.jpg"
+      ]
     }
   ]
 }
