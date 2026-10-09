@@ -1230,6 +1230,20 @@
       "evidencia": [
         "bocetos/evidencia/249-old-west-cucuta-ig.jpg"
       ]
+    },
+    {
+      "num": 250,
+      "slug": "250-puerto-seguro-cucuta",
+      "nombre": "Puerto Seguro Restaurante",
+      "ig": "puertosegurorest",
+      "lugar": "Cúcuta, Norte de Santander, Colombia (4 sedes)",
+      "nicho": "Restaurante (buffet por peso, brunch, parrilla)",
+      "web": "Sin web (menú digital menupp)",
+      "porque": "12.6K seguidores, 30 años, 4 sedes, activo (oct 2026). Web con sedes, menú y reservas para celebraciones. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\n30 años y 4 sedes, pero hoy solo tienen un menú digital como página.\nTe proponemos una web con sedes, buffet, brunch y reservas para celebraciones.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/250-puerto-seguro-cucuta-ig.jpg"
+      ]
     }
   ]
 }
