@@ -157,6 +157,20 @@
         "bocetos/evidencia/153-hostal-vistaguila-salento-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que Vistaguila tiene baño turco, piscina climatizada y actividades de bienestar, pero hoy todas las reservas pasan por Hostelworld y su comisión.\nTe proponemos una web bilingüe con reserva directa para que el huésped te reserve sin intermediarios.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?"
+    },
+    {
+      "num": 154,
+      "slug": "154-minca-hostal-mirador",
+      "nombre": "Minca Hostal Mirador",
+      "ig": "mincahostelmirador",
+      "lugar": "Minca, Santa Marta, Colombia",
+      "nicho": "Hostal / camping / pasadía con restaurante y bar",
+      "web": "Sin web (reservas solo por WhatsApp)",
+      "porque": "8K seguidores, activo (julio 2026 propio + etiquetas sep 2026). 'La mejor vista de Minca al mar y Santa Marta', hotel 24h, restaurante y bar, camping y pasadía. Todo se reserva por WhatsApp; sin web no aparece cuando el turista busca dónde dormir en Minca. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/154-minca-hostal-mirador-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nLa vista de su mirador al mar es de lo mejor de Minca, pero quien busca en Google dónde dormir allá no encuentra una página suya.\nTe proponemos una web con hostal, camping y pasadía, horarios y reserva directa.\nLes preparamos una vista previa (~20%). ¿Se la mostramos?"
     }
   ]
 }
