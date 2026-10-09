@@ -271,6 +271,20 @@
       "evidencia": [
         "bocetos/evidencia/181-aventureros-lima-ig.jpg"
       ]
+    },
+    {
+      "num": 182,
+      "slug": "182-upgrade-fit-quito",
+      "nombre": "Upgrade Fitness Center",
+      "ig": "upgradefitcenter",
+      "lugar": "Quito, Ecuador",
+      "nicho": "Gimnasio",
+      "web": "Sin web (Facebook + wa.me)",
+      "porque": "8.4K seguidores, 1.200+ posts, un reel con 38K likes, activo (oct 2026). Sin web: planes, horarios y clase de prueba online. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSu contenido pega fuerte (hasta 38K likes), pero quien quiere inscribirse no encuentra planes ni horarios en una web.\nTe proponemos una web con membresías, horarios de clases y reserva de clase de prueba.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/182-upgrade-fit-quito-ig.jpg"
+      ]
     }
   ]
 }
