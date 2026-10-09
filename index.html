@@ -66,7 +66,7 @@ if(!window.ClipboardItem||!navigator.clipboard||!navigator.clipboard.write){done
 const blob=fetch(url,{cache:'force-cache'}).then(r=>r.blob()).then(x=>x.type==='image/png'?x:new Blob([x],{type:'image/png'}));
 navigator.clipboard.write([new ClipboardItem({'image/png':blob})]).then(()=>done('¡Imagen copiada!'),()=>done('No se pudo copiar'))}</script>
 <section class="jor">
-  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 83 prospectos · </small></h2>
+  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 84 prospectos · </small></h2>
   <div class="pros"><div class="pro">
   <a class="thumb" href="bocetos/163-bribrecan-vet-cali.html"><img src="bocetos/preview/163-bribrecan-vet-cali.png" alt="Boceto Clínica Veterinaria Bribrecan" loading="lazy"></a>
   <div class="bd">
@@ -1145,6 +1145,19 @@ Menú, pedidos y reservas de Barrileros hoy viven en un Linktree.
 Te proponemos una web con carta completa, pedidos y reservas en un solo lugar.
 Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
     <div class="acts"><button class="main" onclick="cp('msg-245-barrileros-monteria',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/245-barrileros-monteria.png',this)">Copiar imagen</button> <a href="bocetos/preview/245-barrileros-monteria.png" download>Descargar imagen</a> <a href="bocetos/245-barrileros-monteria.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/245-barrileros-monteria-ig.jpg" target="_blank">Evidencia IG</a></div>
+  </div>
+</div><div class="pro">
+  <a class="thumb" href="bocetos/246-forza-gym-monteria.html"><img src="bocetos/preview/246-forza-gym-monteria.png" alt="Boceto Forza Gym River" loading="lazy"></a>
+  <div class="bd">
+    <div class="n">BOCETO 246 · 09/10/2026</div>
+    <h3>Forza Gym River</h3>
+    <div class="meta"><a href="https://instagram.com/forzagymriver" target="_blank">@forzagymriver</a> · Urb. Villarreal, Montería, Colombia · Gimnasio · Web: Sin web (atom.bio)</div>
+    <p class="why">15.9K seguidores, activo (oct 2026), promo de inscripción gratis. Web con planes y registro. Prioridad MEDIA.</p>
+    <pre id="msg-246-forza-gym-monteria">Hola 👋 Somos de PAGX Studio.
+Tienen inscripción gratis, pero para aprovecharla hay que escribir y esperar respuesta.
+Te proponemos una web con planes, horarios e inscripción en línea.
+Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
+    <div class="acts"><button class="main" onclick="cp('msg-246-forza-gym-monteria',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/246-forza-gym-monteria.png',this)">Copiar imagen</button> <a href="bocetos/preview/246-forza-gym-monteria.png" download>Descargar imagen</a> <a href="bocetos/246-forza-gym-monteria.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/246-forza-gym-monteria-ig.jpg" target="_blank">Evidencia IG</a></div>
   </div>
 </div></div>
 </section>
@@ -4646,6 +4659,15 @@ Preparamos uma prévia (~20%) de como ficaria. Quer ver?</pre>
         <h2>Barrileros Steak House</h2>
         <p>Montería, Córdoba, Colombia (Calle 62 # 6-46, Pasaje del Sol) · Steak house & bar.</p>
         <div class="links"><span>Ver página →</span> <a href="bocetos/preview/245-barrileros-monteria.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/246-forza-gym-monteria.html">
+      <div class="thumb"><img src="bocetos/preview/246-forza-gym-monteria.png" alt="Boceto Forza Gym River"></div>
+      <div class="body">
+        <div class="n">BOCETO 246 · 09/10/2026</div>
+        <h2>Forza Gym River</h2>
+        <p>Urb. Villarreal, Montería, Colombia · Gimnasio.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/246-forza-gym-monteria.png" style="color:var(--muted)">PNG completo</a></div>
       </div>
     </a>
   </div>

@@ -1173,6 +1173,20 @@
       "evidencia": [
         "bocetos/evidencia/245-barrileros-monteria-ig.jpg"
       ]
+    },
+    {
+      "num": 246,
+      "slug": "246-forza-gym-monteria",
+      "nombre": "Forza Gym River",
+      "ig": "forzagymriver",
+      "lugar": "Urb. Villarreal, Montería, Colombia",
+      "nicho": "Gimnasio",
+      "web": "Sin web (atom.bio)",
+      "porque": "15.9K seguidores, activo (oct 2026), promo de inscripción gratis. Web con planes y registro. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nTienen inscripción gratis, pero para aprovecharla hay que escribir y esperar respuesta.\nTe proponemos una web con planes, horarios e inscripción en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/246-forza-gym-monteria-ig.jpg"
+      ]
     }
   ]
 }
