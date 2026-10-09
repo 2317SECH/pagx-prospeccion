@@ -1145,6 +1145,20 @@
       "evidencia": [
         "bocetos/evidencia/243-mayler-tattoo-ibague-ig.jpg"
       ]
+    },
+    {
+      "num": 244,
+      "slug": "244-vangora-pasto",
+      "nombre": "Vangora Restaurante",
+      "ig": "vangora_pasto",
+      "lugar": "Pasto, Nariño, Colombia",
+      "nicho": "Restaurante de autor + gin bar",
+      "web": "Sin web (menú en PDF de Google Drive)",
+      "porque": "11.3K seguidores, activo (sept 2026). Menú en Drive y reservas por WhatsApp. Primer prospecto en Pasto. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que el menú de Vangora está en un PDF de Google Drive.\nTe proponemos una web con menú de autor, Gin House y reservas en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/244-vangora-pasto-ig.jpg"
+      ]
     }
   ]
 }

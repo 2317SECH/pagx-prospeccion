@@ -66,7 +66,7 @@ if(!window.ClipboardItem||!navigator.clipboard||!navigator.clipboard.write){done
 const blob=fetch(url,{cache:'force-cache'}).then(r=>r.blob()).then(x=>x.type==='image/png'?x:new Blob([x],{type:'image/png'}));
 navigator.clipboard.write([new ClipboardItem({'image/png':blob})]).then(()=>done('¡Imagen copiada!'),()=>done('No se pudo copiar'))}</script>
 <section class="jor">
-  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 81 prospectos · </small></h2>
+  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 82 prospectos · </small></h2>
   <div class="pros"><div class="pro">
   <a class="thumb" href="bocetos/163-bribrecan-vet-cali.html"><img src="bocetos/preview/163-bribrecan-vet-cali.png" alt="Boceto Clínica Veterinaria Bribrecan" loading="lazy"></a>
   <div class="bd">
@@ -1119,6 +1119,19 @@ Tu línea fina y los retratos de mascotas tienen mucho público, pero no hay lin
 Te proponemos una web con portafolio por estilo y formulario de cotización.
 Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
     <div class="acts"><button class="main" onclick="cp('msg-243-mayler-tattoo-ibague',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/243-mayler-tattoo-ibague.png',this)">Copiar imagen</button> <a href="bocetos/preview/243-mayler-tattoo-ibague.png" download>Descargar imagen</a> <a href="bocetos/243-mayler-tattoo-ibague.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/243-mayler-tattoo-ibague-ig.jpg" target="_blank">Evidencia IG</a></div>
+  </div>
+</div><div class="pro">
+  <a class="thumb" href="bocetos/244-vangora-pasto.html"><img src="bocetos/preview/244-vangora-pasto.png" alt="Boceto Vangora Restaurante" loading="lazy"></a>
+  <div class="bd">
+    <div class="n">BOCETO 244 · 09/10/2026</div>
+    <h3>Vangora Restaurante</h3>
+    <div class="meta"><a href="https://instagram.com/vangora_pasto" target="_blank">@vangora_pasto</a> · Pasto, Nariño, Colombia · Restaurante de autor + gin bar · Web: Sin web (menú en PDF de Google Drive)</div>
+    <p class="why">11.3K seguidores, activo (sept 2026). Menú en Drive y reservas por WhatsApp. Primer prospecto en Pasto. Prioridad MEDIA.</p>
+    <pre id="msg-244-vangora-pasto">Hola 👋 Somos de PAGX Studio.
+Vimos que el menú de Vangora está en un PDF de Google Drive.
+Te proponemos una web con menú de autor, Gin House y reservas en línea.
+Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
+    <div class="acts"><button class="main" onclick="cp('msg-244-vangora-pasto',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/244-vangora-pasto.png',this)">Copiar imagen</button> <a href="bocetos/preview/244-vangora-pasto.png" download>Descargar imagen</a> <a href="bocetos/244-vangora-pasto.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/244-vangora-pasto-ig.jpg" target="_blank">Evidencia IG</a></div>
   </div>
 </div></div>
 </section>
@@ -4602,6 +4615,15 @@ Preparamos uma prévia (~20%) de como ficaria. Quer ver?</pre>
         <h2>Mayler Tattoo</h2>
         <p>Ibagué, Tolima, Colombia · Tatuajes (línea fina, microrealismo, mascotas).</p>
         <div class="links"><span>Ver página →</span> <a href="bocetos/preview/243-mayler-tattoo-ibague.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/244-vangora-pasto.html">
+      <div class="thumb"><img src="bocetos/preview/244-vangora-pasto.png" alt="Boceto Vangora Restaurante"></div>
+      <div class="body">
+        <div class="n">BOCETO 244 · 09/10/2026</div>
+        <h2>Vangora Restaurante</h2>
+        <p>Pasto, Nariño, Colombia · Restaurante de autor + gin bar.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/244-vangora-pasto.png" style="color:var(--muted)">PNG completo</a></div>
       </div>
     </a>
   </div>
