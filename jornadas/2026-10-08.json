@@ -269,6 +269,20 @@
         "bocetos/evidencia/161-1of1-auto-detail-sa-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nYour detailing results look great, but right now booking means calling or texting you.\nWe'd build a simple site with your packages and online booking so customers can schedule 24/7.\nWe made a quick preview (~20%). Want to see it?"
+    },
+    {
+      "num": 162,
+      "slug": "162-ikanjana-danzas-cali",
+      "nombre": "Ikanjana · Academia de Danzas",
+      "ig": "ikanjanadancecali",
+      "lugar": "Cali, Colombia",
+      "nicho": "Academia de danza (árabe, hindú moderna, flamenco)",
+      "web": "Sin web (solo wa.link)",
+      "porque": "5.1K seguidores, 1.600+ publicaciones; activo vía fundación (ago 2026). 17 años de danzas orientales en San Antonio, directora Ilvahana, premios y teatros. Inscripciones solo por WhatsApp; una web con estilos, horarios y clase de prueba la posiciona. Prioridad MEDIA.",
+      "evidencia": [
+        "bocetos/evidencia/162-ikanjana-danzas-cali-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\n17 años de danzas orientales en Cali es una trayectoria enorme, pero hoy no tienen una web que la muestre ni donde inscribirse.\nTe proponemos una web con estilos, horarios, eventos y reserva de clase de prueba.\nLes preparamos una vista previa (~20%). ¿Se la mostramos?"
     }
   ]
 }
