@@ -66,7 +66,7 @@ if(!window.ClipboardItem||!navigator.clipboard||!navigator.clipboard.write){done
 const blob=fetch(url,{cache:'force-cache'}).then(r=>r.blob()).then(x=>x.type==='image/png'?x:new Blob([x],{type:'image/png'}));
 navigator.clipboard.write([new ClipboardItem({'image/png':blob})]).then(()=>done('¡Imagen copiada!'),()=>done('No se pudo copiar'))}</script>
 <section class="jor">
-  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 64 prospectos · </small></h2>
+  <h2 class="day"><span class="pill">JORNADA</span> 09/10/2026 <small>Sergio · 65 prospectos · </small></h2>
   <div class="pros"><div class="pro">
   <a class="thumb" href="bocetos/163-bribrecan-vet-cali.html"><img src="bocetos/preview/163-bribrecan-vet-cali.png" alt="Boceto Clínica Veterinaria Bribrecan" loading="lazy"></a>
   <div class="bd">
@@ -898,6 +898,19 @@ Tres años ganando Sushi Master y dos sedes, pero el menú y las reservas siguen
 Te proponemos una web con menú, promos como el 2x1 y reservas por sede.
 Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
     <div class="acts"><button class="main" onclick="cp('msg-226-makena-sushi-medellin',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/226-makena-sushi-medellin.png',this)">Copiar imagen</button> <a href="bocetos/preview/226-makena-sushi-medellin.png" download>Descargar imagen</a> <a href="bocetos/226-makena-sushi-medellin.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/226-makena-sushi-medellin-ig.jpg" target="_blank">Evidencia IG</a></div>
+  </div>
+</div><div class="pro">
+  <a class="thumb" href="bocetos/227-california-cafe-tulua.html"><img src="bocetos/preview/227-california-cafe-tulua.png" alt="Boceto California Café Bar" loading="lazy"></a>
+  <div class="bd">
+    <div class="n">BOCETO 227 · 09/10/2026</div>
+    <h3>California Café Bar</h3>
+    <div class="meta"><a href="https://instagram.com/california62tulua" target="_blank">@california62tulua</a> · Tuluá, Valle del Cauca, Colombia (Km 3 vía Tuluá–Nariño) · Café bar tropical · Web: Sin web</div>
+    <p class="why">11.1K seguidores, activo (oct 2026). Sin reservas (entrada libre): web útil con menú, horarios y cumpleaños. Prioridad MEDIA.</p>
+    <pre id="msg-227-california-cafe-tulua">Hola 👋 Somos de PAGX Studio.
+Vimos que en California no hay reservas, así que la gente necesita ver menú y horario antes de ir.
+Te proponemos una web con menú, horarios, cumpleaños y ubicación.
+Te preparamos una vista previa (~20%). ¿Te la mostramos?</pre>
+    <div class="acts"><button class="main" onclick="cp('msg-227-california-cafe-tulua',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/227-california-cafe-tulua.png',this)">Copiar imagen</button> <a href="bocetos/preview/227-california-cafe-tulua.png" download>Descargar imagen</a> <a href="bocetos/227-california-cafe-tulua.html" target="_blank">Ver boceto en vivo</a> <a href="bocetos/evidencia/227-california-cafe-tulua-ig.jpg" target="_blank">Evidencia IG</a></div>
   </div>
 </div></div>
 </section>
@@ -4228,6 +4241,15 @@ Preparamos uma prévia (~20%) de como ficaria. Quer ver?</pre>
         <h2>Makena Sushi & Grill</h2>
         <p>Medellín, Colombia (Laureles y Av. Nutibara/UPB) · Restaurante sushi / nikkei (2 sedes).</p>
         <div class="links"><span>Ver página →</span> <a href="bocetos/preview/226-makena-sushi-medellin.png" style="color:var(--muted)">PNG completo</a></div>
+      </div>
+    </a>
+    <a class="card" href="bocetos/227-california-cafe-tulua.html">
+      <div class="thumb"><img src="bocetos/preview/227-california-cafe-tulua.png" alt="Boceto California Café Bar"></div>
+      <div class="body">
+        <div class="n">BOCETO 227 · 09/10/2026</div>
+        <h2>California Café Bar</h2>
+        <p>Tuluá, Valle del Cauca, Colombia (Km 3 vía Tuluá–Nariño) · Café bar tropical.</p>
+        <div class="links"><span>Ver página →</span> <a href="bocetos/preview/227-california-cafe-tulua.png" style="color:var(--muted)">PNG completo</a></div>
       </div>
     </a>
   </div>
