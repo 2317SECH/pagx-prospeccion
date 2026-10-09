@@ -1,0 +1,21 @@
+{
+  "fecha": "09/10/2026",
+  "persona": "Sergio",
+  "nota": "",
+  "prospectos": [
+    {
+      "num": 163,
+      "slug": "163-bribrecan-vet-cali",
+      "nombre": "Clínica Veterinaria Bribrecan",
+      "ig": "clinica_veterinaria_bribrecan",
+      "lugar": "Cali, Colombia (Cl. 70 # 28G-36)",
+      "nicho": "Clínica veterinaria + pet shop",
+      "web": "Sin web (solo wa.link)",
+      "porque": "7.6K seguidores, activa (sept 2026). Rx, ecografías, cirugías ortopédicas, spa y pet shop; testimonios fuertes (cirugía de Sally, 693 likes). Todo se agenda por WhatsApp; una web con agenda por servicio y fichas de cirugía le da confianza al tutor. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que en Bribrecan hacen Rx, ecografías y cirugías ortopédicas, pero todo se agenda solo por WhatsApp.\nTe proponemos una web con agenda por servicio y casos reales, para que el tutor confíe y reserve solo.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/163-bribrecan-vet-cali-ig.jpg"
+      ]
+    }
+  ]
+}

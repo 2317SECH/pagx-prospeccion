@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cãoqri Pet Shop — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4fbff;--fg:#13314a;--ac:#2a9df4;--mu:#56708a;--card:#ffffff;--ac2:#13314a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid rgba(128,128,128,.2)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:'Quicksand';font-weight:800;font-size:24px;white-space:nowrap;letter-spacing:0}
+.logo span{color:var(--ac)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a{color:var(--mu);text-decoration:none}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:14px 24px;border-radius:20px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
+.k{font-weight:800;font-size:12px;letter-spacing:.22em;color:var(--ac);text-transform:uppercase}
+h1{font-family:'Quicksand';font-size:60px;line-height:1.04;margin:16px 0;font-weight:700;}
+h2{font-family:'Quicksand';font-size:44px;line-height:1.1;font-weight:700;}
+.hero{position:relative}
+.hero.full,.hero.center{min-height:620px;display:flex;align-items:center;color:#fff}
+.hero.full>img,.hero.center>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.full:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.62) 30%,rgba(0,0,0,.1))}
+.hero.center:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero.center .ht{text-align:center;max-width:780px;margin:0 auto}.hero.center .cta{justify-content:center}
+.hero.full .ht{max-width:600px}
+.hero p{font-size:18px;line-height:1.6;opacity:.92;max-width:540px}.hero.center p{margin:0 auto}
+.hero.split{padding:60px 0}
+.hero.split .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero.split p{color:var(--mu)}
+.hi img{width:100%;height:520px;object-fit:cover;border-radius:40px;display:block}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.facts{background:var(--card);padding:28px 0}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.facts b{display:block;font-family:'Quicksand';font-size:26px;color:var(--ac)}.facts span{font-size:13px;color:var(--mu)}
+section.sec{padding:80px 0}
+.sub{color:var(--mu);margin:8px 0 32px;max-width:640px;line-height:1.6}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c{background:var(--card);border-radius:28px;padding:28px;border:1px solid rgba(128,128,128,.2)}
+.c i{font-style:normal;font-family:'Quicksand';font-size:28px;color:var(--ac)}
+.c h3{font-size:19px;margin:12px 0 8px}.c p{font-size:14px;line-height:1.6;color:var(--mu)}
+.pr img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:26px;display:block}
+.pr h3{font-size:17px;margin:14px 0 4px}.pr span{font-size:13px;color:var(--mu)}
+.pk{background:var(--card);border:1px solid rgba(128,128,128,.2);border-radius:18px;padding:30px;position:relative}
+.pk.f{border:2px solid var(--ac)}.pk .tag{position:absolute;top:-12px;left:24px;background:var(--ac);color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px}
+.pk h3{font-family:'Quicksand';font-size:26px}.pk .pp{font-family:'Quicksand';font-size:40px;margin:10px 0}.pk .pp small{font-size:13px;color:var(--mu);font-family:'Quicksand'}
+.pk ul{list-style:none;font-size:14px;line-height:2;color:var(--mu)}.pk li:before{content:"— ";color:var(--ac)}
+.why{padding:0 0 80px}.why .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.wi img{width:100%;height:440px;object-fit:cover;border-radius:40px;display:block}
+.why h2{margin:12px 0 18px}.why ul{list-style:none;line-height:2.1;color:var(--mu);font-size:16px}.why li:before{content:"✓  ";color:var(--ac);font-weight:800}
+.gal{padding:0 0 80px}.gal .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gal img{width:100%;height:280px;object-fit:cover;border-radius:26px;display:block}
+.call{background:var(--ac2);color:#fff;padding:56px 0}
+.call .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.call h2{font-size:38px}.call p{opacity:.85;margin-top:6px}
+.call .btn{background:#fff;color:#111}
+footer{padding:26px 0;color:var(--mu);font-size:13px}
+.demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#fff;color:#111;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+@media (max-width:860px){
+ .links{display:none}.logo{font-size:17px}header.nav .btn{padding:10px 12px;font-size:12px}
+ .wrap{padding:0 18px}
+ .hero.full,.hero.center{min-height:560px}h1{font-size:42px}.hero p{font-size:16px}
+ .hero.split .wrap,.why .wrap{grid-template-columns:1fr}.hi img{height:320px}.wi img{height:280px}
+ .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .g2,.g3,.g4{grid-template-columns:1fr}.gal .wrap{grid-template-columns:1fr}.gal img{height:220px}
+ h2{font-size:32px}.call .wrap{flex-direction:column;align-items:flex-start}.call h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><div class="logo">Cão<span>qri</span></div><nav class="links"><a href="#">Banho &amp; Tosa</a><a href="#">Boutique</a><a href="#">Farmácia</a><a href="#">Veterinário</a></nav><a class="btn" href="#">Agendar</a></div></header>
+<section class="hero split"><div class="wrap"><div class="ht">
+<div class="k">Pet shop · Jaqueira, Recife</div><h1>Mais de 20 anos cuidando de quem você ama</h1><p>Banho e tosa, boutique, farmácia, veterinário, cirurgias e delivery. Rua Muniz Tavares, 72 — Jaqueira.</p>
+<div class="cta"><a class="btn" href="#">Agendar banho e tosa</a><a class="btn o" href="#">Pedir delivery</a></div></div>
+<div class="hi"><img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=1000&h=1100&fit=crop&q=70" alt=""></div></div></section>
+<section class="facts"><div class="wrap"><div><b>20+</b><span>anos de confiança</span></div><div><b>9K</b><span>seguidores</span></div><div><b>Delivery</b><span>81 99957-2070</span></div><div><b>Jaqueira</b><span>Recife</span></div></div></section>
+<section class="sec"><div class="wrap"><div class="k">Serviços</div><h2>Tudo em um só lugar</h2><p class="sub">Serviços que aparecem na bio. Hoje o domínio caoqri.com.br mostra só a página padrão da HostGator.</p><div class="grid g4"><div class="c"><i>01</i><h3>Banho e tosa</h3><p>Agendamento por horário, com fotos do resultado.</p></div><div class="c"><i>02</i><h3>Boutique</h3><p>Roupas, acessórios e brinquedos.</p></div><div class="c"><i>03</i><h3>Farmácia</h3><p>Medicamentos e rações com entrega.</p></div><div class="c"><i>04</i><h3>Veterinário</h3><p>Consultas e cirurgias.</p></div></div></div></section>
+
+<section class="gal"><div class="wrap"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=800&h=600&fit=crop&q=70" alt=""></div></section>
+<section class="call"><div class="wrap"><div><h2>Seu pet merece o melhor</h2><p>Agende online ou peça pelo delivery.</p></div><a class="btn" href="#">Agendar</a></div></section>
+<footer><div class="wrap">Cãoqri Pet Shop · Rua Muniz Tavares, 72 — Jaqueira, Recife — Fotos de banco de imagens e preços são demonstrativos</div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>

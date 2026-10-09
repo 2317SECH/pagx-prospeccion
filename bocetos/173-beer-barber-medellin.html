@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beer Barber Co — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14100c;--fg:#f6efe3;--ac:#e8a317;--mu:#b3a593;--card:#1e1812;--ac2:#e8a317}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid #2e261d}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:'Oswald';font-weight:800;font-size:26px;white-space:nowrap;letter-spacing:0}
+.logo span{color:var(--ac)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a{color:var(--mu);text-decoration:none}
+.btn{display:inline-block;background:var(--ac);color:#14100c;padding:14px 24px;border-radius:6px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
+.k{font-weight:800;font-size:12px;letter-spacing:.22em;color:var(--ac);text-transform:uppercase}
+h1{font-family:'Oswald';font-size:80px;line-height:1.04;margin:16px 0;text-transform:uppercase;}
+h2{font-family:'Oswald';font-size:44px;line-height:1.1;text-transform:uppercase;}
+.hero{position:relative}
+.hero.full,.hero.center{min-height:620px;display:flex;align-items:center;color:#fff}
+.hero.full>img,.hero.center>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.full:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.62) 30%,rgba(0,0,0,.1))}
+.hero.center:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero.center .ht{text-align:center;max-width:780px;margin:0 auto}.hero.center .cta{justify-content:center}
+.hero.full .ht{max-width:600px}
+.hero p{font-size:18px;line-height:1.6;opacity:.92;max-width:540px}.hero.center p{margin:0 auto}
+.hero.split{padding:60px 0}
+.hero.split .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero.split p{color:var(--mu)}
+.hi img{width:100%;height:520px;object-fit:cover;border-radius:24px;display:block}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.facts{background:var(--card);padding:28px 0}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.facts b{display:block;font-family:'Oswald';font-size:26px;color:var(--ac)}.facts span{font-size:13px;color:var(--mu)}
+section.sec{padding:80px 0}
+.sub{color:var(--mu);margin:8px 0 32px;max-width:640px;line-height:1.6}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c{background:var(--card);border-radius:14px;padding:28px;border:1px solid #2e261d}
+.c i{font-style:normal;font-family:'Oswald';font-size:28px;color:var(--ac)}
+.c h3{font-size:19px;margin:12px 0 8px}.c p{font-size:14px;line-height:1.6;color:var(--mu)}
+.pr img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;display:block}
+.pr h3{font-size:17px;margin:14px 0 4px}.pr span{font-size:13px;color:var(--mu)}
+.pk{background:var(--card);border:1px solid #2e261d;border-radius:18px;padding:30px;position:relative}
+.pk.f{border:2px solid var(--ac)}.pk .tag{position:absolute;top:-12px;left:24px;background:var(--ac);color:#14100c;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px}
+.pk h3{font-family:'Oswald';font-size:26px}.pk .pp{font-family:'Oswald';font-size:40px;margin:10px 0}.pk .pp small{font-size:13px;color:var(--mu);font-family:'Inter'}
+.pk ul{list-style:none;font-size:14px;line-height:2;color:var(--mu)}.pk li:before{content:"— ";color:var(--ac)}
+.why{padding:0 0 80px}.why .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.wi img{width:100%;height:440px;object-fit:cover;border-radius:24px;display:block}
+.why h2{margin:12px 0 18px}.why ul{list-style:none;line-height:2.1;color:var(--mu);font-size:16px}.why li:before{content:"✓  ";color:var(--ac);font-weight:800}
+.gal{padding:0 0 80px}.gal .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gal img{width:100%;height:280px;object-fit:cover;border-radius:12px;display:block}
+.call{background:var(--ac2);color:#14100c;padding:56px 0}
+.call .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.call h2{font-size:38px}.call p{opacity:.85;margin-top:6px}
+.call .btn{background:#14100c;color:#e8a317}
+footer{padding:26px 0;color:var(--mu);font-size:13px}
+.demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#fff;color:#111;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+@media (max-width:860px){
+ .links{display:none}.logo{font-size:19px}header.nav .btn{padding:10px 12px;font-size:12px}
+ .wrap{padding:0 18px}
+ .hero.full,.hero.center{min-height:560px}h1{font-size:42px}.hero p{font-size:16px}
+ .hero.split .wrap,.why .wrap{grid-template-columns:1fr}.hi img{height:320px}.wi img{height:280px}
+ .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .g2,.g3,.g4{grid-template-columns:1fr}.gal .wrap{grid-template-columns:1fr}.gal img{height:220px}
+ h2{font-size:32px}.call .wrap{flex-direction:column;align-items:flex-start}.call h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><div class="logo">BEER <span>BARBER</span> CO</div><nav class="links"><a href="#">Cortes</a><a href="#">Sedes</a><a href="#">Productos</a><a href="#">Cerveza</a></nav><a class="btn" href="#">Reservar</a></div></header>
+<section class="hero full"><img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=1800&h=1100&fit=crop&q=70" alt=""><div class="wrap"><div class="ht">
+<div class="k">Barbería · Medellín · 2 sedes</div><h1>Buen corte y una buena cerveza</h1><p>Rendimos tributo al buen corte, al mejor servicio y a una buena cerveza. Visajismo para encontrar el estilo que va contigo.</p>
+<div class="cta"><a class="btn" href="#">Reservar en Laureles</a><a class="btn o" href="#">Reservar en Belén</a></div></div></div></section>
+<section class="facts"><div class="wrap"><div><b>7.7K</b><span>seguidores</span></div><div><b>2 sedes</b><span>Laureles y Belén</span></div><div><b>Visajismo</b><span>asesoría de estilo</span></div><div><b>Productos</b><span>propios a la venta</span></div></div></section>
+<section class="sec"><div class="wrap"><div class="k">Cortes</div><h2>Estilos de la casa</h2><p class="sub">Cortes que publican (low taper slick back, fades); fotos de stock de referencia.</p><div class="grid g3"><div class="pr"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&h=700&fit=crop&q=70" alt=""><h3>Low Taper Slick Back</h3><span>Clásico y definido</span></div><div class="pr"><img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=700&h=700&fit=crop&q=70" alt=""><h3>Fade + barba</h3><span>Laterales limpios</span></div><div class="pr"><img src="https://images.unsplash.com/photo-1635273051937-a0ddef9573b6?w=700&h=700&fit=crop&q=70" alt=""><h3>Corte con tijera</h3><span>Textura natural</span></div></div></div></section>
+<section class="why"><div class="wrap"><div class="wi"><img src="https://images.unsplash.com/photo-1678356164573-9a534fe43958?w=900&h=900&fit=crop&q=70" alt=""></div><div>
+<div class="k">Dos sedes</div><h2>Elige tu spot</h2><ul><li>Kyux Studios · Laureles</li><li>Los Bernal · Belén</li><li>Reserva por sede y barbero</li><li>Tienda online de productos</li></ul></div></div></section>
+<section class="gal"><div class="wrap"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=800&h=600&fit=crop&q=70" alt=""></div></section>
+<section class="call"><div class="wrap"><div><h2>El spot está listo. Tu corte también.</h2><p>Reserva en la sede que te quede cerca.</p></div><a class="btn" href="#">Reservar</a></div></section>
+<footer><div class="wrap">Beer Barber Co · Laureles y Belén, Medellín — Fotos de stock y precios son de demostración</div></footer>
+<div class="demo-badge">Concepto PAGX Studio · demo ~20%</div>
+</body>
+</html>

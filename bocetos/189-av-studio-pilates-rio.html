@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AV Studio de Pilates — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus:wght@400;600;700;800&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f2;--fg:#2c2a26;--ac:#8a9a5b;--mu:#77736a;--card:#ffffff;--ac2:#4c5634}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Mulish',sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid rgba(128,128,128,.2)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:'Marcellus';font-weight:800;font-size:24px;white-space:nowrap;letter-spacing:0}
+.logo span{color:var(--ac)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a{color:var(--mu);text-decoration:none}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:14px 24px;border-radius:24px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
+.k{font-weight:800;font-size:12px;letter-spacing:.22em;color:var(--ac);text-transform:uppercase}
+h1{font-family:'Marcellus';font-size:68px;line-height:1.04;margin:16px 0;}
+h2{font-family:'Marcellus';font-size:44px;line-height:1.1;}
+.hero{position:relative}
+.hero.full,.hero.center{min-height:620px;display:flex;align-items:center;color:#fff}
+.hero.full>img,.hero.center>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.full:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.5) 30%,rgba(0,0,0,.1))}
+.hero.center:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero.center .ht{text-align:center;max-width:780px;margin:0 auto}.hero.center .cta{justify-content:center}
+.hero.full .ht{max-width:600px}
+.hero p{font-size:18px;line-height:1.6;opacity:.92;max-width:540px}.hero.center p{margin:0 auto}
+.hero.split{padding:60px 0}
+.hero.split .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero.split p{color:var(--mu)}
+.hi img{width:100%;height:520px;object-fit:cover;border-radius:24px;display:block}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.facts{background:var(--card);padding:28px 0}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.facts b{display:block;font-family:'Marcellus';font-size:26px;color:var(--ac)}.facts span{font-size:13px;color:var(--mu)}
+section.sec{padding:80px 0}
+.sub{color:var(--mu);margin:8px 0 32px;max-width:640px;line-height:1.6}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c{background:var(--card);border-radius:32px;padding:28px;border:1px solid rgba(128,128,128,.2)}
+.c i{font-style:normal;font-family:'Marcellus';font-size:28px;color:var(--ac)}
+.c h3{font-size:19px;margin:12px 0 8px}.c p{font-size:14px;line-height:1.6;color:var(--mu)}
+.pr img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:30px;display:block}
+.pr h3{font-size:17px;margin:14px 0 4px}.pr span{font-size:13px;color:var(--mu)}
+.pk{background:var(--card);border:1px solid rgba(128,128,128,.2);border-radius:18px;padding:30px;position:relative}
+.pk.f{border:2px solid var(--ac)}.pk .tag{position:absolute;top:-12px;left:24px;background:var(--ac);color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px}
+.pk h3{font-family:'Marcellus';font-size:26px}.pk .pp{font-family:'Marcellus';font-size:40px;margin:10px 0}.pk .pp small{font-size:13px;color:var(--mu);font-family:'Mulish'}
+.pk ul{list-style:none;font-size:14px;line-height:2;color:var(--mu)}.pk li:before{content:"— ";color:var(--ac)}
+.why{padding:0 0 80px}.why .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.wi img{width:100%;height:440px;object-fit:cover;border-radius:24px;display:block}
+.why h2{margin:12px 0 18px}.why ul{list-style:none;line-height:2.1;color:var(--mu);font-size:16px}.why li:before{content:"✓  ";color:var(--ac);font-weight:800}
+.gal{padding:0 0 80px}.gal .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gal img{width:100%;height:280px;object-fit:cover;border-radius:30px;display:block}
+.call{background:var(--ac2);color:#fff;padding:56px 0}
+.call .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.call h2{font-size:38px}.call p{opacity:.85;margin-top:6px}
+.call .btn{background:#fff;color:#111}
+footer{padding:26px 0;color:var(--mu);font-size:13px}
+.demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#fff;color:#111;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+@media (max-width:860px){
+ .links{display:none}.logo{font-size:17px}header.nav .btn{padding:10px 12px;font-size:12px}
+ .wrap{padding:0 18px}
+ .hero.full,.hero.center{min-height:560px}h1{font-size:42px}.hero p{font-size:16px}
+ .hero.split .wrap,.why .wrap{grid-template-columns:1fr}.hi img{height:320px}.wi img{height:280px}
+ .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .g2,.g3,.g4{grid-template-columns:1fr}.gal .wrap{grid-template-columns:1fr}.gal img{height:220px}
+ h2{font-size:32px}.call .wrap{flex-direction:column;align-items:flex-start}.call h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><div class="logo">AV <span>Studio</span> Pilates</div><nav class="links"><a href="#">Aulas</a><a href="#">Unidades</a><a href="#">Profissionais</a><a href="#">Depoimentos</a></nav><a class="btn" href="#">Aula experimental</a></div></header>
+<section class="hero center"><img src="https://images.unsplash.com/photo-1747238415033-b74eec07eb59?w=1800&h=1100&fit=crop&q=70" alt=""><div class="wrap"><div class="ht">
+<div class="k">Pilates · Rocha Miranda e Duque de Caxias</div><h1>Menos dor, mais qualidade de vida</h1><p>Aulas para todos os níveis em duas unidades. Agende sua aula experimental avaliativa.</p>
+<div class="cta"><a class="btn" href="#">Agendar aula experimental</a><a class="btn o" href="#">Ver unidades</a></div></div></div></section>
+<section class="facts"><div class="wrap"><div><b>6.5K</b><span>seguidores</span></div><div><b>2</b><span>unidades</span></div><div><b>Todos</b><span>os níveis</span></div><div><b>Avaliação</b><span>na primeira aula</span></div></div></section>
+<section class="sec"><div class="wrap"><div class="k">Unidades</div><h2>Escolha a mais perto de você</h2><p class="sub">Endereços e telefones publicados no perfil.</p><div class="grid g3"><div class="c"><i>01</i><h3>Rocha Miranda</h3><p>(21) 97739-6539 · aulas em grupo e individuais.</p></div><div class="c"><i>02</i><h3>Jardim Leal · Duque de Caxias</h3><p>Av. Pedro Lessa, lote 06, quadra 36 · (21) 98741-1570.</p></div><div class="c"><i>03</i><h3>Aula experimental</h3><p>Avaliação postural antes de começar.</p></div></div></div></section>
+
+<section class="gal"><div class="wrap"><img src="https://images.unsplash.com/photo-1747239069226-55382c570116?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1591258370814-01609b341790?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1579454566790-f9e5697ddf36?w=800&h=600&fit=crop&q=70" alt=""></div></section>
+<section class="call"><div class="wrap"><div><h2>Seu corpo agradece</h2><p>Agende sua aula experimental hoje.</p></div><a class="btn" href="#">Agendar</a></div></section>
+<footer><div class="wrap">AV Studio de Pilates · Rocha Miranda (RJ) e Duque de Caxias (RJ) — Fotos de banco de imagens e preços são demonstrativos</div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>

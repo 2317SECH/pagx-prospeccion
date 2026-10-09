@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Viviane Manfrim Semijoias — concepto PAGX Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f4;--fg:#2a1f1c;--ac:#a8763e;--mu:#7a6a62;--card:#ffffff;--ac2:#2a1f1c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid rgba(128,128,128,.2)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:'Cormorant Garamond';font-weight:800;font-size:24px;white-space:nowrap;letter-spacing:.08em}
+.logo span{color:var(--ac)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a{color:var(--mu);text-decoration:none}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:14px 24px;border-radius:2px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
+.k{font-weight:800;font-size:12px;letter-spacing:.22em;color:var(--ac);text-transform:uppercase}
+h1{font-family:'Cormorant Garamond';font-size:66px;line-height:1.04;margin:16px 0;font-weight:600;}
+h2{font-family:'Cormorant Garamond';font-size:44px;line-height:1.1;font-weight:600;}
+.hero{position:relative}
+.hero.full,.hero.center{min-height:620px;display:flex;align-items:center;color:#fff}
+.hero.full>img,.hero.center>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.full:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.62) 30%,rgba(0,0,0,.1))}
+.hero.center:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero.center .ht{text-align:center;max-width:780px;margin:0 auto}.hero.center .cta{justify-content:center}
+.hero.full .ht{max-width:600px}
+.hero p{font-size:18px;line-height:1.6;opacity:.92;max-width:540px}.hero.center p{margin:0 auto}
+.hero.split{padding:60px 0}
+.hero.split .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+.hero.split p{color:var(--mu)}
+.hi img{width:100%;height:520px;object-fit:cover;border-radius:24px;display:block}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.facts{background:var(--card);padding:28px 0}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.facts b{display:block;font-family:'Cormorant Garamond';font-size:26px;color:var(--ac)}.facts span{font-size:13px;color:var(--mu)}
+section.sec{padding:80px 0}
+.sub{color:var(--mu);margin:8px 0 32px;max-width:640px;line-height:1.6}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c{background:var(--card);border-radius:10px;padding:28px;border:1px solid rgba(128,128,128,.2)}
+.c i{font-style:normal;font-family:'Cormorant Garamond';font-size:28px;color:var(--ac)}
+.c h3{font-size:19px;margin:12px 0 8px}.c p{font-size:14px;line-height:1.6;color:var(--mu)}
+.pr img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}
+.pr h3{font-size:17px;margin:14px 0 4px}.pr span{font-size:13px;color:var(--mu)}
+.pk{background:var(--card);border:1px solid rgba(128,128,128,.2);border-radius:18px;padding:30px;position:relative}
+.pk.f{border:2px solid var(--ac)}.pk .tag{position:absolute;top:-12px;left:24px;background:var(--ac);color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px}
+.pk h3{font-family:'Cormorant Garamond';font-size:26px}.pk .pp{font-family:'Cormorant Garamond';font-size:40px;margin:10px 0}.pk .pp small{font-size:13px;color:var(--mu);font-family:'Montserrat'}
+.pk ul{list-style:none;font-size:14px;line-height:2;color:var(--mu)}.pk li:before{content:"— ";color:var(--ac)}
+.why{padding:0 0 80px}.why .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.wi img{width:100%;height:440px;object-fit:cover;border-radius:24px;display:block}
+.why h2{margin:12px 0 18px}.why ul{list-style:none;line-height:2.1;color:var(--mu);font-size:16px}.why li:before{content:"✓  ";color:var(--ac);font-weight:800}
+.gal{padding:0 0 80px}.gal .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gal img{width:100%;height:280px;object-fit:cover;border-radius:8px;display:block}
+.call{background:var(--ac2);color:#fff;padding:56px 0}
+.call .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.call h2{font-size:38px}.call p{opacity:.85;margin-top:6px}
+.call .btn{background:#a8763e;color:#fff}
+footer{padding:26px 0;color:var(--mu);font-size:13px}
+.demo-badge{position:fixed;right:16px;bottom:16px;z-index:80;background:#fff;color:#111;font-size:12px;font-weight:800;padding:9px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+@media (max-width:860px){
+ .links{display:none}.logo{font-size:17px}header.nav .btn{padding:10px 12px;font-size:12px}
+ .wrap{padding:0 18px}
+ .hero.full,.hero.center{min-height:560px}h1{font-size:42px}.hero p{font-size:16px}
+ .hero.split .wrap,.why .wrap{grid-template-columns:1fr}.hi img{height:320px}.wi img{height:280px}
+ .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .g2,.g3,.g4{grid-template-columns:1fr}.gal .wrap{grid-template-columns:1fr}.gal img{height:220px}
+ h2{font-size:32px}.call .wrap{flex-direction:column;align-items:flex-start}.call h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><div class="logo">Viviane <span>Manfrim</span></div><nav class="links"><a href="#">Brincos</a><a href="#">Colares</a><a href="#">Moissanites</a><a href="#">Prata 925</a></nav><a class="btn" href="#">Comprar</a></div></header>
+<section class="hero split"><div class="wrap"><div class="ht">
+<div class="k">Semijoias de luxo · há 19 anos</div><h1>Brilho que transforma qualquer produção</h1><p>Moissanites, prata 925 e semijoias de luxo. Enviamos para todo o Brasil — agora com loja própria, além da Live Shop semanal.</p>
+<div class="cta"><a class="btn" href="#">Comprar agora</a><a class="btn o" href="#">Próxima live</a></div></div>
+<div class="hi"><img src="https://images.unsplash.com/photo-1693212793204-bcea856c75fe?w=1000&h=1100&fit=crop&q=70" alt=""></div></div></section>
+<section class="facts"><div class="wrap"><div><b>42.6K</b><span>seguidoras</span></div><div><b>19 anos</b><span>de história</span></div><div><b>Live Shop</b><span>semanal</span></div><div><b>Brasil</b><span>envio para todo o país</span></div></div></section>
+<section class="sec"><div class="wrap"><div class="k">Novidades</div><h2>Os mais desejados</h2><p class="sub">Hoje as vendas passam pela live e pelo WhatsApp. Assim ficaria a loja própria (preços demonstrativos).</p><div class="grid g4"><div class="pr"><img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=700&h=700&fit=crop&q=70" alt=""><h3>Brincos de cristal</h3><span>R$ — demo</span></div><div class="pr"><img src="https://images.unsplash.com/photo-1716461534906-d31a17008801?w=700&h=700&fit=crop&q=70" alt=""><h3>Brincos statement</h3><span>R$ — demo</span></div><div class="pr"><img src="https://images.unsplash.com/photo-1630233888150-e2e0c6aac3d9?w=700&h=700&fit=crop&q=70" alt=""><h3>Brincos prata 925</h3><span>R$ — demo</span></div><div class="pr"><img src="https://images.unsplash.com/photo-1633934542430-0905ccb5f050?w=700&h=700&fit=crop&q=70" alt=""><h3>Colares delicados</h3><span>R$ — demo</span></div></div></div></section>
+
+<section class="gal"><div class="wrap"><img src="https://images.unsplash.com/photo-1693212793204-bcea856c75fe?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=600&fit=crop&q=70" alt=""><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=600&fit=crop&q=70" alt=""></div></section>
+<section class="call"><div class="wrap"><div><h2>Sua próxima peça favorita</h2><p>Compre 24h, sem esperar a live.</p></div><a class="btn" href="#">Ir para a loja</a></div></section>
+<footer><div class="wrap">Viviane Manfrim Semijoias · Envio para todo o Brasil — Fotos de banco de imagens e preços são demonstrativos</div></footer>
+<div class="demo-badge">Conceito PAGX Studio · demo ~20%</div>
+</body>
+</html>
