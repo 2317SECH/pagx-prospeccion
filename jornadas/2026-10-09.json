@@ -1089,6 +1089,20 @@
       "evidencia": [
         "bocetos/evidencia/239-rosys-quinceanera-miami-ig.jpg"
       ]
+    },
+    {
+      "num": 240,
+      "slug": "240-mistico-manizales",
+      "nombre": "Místico Restaurante Bar",
+      "ig": "mistico_manizales",
+      "lugar": "Milán, Manizales, Colombia (Calle 77 # 19A-36)",
+      "nicho": "Restaurante bar",
+      "web": "Sin web (carta en PDF de Google Drive)",
+      "porque": "12.6K seguidores, activo (sept 2026). Carta en Drive y reservas por WhatsApp. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que la carta de Místico es un PDF en Google Drive.\nTe proponemos una web con carta, menú del día, eventos y reservas.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/240-mistico-manizales-ig.jpg"
+      ]
     }
   ]
 }
