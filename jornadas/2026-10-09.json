@@ -1159,6 +1159,20 @@
       "evidencia": [
         "bocetos/evidencia/244-vangora-pasto-ig.jpg"
       ]
+    },
+    {
+      "num": 245,
+      "slug": "245-barrileros-monteria",
+      "nombre": "Barrileros Steak House",
+      "ig": "barrilerosteakhouse",
+      "lugar": "Montería, Córdoba, Colombia (Calle 62 # 6-46, Pasaje del Sol)",
+      "nicho": "Steak house & bar",
+      "web": "Sin web (Linktree)",
+      "porque": "20.5K seguidores, activo (oct 2026). Menú, pedidos y reservas en Linktree. Primer prospecto en Montería. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nMenú, pedidos y reservas de Barrileros hoy viven en un Linktree.\nTe proponemos una web con carta completa, pedidos y reservas en un solo lugar.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/245-barrileros-monteria-ig.jpg"
+      ]
     }
   ]
 }
