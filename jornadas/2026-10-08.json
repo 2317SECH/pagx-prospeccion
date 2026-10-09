@@ -255,6 +255,20 @@
         "bocetos/evidencia/160-timeless-tattoo-phoenix-ig.jpg"
       ],
       "mensaje": "Hi 👋 We're PAGX Studio.\nYou call yourselves Phoenix's best rated tattoo shop, but there's no website showing your 5 artists and their work — just a booking link.\nWe'd build a site with artist portfolios, flash, walk-in hours and online booking.\nWe made a quick preview (~20%). Want to see it?"
+    },
+    {
+      "num": 161,
+      "slug": "161-1of1-auto-detail-sa",
+      "nombre": "1of1 Auto Detail",
+      "ig": "1of1.autodetail",
+      "lugar": "San Antonio, TX, USA",
+      "nicho": "Mobile auto detailing",
+      "web": "No website (call/text only)",
+      "porque": "111 followers, active (29/09/2026). Mobile detailing 'We come to you': interior, exterior, shampoo. Small new account, booking only by call/text. A simple site with packages + online booking is an easy win. Prioridad MEDIA-BAJA (cuenta pequeña).",
+      "evidencia": [
+        "bocetos/evidencia/161-1of1-auto-detail-sa-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nYour detailing results look great, but right now booking means calling or texting you.\nWe'd build a simple site with your packages and online booking so customers can schedule 24/7.\nWe made a quick preview (~20%). Want to see it?"
     }
   ]
 }
