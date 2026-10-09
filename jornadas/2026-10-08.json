@@ -241,6 +241,20 @@
         "bocetos/evidencia/159-huracan-box-cali-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos la energía de la Jauría y el CrossFit Kids, pero los horarios y planes hoy solo se consultan por WhatsApp.\nTe proponemos una web con programas, horarios y reserva de clase de prueba en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?"
+    },
+    {
+      "num": 160,
+      "slug": "160-timeless-tattoo-phoenix",
+      "nombre": "Timeless Tattoo Co.",
+      "ig": "timelesstattoo.co",
+      "lugar": "Phoenix, AZ, USA",
+      "nicho": "Tattoo & piercing shop",
+      "web": "No website (GlossGenius booking page only)",
+      "porque": "3.9K followers, very active (collab posts 03–08/10/2026). 'Best rated tattoo shop in Phoenix', Tue–Sat 12–7, walk-ins, 5 resident artists (Julie, Denver, Nando, Noah, Devon). Only a GlossGenius booking link — no site with artist portfolios to rank on Google. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/160-timeless-tattoo-phoenix-ig.jpg"
+      ],
+      "mensaje": "Hi 👋 We're PAGX Studio.\nYou call yourselves Phoenix's best rated tattoo shop, but there's no website showing your 5 artists and their work — just a booking link.\nWe'd build a site with artist portfolios, flash, walk-in hours and online booking.\nWe made a quick preview (~20%). Want to see it?"
     }
   ]
 }
