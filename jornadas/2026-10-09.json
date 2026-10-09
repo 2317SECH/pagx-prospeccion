@@ -1033,6 +1033,20 @@
       "evidencia": [
         "bocetos/evidencia/235-coffee-district-guatemala-ig.jpg"
       ]
+    },
+    {
+      "num": 236,
+      "slug": "236-algussto-panama",
+      "nombre": "Algussto Restaurante Italiano",
+      "ig": "algussto_panama",
+      "lugar": "Ciudad de Panamá (Metromall y Albrook Mall)",
+      "nicho": "Restaurante italiano / costillas ahumadas",
+      "web": "Sin web (menú en PDF de Google Drive)",
+      "porque": "14.2K seguidores, activo (oct 2026), nuevas promos. Su menú es un PDF en Drive. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que el menú de Algussto es un PDF en Google Drive.\nTe proponemos una web con menú, promos, delivery y tus dos locales.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/236-algussto-panama-ig.jpg"
+      ]
     }
   ]
 }
