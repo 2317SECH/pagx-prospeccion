@@ -30,6 +30,20 @@
       "evidencia": [
         "bocetos/evidencia/164-donjuan-barberia-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 165,
+      "slug": "165-travelmania-cali",
+      "nombre": "Travelmania Agencia de Viajes",
+      "ig": "travelmania_cali",
+      "lugar": "Cali, Colombia",
+      "nicho": "Agencia de viajes (vuelos, paquetes, visas, seguro)",
+      "web": "Sin web (3 wa.link + beacons.ai)",
+      "porque": "12.5K seguidores, publica casi a diario (oct 2026). Destinos en CO, EE. UU. y España; visas y seguros. Toda la cotización por varios WhatsApp y un beacons. Web con destinos y formulario de cotización. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nPublican destinos casi a diario, pero para cotizar hay que escoger entre 3 WhatsApp y un beacons.\nTe proponemos una web con destinos, formulario de cotización y asesoría de visas en un solo lugar.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/165-travelmania-cali-ig.jpg"
+      ]
     }
   ]
 }
