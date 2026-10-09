@@ -171,6 +171,20 @@
         "bocetos/evidencia/154-minca-hostal-mirador-ig.jpg"
       ],
       "mensaje": "Hola 👋 Somos de PAGX Studio.\nLa vista de su mirador al mar es de lo mejor de Minca, pero quien busca en Google dónde dormir allá no encuentra una página suya.\nTe proponemos una web con hostal, camping y pasadía, horarios y reserva directa.\nLes preparamos una vista previa (~20%). ¿Se la mostramos?"
+    },
+    {
+      "num": 155,
+      "slug": "155-montu-gafas-medellin",
+      "nombre": "Montu Gafas · Óptica",
+      "ig": "montugafas_medellin",
+      "lugar": "Medellín, Colombia",
+      "nicho": "Óptica (monturas, lentes formulados, examen visual)",
+      "web": "Sin web (solo wa.link)",
+      "porque": "10.9K seguidores, publica casi a diario (08/10/2026). Dos sedes, examen visual y 'cotiza tu fórmula en línea' — pero esa cotización es solo un link de WhatsApp. Una web con catálogo y carga de fórmula convierte mejor. Prioridad ALTA.",
+      "evidencia": [
+        "bocetos/evidencia/155-montu-gafas-medellin-ig.jpg"
+      ],
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que ofrecen cotizar la fórmula en línea, pero hoy eso depende de un link de WhatsApp.\nTe proponemos una web con catálogo de monturas, tus 2 sedes y un formulario para subir la fórmula y cotizar.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?"
     }
   ]
 }
