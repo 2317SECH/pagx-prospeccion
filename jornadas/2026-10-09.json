@@ -611,6 +611,20 @@
       "evidencia": [
         "bocetos/evidencia/205-salon5-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 206,
+      "slug": "206-haircolors-bogota",
+      "nombre": "Haircolors Peluquería",
+      "ig": "haircolorsbogota",
+      "lugar": "Bogotá, Colombia (Carrera 9 # 10-37)",
+      "nicho": "Coloristas y maquilladores",
+      "web": "Sin web (solo wa.me)",
+      "porque": "14.3K seguidores, activa (oct 2026). Coloristas + makeup + asesoría de imagen. Web con resultados y citas. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSus resultados de color son espectaculares, pero solo se ven en Instagram y las citas van por WhatsApp.\nTe proponemos una web con galería de color, servicios y agenda.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/206-haircolors-bogota-ig.jpg"
+      ]
     }
   ]
 }
