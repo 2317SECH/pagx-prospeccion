@@ -229,6 +229,20 @@
         "bocetos/evidencia/178-muebles-colchones-cartagena-ig.jpg",
         "bocetos/evidencia/178-muebles-colchones-cartagena-web-actual.jpg"
       ]
+    },
+    {
+      "num": 179,
+      "slug": "179-burger-trap-miami",
+      "nombre": "Burger Trap Miami",
+      "ig": "burgertrapmiami",
+      "lugar": "Hialeah / Miami, FL, USA (7551 W 4th Ave)",
+      "nicho": "Food truck + catering",
+      "web": "No website (Linktree only)",
+      "porque": "15.9K seguidores, activo (oct 2026). Su negocio fuerte es catering ('Book us now' en cada post) pero sin web ni formulario. Web con menú y cotizador de catering. Prioridad ALTA.",
+      "mensaje": "Hi 👋 We're PAGX Studio.\nEvery post says “Book us now” for catering, but there's no site where clients can request a quote.\nWe'd build you a site with your menu, catering packages and an online quote form.\nWe made a quick preview (~20%). Want to see it?",
+      "evidencia": [
+        "bocetos/evidencia/179-burger-trap-miami-ig.jpg"
+      ]
     }
   ]
 }
