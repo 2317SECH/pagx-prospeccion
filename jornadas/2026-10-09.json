@@ -243,6 +243,20 @@
       "evidencia": [
         "bocetos/evidencia/179-burger-trap-miami-ig.jpg"
       ]
+    },
+    {
+      "num": 180,
+      "slug": "180-inmigrants-barber-santiago",
+      "nombre": "Inmigrant's Barber Studio",
+      "ig": "inmigrantsbarberstudio",
+      "lugar": "Monumento, Santiago de Chile",
+      "nicho": "Barbería / asesoría de imagen",
+      "web": "Sin web (Linktree)",
+      "porque": "1.5K seguidores, activa (oct 2026), están contratando barberos. Web con reservas por barbero, promo 10% y postulación. Prioridad MEDIA-BAJA (cuenta pequeña, primer prospecto en Chile).",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que están creciendo y buscando barberos, pero todo pasa por un Linktree.\nTe proponemos una web con reservas por barbero, tu promo del 10% y postulación para el equipo.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/180-inmigrants-barber-santiago-ig.jpg"
+      ]
     }
   ]
 }
