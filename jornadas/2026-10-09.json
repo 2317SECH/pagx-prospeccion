@@ -696,6 +696,20 @@
       "evidencia": [
         "bocetos/evidencia/211-los-chamos-arepas-medellin-ig.jpg"
       ]
+    },
+    {
+      "num": 212,
+      "slug": "212-buenos-aires-grill",
+      "nombre": "Buenos Aires Grill",
+      "ig": "bsasgrill",
+      "lugar": "CABA, Argentina (Av. Santa Fe 1876 y Av. Corrientes 1318)",
+      "nicho": "Parrilla a la leña",
+      "web": "Sin web (Linktree)",
+      "porque": "16.7K seguidores, 2 locales céntricos, activa (oct 2026). Reservas y carta en Linktree; web con reservas por local. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nDos locales en pleno centro y la carta y reservas viven en un Linktree.\nTe proponemos una web con carta, reservas por local y ubicación.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/212-buenos-aires-grill-ig.jpg"
+      ]
     }
   ]
 }
