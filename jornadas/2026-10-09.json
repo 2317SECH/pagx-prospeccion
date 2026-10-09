@@ -370,6 +370,20 @@
         "bocetos/evidencia/188-caoqri-petshop-recife-ig.jpg",
         "bocetos/evidencia/188-caoqri-petshop-recife-web-actual.jpg"
       ]
+    },
+    {
+      "num": 189,
+      "slug": "189-av-studio-pilates-rio",
+      "nombre": "AV Studio de Pilates",
+      "ig": "avstudiopilates",
+      "lugar": "Rocha Miranda e Duque de Caxias, RJ, Brasil",
+      "nicho": "Studio de pilates",
+      "web": "Sem site (linklist.bio)",
+      "porque": "6.5K seguidores, 1.300+ posts, activo (oct 2026), 2 unidades con teléfonos distintos. Web con unidades y aula experimental. Prioridad MEDIA.",
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nCom duas unidades e telefones diferentes, fica difícil o aluno saber onde agendar.\nPropomos um site com as unidades, horários e agendamento da aula experimental.\nPreparamos uma prévia (~20%). Quer ver?",
+      "evidencia": [
+        "bocetos/evidencia/189-av-studio-pilates-rio-ig.jpg"
+      ]
     }
   ]
 }
