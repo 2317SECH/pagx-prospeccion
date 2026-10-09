@@ -1117,6 +1117,20 @@
       "evidencia": [
         "bocetos/evidencia/241-rosso-manizales-ig.jpg"
       ]
+    },
+    {
+      "num": 242,
+      "slug": "242-distrito71-ibague",
+      "nombre": "Distrito 71",
+      "ig": "distrito71_ibague",
+      "lugar": "Ibagué, Tolima, Colombia (Av. Mirolindo Cra 10 Sur # 71-161)",
+      "nicho": "Restaurante bar con música en vivo",
+      "web": "Sin web (beacons)",
+      "porque": "10.3K seguidores, activo (oct 2026). Agenda de artistas semanal; web con agenda y reservas. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nCada semana tienen artistas en vivo, pero la agenda solo se ve en Instagram.\nTe proponemos una web con agenda, menú y reservas de mesa.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/242-distrito71-ibague-ig.jpg"
+      ]
     }
   ]
 }
