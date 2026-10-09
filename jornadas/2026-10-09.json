@@ -781,6 +781,20 @@
         "bocetos/evidencia/217-sorri-leste-fortaleza-ig.jpg",
         "bocetos/evidencia/217-sorri-leste-fortaleza-web-actual.jpg"
       ]
+    },
+    {
+      "num": 218,
+      "slug": "218-parrilla-buenos-aires-sp",
+      "nombre": "Parrilla Buenos Aires",
+      "ig": "parrillabuenosairesbr",
+      "lugar": "Tatuapé, São Paulo, SP, Brasil (Rua Itapura, 1467)",
+      "nicho": "Restaurante de carnes argentinas",
+      "web": "Sem site (WhatsApp + Facebook)",
+      "porque": "11.1K seguidores, activo (oct 2026). Horarios en destacados, reservas por WhatsApp. Web con cardápio y reservas. Prioridad MEDIA.",
+      "mensaje": "Oi 👋 Somos da PAGX Studio.\nCardápio e horários estão nos destaques e a reserva é só pelo WhatsApp.\nPropomos um site com cardápio, horários e reserva online.\nPreparamos uma prévia (~20%). Quer ver?",
+      "evidencia": [
+        "bocetos/evidencia/218-parrilla-buenos-aires-sp-ig.jpg"
+      ]
     }
   ]
 }
