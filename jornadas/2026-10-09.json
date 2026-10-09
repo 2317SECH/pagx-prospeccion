@@ -1019,6 +1019,20 @@
       "evidencia": [
         "bocetos/evidencia/234-mito-tattoo-medellin-ig.jpg"
       ]
+    },
+    {
+      "num": 235,
+      "slug": "235-coffee-district-guatemala",
+      "nombre": "Coffee District",
+      "ig": "coffeedistrict.gt",
+      "lugar": "Ciudad de Guatemala (Zona 4 y Zona 15)",
+      "nicho": "Café de especialidad + coffee cart",
+      "web": "Sin web propia (beacons + directorio)",
+      "porque": "30.3K seguidores, 'Best Coffee Shop en Guatemala 2025', 2 sedes, activo (sept 2026). Coffee cart para eventos = lead B2B. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nSer el Best Coffee Shop 2025 de Guatemala merece una web propia, no solo un beacons.\nTe proponemos una web con menú, sedes y cotizador del coffee cart para eventos.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/235-coffee-district-guatemala-ig.jpg"
+      ]
     }
   ]
 }
