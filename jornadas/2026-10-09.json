@@ -100,6 +100,21 @@
       "evidencia": [
         "bocetos/evidencia/169-joyeria-eldorado-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 170,
+      "slug": "170-tecniracer-bucaramanga",
+      "nombre": "Tecniracer Taller Mecánico",
+      "ig": "tecniracer",
+      "lugar": "Bucaramanga, Colombia (Cra. 19 # 17-54 San Francisco)",
+      "nicho": "Taller mecánico + peritaje vehicular",
+      "web": "Web deficiente (Wix: textos cortados, sin menú)",
+      "porque": "3.6K seguidores, activo (oct 2026). tecniracer.com en Wix tiene el texto de la oferta cortado y no hay navegación. Rediseño con servicios claros y agenda. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos su web tecniracer.com: la oferta se corta en pantalla y no tiene menú de servicios.\nTe proponemos un rediseño con servicios claros, peritaje y agenda en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/170-tecniracer-bucaramanga-ig.jpg",
+        "bocetos/evidencia/170-tecniracer-bucaramanga-web-actual.jpg"
+      ]
     }
   ]
 }
