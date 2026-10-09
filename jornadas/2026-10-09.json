@@ -837,6 +837,20 @@
       "evidencia": [
         "bocetos/evidencia/221-posh-salon-cr-ig.jpg"
       ]
+    },
+    {
+      "num": 222,
+      "slug": "222-petit-pet-bakery-lima",
+      "nombre": "Petit Pet Bakery",
+      "ig": "petitpetbakery",
+      "lugar": "Lima, Perú",
+      "nicho": "Tortas y treats para perros y gatos (e-commerce)",
+      "web": "Sin web (solo Facebook)",
+      "porque": "30K seguidores, desde 2014, activa (oct 2026). Producto ideal para tienda con pedido por fecha y personalización. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nDesde 2014 celebrando peluditos en Lima, pero los pedidos siguen siendo por mensaje.\nTe proponemos una tienda online con tortas, treats y pedido con fecha de entrega.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/222-petit-pet-bakery-lima-ig.jpg"
+      ]
     }
   ]
 }
