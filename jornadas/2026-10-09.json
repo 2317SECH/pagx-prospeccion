@@ -456,6 +456,20 @@
       "evidencia": [
         "bocetos/evidencia/194-mentha-odontologia-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 195,
+      "slug": "195-fonoaudiologia-medellin",
+      "nombre": "Fonoaudiología Medellín",
+      "ig": "fonoaudiologia_medellin",
+      "lugar": "Medellín, Colombia",
+      "nicho": "Centro terapéutico infantil (fono, TO, psicología, fisio)",
+      "web": "Sin web (solo wa.me)",
+      "porque": "5.8K seguidores, muy activo (oct 2026, buenos comentarios). 4 disciplinas y 3 modalidades (sede, domicilio, virtual). Web para que los padres entiendan y agenden. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nOfrecen fono, TO, psicología y fisio en sede, domicilio y virtual, pero los papás solo pueden preguntar por WhatsApp.\nTe proponemos una web con cada terapia, el equipo y agenda por modalidad.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/195-fonoaudiologia-medellin-ig.jpg"
+      ]
     }
   ]
 }
