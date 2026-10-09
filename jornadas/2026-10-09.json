@@ -597,6 +597,20 @@
         "bocetos/evidencia/204-marmara-spa-bogota-ig.jpg",
         "bocetos/evidencia/204-marmara-spa-bogota-web-actual.jpg"
       ]
+    },
+    {
+      "num": 205,
+      "slug": "205-salon5-bogota",
+      "nombre": "Salón 5 Peluquería",
+      "ig": "salon5peluqueria",
+      "lugar": "Bogotá, Colombia (Calle 109 # 17A-35, of. 501)",
+      "nicho": "Salón de belleza / color",
+      "web": "Sin web (solo wa.me)",
+      "porque": "59K seguidores, reels con 3K likes, activa (oct 2026). 9+ estilistas en destacadas: web con reserva por profesional. Prioridad ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nCon 59K seguidores y un equipo de 9 estilistas, reservar todavía es solo por WhatsApp.\nTe proponemos una web con servicios y reserva por estilista.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/205-salon5-bogota-ig.jpg"
+      ]
     }
   ]
 }
