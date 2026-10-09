@@ -1258,6 +1258,21 @@
       "evidencia": [
         "bocetos/evidencia/251-apolo-barberia-cucuta-ig.jpg"
       ]
+    },
+    {
+      "num": 252,
+      "slug": "252-la-chulada-del-toro-cucuta",
+      "nombre": "La Chulada del Toro",
+      "ig": "lachuladadeltoro",
+      "lugar": "Boconó, Cúcuta, Colombia (Bahía Palma Premium, local 1)",
+      "nicho": "Steak house y cocina mexicana",
+      "web": "Web deficiente (menú en sitio de Canva)",
+      "porque": "22.4K seguidores, activo (oct 2026), artistas en vivo. Menú en un sitio de Canva. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nVimos que el menú de La Chulada está en un sitio de Canva.\nTe proponemos una web con menú, artistas en vivo y reservas.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/252-la-chulada-del-toro-cucuta-ig.jpg",
+        "bocetos/evidencia/252-la-chulada-del-toro-cucuta-web-actual.jpg"
+      ]
     }
   ]
 }
