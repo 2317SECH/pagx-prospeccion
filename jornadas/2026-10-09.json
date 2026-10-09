@@ -1216,6 +1216,20 @@
         "bocetos/evidencia/248-saiya-gym-popayan-ig.jpg",
         "bocetos/evidencia/248-saiya-gym-popayan-web-actual.jpg"
       ]
+    },
+    {
+      "num": 249,
+      "slug": "249-old-west-cucuta",
+      "nombre": "Old West Steakhouse",
+      "ig": "oldwestcucuta",
+      "lugar": "Cúcuta, Norte de Santander, Colombia",
+      "nicho": "Restaurante americano / steakhouse",
+      "web": "Sin web (Linktree + WhatsApp)",
+      "porque": "101K seguidores, reels con 87K y 53K likes, varias sedes, activo (oct 2026). Reservas y pedidos por Linktree. Prioridad MUY ALTA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nCon 101K seguidores y reels de 87K likes, las reservas siguen pasando por un Linktree.\nTe proponemos una web con menú, sedes, eventos y reservas en línea.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/249-old-west-cucuta-ig.jpg"
+      ]
     }
   ]
 }
