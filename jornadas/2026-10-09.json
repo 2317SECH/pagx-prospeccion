@@ -1244,6 +1244,20 @@
       "evidencia": [
         "bocetos/evidencia/250-puerto-seguro-cucuta-ig.jpg"
       ]
+    },
+    {
+      "num": 251,
+      "slug": "251-apolo-barberia-cucuta",
+      "nombre": "Apolo Barbería",
+      "ig": "apolobarberia",
+      "lugar": "Cúcuta y Los Patios, Norte de Santander, Colombia",
+      "nicho": "Barbería (2 sedes)",
+      "web": "Sin web (sin link en bio)",
+      "porque": "30K seguidores, 2 sedes, activa (sept 2026). Reservas por teléfono de cada sede. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nCon 30K seguidores y dos sedes, reservar en Apolo depende de llamar al número correcto.\nTe proponemos una web con servicios y reserva por sede y barbero.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/251-apolo-barberia-cucuta-ig.jpg"
+      ]
     }
   ]
 }
