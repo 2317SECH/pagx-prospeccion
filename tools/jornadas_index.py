@@ -26,7 +26,11 @@ CSS = """<style id="jornadas-css">
   .old-h{margin-top:46px;font-size:22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
   @media (max-width:760px){.pro{grid-template-columns:1fr}.pro .thumb{border-right:0;border-bottom:1px solid var(--line)}.pro .thumb img{max-height:360px}}
 </style>
-<script>function cp(id,b){navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>{b.textContent='¡Copiado!';setTimeout(()=>b.textContent='Copiar mensaje',1500)})}</script>"""
+<script>function cp(id,b){navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>{b.textContent='¡Copiado!';setTimeout(()=>b.textContent='Copiar mensaje',1500)})}
+function ci(url,b){const t=b.textContent,done=m=>{b.textContent=m;setTimeout(()=>b.textContent=t,1800)};
+if(!window.ClipboardItem||!navigator.clipboard||!navigator.clipboard.write){done('Usa Descargar');return}
+const blob=fetch(url,{cache:'force-cache'}).then(r=>r.blob()).then(x=>x.type==='image/png'?x:new Blob([x],{type:'image/png'}));
+navigator.clipboard.write([new ClipboardItem({'image/png':blob})]).then(()=>done('¡Imagen copiada!'),()=>done('No se pudo copiar'))}</script>"""
 
 def card(p):
     e = html.escape
@@ -40,7 +44,7 @@ def card(p):
     <div class="meta"><a href="https://instagram.com/{e(p['ig'])}" target="_blank">@{e(p['ig'])}</a> · {e(p['lugar'])} · {e(p['nicho'])} · Web: {e(p['web'])}</div>
     <p class="why">{e(p['porque'])}</p>
     <pre id="{mid}">{e(p['mensaje'])}</pre>
-    <div class="acts"><button class="main" onclick="cp('{mid}',this)">Copiar mensaje</button> <a href="bocetos/preview/{e(p['slug'])}.png" download>Descargar imagen</a> <a href="bocetos/{e(p['slug'])}.html" target="_blank">Ver boceto en vivo</a>{ev}</div>
+    <div class="acts"><button class="main" onclick="cp('{mid}',this)">Copiar mensaje</button> <button class="main" onclick="ci('bocetos/preview/{e(p['slug'])}.png',this)">Copiar imagen</button> <a href="bocetos/preview/{e(p['slug'])}.png" download>Descargar imagen</a> <a href="bocetos/{e(p['slug'])}.html" target="_blank">Ver boceto en vivo</a>{ev}</div>
   </div>
 </div>"""
 
