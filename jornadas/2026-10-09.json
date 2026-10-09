@@ -526,6 +526,20 @@
       "evidencia": [
         "bocetos/evidencia/199-majo-dog-house-bogota-ig.jpg"
       ]
+    },
+    {
+      "num": 200,
+      "slug": "200-casa-roma-tayrona",
+      "nombre": "Hostal Casa Roma Tayrona",
+      "ig": "casaromatayrona",
+      "lugar": "Sector Parque Tayrona, Santa Marta, Colombia",
+      "nicho": "Hostal / pasadía",
+      "web": "Sin web (wa.me + Airbnb)",
+      "porque": "1.7K seguidores, activo (oct 2026). Depende de Airbnb (comisiones) y WhatsApp. Web de reserva directa con pasadía. Prioridad MEDIA.",
+      "mensaje": "Hola 👋 Somos de PAGX Studio.\nHoy reservan por Airbnb o WhatsApp, y cada reserva de Airbnb deja comisión.\nTe proponemos una web con habitaciones, pasadía y reserva directa.\nTe preparamos una vista previa (~20%). ¿Te la mostramos?",
+      "evidencia": [
+        "bocetos/evidencia/200-casa-roma-tayrona-ig.jpg"
+      ]
     }
   ]
 }
